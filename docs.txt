@@ -1,0 +1,9 @@
+Player Input:
+Go left: A or <-
+Go right: D or ->
+Jump: space or w or arrow up
+Basic attack: J or Right Mouse Button
+
+When creating Enemy:
+It should have collision layer and mask set to 2. Otherwise player won't be able to hit it.
+It also should inherent from class Character.

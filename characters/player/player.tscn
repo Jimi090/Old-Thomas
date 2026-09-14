@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b0fqim18ew3u8"]
 
-[ext_resource type="Texture2D" uid="uid://c4nchvllfvg5b" path="res://player/test_sprite/IDLE.png" id="1_oul6g"]
-[ext_resource type="Script" uid="uid://blfloaxdl868q" path="res://player/player.gd" id="1_rkbax"]
-[ext_resource type="Texture2D" uid="uid://yv6nj8pklhxy" path="res://player/test_sprite/ATTACK 1.png" id="2_yw30f"]
-[ext_resource type="Texture2D" uid="uid://cfb4vs0prjdre" path="res://player/test_sprite/RUN.png" id="3_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://c4nchvllfvg5b" path="res://characters/player/test_sprite/IDLE.png" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://blfloaxdl868q" path="res://characters/player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://yv6nj8pklhxy" path="res://characters/player/test_sprite/ATTACK 1.png" id="2_yw30f"]
+[ext_resource type="Texture2D" uid="uid://cfb4vs0prjdre" path="res://characters/player/test_sprite/RUN.png" id="3_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://bw7ug3sblmttg" path="res://characters/player/test_sprite/HURT.png" id="5_qjkh3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65viv"]
 atlas = ExtResource("2_yw30f")
@@ -137,6 +138,22 @@ region = Rect2(1344, 0, 96, 96)
 atlas = ExtResource("3_g1dw6")
 region = Rect2(1440, 0, 96, 96)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw77l"]
+atlas = ExtResource("5_qjkh3")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rptt4"]
+atlas = ExtResource("5_qjkh3")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7pn3"]
+atlas = ExtResource("5_qjkh3")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8hi5"]
+atlas = ExtResource("5_qjkh3")
+region = Rect2(288, 0, 96, 96)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
 animations = [{
 "frames": [{
@@ -161,7 +178,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7pqkx")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"basic_attack",
 "speed": 12.0
 }, {
@@ -252,6 +269,23 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw77l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rptt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7pn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8hi5")
+}],
+"loop": 0,
+"name": &"take_damage",
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_478fi"]
@@ -266,16 +300,18 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886025495]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"basic_attack"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.66349876
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=864961474]
 position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_478fi")
 
 [node name="BasicAttackRange" type="Area2D" parent="." unique_id=979473575]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BasicAttackRange" unique_id=1611206424]
 position = Vector2(6.5, 13.25)
 shape = SubResource("RectangleShape2D_g1dw6")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]
