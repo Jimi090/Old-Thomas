@@ -1,29 +1,43 @@
 [gd_scene format=3 uid="uid://b25p6ava63g81"]
 
 [ext_resource type="PackedScene" uid="uid://b0fqim18ew3u8" path="res://characters/player/player.tscn" id="1_3mqji"]
+[ext_resource type="Texture2D" uid="uid://ck5boncetgslc" path="res://characters/player/blue.jpg" id="2_x4av3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_478fi"]
 size = Vector2(401, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8impv"]
+size = Vector2(20.685982, 16.675571)
 
 [node name="MainScene" type="Node2D" unique_id=1474833590]
 
 [node name="Player" parent="." unique_id=289370131 instance=ExtResource("1_3mqji")]
 position = Vector2(63, 12)
+scale = Vector2(2, 2)
 
 [node name="Test_floor" type="StaticBody2D" parent="." unique_id=358636882]
-position = Vector2(84, 110)
+position = Vector2(79, 175)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Test_floor" unique_id=1864736280]
 position = Vector2(79.5, -3.5)
 shape = SubResource("RectangleShape2D_478fi")
 
+[node name="Sprite2D" type="Sprite2D" parent="Test_floor" unique_id=1599584721]
+position = Vector2(84, -2.9999998)
+scale = Vector2(-0.2564517, -0.011347416)
+texture = ExtResource("2_x4av3")
+
 [node name="Test_obstacle" type="StaticBody2D" parent="." unique_id=418568646]
-position = Vector2(242, 78)
+position = Vector2(233, 142)
 scale = Vector2(2.152353, 2.2469988)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Test_obstacle" unique_id=981807735]
+position = Vector2(0.34300232, 1.66222)
 shape = SubResource("RectangleShape2D_8impv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Test_obstacle" unique_id=2012230051]
+position = Vector2(0.46460778, 1.7801522)
+scale = Vector2(0.013, 0.015)
+texture = ExtResource("2_x4av3")
