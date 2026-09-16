@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Old Thomas"
-run/main_scene="uid://b25p6ava63g81"
+run/main_scene="uid://cidsvy4wrqrsh"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]

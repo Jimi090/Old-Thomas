@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 func new_game():
-	var game = preload("res://MainScene.tscn").instantiate()
-	get_tree().change_scene_to_node(game)
+	var mainMenu = preload("res://UI/MainMenu/MainMenu.tscn").instantiate()
+	get_tree().change_scene_to_node(mainMenu)
