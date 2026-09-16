@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://cidsvy4wrqrsh"]
+
+[ext_resource type="Script" uid="uid://b0ynxtxqaexee" path="res://UI/StartMenu/start_menu.gd" id="1_1crbp"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_8uev0"]
+[ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemy/idle-enemy.png" id="3_7vcb3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jntbr"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7vda"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62gyc"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vv7t"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj0pe"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uotx"]
+atlas = ExtResource("2_8uev0")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jntbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62gyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vv7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj0pe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uotx")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpcpp"]
+atlas = ExtResource("3_7vcb3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdku0"]
+atlas = ExtResource("3_7vcb3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1bng"]
+atlas = ExtResource("3_7vcb3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6ujw"]
+atlas = ExtResource("3_7vcb3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pajtk"]
+atlas = ExtResource("3_7vcb3")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8impv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpcpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdku0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1bng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6ujw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pajtk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="StartMenu" type="Control" unique_id=2018449368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1crbp")
+
+[node name="Background" type="ColorRect" parent="." unique_id=561221022]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(1.6364455e-06, 0.37172782, 0.49743444, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1365866179]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0.84313726, 1)
+theme_override_font_sizes/font_size = 24
+text = "Old Thomas"
+horizontal_alignment = 1
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1838247519]
+position = Vector2(56, 103)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_478fi")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="EnemyAnimation" type="AnimatedSprite2D" parent="." unique_id=1027962562]
+position = Vector2(260, 100)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_8impv")
+autoplay = "default"
+frame_progress = 0.046389855
+flip_h = true
+
+[node name="PlayBtn" type="Button" parent="." unique_id=1499088463]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -18.0
+offset_right = 44.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="SettingsBtn" type="Button" parent="." unique_id=1629579518]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85
+anchor_right = 0.5
+anchor_bottom = 0.85
+offset_left = -40.0
+offset_top = -44.0
+offset_right = 44.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Settings
+"
