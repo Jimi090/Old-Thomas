@@ -1,29 +1,79 @@
 [gd_scene format=3 uid="uid://b25p6ava63g81"]
 
 [ext_resource type="PackedScene" uid="uid://b0fqim18ew3u8" path="res://characters/player/player.tscn" id="1_3mqji"]
+[ext_resource type="Texture2D" uid="uid://ck5boncetgslc" path="res://characters/player/blue.jpg" id="2_x4av3"]
+[ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="3_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://bfpcxuyyt6brx" path="res://UI/HUD/HUD.tscn" id="4_uxrcv"]
+[ext_resource type="Script" uid="uid://ev66opxh25wi" path="res://characters/player/test_enemy.gd" id="5_a814b"]
+[ext_resource type="Texture2D" uid="uid://rikjih3ywayj" path="res://characters/player/red.jpg" id="5_rf2cd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_478fi"]
 size = Vector2(401, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8impv"]
+size = Vector2(20.685982, 16.675571)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqbil"]
+size = Vector2(20, 70)
 
 [node name="MainScene" type="Node2D" unique_id=1474833590]
 
 [node name="Player" parent="." unique_id=289370131 instance=ExtResource("1_3mqji")]
 position = Vector2(63, 12)
+scale = Vector2(2, 2)
 
 [node name="Test_floor" type="StaticBody2D" parent="." unique_id=358636882]
-position = Vector2(84, 110)
+position = Vector2(79, 175)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Test_floor" unique_id=1864736280]
 position = Vector2(79.5, -3.5)
 shape = SubResource("RectangleShape2D_478fi")
 
+[node name="Sprite2D" type="Sprite2D" parent="Test_floor" unique_id=1599584721]
+position = Vector2(84, -2.9999998)
+scale = Vector2(-0.2564517, -0.011347416)
+texture = ExtResource("2_x4av3")
+
 [node name="Test_obstacle" type="StaticBody2D" parent="." unique_id=418568646]
-position = Vector2(242, 78)
+position = Vector2(233, 142)
 scale = Vector2(2.152353, 2.2469988)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Test_obstacle" unique_id=981807735]
+position = Vector2(0.34300232, 1.66222)
 shape = SubResource("RectangleShape2D_8impv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Test_obstacle" unique_id=2012230051]
+position = Vector2(0.46460778, 1.7801522)
+scale = Vector2(0.013, 0.015)
+texture = ExtResource("2_x4av3")
+
+[node name="Coin" parent="." unique_id=525547507 instance=ExtResource("3_rpqi1")]
+position = Vector2(236, 112)
+
+[node name="Coin2" parent="." unique_id=955250426 instance=ExtResource("3_rpqi1")]
+position = Vector2(169, 149)
+
+[node name="Coin3" parent="." unique_id=759174080 instance=ExtResource("3_rpqi1")]
+position = Vector2(332, 151)
+
+[node name="Coin4" parent="." unique_id=35558858 instance=ExtResource("3_rpqi1")]
+position = Vector2(103, 149)
+
+[node name="Hud" parent="." unique_id=1273968060 node_paths=PackedStringArray("player") instance=ExtResource("4_uxrcv")]
+player = NodePath("../Player")
+
+[node name="Test_Enemy" type="Area2D" parent="." unique_id=1159755670]
+position = Vector2(-26, 129)
+script = ExtResource("5_a814b")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test_Enemy" unique_id=1973083022]
+shape = SubResource("RectangleShape2D_qqbil")
+
+[node name="Sprite2D" type="Sprite2D" parent="Test_Enemy" unique_id=486457081]
+scale = Vector2(0.009, 0.05)
+texture = ExtResource("5_rf2cd")
+
+[connection signal="body_entered" from="Test_Enemy" to="Test_Enemy" method="_on_body_entered"]

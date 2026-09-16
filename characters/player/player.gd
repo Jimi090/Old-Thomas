@@ -1,4 +1,7 @@
+class_name Player
 extends Character
+
+signal health_changed(new_health)
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var basic_attack_range: Area2D = $BasicAttackRange
@@ -9,15 +12,17 @@ extends Character
 
 var basic_attack_damage := 10
 
-var direction : float
+var direction: float
 
-enum State{
+enum State {
 	IDLE,
 	RUN,
 	BASIC_ATTACK,
-	TAKE_DAMAGE
+	TAKE_DAMAGE,
+	JUMP,
 }
 var state = State.IDLE
+
 
 func basic_attack():
 	var bodies = basic_attack_range.get_overlapping_bodies()
@@ -25,9 +30,11 @@ func basic_attack():
 		body.take_damage(basic_attack_damage)
 	state = State.BASIC_ATTACK
 
+
 func take_damage(damage):
-	animated_sprite_2d.play("take_damage")
+	state = State.TAKE_DAMAGE
 	super(damage)
+
 
 func update_animation():
 	match state:
@@ -39,21 +46,25 @@ func update_animation():
 			animated_sprite_2d.play("basic_attack")
 		State.TAKE_DAMAGE:
 			animated_sprite_2d.play("take_damage")
+		State.JUMP:
+			animated_sprite_2d.play("jump")
+
 
 func _ready() -> void:
 	max_health = 100
 	super()
 
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 
-	direction = Input.get_axis("left","right")
+	direction = Input.get_axis("left", "right")
 	if direction != 0:
 		animated_sprite_2d.flip_h = direction < 0
-	velocity.x = move_toward(velocity.x,direction*SPEED,delta*1000)
+	velocity.x = move_toward(velocity.x, direction * SPEED, delta * 1000)
 
-	if state != State.BASIC_ATTACK and state != State.TAKE_DAMAGE:
+	if state != State.BASIC_ATTACK and state != State.TAKE_DAMAGE and state != State.JUMP:
 		if direction != 0:
 			state = State.RUN
 		else:
@@ -61,6 +72,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -JUMP_FORCE
+		state = State.JUMP
 
 	if Input.is_action_just_pressed("Basic Attack"):
 		basic_attack()
@@ -69,6 +81,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+
 func _on_animation_finished() -> void:
-	if state == State.BASIC_ATTACK or state == State.TAKE_DAMAGE:
+	if state == State.BASIC_ATTACK or state == State.TAKE_DAMAGE or state == State.JUMP:
 		state = State.IDLE
+
+
+func _on_health_changed():
+	health_changed.emit(health)

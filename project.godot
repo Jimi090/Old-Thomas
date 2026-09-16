@@ -14,6 +14,10 @@ config/name="Old Thomas"
 run/main_scene="uid://b25p6ava63g81"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+GameData="*uid://by6ghnada1xin"
+
 [display]
 
 window/size/viewport_width=320
