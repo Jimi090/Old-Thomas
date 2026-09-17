@@ -10,6 +10,7 @@ extends Character
 @export var JUMP_FORCE := 200
 
 var damage := 20
+var attack_cooldown := 2
 
 var direction: float
 
@@ -18,15 +19,16 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 
-	if not floor_check.is_colliding():
-		direction *= -1
-		floor_check.target_position.x *= -1
-		wall_check.target_position.x *= -1
+	if state != State.BASIC_ATTACK:
+		if not floor_check.is_colliding():
+			direction *= -1
+			floor_check.target_position.x *= -1
+			wall_check.target_position.x *= -1
 
-	if wall_check.is_colliding() and is_on_floor():
-		velocity.y = -JUMP_FORCE
+		if wall_check.is_colliding() and is_on_floor():
+			velocity.y = -JUMP_FORCE
 
-	velocity.x = direction * SPEED
+		velocity.x = direction * SPEED
 
 	animated_sprite_2d.flip_h = direction < 0
 
@@ -37,4 +39,17 @@ func _physics_process(delta: float) -> void:
 
 func _ready() -> void:
 	direction = 1
+	state = State.RUN
+	max_health = 20
+	super()
+
+
+func _on_attack_range_body_entered(body: Character) -> void:
+	while body.health > 0 and attack_range.overlaps_body(body):
+		if body.position.x > position.x:
+			direction = 1
+		else:
+			direction = -1
+		basic_attack(attack_range, damage)
+		await get_tree().create_timer(attack_cooldown).timeout
 	state = State.RUN

@@ -26,6 +26,7 @@ func _ready() -> void:
 func take_damage(damage: int):
 	state = State.TAKE_DAMAGE
 	health -= damage
+	print(health)
 
 	if health <= 0:
 		die()

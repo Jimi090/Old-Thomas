@@ -22,14 +22,6 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_e0t8f")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_obssx"]
-atlas = ExtResource("3_cnuwa")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f14m0"]
-atlas = ExtResource("3_cnuwa")
-region = Rect2(16, 0, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6q3y"]
 atlas = ExtResource("4_micc2")
 region = Rect2(0, 0, 16, 16)
@@ -66,6 +58,14 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("5_vftwx")
 region = Rect2(48, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_obssx"]
+atlas = ExtResource("3_cnuwa")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f14m0"]
+atlas = ExtResource("3_cnuwa")
+region = Rect2(16, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
 animations = [{
 "frames": [{
@@ -82,19 +82,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_32mxs")
 }],
 "loop": 0,
-"name": &"attack",
+"name": &"basic_attack",
 "speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_obssx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f14m0")
-}],
-"loop": 0,
-"name": &"hurt",
-"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -132,21 +121,34 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obssx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f14m0")
+}],
+"loop": 0,
+"name": &"take_damage",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_478fi"]
 size = Vector2(18, 19)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8impv"]
-size = Vector2(27, 11)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ey2db"]
+radius = 23.021729
 
 [node name="Enemy" type="CharacterBody2D" unique_id=2006298918]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_ey2db")
 metadata/_custom_type_script = "uid://dgsbxe6ot30r3"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=141217313]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"idle"
+animation = &"basic_attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419303714]
@@ -155,11 +157,11 @@ position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_478fi")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=1134636074]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1932074008]
-visible = false
-position = Vector2(9, 1)
-shape = SubResource("RectangleShape2D_8impv")
+shape = SubResource("CircleShape2D_ey2db")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=71231742]
 visible = false
@@ -168,3 +170,5 @@ target_position = Vector2(3, 26)
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=562945465]
 visible = false
 target_position = Vector2(12, 5)
+
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
