@@ -93,7 +93,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pajtk")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
 "speed": 10.0
 }]
 
@@ -171,6 +171,6 @@ autoplay = "idle"
 position = Vector2(260, 100)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_8impv")
-autoplay = "default"
-frame_progress = 0.046389855
+animation = &"idle"
+autoplay = "idle"
 flip_h = true

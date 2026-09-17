@@ -14,41 +14,6 @@ var basic_attack_damage := 10
 
 var direction: float
 
-enum State {
-	IDLE,
-	RUN,
-	BASIC_ATTACK,
-	TAKE_DAMAGE,
-	JUMP,
-}
-var state = State.IDLE
-
-
-func basic_attack():
-	var bodies = basic_attack_range.get_overlapping_bodies()
-	for body in bodies:
-		body.take_damage(basic_attack_damage)
-	state = State.BASIC_ATTACK
-
-
-func take_damage(damage):
-	state = State.TAKE_DAMAGE
-	super(damage)
-
-
-func update_animation():
-	match state:
-		State.IDLE:
-			animated_sprite_2d.play("idle")
-		State.RUN:
-			animated_sprite_2d.play("run")
-		State.BASIC_ATTACK:
-			animated_sprite_2d.play("basic_attack")
-		State.TAKE_DAMAGE:
-			animated_sprite_2d.play("take_damage")
-		State.JUMP:
-			animated_sprite_2d.play("jump")
-
 
 func _ready() -> void:
 	max_health = 100
@@ -75,9 +40,9 @@ func _physics_process(delta: float) -> void:
 		state = State.JUMP
 
 	if Input.is_action_just_pressed("Basic Attack"):
-		basic_attack()
+		basic_attack(basic_attack_range, basic_attack_damage)
 
-	update_animation()
+	update_animation(animated_sprite_2d)
 
 	move_and_slide()
 

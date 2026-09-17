@@ -8,6 +8,15 @@ var health: int:
 		health = value
 		_on_health_changed()
 
+enum State {
+	IDLE,
+	RUN,
+	BASIC_ATTACK,
+	TAKE_DAMAGE,
+	JUMP,
+}
+var state = State.IDLE
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,10 +24,25 @@ func _ready() -> void:
 
 
 func take_damage(damage: int):
+	state = State.TAKE_DAMAGE
 	health -= damage
 
 	if health <= 0:
 		die()
+
+
+func update_animation(animated_sprite_2d):
+	match state:
+		State.IDLE:
+			animated_sprite_2d.play("idle")
+		State.RUN:
+			animated_sprite_2d.play("run")
+		State.BASIC_ATTACK:
+			animated_sprite_2d.play("basic_attack")
+		State.TAKE_DAMAGE:
+			animated_sprite_2d.play("take_damage")
+		State.JUMP:
+			animated_sprite_2d.play("jump")
 
 
 func is_moving():
@@ -27,6 +51,13 @@ func is_moving():
 
 func die():
 	queue_free()
+
+
+func basic_attack(attack_range, damage):
+	state = State.BASIC_ATTACK
+	var bodies = attack_range.get_overlapping_bodies()
+	for body in bodies:
+		body.take_damage(damage)
 
 
 func _on_health_changed():
