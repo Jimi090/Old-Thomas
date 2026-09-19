@@ -9,6 +9,8 @@ signal health_changed(new_health)
 @export var SPEED := 200
 @export var GRAVITY := 1000
 @export var JUMP_FORCE := 320
+@export var attack_multi  := 1.0
+@export var speed_multi := 1.0
 
 var basic_attack_damage := 10
 
@@ -51,6 +53,16 @@ func _on_animation_finished() -> void:
 	if state == State.BASIC_ATTACK or state == State.TAKE_DAMAGE or state == State.JUMP:
 		state = State.IDLE
 
-
 func _on_health_changed():
 	health_changed.emit(health)
+
+func heal(amount: int) -> void:
+	health = min(max_health, health + amount)
+	health_changed.emit(health)
+
+func boost_attack(multiplier: float) -> void:
+	basic_attack_damage = int(basic_attack_damage * multiplier)
+
+func boost_speed(multiplier: float) -> void:
+	SPEED = int(SPEED * multiplier)
+	
