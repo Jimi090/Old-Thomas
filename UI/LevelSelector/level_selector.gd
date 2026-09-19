@@ -11,17 +11,30 @@ func _ready() -> void:
 
 	dir.list_dir_begin()
 
-	var name = dir.get_next()
-	while name != "":
-		var btn = LEVEL_BUTTON.instantiate()
+	var level_names := []
+	var file_name = dir.get_next()
+
+	while file_name != "":
+		level_names.append(file_name)
+		file_name = dir.get_next()
+
+	level_names.sort()
+
+	for name in level_names:
+		var btn: Button = LEVEL_BUTTON.instantiate()
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		btn.text = name[-6]
 		btn.pressed.connect(lunch_level.bind(path + name))
 		v_box_container.add_child(btn)
-		name = dir.get_next()
 
 
-func lunch_level(level_path):
-	var game = load(level_path).instantiate()
+func lunch_level(level_scene_path):
+	var game: Node2D = load(level_scene_path).instantiate()
+	var player = preload("res://characters/player/player.tscn").instantiate()
+	player.position = Vector2(25, 0)
+	game.add_child(player)
+	var HUD = preload("res://UI/HUD/HUD.tscn").instantiate()
+	HUD.player = player
+	game.add_child(HUD)
 	get_tree().change_scene_to_node(game)

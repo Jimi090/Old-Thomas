@@ -711,23 +711,27 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.37254903, 0.49803922, 1)
 
-[node name="ShopImage" type="TextureRect" parent="." unique_id=1672783351]
+[node name="ShopBtn" type="Button" parent="." unique_id=50165495]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 56.0
-offset_right = 320.0
-offset_bottom = 97.0
-texture = ExtResource("1_8fkdr")
+offset_left = 268.0
+offset_top = 40.0
+offset_right = 324.0
+offset_bottom = 89.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("1_8fkdr")
+flat = true
 
-[node name="ChurchImage" type="TextureRect" parent="." unique_id=2052839708]
+[node name="ChurchBtn" type="Button" parent="." unique_id=1056776551]
 z_index = 1
 layout_mode = 0
-offset_left = 130.0
-offset_top = 15.0
-offset_right = 258.0
-offset_bottom = 127.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_8x0bb")
+offset_left = 131.0
+offset_top = 15.999999
+offset_right = 267.0
+offset_bottom = 136.0
+scale = Vector2(0.4599988, 0.4599988)
+mouse_default_cursor_shape = 2
+icon = ExtResource("2_8x0bb")
+flat = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=43598028]
 scale = Vector2(0.3, 0.3)
@@ -760,3 +764,66 @@ theme_override_fonts/font = ExtResource("5_4elqj")
 theme_override_font_sizes/font_size = 12
 text = "Path 1"
 horizontal_alignment = 1
+
+[node name="Path2" type="Button" parent="." unique_id=1576382085]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 137.0
+offset_right = 132.0
+offset_bottom = 177.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Path2" unique_id=1963621095]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 42.0
+texture = ExtResource("4_nahvw")
+
+[node name="Label" type="Label" parent="Path2" unique_id=362574094]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
+theme_override_fonts/font = ExtResource("5_4elqj")
+theme_override_font_sizes/font_size = 12
+text = "Path 2"
+horizontal_alignment = 1
+
+[node name="Path3" type="Button" parent="." unique_id=2040573952]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 2.0
+offset_right = 261.0
+offset_bottom = 42.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Path3" unique_id=641653728]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 42.0
+texture = ExtResource("4_nahvw")
+
+[node name="Label" type="Label" parent="Path3" unique_id=1554461840]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
+theme_override_fonts/font = ExtResource("5_4elqj")
+theme_override_font_sizes/font_size = 12
+text = "Path 3
+"
+horizontal_alignment = 1
+
+[node name="NotAvailablePopup" type="AcceptDialog" parent="." unique_id=1184895441]
+oversampling_override = 1.0
+title = ""
+position = Vector2i(60, 50)
+size = Vector2i(200, 106)
+dialog_text = "This feature is not avaiable in this verison"
+dialog_autowrap = true

@@ -694,7 +694,6 @@ sources/1 = SubResource("TileSetAtlasSource_torvr")
 
 [node name="Player" parent="." unique_id=289370131 instance=ExtResource("1_3mqji")]
 position = Vector2(63, 12)
-scale = Vector2(2, 2)
 
 [node name="Coin" parent="." unique_id=525547507 instance=ExtResource("3_rpqi1")]
 position = Vector2(199, 161)
@@ -718,8 +717,6 @@ tile_set = SubResource("TileSet_korjc")
 
 [node name="Enemy" parent="." unique_id=2006298918 instance=ExtResource("8_hbc2u")]
 position = Vector2(377, 171)
-scale = Vector2(2, 2)
 
 [node name="Enemy2" parent="." unique_id=482182324 instance=ExtResource("8_hbc2u")]
 position = Vector2(133, 48)
-scale = Vector2(2, 2)
