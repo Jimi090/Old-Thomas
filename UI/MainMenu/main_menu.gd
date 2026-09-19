@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 func _on_click_path1():
-	var game = preload("res://MainScene.tscn").instantiate()
-	get_tree().change_scene_to_node(game)
+	var lvlSelector = preload("res://UI/LevelSelector/LevelSelector.tscn").instantiate()
+	get_tree().change_scene_to_node(lvlSelector)

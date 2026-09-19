@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dm5o11yjlprnr"]
 
-[ext_resource type="Script" uid="uid://cqdsx2rkapb4" path="res://collectable.gd" id="1_3dk6v"]
+[ext_resource type="Script" uid="uid://cqdsx2rkapb4" path="res://pickups/collectable.gd" id="1_3dk6v"]
 [ext_resource type="Texture2D" uid="uid://csp6kk5q1j2rc" path="res://UI/Potions/potion-pack-2.0/sheet-transparent.png" id="2_un20x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a814b"]
