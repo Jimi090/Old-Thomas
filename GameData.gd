@@ -8,6 +8,8 @@ var gold: int = 0:
 		gold = value
 		gold_changed.emit(gold)
 
+var level_progress := { }
+
 
 func save_data():
 	var data = { "gold": gold }
@@ -30,3 +32,29 @@ func load_data():
 
 func _ready() -> void:
 	load_data()
+	var paths_dir := DirAccess.open("res://Paths/")
+	paths_dir.list_dir_begin()
+	var paths := []
+	var pathFileName := paths_dir.get_next()
+
+	while pathFileName != "":
+		paths.append(pathFileName)
+
+		pathFileName = paths_dir.get_next()
+	paths.sort()
+
+	for path in paths:
+		var path_dir := DirAccess.open("res://Paths/" + path)
+		path_dir.list_dir_begin()
+		var levels := []
+		var levelFileName := path_dir.get_next()
+
+		while levelFileName != "":
+			levels.append(levelFileName)
+
+			levelFileName = path_dir.get_next()
+		levels.sort()
+
+		level_progress[path] = { }
+		for level in levels:
+			level_progress[path][level] = { "finished": false }
