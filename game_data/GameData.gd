@@ -12,7 +12,7 @@ var level_progress := { }
 
 
 func save_data():
-	var data = { "gold": gold }
+	var data = { "gold": gold, "level_progress": level_progress }
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -20,18 +20,25 @@ func save_data():
 
 func load_data():
 	if not FileAccess.file_exists(SAVE_PATH):
+		print('xd')
 		return
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	var data = JSON.parse_string(file.get_as_text())
-
+	print(data, 'xd')
 	if data == null:
 		return
 
 	gold = data.get("gold", 0)
+	level_progress = data.get("level_progress")
 
 
 func _ready() -> void:
 	load_data()
+	if level_progress == { }:
+		get_empty_level_progress()
+
+
+func get_empty_level_progress():
 	var paths_dir := DirAccess.open("res://Paths/")
 	paths_dir.list_dir_begin()
 	var paths := []
