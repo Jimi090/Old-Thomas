@@ -18,3 +18,4 @@ Basic attack: J or Right Mouse Button
 
 Made by Jimi and Amira for Thirdspace <3 
 
+https://lillylike123.itch.io/old-thomas
