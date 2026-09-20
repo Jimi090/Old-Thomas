@@ -20,11 +20,10 @@ func save_data():
 
 func load_data():
 	if not FileAccess.file_exists(SAVE_PATH):
-		print('xd')
 		return
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	var data = JSON.parse_string(file.get_as_text())
-	print(data, 'xd')
+
 	if data == null:
 		return
 

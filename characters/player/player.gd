@@ -71,6 +71,12 @@ func heal(amount: int) -> void:
 	health_changed.emit(health)
 
 
+func die():
+	# temporary solution
+	position = Vector2(25, 0)
+	health = max_health
+
+
 func boost_attack(multiplier: float) -> void:
 	basic_attack_damage = int(basic_attack_damage * multiplier)
 

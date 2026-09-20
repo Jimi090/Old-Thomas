@@ -6,19 +6,6 @@ const LEVEL_BUTTON = preload("uid://cv3q0ojxxmjm3")
 
 func _ready() -> void:
 	const path = "Path1"
-	'var dir = DirAccess.open(path)
-
-
-	dir.list_dir_begin()
-
-	var level_names := []
-	var file_name = dir.get_next()
-
-	while file_name != "":
-		level_names.append(file_name)
-		file_name = dir.get_next()
-
-	level_names.sort()'
 	v_box_container.columns = 2
 
 	var levels = GameData.level_progress[path]
@@ -31,7 +18,7 @@ func _ready() -> void:
 
 		if levels[level]["finished"] == true:
 			var style := btn.get_theme_stylebox("normal").duplicate()
-			style.bg_color = Color.GREEN
+			style.bg_color = Color.WEB_GREEN
 			btn.add_theme_stylebox_override("normal", style)
 
 		v_box_container.add_child(btn)
