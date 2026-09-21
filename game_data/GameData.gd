@@ -63,4 +63,4 @@ func get_empty_level_progress():
 
 		level_progress[path] = { }
 		for level in levels:
-			level_progress[path][level] = { "finished": false }
+			level_progress[path][level] = { "finished": false, "coinsCollected": [] }

@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://te0a7jalieqe"]
 
-[ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://UI/tileset/midground_/autumn_.png" id="1_q2b2h"]
-[ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://UI/tileset/objects_/items_.png" id="2_ejp3m"]
-[ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://UI/tileset/objects_/staticObjects_.png" id="3_7ylg2"]
-[ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/key/key.tscn" id="5_630bk"]
+[ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="1_q2b2h"]
+[ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="2_ejp3m"]
+[ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_7ylg2"]
+[ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="5_630bk"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="5_ejp3m"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_7ylg2"]
 
