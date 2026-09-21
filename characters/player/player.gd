@@ -31,6 +31,10 @@ func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("left", "right")
 	if direction != 0:
 		animated_sprite_2d.flip_h = direction < 0
+		if direction < 0:
+			basic_attack_range.rotation = PI
+		else:
+			basic_attack_range.rotation = 0
 	velocity.x = move_toward(velocity.x, direction * SPEED, delta * 1000)
 
 	# animations

@@ -213,7 +213,6 @@ position = Vector2(-2, 1)
 shape = SubResource("CapsuleShape2D_478fi")
 
 [node name="BasicAttackRange" type="Area2D" parent="." unique_id=979473575]
-visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BasicAttackRange" unique_id=1611206424]
