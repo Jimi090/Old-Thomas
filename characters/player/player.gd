@@ -19,6 +19,7 @@ var direction: float
 
 func _ready() -> void:
 	max_health = 100
+	add_to_group("player")
 	super()
 
 

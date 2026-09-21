@@ -64,3 +64,9 @@ func get_empty_level_progress():
 		level_progress[path] = { }
 		for level in levels:
 			level_progress[path][level] = { "finished": false, "coinsCollected": [] }
+
+
+func clear_save():
+	gold = 0
+	get_empty_level_progress()
+	save_data()

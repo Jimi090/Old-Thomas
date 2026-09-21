@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dh5oguu5fj6hb"]
+
+[ext_resource type="Script" uid="uid://dh4g4gsd4s835" path="res://DevTools/dev_tool_overlay.gd" id="1_mwe4g"]
+
+[node name="DevToolOverlay" type="CanvasLayer" unique_id=2121921353]
+layer = 100
+script = ExtResource("1_mwe4g")
+
+[node name="Panel" type="Panel" parent="." unique_id=591588493]
+z_index = 10
+offset_right = 110.0
+offset_bottom = 80.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=294519831]
+layout_mode = 1
+offset_right = 103.0
+offset_bottom = 76.0
+
+[node name="ClearSaveBtn" type="Button" parent="Panel/VBoxContainer" unique_id=2064824565]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "Clear Save"
+
+[node name="FlyButton" type="CheckButton" parent="Panel/VBoxContainer" unique_id=2042137622]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 8
+text = "Flying"
+
+[node name="InfiniteHealthButton" type="CheckButton" parent="Panel/VBoxContainer" unique_id=251679684]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 8
+text = "Infinite health"
+
+[connection signal="pressed" from="Panel/VBoxContainer/ClearSaveBtn" to="." method="_on_clear_save_btn_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/FlyButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/InfiniteHealthButton" to="." method="_on_infinite_health_button_pressed"]
