@@ -48,10 +48,7 @@ func lunch_level(level_scene_path: String):
 	var nodes := game.get_children()
 	var coinCounter = 0
 
-	var collectedCoins = GameData.level_progress[short_path.get_slice("/", 1)][
-		short_path.get_slice("/", 2)
-	]["coinsCollected"]
-
+	var collectedCoins = GameData.level_progress[short_path.get_slice("/", 1)][short_path.get_slice("/", 2)]
 	for node in nodes:
 		if node is Coin:
 			if coinCounter in collectedCoins:
