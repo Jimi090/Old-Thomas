@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://co2hrb78m8fia" path="res://UI/MainMenu/assets/town.png" id="2_8x0bb"]
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
 [ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4elqj"]
 resource_name = "Path"
@@ -768,3 +769,9 @@ position = Vector2i(60, 50)
 size = Vector2i(200, 106)
 dialog_text = "This feature is not avaiable in this verison"
 dialog_autowrap = true
+
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
+layout_mode = 1
+offset_top = 4.0
+offset_bottom = 140.0
+destiantion = 1

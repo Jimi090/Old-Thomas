@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cidsvy4wrqrsh"]
 
 [ext_resource type="Script" uid="uid://b0ynxtxqaexee" path="res://UI/StartMenu/start_menu.gd" id="1_1crbp"]
+[ext_resource type="PackedScene" uid="uid://7i4qhwyqmlrx" path="res://UI/StartMenu/option_button.tscn" id="2_7vcb3"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_8uev0"]
 [ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemy/sprite/idle-enemy.png" id="3_7vcb3"]
 
@@ -128,36 +129,50 @@ theme_override_font_sizes/font_size = 28
 text = "Old Thomas"
 horizontal_alignment = 1
 
-[node name="PlayBtn" type="Button" parent="." unique_id=1499088463]
+[node name="PlayBtn" parent="." unique_id=320541208 instance=ExtResource("2_7vcb3")]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.4
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.4
 offset_left = -40.0
-offset_top = -18.0
-offset_right = 44.0
-offset_bottom = 14.0
+offset_top = -12.5
+offset_right = 40.0
+offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
 
-[node name="SettingsBtn" type="Button" parent="." unique_id=1629579518]
+[node name="SettingsBtn" parent="." unique_id=1690298222 instance=ExtResource("2_7vcb3")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.85
+anchor_top = 0.55
 anchor_right = 0.5
-anchor_bottom = 0.85
+anchor_bottom = 0.55
 offset_left = -40.0
-offset_top = -44.0
-offset_right = 44.0
-offset_bottom = -12.0
+offset_top = -12.5
+offset_right = 40.0
+offset_bottom = 12.5
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 16
-text = "Settings
+grow_vertical = 2
+text = "Settings"
+
+[node name="ExitBtn" parent="." unique_id=1348261010 instance=ExtResource("2_7vcb3")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
+offset_left = -40.0
+offset_top = -12.5
+offset_right = 40.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit
 "
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1838247519]

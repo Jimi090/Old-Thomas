@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmngoya21hrv4"]
 
 [ext_resource type="Script" uid="uid://b7vilq0ahnht3" path="res://UI/LevelSelector/level_selector.gd" id="1_3qqqg"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="2_3qqqg"]
 
 [node name="LevelSelector" type="Control" unique_id=1458111347]
 layout_mode = 3
@@ -22,3 +23,8 @@ offset_bottom = 170.0
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 8
 columns = 3
+
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("2_3qqqg")]
+layout_mode = 1
+offset_top = 4.0
+offset_bottom = 140.0
