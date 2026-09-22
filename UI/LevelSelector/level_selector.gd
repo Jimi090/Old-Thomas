@@ -2,10 +2,10 @@ extends Control
 
 const LEVEL_BUTTON = preload("uid://cv3q0ojxxmjm3")
 @onready var v_box_container: GridContainer = $VBoxContainer
+@export var path: String
 
 
 func _ready() -> void:
-	const path = "Path1"
 	v_box_container.columns = 2
 
 	var levels = GameData.level_progress[path]
@@ -27,7 +27,6 @@ func _ready() -> void:
 func lunch_level(level_scene_path: String):
 	var game: Node2D = load(level_scene_path).instantiate()
 	var short_path = level_scene_path.substr(6)
-	print(short_path)
 
 	# add player
 	var player = preload("res://characters/player/player.tscn").instantiate()
@@ -48,7 +47,9 @@ func lunch_level(level_scene_path: String):
 	var nodes := game.get_children()
 	var coinCounter = 0
 
-	var collectedCoins = GameData.level_progress[short_path.get_slice("/", 1)][short_path.get_slice("/", 2)]
+	var collectedCoins = GameData.level_progress[short_path.get_slice("/", 1)][
+		short_path.get_slice("/", 2)
+	]
 	for node in nodes:
 		if node is Coin:
 			if coinCounter in collectedCoins:

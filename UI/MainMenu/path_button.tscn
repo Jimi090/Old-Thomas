@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://duo1fi1ph7hv6"]
+
+[ext_resource type="Texture2D" uid="uid://d4f81gr1fokvf" path="res://UI/MainMenu/assets/signpost.png" id="1_1we5y"]
+[ext_resource type="Script" uid="uid://drl5kfk6wvm4b" path="res://UI/MainMenu/path_button.gd" id="1_rga7j"]
+[ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="2_rga7j"]
+
+[node name="Path" type="Button" unique_id=514115052]
+offset_left = 6.0
+offset_top = 38.0
+offset_right = 46.0
+offset_bottom = 78.0
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("1_rga7j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=880997601]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 42.0
+texture = ExtResource("1_1we5y")
+
+[node name="Label" type="Label" parent="." unique_id=1053168269]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
+theme_override_fonts/font = ExtResource("2_rga7j")
+theme_override_font_sizes/font_size = 12
+text = "Path"
+horizontal_alignment = 1

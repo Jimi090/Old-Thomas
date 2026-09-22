@@ -4,8 +4,7 @@
 [ext_resource type="Script" uid="uid://drdgfr7orhyj5" path="res://UI/MainMenu/main_menu.gd" id="1_ri767"]
 [ext_resource type="Texture2D" uid="uid://co2hrb78m8fia" path="res://UI/MainMenu/assets/town.png" id="2_8x0bb"]
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
-[ext_resource type="Texture2D" uid="uid://d4f81gr1fokvf" path="res://UI/MainMenu/assets/signpost.png" id="4_nahvw"]
-[ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="5_4elqj"]
+[ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4elqj"]
 resource_name = "Path"
@@ -738,87 +737,29 @@ scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAARAAoAAAACAAIAAAAJAAYAAAACAAMAAAABAAIAAAACAAMAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAApAA4AAAADAAIAAAAxAAoAAAADAAMAAAAxABIAAAACAAMAAAA5ABYAAAACAAMAAABBABoAAAACAAMAAAAZABYAAAADAAMAAAATABkAAAABAAMAAAALABUAAAACAAMAAAADABEAAAACAAMAAAD7/w0AAAACAAMAAAApABYAAAACAAMAAAAxABoAAAAAAAMAAAA5AB4AAAACAAMAAAApAB4AAAADAAMAAABBACIAAAACAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAALAB0AAAADAAMAAAADACEAAAADAAMAAAD7/yUAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_478fi")
 
-[node name="Path1" type="Button" parent="." unique_id=91260954]
+[node name="Path1" parent="." unique_id=514115052 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 38.0
-offset_right = 46.0
-offset_bottom = 78.0
-mouse_default_cursor_shape = 2
-flat = true
+offset_left = 5.0
+offset_top = 17.0
+offset_right = 45.0
+offset_bottom = 57.0
+path_number = 1
 
-[node name="TextureRect" type="TextureRect" parent="Path1" unique_id=2114908616]
+[node name="Path2" parent="." unique_id=1228126815 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 42.0
-texture = ExtResource("4_nahvw")
+offset_left = 93.0
+offset_top = 139.0
+offset_right = 133.0
+offset_bottom = 179.0
+path_number = 2
 
-[node name="Label" type="Label" parent="Path1" unique_id=799579044]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 24.0
-theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
-theme_override_fonts/font = ExtResource("5_4elqj")
-theme_override_font_sizes/font_size = 12
-text = "Path 1"
-horizontal_alignment = 1
-
-[node name="Path2" type="Button" parent="." unique_id=1576382085]
-layout_mode = 0
-offset_left = 92.0
-offset_top = 137.0
-offset_right = 132.0
-offset_bottom = 177.0
-mouse_default_cursor_shape = 2
-flat = true
-
-[node name="TextureRect" type="TextureRect" parent="Path2" unique_id=1963621095]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 42.0
-texture = ExtResource("4_nahvw")
-
-[node name="Label" type="Label" parent="Path2" unique_id=362574094]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 24.0
-theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
-theme_override_fonts/font = ExtResource("5_4elqj")
-theme_override_font_sizes/font_size = 12
-text = "Path 2"
-horizontal_alignment = 1
-
-[node name="Path3" type="Button" parent="." unique_id=2040573952]
+[node name="Path3" parent="." unique_id=2076128032 instance=ExtResource("5_a712v")]
 layout_mode = 0
 offset_left = 221.0
 offset_top = 2.0
 offset_right = 261.0
 offset_bottom = 42.0
-mouse_default_cursor_shape = 2
-flat = true
-
-[node name="TextureRect" type="TextureRect" parent="Path3" unique_id=641653728]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 42.0
-texture = ExtResource("4_nahvw")
-
-[node name="Label" type="Label" parent="Path3" unique_id=1554461840]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 24.0
-theme_override_colors/font_color = Color(0.9490196, 0.8392157, 0.63529414, 1)
-theme_override_fonts/font = ExtResource("5_4elqj")
-theme_override_font_sizes/font_size = 12
-text = "Path 3
-"
-horizontal_alignment = 1
+path_number = 3
 
 [node name="NotAvailablePopup" type="AcceptDialog" parent="." unique_id=1184895441]
 oversampling_override = 1.0
