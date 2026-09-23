@@ -52,7 +52,7 @@ func _on_attack_range_body_entered(body: Character) -> void:
 			direction = 1
 		else:
 			direction = -1
-		fire_attack(body)
+		call_deferred("fire_attack", body)
 		await get_tree().create_timer(attack_cooldown).timeout
 	state = State.RUN
 

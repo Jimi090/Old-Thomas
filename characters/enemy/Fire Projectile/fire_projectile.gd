@@ -13,11 +13,9 @@ func _on_body_entered(body: Player) -> void:
 
 
 func _ready() -> void:
-	print('a')
 	direction = (target_position - global_position).normalized()
 	$Sprite2D.rotation = direction.angle() + PI
 	await get_tree().create_timer(2.0).timeout
-	print('xd')
 	queue_free()
 
 

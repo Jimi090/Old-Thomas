@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://cc7ykq6r4mdu3"]
 
+[ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_0knnk"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="1_2hv30"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="2_0knnk"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_j1jb0"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="5_0knnk"]
-[ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="5_nrd0i"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_j1jb0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lolil"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1jb0"]
 texture = ExtResource("1_2hv30")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.0791512, 8, -1.6187286, 8, 8, -8, 8)
@@ -400,11 +400,11 @@ texture = ExtResource("1_2hv30")
 5:19/0 = 0
 5:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_nrtow"]
+[sub_resource type="TileSet" id="TileSet_t5d4c"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lolil")
+sources/0 = SubResource("TileSetAtlasSource_j1jb0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpksy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrd0i"]
 texture = ExtResource("2_0knnk")
 0:0/0 = 0
 1:0/0 = 0
@@ -419,7 +419,7 @@ texture = ExtResource("2_0knnk")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bhpv2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flpbj"]
 texture = ExtResource("3_j1jb0")
 3:0/0 = 0
 4:0/0 = 0
@@ -569,50 +569,53 @@ texture = ExtResource("3_j1jb0")
 15:8/0 = 0
 16:8/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_kara3"]
+[sub_resource type="TileSet" id="TileSet_uc3s5"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_fpksy")
-sources/1 = SubResource("TileSetAtlasSource_bhpv2")
+sources/0 = SubResource("TileSetAtlasSource_nrd0i")
+sources/1 = SubResource("TileSetAtlasSource_flpbj")
 
-[node name="Level2" type="Node2D" unique_id=1839978259]
+[node name="Level2" unique_id=1826943140 instance=ExtResource("1_0knnk")]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1407503282]
+[node name="Player" parent="." index="0" unique_id=289370131]
+position = Vector2(40, 45)
+
+[node name="Key" parent="." index="1" unique_id=155803228]
+position = Vector2(1356, 221)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=548662229]
 tile_map_data = PackedByteArray("AAABAAYAAAAAAA0AAAABAAcAAAAAAA4AAAACAAYAAAABAA0AAAACAAcAAAABAA4AAAAFAAgAAAADAAwAAAAFAAkAAAADAA0AAAAFAAoAAAADAA4AAAAGAAgAAAAEAAwAAAAGAAkAAAAEAA0AAAAGAAoAAAAEAA4AAAAHAAgAAAAFAAwAAAAHAAkAAAAFAA0AAAAHAAoAAAAFAA4AAAAFAAcAAAAAAAwAAAAGAAcAAAABAAwAAAAHAAcAAAACAAwAAAAIAAkAAAAGAAwAAAAJAAkAAAAHAAwAAAAIAAgAAAACAAwAAAAJAAgAAAACAAoAAAAIAAoAAAAIAAwAAAAJAAoAAAAJAAwAAAAMAAgAAAAAAA0AAAAMAAkAAAAAAA4AAAANAAgAAAABAA0AAAANAAkAAAABAA4AAAAOAAcAAAACAA0AAAAOAAgAAAACAA4AAAAOAAkAAAAIAAwAAAANAAoAAAAGAAwAAAAOAAoAAAAHAAwAAAAMAAoAAAAKAAsAAAAPAAkAAAAJAA0AAAAPAAoAAAAJAA4AAAAPAAgAAAAJAAoAAAARAAcAAAADABIAAAARAAgAAAADABMAAAASAAcAAAAEABIAAAASAAgAAAAEABMAAAAVAAcAAAADABIAAAAVAAgAAAADABMAAAAWAAcAAAAEABIAAAAWAAgAAAAEABMAAAAZAAcAAAADABIAAAAZAAgAAAADABMAAAAaAAcAAAAEABIAAAAaAAgAAAAEABMAAAAdAAcAAAAAAAoAAAAdAAgAAAAGAA0AAAAdAAkAAAAGAA4AAAAeAAcAAAABAAoAAAAeAAgAAAAHAA0AAAAeAAkAAAAHAA4AAAAfAAgAAAACAA0AAAAfAAkAAAACAA4AAAAgAAgAAAAAAAoAAAAgAAkAAAAGAAwAAAAhAAgAAAABAAoAAAAhAAkAAAAHAAwAAAAlAAkAAAADAAwAAAAlAAoAAAADAA0AAAAmAAkAAAAEAAwAAAAmAAoAAAAEAA0AAAAnAAkAAAAFAAwAAAAnAAoAAAAFAA0AAAAlAAsAAAADAA4AAAAmAAsAAAAEAA4AAAAnAAsAAAAFAA4AAAAlAAgAAAAAAAwAAAAmAAgAAAABAAwAAAAnAAgAAAACAAwAAAAdAAoAAAAGAAsAAAAeAAoAAAAHAAsAAAAfAAoAAAAJAAsAAAAmAAwAAAAGAAsAAAAnAAwAAAAHAAsAAAAlAAwAAAAKAAsAAAAoAAkAAAACAA0AAAAoAAoAAAACAA4AAAAoAAsAAAAGAA0AAAAoAAwAAAAGAA4AAAApAAsAAAAHAA0AAAApAAwAAAAHAA4AAAApAAoAAAACAAwAAAAvAAoAAAAAAAwAAAAwAAoAAAABAAwAAAAwAAsAAAAIAA0AAAAwAAwAAAAIAA4AAAAxAAoAAAADAAwAAAAxAAsAAAADAA0AAAAxAAwAAAADAA4AAAAyAAoAAAAEAAwAAAAyAAsAAAAEAA0AAAAyAAwAAAAEAA4AAAAzAAoAAAAFAAwAAAAzAAsAAAAFAA0AAAAzAAwAAAAFAA4AAAAvAAsAAAAKAA0AAAAvAAwAAAAKAA4AAAAyAAkAAAAAAAoAAAAzAAkAAAABAAoAAAAxAAkAAAACAAoAAAA0AAwAAAAIAA0AAAA0AA0AAAAIAA4AAAA0AAsAAAACAAwAAAA1AAwAAAAAAA0AAAA1AA0AAAAAAA4AAAA2AAwAAAABAA0AAAA2AA0AAAABAA4AAAA5AAsAAAAAAA0AAAA5AAwAAAAAAA4AAAA6AAsAAAABAA0AAAA6AAwAAAABAA4AAAA5AA0AAAAGAAsAAAA6AA0AAAAHAAsAAAA7AAwAAAAIAA0AAAA7AA0AAAAIAA4AAAA7AAsAAAACAAoAAAA8AA4AAAAGAA0AAAA8AA8AAAAGAA4AAAA9AA4AAAAHAA0AAAA9AA8AAAAHAA4AAAA8AA0AAAAAAAwAAAA9AA0AAAABAAwAAABAAA0AAAAAAAwAAABBAA0AAAABAAwAAABEAA4AAAAAAAwAAABEAA8AAAADAAwAAABEABAAAAADAA0AAABFAA4AAAABAAwAAABFAA8AAAAEAAwAAABFABAAAAAEAA0AAABGAA4AAAAAAAwAAABGAA8AAAAFAAwAAABGABAAAAAFAA0AAABHAA4AAAABAAwAAABEABEAAAADAA4AAABFABEAAAAEAA4AAABGABEAAAAFAA4AAABHAA8AAAAIAA0AAABHABAAAAAIAA4AAABHABEAAAAJAAwAAABAAA4AAAAIAAcAAABBAA4AAAAJAAYAAABLAA8AAAAIAAwAAABMAA8AAAAGAA0AAABMABAAAAAGAA4AAABNAA8AAAAHAA0AAABNABAAAAAHAA4AAABLAA4AAAAAAAoAAABMAA4AAAABAAoAAABNAA4AAAACAAoAAABOAA8AAAAAAA0AAABOABAAAAAAAA4AAABPAA8AAAABAA0AAABPABAAAAABAA4AAABQABAAAAAIAA0AAABQABEAAAAIAA4AAABQAA8AAAACAAwAAABTAA8AAAACAAwAAABUAA4AAAACAAoAAABUAA8AAAAIAAwAAAA=")
-tile_set = SubResource("TileSet_nrtow")
+tile_set = SubResource("TileSet_t5d4c")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="TileMapLayer" unique_id=207461933]
+[node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=479263427]
 tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAAAqAAoAAQAJAAgAAAArAAoAAQAKAAgAAAAsAAoAAQALAAgAAAAtAAoAAQAMAAgAAAAuAAoAAQANAAgAAAA0AAgAAQAHAAEAAAA0AAkAAQAHAAIAAAA0AAoAAQAHAAMAAAA1AAsAAQAMAAEAAABEAAsAAQAKAAEAAABEAAwAAQAKAAIAAABEAA0AAQAKAAMAAABFAA0AAQAKAAMAAABDAA0AAQAJAAMAAAAfAAcAAQAJAAUAAAANAAYAAQAMAAIAAAANAAcAAQAMAAMAAAAMAAcAAQAMAAEAAAAIAAUAAQAHAAEAAAAIAAYAAQAHAAIAAAAIAAcAAQAHAAMAAABQAA4AAQAMAAEAAAA=")
-tile_set = SubResource("TileSet_kara3")
+tile_set = SubResource("TileSet_uc3s5")
 
-[node name="Key" parent="." unique_id=155803228 instance=ExtResource("5_nrd0i")]
-position = Vector2(1352, 223)
-
-[node name="Enemy" parent="." unique_id=2006298918 instance=ExtResource("5_0knnk")]
+[node name="Enemy" parent="." index="5" unique_id=2006298918 instance=ExtResource("5_0knnk")]
 position = Vector2(620, 112)
 
-[node name="Enemy2" parent="." unique_id=1311851140 instance=ExtResource("5_0knnk")]
+[node name="Enemy2" parent="." index="6" unique_id=141848646 instance=ExtResource("5_0knnk")]
 position = Vector2(1128, 208)
 
-[node name="Enemy3" parent="." unique_id=344613952 instance=ExtResource("5_0knnk")]
+[node name="Enemy3" parent="." index="7" unique_id=1959948556 instance=ExtResource("5_0knnk")]
 position = Vector2(1274, 224)
 
-[node name="Enemy4" parent="." unique_id=516339057 instance=ExtResource("5_0knnk")]
+[node name="Enemy4" parent="." index="8" unique_id=1044766185 instance=ExtResource("5_0knnk")]
 position = Vector2(101, 96)
 
-[node name="Coin" parent="." unique_id=525547507 instance=ExtResource("6_j1jb0")]
+[node name="Coin" parent="." index="9" unique_id=525547507 instance=ExtResource("6_j1jb0")]
 position = Vector2(288, 96)
 
-[node name="Coin2" parent="." unique_id=1885633295 instance=ExtResource("6_j1jb0")]
+[node name="Coin2" parent="." index="10" unique_id=371922107 instance=ExtResource("6_j1jb0")]
 position = Vector2(415, 96)
 
-[node name="Coin3" parent="." unique_id=1238747962 instance=ExtResource("6_j1jb0")]
+[node name="Coin3" parent="." index="11" unique_id=4870176 instance=ExtResource("6_j1jb0")]
 position = Vector2(352, 97)
 
-[node name="Coin4" parent="." unique_id=1046974455 instance=ExtResource("6_j1jb0")]
+[node name="Coin4" parent="." index="12" unique_id=1530508229 instance=ExtResource("6_j1jb0")]
 position = Vector2(928, 161)
 
-[node name="Coin5" parent="." unique_id=243565535 instance=ExtResource("6_j1jb0")]
+[node name="Coin5" parent="." index="13" unique_id=670005816 instance=ExtResource("6_j1jb0")]
 position = Vector2(808, 135)
 
-[node name="Coin6" parent="." unique_id=94004891 instance=ExtResource("6_j1jb0")]
+[node name="Coin6" parent="." index="14" unique_id=749763958 instance=ExtResource("6_j1jb0")]
 position = Vector2(1226, 216)

@@ -9,13 +9,10 @@
 script = ExtResource("1_yheth")
 
 [node name="Player" parent="." unique_id=289370131 instance=ExtResource("1_a3kgd")]
-position = Vector2(45, 26)
+position = Vector2(16, 35)
 
 [node name="Key" parent="." unique_id=155803228 instance=ExtResource("2_yheth")]
-position = Vector2(228, -67)
+position = Vector2(51, 17)
 
 [node name="HUD" parent="." unique_id=150336644 node_paths=PackedStringArray("player") instance=ExtResource("3_dtys8")]
 player = NodePath("../Player")
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1986070048]
-position = Vector2(36, 93)
