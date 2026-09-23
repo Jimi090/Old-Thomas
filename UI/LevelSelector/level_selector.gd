@@ -26,37 +26,4 @@ func _ready() -> void:
 
 func lunch_level(level_scene_path: String):
 	var game: Node2D = load(level_scene_path).instantiate()
-	var short_path = level_scene_path.substr(6)
-
-	# add player
-	var player = preload("res://characters/player/player.tscn").instantiate()
-	player.position = Vector2(25, 0)
-	game.add_child(player)
-
-	# add HUD
-	var HUD = preload("res://UI/HUD/HUD.tscn").instantiate()
-	HUD.player = player
-	game.add_child(HUD)
-
-	# add Key(level end) mechanics
-	var key: Key = game.get_node("Key")
-	key.path_name = short_path.get_slice("/", 1)
-	key.level_name = short_path.get_slice("/", 2)
-
-	# don't add coins that had been collected
-	var nodes := game.get_children()
-	var coinCounter = 0
-
-	var collectedCoins = GameData.level_progress[short_path.get_slice("/", 1)][
-		short_path.get_slice("/", 2)
-	]
-	for node in nodes:
-		if node is Coin:
-			if coinCounter in collectedCoins:
-				node.queue_free()
-			else:
-				node.coinNumber = coinCounter
-				node.pathToItself = level_scene_path.substr(6)
-			coinCounter += 1
-
 	get_tree().change_scene_to_node(game)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://behvrkejtthtd"
-path="res://.godot/imported/smallcoolproj.png-486fc63ac273afa6a9e3798401380a43.ctex"
+uid="uid://bdpwngfus66oc"
+path="res://.godot/imported/bigcoolproj.png-d2b6c2d95cd6f6effa12b9fdbfa8d9ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectile/Projectile assets/smallcoolproj.png"
-dest_files=["res://.godot/imported/smallcoolproj.png-486fc63ac273afa6a9e3798401380a43.ctex"]
+source_file="res://characters/enemy/Fire Projectile/Projectile assets/bigcoolproj.png"
+dest_files=["res://.godot/imported/bigcoolproj.png-d2b6c2d95cd6f6effa12b9fdbfa8d9ca.ctex"]
 
 [params]
 

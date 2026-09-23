@@ -9,8 +9,10 @@ extends Character
 @export var GRAVITY := 1000
 @export var JUMP_FORCE := 200
 
+const PROJECTILE = preload("uid://cymdi8bpgwy1w")
+
 var damage := 20
-var attack_cooldown := 2
+var attack_cooldown := 2.5
 
 var direction: float
 
@@ -50,6 +52,17 @@ func _on_attack_range_body_entered(body: Character) -> void:
 			direction = 1
 		else:
 			direction = -1
-		basic_attack(attack_range, damage)
+		call_deferred("fire_attack", body)
 		await get_tree().create_timer(attack_cooldown).timeout
 	state = State.RUN
+
+
+func fire_attack(body: CharacterBody2D):
+	var fire: Fire_Projectile = PROJECTILE.instantiate()
+
+	fire.global_position = global_position
+	fire.damage = damage
+	fire.target_position = body.global_position
+	fire.speed = 100
+
+	get_tree().current_scene.add_child(fire)

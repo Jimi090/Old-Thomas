@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s2m84cx43s2t"
-path="res://.godot/imported/spritesheetver.png-e77fb14e0c6b23d44a0a0c8a99dac68d.ctex"
+uid="uid://dkg5e72i6cy2l"
+path="res://.godot/imported/smallestcircleproj.png-6cd791fe6f8aed83cbacc299a54895e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectile/Projectile assets/spritesheetver.png"
-dest_files=["res://.godot/imported/spritesheetver.png-e77fb14e0c6b23d44a0a0c8a99dac68d.ctex"]
+source_file="res://characters/enemy/Fire Projectile/Projectile assets/smallestcircleproj.png"
+dest_files=["res://.godot/imported/smallestcircleproj.png-6cd791fe6f8aed83cbacc299a54895e8.ctex"]
 
 [params]
 

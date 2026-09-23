@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfpcxuyyt6brx"]
 
 [ext_resource type="Script" uid="uid://d1aewfowog0rh" path="res://UI/HUD/hud.gd" id="1_yixhe"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="2_53dev"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
 bg_color = Color(0.2, 0.8, 0.2, 1)
@@ -45,3 +46,8 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 10
 text = "Gold: 0"
 horizontal_alignment = 2
+
+[node name="BackButton" parent="UI" unique_id=2064163710 instance=ExtResource("2_53dev")]
+layout_mode = 1
+offset_top = 4.0
+offset_bottom = 140.0

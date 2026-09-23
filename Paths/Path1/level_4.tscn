@@ -1,14 +1,13 @@
 [gd_scene format=4 uid="uid://ca87dxl0o3csd"]
 
+[ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_gw7ii"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="1_k3o4x"]
-[ext_resource type="Script" uid="uid://dy6fatpcbkxtn" path="res://Paths/Path1/levelstartcoin.gd" id="1_l4gq6"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="2_gw7ii"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="5_gw7ii"]
-[ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="5_k1adq"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_l4gq6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lolil"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4gq6"]
 texture = ExtResource("1_k3o4x")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.0791512, 8, -1.6187286, 8, 8, -8, 8)
@@ -401,11 +400,11 @@ texture = ExtResource("1_k3o4x")
 5:19/0 = 0
 5:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_nrtow"]
+[sub_resource type="TileSet" id="TileSet_85wvi"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lolil")
+sources/0 = SubResource("TileSetAtlasSource_l4gq6")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpksy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1adq"]
 texture = ExtResource("2_gw7ii")
 0:0/0 = 0
 1:0/0 = 0
@@ -420,7 +419,7 @@ texture = ExtResource("2_gw7ii")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bhpv2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58a74"]
 texture = ExtResource("3_l4gq6")
 3:0/0 = 0
 4:0/0 = 0
@@ -570,60 +569,56 @@ texture = ExtResource("3_l4gq6")
 15:8/0 = 0
 16:8/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_kara3"]
+[sub_resource type="TileSet" id="TileSet_ymtdt"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_fpksy")
-sources/1 = SubResource("TileSetAtlasSource_bhpv2")
+sources/0 = SubResource("TileSetAtlasSource_k1adq")
+sources/1 = SubResource("TileSetAtlasSource_58a74")
 
-[node name="Level1" type="Node2D" unique_id=1839978259]
-script = ExtResource("1_l4gq6")
+[node name="Level4" unique_id=1826943140 instance=ExtResource("1_gw7ii")]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1407503282]
+[node name="Player" parent="." index="0" unique_id=289370131]
+position = Vector2(41, 50)
+
+[node name="Key" parent="." index="1" unique_id=155803228]
+position = Vector2(1316, 37)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=624615222]
 tile_map_data = PackedByteArray("AAABAAYAAAAAAAMAAAABAAcAAAAAAAQAAAACAAYAAAABAAMAAAACAAcAAAABAAQAAAABAAgAAAADAAIAAAABAAkAAAADAAMAAAABAAoAAAADAAQAAAACAAgAAAAEAAIAAAACAAkAAAAEAAMAAAACAAoAAAAEAAQAAAADAAgAAAAFAAIAAAADAAkAAAAFAAMAAAADAAoAAAAFAAQAAAADAAcAAAACAAIAAAAGAAYAAAAAAAMAAAAGAAcAAAAAAAQAAAAHAAYAAAABAAMAAAAHAAcAAAABAAQAAAAIAAUAAAACAAMAAAAIAAYAAAACAAQAAAAJAAUAAAADAAIAAAAJAAYAAAADAAMAAAAJAAcAAAADAAQAAAAKAAUAAAAEAAIAAAAKAAYAAAAEAAMAAAAKAAcAAAAEAAQAAAALAAUAAAAFAAIAAAALAAYAAAAFAAMAAAALAAcAAAAFAAQAAAAIAAcAAAAIAAIAAAAJAAQAAAAAAAIAAAAKAAQAAAABAAIAAAALAAQAAAACAAIAAAAUAAQAAAACAAMAAAAUAAUAAAACAAQAAAAVAAMAAAAAAAMAAAAVAAQAAAAAAAQAAAAVAAUAAAAGAAIAAAAWAAMAAAABAAMAAAAWAAQAAAABAAQAAAAWAAUAAAAHAAIAAAAXAAIAAAAAAAMAAAAXAAMAAAAAAAQAAAAXAAQAAAAGAAMAAAAXAAUAAAAGAAQAAAAYAAIAAAABAAMAAAAYAAMAAAABAAQAAAAYAAQAAAAHAAMAAAAYAAUAAAAHAAQAAAAPAAQAAAADABIAAAAPAAUAAAADABMAAAAQAAQAAAAEABIAAAAQAAUAAAAEABMAAAAZAAMAAAACAAMAAAAZAAQAAAACAAQAAAAaAAQAAAACAAIAAAAZAAUAAAAGAAIAAAAaAAUAAAAHAAIAAAAXAAYAAAAGAAcAAAAYAAYAAAAHAAcAAAAWAAYAAAAIAAYAAAAZAAYAAAAJAAYAAAAHAAgAAAAGAAcAAAAIAAgAAAAHAAcAAAAJAAgAAAAIAAcAAAAKAAgAAAAIAAYAAAAfAAQAAAAAAAMAAAAfAAUAAAAAAAQAAAAgAAQAAAABAAMAAAAgAAUAAAABAAQAAAAhAAQAAAADAAIAAAAhAAUAAAADAAMAAAAhAAYAAAADAAQAAAAiAAQAAAAEAAIAAAAiAAUAAAAEAAMAAAAiAAYAAAAEAAQAAAAjAAQAAAAFAAIAAAAjAAUAAAAFAAMAAAAjAAYAAAAFAAQAAAAhAAMAAAAAAAIAAAAiAAMAAAABAAIAAAAjAAMAAAACAAIAAAAfAAYAAAAGAAcAAAAgAAYAAAAHAAcAAAAhAAcAAAAGAAcAAAAiAAcAAAAHAAcAAAAjAAcAAAAJAAYAAAAnAAIAAAAAAAMAAAAnAAMAAAAAAAQAAAAoAAIAAAABAAMAAAAoAAMAAAABAAQAAAApAAEAAAACAAMAAAApAAIAAAACAAQAAAApAAMAAAAIAAIAAAAqAAEAAAAGAAMAAAAqAAIAAAAGAAQAAAArAAEAAAAHAAMAAAArAAIAAAAHAAQAAAAqAAAAAAAAAAIAAAArAAAAAAABAAIAAAAsAAEAAAAGAAMAAAAsAAIAAAAGAAQAAAAtAAEAAAAHAAMAAAAtAAIAAAAHAAQAAAAsAAAAAAAAAAIAAAAtAAAAAAABAAIAAAAuAAEAAAACAAIAAAAuAAIAAAAGAAIAAAAvAAIAAAAHAAIAAAAqAAMAAAAGAAcAAAArAAMAAAAHAAcAAAAsAAMAAAAIAAcAAAAtAAMAAAAJAAcAAAAvAAEAAAACAAoAAAAxAAUAAAAAAAMAAAAxAAYAAAAAAAQAAAAyAAUAAAABAAMAAAAyAAYAAAABAAQAAAAzAAYAAAACAAMAAAAzAAcAAAACAAQAAAA0AAgAAAAGAAMAAAA0AAkAAAAGAAQAAAA1AAgAAAAHAAMAAAA1AAkAAAAHAAQAAAA0AAcAAAAAAAIAAAA1AAcAAAABAAIAAAAyAAcAAAAIAAMAAAAzAAgAAAAIAAIAAAAyAAgAAAAIAAQAAAA2AAcAAAAAAAMAAAA2AAgAAAAAAAQAAAA3AAcAAAABAAMAAAA3AAgAAAABAAQAAAA2AAkAAAAGAAIAAAA3AAkAAAAHAAIAAAA4AAcAAAAAAAMAAAA4AAgAAAAAAAQAAAA5AAcAAAABAAMAAAA5AAgAAAABAAQAAAA5AAkAAAAGAAIAAAA6AAkAAAAHAAIAAAA4AAkAAAAIAAIAAAA7AAgAAAACAAMAAAA7AAkAAAACAAQAAAA6AAgAAAACAAIAAAA8AAkAAAAAAAIAAAA9AAkAAAABAAIAAAAzAAAAAAAAAAIAAAA0AAAAAAABAAIAAAA1AP//AAAAAAMAAAA1AAAAAAAAAAQAAAA2AP//AAABAAMAAAA2AAAAAAABAAQAAAA3AP//AAADAAIAAAA3AAAAAAADAAMAAAA3AAEAAAADAAQAAAA4AP//AAAEAAIAAAA4AAAAAAAEAAMAAAA4AAEAAAAEAAQAAAA5AP//AAAFAAIAAAA5AAAAAAAFAAMAAAA5AAEAAAAFAAQAAAA3AP7/AAAAAAIAAAA4AP7/AAABAAIAAAA5AP7/AAACAAIAAAA1AAEAAAAGAAIAAAA2AAEAAAAHAAIAAAA0AAEAAAAKAAEAAAA+AAgAAAACAAMAAAA+AAkAAAACAAQAAAA/AAcAAAAAAAMAAAA/AAgAAAAAAAQAAABAAAcAAAABAAMAAABAAAgAAAABAAQAAAA/AAkAAAAGAAIAAABAAAkAAAAHAAIAAABBAAcAAAADAAIAAABBAAgAAAADAAMAAABBAAkAAAADAAQAAABCAAcAAAAEAAIAAABCAAgAAAAEAAMAAABCAAkAAAAEAAQAAABDAAcAAAAFAAIAAABDAAgAAAAFAAMAAABDAAkAAAAFAAQAAABBAAYAAAACAAIAAABCAAYAAAAAAAIAAABDAAYAAAABAAIAAAA8AP//AAADABIAAAA8AAAAAAADABMAAAA9AP//AAAEABIAAAA9AAAAAAAEABMAAABAAP//AAADAAIAAABAAAAAAAADAAMAAABAAAEAAAADAAQAAABBAP//AAAEAAIAAABBAAAAAAAEAAMAAABBAAEAAAAEAAQAAABCAP//AAAFAAIAAABCAAAAAAAFAAMAAABCAAEAAAAFAAQAAABCAP7/AAACAAIAAABAAP7/AAAAAAIAAABBAP7/AAABAAIAAABDAAAAAAAAAAMAAABDAAEAAAAAAAQAAABEAAAAAAABAAMAAABEAAEAAAABAAQAAABEAAUAAAAAAAMAAABEAAYAAAAAAAQAAABFAAUAAAABAAMAAABFAAYAAAABAAQAAABEAAgAAAAGAAMAAABEAAkAAAAGAAQAAABFAAgAAAAHAAMAAABFAAkAAAAHAAQAAABEAAcAAAAGAAIAAABFAAcAAAAHAAIAAABGAAUAAAADAAIAAABGAAYAAAADAAMAAABGAAcAAAADAAQAAABHAAUAAAAEAAIAAABHAAYAAAAEAAMAAABHAAcAAAAEAAQAAABIAAUAAAAFAAIAAABIAAYAAAAFAAMAAABIAAcAAAAFAAQAAABGAAQAAAAAAAAAAABHAAQAAAABAAAAAABIAAQAAAACAAAAAABOAAUAAAAIAAMAAABOAAYAAAAIAAQAAABOAAQAAAACAAUAAABPAAQAAAAAAAMAAABPAAUAAAAAAAQAAABQAAQAAAABAAMAAABQAAUAAAABAAQAAABPAAYAAAAGAAIAAABQAAYAAAAHAAIAAABRAAMAAAACAAMAAABRAAQAAAACAAQAAABRAAUAAAAGAAMAAABRAAYAAAAGAAQAAABSAAUAAAAHAAMAAABSAAYAAAAHAAQAAABSAAMAAAACAAIAAABSAAQAAAAIAAIAAAA=")
-tile_set = SubResource("TileSet_nrtow")
+tile_set = SubResource("TileSet_85wvi")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=207461933]
+[node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=1947384826]
 tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAAAbAAQAAQAJAAgAAAAcAAQAAQAKAAgAAAAdAAQAAQALAAgAAAAeAAQAAQAMAAgAAAAfAAQAAQANAAgAAABJAAUAAQAJAAgAAABKAAUAAQAKAAgAAABLAAUAAQALAAgAAABMAAUAAQAMAAgAAABNAAUAAQANAAgAAAA4APv/AQAHAAEAAAA4APz/AQAHAAIAAAA4AP3/AQAHAAMAAAA5AP3/AQAMAAEAAABFAAQAAQAJAAUAAAA1AAQAAQAKAAEAAAA1AAUAAQAKAAIAAAA1AAYAAQAKAAMAAAA0AAYAAQAJAAMAAAA2AAYAAQAMAAEAAABDAP7/AQAMAAIAAABDAP//AQAMAAMAAAAiAAAAAQAHAAEAAAAiAAEAAQAHAAIAAAAiAAIAAQAHAAMAAAAjAAIAAQAJAAUAAAAqAP//AQAMAAEAAAAsAP3/AQAKAAEAAAAsAP7/AQAKAAIAAAAsAP//AQAKAAMAAAArAP//AQAJAAMAAAAtAP//AQALAAMAAAAKAAEAAQAHAAEAAAAKAAIAAQAHAAIAAAAKAAMAAQAHAAMAAAAJAAMAAQAIAAIAAABEAP//AQAIAAIAAAA=")
-tile_set = SubResource("TileSet_kara3")
+tile_set = SubResource("TileSet_ymtdt")
 
-[node name="Key" parent="." unique_id=155803228 instance=ExtResource("5_k1adq")]
-position = Vector2(1319, 37)
-
-[node name="Enemy" parent="." unique_id=2006298918 instance=ExtResource("5_gw7ii")]
+[node name="Enemy" parent="." index="5" unique_id=2006298918 instance=ExtResource("5_gw7ii")]
 position = Vector2(864, -31)
 
-[node name="Enemy2" parent="." unique_id=1736438692 instance=ExtResource("5_gw7ii")]
+[node name="Enemy2" parent="." index="6" unique_id=494445774 instance=ExtResource("5_gw7ii")]
 position = Vector2(356, 32)
 
-[node name="Enemy3" parent="." unique_id=1893922013 instance=ExtResource("5_gw7ii")]
+[node name="Enemy3" parent="." index="7" unique_id=246185343 instance=ExtResource("5_gw7ii")]
 position = Vector2(914, 96)
 
-[node name="Enemy4" parent="." unique_id=2053003049 instance=ExtResource("5_gw7ii")]
+[node name="Enemy4" parent="." index="8" unique_id=710527861 instance=ExtResource("5_gw7ii")]
 position = Vector2(1153, 56)
 
-[node name="Enemy5" parent="." unique_id=1324832201 instance=ExtResource("5_gw7ii")]
+[node name="Enemy5" parent="." index="9" unique_id=87181825 instance=ExtResource("5_gw7ii")]
 position = Vector2(116, 80)
 
-[node name="Coin" parent="." unique_id=525547507 instance=ExtResource("6_l4gq6")]
+[node name="Coin" parent="." index="10" unique_id=525547507 instance=ExtResource("6_l4gq6")]
 position = Vector2(257, 49)
-pathToItself = "Paths/Path1/level_4.tscn"
 
-[node name="Coin2" parent="." unique_id=1093796778 instance=ExtResource("6_l4gq6")]
+[node name="Coin2" parent="." index="11" unique_id=1191198511 instance=ExtResource("6_l4gq6")]
 position = Vector2(640, 19)
-pathToItself = "Paths/Path1/level_4.tscn"
 
-[node name="Coin3" parent="." unique_id=1033670628 instance=ExtResource("6_l4gq6")]
+[node name="Coin3" parent="." index="12" unique_id=1536961559 instance=ExtResource("6_l4gq6")]
 position = Vector2(1048, -47)
-pathToItself = "Paths/Path1/level_4.tscn"
 
-[node name="Coin4" parent="." unique_id=989065285 instance=ExtResource("6_l4gq6")]
+[node name="Coin4" parent="." index="13" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
 position = Vector2(976, -30)
-pathToItself = "Paths/Path1/level_4.tscn"
 
-[node name="Coin5" parent="." unique_id=106688526 instance=ExtResource("6_l4gq6")]
+[node name="Coin5" parent="." index="14" unique_id=1214575219 instance=ExtResource("6_l4gq6")]
 position = Vector2(976, 130)
-pathToItself = "Paths/Path1/level_4.tscn"
 
-[node name="Coin6" parent="." unique_id=540836141 instance=ExtResource("6_l4gq6")]
+[node name="Coin6" parent="." index="15" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
 position = Vector2(801, 67)
-pathToItself = "Paths/Path1/level_4.tscn"
