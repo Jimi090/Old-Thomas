@@ -20,5 +20,5 @@ func _ready() -> void:
 
 	health_bar.max_value = player.max_health
 	health_bar.value = player.max_health
-	
+
 	gold_label.text = "Gold: " + str(GameData.gold)

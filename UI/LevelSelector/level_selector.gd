@@ -28,7 +28,7 @@ func lunch_level(level_scene_path: String):
 	var game: Node2D = load(level_scene_path).instantiate()
 	var short_path = level_scene_path.substr(6)
 
-	# add player
+	'# add player
 	var player = preload("res://characters/player/player.tscn").instantiate()
 	player.position = Vector2(25, 0)
 	game.add_child(player)
@@ -42,6 +42,7 @@ func lunch_level(level_scene_path: String):
 	var key: Key = game.get_node("Key")
 	key.path_name = short_path.get_slice("/", 1)
 	key.level_name = short_path.get_slice("/", 2)
+	'
 
 	# don't add coins that had been collected
 	var nodes := game.get_children()
