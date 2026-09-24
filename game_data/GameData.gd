@@ -1,7 +1,6 @@
 extends Node
 
 const SAVE_PATH := "user://save.json"
-
 signal gold_changed(new_amount)
 var gold: int = 0:
 	set(value):
@@ -9,6 +8,7 @@ var gold: int = 0:
 		gold_changed.emit(gold)
 
 var level_progress := { }
+const default_level_progress = { "finished": false, "coinsCollected": [], "chestsCollected": [] }
 
 
 func save_data():
@@ -63,7 +63,7 @@ func get_empty_level_progress():
 
 		level_progress[path] = { }
 		for level in levels:
-			level_progress[path][level] = { "finished": false, "coinsCollected": [] }
+			level_progress[path][level] = default_level_progress
 
 
 func clear_save():

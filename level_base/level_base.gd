@@ -11,9 +11,11 @@ func _ready() -> void:
 	key.level_name = level
 
 	var nodes := get_children()
-	var coinCounter = 0
+	var coinCounter := 0
+	var chestCounter := 0
 
 	var collectedCoins = GameData.level_progress[path][level]["coinsCollected"]
+	var collectedChests = GameData.level_progress[path][level]["chestsCollected"]
 	for node in nodes:
 		if node is Coin:
 			if coinCounter in collectedCoins:
@@ -23,3 +25,12 @@ func _ready() -> void:
 				node.path = path
 				node.level = level
 			coinCounter += 1
+		if node is Chest:
+			if chestCounter in collectedChests:
+				node.opened = true
+				node.animated_sprite_2d.play("opened")
+			else:
+				node.chest_number = chestCounter
+				node.path = path
+				node.level = level
+			chestCounter += 1

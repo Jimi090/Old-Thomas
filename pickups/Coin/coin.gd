@@ -12,6 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		GameData.gold += value
 
 		# mark as collected
-		GameData.level_progress[path][level]["coinsCollected"].append(coinNumber)
+		if path and level:
+			GameData.level_progress[path][level]["coinsCollected"].append(coinNumber)
 
 		queue_free()

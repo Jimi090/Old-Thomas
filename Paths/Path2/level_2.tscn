@@ -1,5 +1,19 @@
 [gd_scene format=3 uid="uid://bw8liqc3nbyrj"]
 
 [ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_jdvot"]
+[ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="2_xoy1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_478fi"]
+size = Vector2(332, 20)
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_jdvot")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3" unique_id=1869770496]
+position = Vector2(11, 142)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1330188846]
+position = Vector2(156, 0)
+shape = SubResource("RectangleShape2D_478fi")
+
+[node name="Chest" parent="." index="4" unique_id=1623759673 instance=ExtResource("2_xoy1p")]
+position = Vector2(303, 108)
