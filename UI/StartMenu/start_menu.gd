@@ -11,8 +11,7 @@ func _ready() -> void:
 
 
 func new_game():
-	var mainMenu = preload("res://UI/MainMenu/MainMenu.tscn").instantiate()
-	get_tree().change_scene_to_node(mainMenu)
+	get_tree().change_scene_to_file("res://Cutscenes/cutscene.tscn")
 
 
 func exit_game():
