@@ -2,6 +2,7 @@ class_name Player
 extends Character
 
 signal health_changed(new_health)
+signal player_died
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var basic_attack_range: Area2D = $BasicAttackRange
@@ -80,6 +81,7 @@ func die():
 	# temporary solution
 	position = Vector2(25, 0)
 	health = max_health
+	player_died.emit()
 
 
 func boost_attack(multiplier: float) -> void:

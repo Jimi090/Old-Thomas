@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var key: Key = $Key
+@onready var player: Player = $Player
 
 
 func _ready() -> void:
@@ -34,3 +35,8 @@ func _ready() -> void:
 				node.path = path
 				node.level = level
 			chestCounter += 1
+	player.player_died.connect(_on_player_death)
+
+
+func _on_player_death():
+	get_tree().reload_current_scene()

@@ -8,6 +8,9 @@ size = Vector2(332, 20)
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_jdvot")]
 
+[node name="Key" parent="." index="1" unique_id=155803228]
+position = Vector2(106, 73)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="3" unique_id=1869770496]
 position = Vector2(11, 142)
 
