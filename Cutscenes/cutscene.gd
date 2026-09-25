@@ -19,12 +19,11 @@ var is_typing: bool = false
 
 func _ready() -> void:
 	if anim_player:
-		anim_player.play("animation")
+		anim_player.play("RESET")
 
 	if prompt_label:
 		prompt_label.hide()
-		
-	story_label.text = ""
+		story_label.text = ""
 	current_page = 0
 	current_char = 0
 	is_typing = true
@@ -53,6 +52,8 @@ func _input(event: InputEvent) -> void:
 			is_typing = true
 			if prompt_label:
 				prompt_label.hide()
+			if current_page == 1 and anim_player:
+				anim_player.play("Home fade")
 		else:
 			go_to_village()
 

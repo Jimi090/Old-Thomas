@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/story_label.gd" id="3_1rxc4"]
 [ext_resource type="Texture2D" uid="uid://cnnfktkmo8pjb" path="res://Cutscenes/assets/scroll.png" id="4_gp3my"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="5_yb8uu"]
+[ext_resource type="Texture2D" uid="uid://hivt0gxcmtfy" path="res://Cutscenes/assets/home.png" id="6_yoo65"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
@@ -15,8 +16,24 @@ font_size = 8
 font = ExtResource("2_1rxc4")
 font_size = 10
 
+[sub_resource type="Animation" id="Animation_yoo65"]
+resource_name = "Home fade"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Home:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0054247375, 1.0003215),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_gp3my"]
-length = 1.3
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,22 +41,58 @@ tracks/0/path = NodePath("Scroll:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.033333335, 1.3666667, 5.0007634, 6.3626847, 6.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-38, 99), Vector2(113, 99)]
+"values": [Vector2(-38, 99), Vector2(113, 99), Vector2(113, 99), Vector2(21.375, 141.125), Vector2(-110, 146.00002)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/path = NodePath("Thomas:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.3666667, 5.0007634, 6.366667, 6.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(354, 100.875), Vector2(223.00002, 100.875)]
+"values": [Vector2(354, 100.875), Vector2(223.00002, 100.875), Vector2(223.00002, 100.875), Vector2(288.00003, 145.99998), Vector2(383.00003, 146)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Thomas:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.031463478, 1.3669882, 5.001085, 6.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5, 3.874), Vector2(5, 4.048), Vector2(5, 4.048), Vector2(8.795835, 7.3009863)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scroll:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.3659034, 5, 6.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4, 4.062), Vector2(4, 3.828), Vector2(4, 3.828), Vector2(8.328125, 7.734375)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Home:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_yb8uu"]
@@ -60,6 +113,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yoo65"]
 _data = {
+&"Home fade": SubResource("Animation_yoo65"),
 &"RESET": SubResource("Animation_gp3my"),
 &"animation": SubResource("Animation_yb8uu")
 }
@@ -107,13 +161,21 @@ libraries/ = SubResource("AnimationLibrary_yoo65")
 
 [node name="Scroll" type="Sprite2D" parent="." unique_id=152247724]
 position = Vector2(-38, 99)
-scale = Vector2(3.5625, 3.5625)
+scale = Vector2(4, 4.062)
 texture = ExtResource("4_gp3my")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1159063195]
+[node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
-scale = Vector2(4.5, 3.9868414)
+scale = Vector2(5, 3.874)
 texture = ExtResource("5_yb8uu")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)
+
+[node name="Home" type="Sprite2D" parent="." unique_id=1983890598]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(165.56252, 101.49999)
+scale = Vector2(5.179686, 5.0625)
+texture = ExtResource("6_yoo65")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336525315]
