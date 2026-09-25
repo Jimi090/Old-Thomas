@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bmhdpdeppso3d"]
 
 [ext_resource type="Script" uid="uid://bw12ymjtwoc2j" path="res://Cutscenes/cutscene.gd" id="1_qce0b"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/PixelOperator8.ttf" id="2_1rxc4"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_1rxc4"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/story_label.gd" id="3_1rxc4"]
+[ext_resource type="Texture2D" uid="uid://cnnfktkmo8pjb" path="res://Cutscenes/assets/scroll.png" id="4_gp3my"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="5_yb8uu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
@@ -12,6 +14,55 @@ font_size = 8
 [sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
 font = ExtResource("2_1rxc4")
 font_size = 10
+
+[sub_resource type="Animation" id="Animation_gp3my"]
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scroll:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-38, 99), Vector2(113, 99)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(354, 100.875), Vector2(223.00002, 100.875)]
+}
+
+[sub_resource type="Animation" id="Animation_yb8uu"]
+resource_name = "animation"
+length = 1.3666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scroll:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-66, 105), Vector2(100, 105)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yoo65"]
+_data = {
+&"RESET": SubResource("Animation_gp3my"),
+&"animation": SubResource("Animation_yb8uu")
+}
 
 [node name="Cutscene" type="Control" unique_id=1136009752]
 layout_mode = 3
@@ -50,3 +101,19 @@ offset_right = 361.0
 offset_bottom = 181.0
 text = "Press Space to Continue"
 label_settings = SubResource("LabelSettings_7c6ys")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1152033746]
+libraries/ = SubResource("AnimationLibrary_yoo65")
+
+[node name="Scroll" type="Sprite2D" parent="." unique_id=152247724]
+position = Vector2(-38, 99)
+scale = Vector2(3.5625, 3.5625)
+texture = ExtResource("4_gp3my")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1159063195]
+position = Vector2(354, 100.875)
+scale = Vector2(4.5, 3.9868414)
+texture = ExtResource("5_yb8uu")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 19.046265)
