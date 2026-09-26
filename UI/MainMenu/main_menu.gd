@@ -6,10 +6,11 @@ extends Control
 @onready var not_available_popup: AcceptDialog = $NotAvailablePopup
 @onready var shop_btn: Button = $ShopBtn
 @onready var church_btn: Button = $ChurchBtn
+const SHOP = preload("uid://tf36yngqrqgr")
 
 
 func _ready() -> void:
-	shop_btn.pressed.connect(_on_click_not_available)
+	shop_btn.pressed.connect(open_shop)
 	church_btn.pressed.connect(_on_click_not_available)
 	path_1.pressed.connect(_on_click_path_button.bind(path_1.path_number))
 	path_2.pressed.connect(_on_click_path_button.bind(path_2.path_number))
@@ -25,3 +26,8 @@ func _on_click_path_button(path_number: int):
 func _on_click_not_available():
 	not_available_popup.popup_centered()
 	not_available_popup.show()
+
+
+func open_shop():
+	var shop = SHOP.instantiate()
+	get_tree().change_scene_to_node(shop)

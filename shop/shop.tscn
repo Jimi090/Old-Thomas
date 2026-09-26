@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://shop/assets/sword.png" id="1_sxvro"]
 [ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://shop/assets/shield.png" id="2_givde"]
 [ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://shop/shop_item.tscn" id="3_givde"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="5_gy7ao"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
 bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
@@ -91,5 +92,10 @@ offset_right = 313.0
 offset_bottom = 26.0
 theme_override_font_sizes/font_size = 10
 text = "Gold: "
+
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("5_gy7ao")]
+layout_mode = 1
+offset_top = 4.0
+offset_bottom = 140.0
 
 [connection signal="pressed" from="Buy_btn" to="." method="_on_buy_btn_pressed"]
