@@ -2,17 +2,30 @@ extends Node
 
 const SAVE_PATH := "user://save.json"
 signal gold_changed(new_amount)
+signal upgrades_changed
+const default_level_progress = { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+
+# Variables to save
 var gold: int = 0:
 	set(value):
 		gold = value
 		gold_changed.emit(gold)
 
 var level_progress := { }
-const default_level_progress = { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+
+var upgrades := {
+	"Attack_upgrade": { "level": 0, "maxLevel": 5 },
+	"Health_upgrade": { "level": 0, "maxLevel": 5 },
+}:
+	set(value):
+		upgrades = value
+		upgrades_changed.emit()
+
+###
 
 
 func save_data():
-	var data = { "gold": gold, "level_progress": level_progress }
+	var data = { "gold": gold, "level_progress": level_progress, "upgrades": upgrades }
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -29,6 +42,8 @@ func load_data():
 
 	gold = data.get("gold", 0)
 	level_progress = data.get("level_progress")
+	if data.get("upgrades"):
+		upgrades = data.get("upgrades")
 
 
 func _ready() -> void:
@@ -68,5 +83,10 @@ func get_empty_level_progress():
 
 func clear_save():
 	gold = 0
+	upgrades = {
+		"Attack_upgrade": { "level": 0, "maxLevel": 5 },
+		"Health_upgrade": { "level": 0, "maxLevel": 5 },
+	}
 	get_empty_level_progress()
 	save_data()
+	get_tree().quit()

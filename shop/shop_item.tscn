@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://3y4hq5p2lg5p"]
+
+[ext_resource type="Script" uid="uid://ba3gy8qctldal" path="res://shop/shop_item.gd" id="1_dgxqr"]
+[ext_resource type="Texture2D" uid="uid://cuxtpttm6sod2" path="res://shop/assets/diamonds.png" id="2_x1owf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxvro"]
+bg_color = Color(0.46475327, 0.46426618, 0.272708, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Shop_item" type="Panel" unique_id=775961121]
+offset_right = 320.0
+offset_bottom = 320.0
+scale = Vector2(0.15, 0.15)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sxvro")
+script = ExtResource("1_dgxqr")
+
+[node name="Button" type="Button" parent="." unique_id=1945297369]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.02
+anchor_right = 0.5
+anchor_bottom = 0.02
+offset_left = -130.0
+offset_top = 3.999999
+offset_right = 134.0
+offset_bottom = 268.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("2_x1owf")
+flat = true
+
+[node name="DiamondsContainer" type="HBoxContainer" parent="." unique_id=1037767489]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 1520.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+theme_override_constants/separation = 80
+
+[node name="Diamond1" type="TextureRect" parent="DiamondsContainer" unique_id=1315880097]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_x1owf")
+
+[node name="Diamond2" type="TextureRect" parent="DiamondsContainer" unique_id=868065423]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_x1owf")
+
+[node name="Diamond3" type="TextureRect" parent="DiamondsContainer" unique_id=1462984857]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_x1owf")
+
+[node name="Diamond4" type="TextureRect" parent="DiamondsContainer" unique_id=1067603901]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_x1owf")
+
+[node name="Diamond5" type="TextureRect" parent="DiamondsContainer" unique_id=1069620355]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_x1owf")
+
+[connection signal="pressed" from="Button" to="." method="_on_shop_item_pressed"]
