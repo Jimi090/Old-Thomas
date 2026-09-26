@@ -3,7 +3,8 @@ extends Control
 @onready var path_1: Button = $Path1
 @onready var path_2: Button = $Path2
 @onready var path_3: Button = $Path3
-@onready var not_available_popup: AcceptDialog = $NotAvailablePopup
+@onready var not_available_popup: Panel = $NotAvailablePopup
+@onready var close_pupup_button: Button = $NotAvailablePopup/Button
 @onready var shop_btn: Button = $ShopBtn
 @onready var church_btn: Button = $ChurchBtn
 const SHOP = preload("uid://tf36yngqrqgr")
@@ -23,11 +24,14 @@ func _on_click_path_button(path_number: int):
 	get_tree().change_scene_to_node(lvlSelector)
 
 
-func _on_click_not_available():
-	not_available_popup.popup_centered()
-	not_available_popup.show()
-
-
 func open_shop():
 	var shop = SHOP.instantiate()
 	get_tree().change_scene_to_node(shop)
+
+
+func _on_click_not_available():
+	not_available_popup.show()
+
+
+func _on_button_pressed() -> void:
+	not_available_popup.hide()
