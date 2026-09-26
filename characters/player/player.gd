@@ -19,7 +19,10 @@ var direction: float
 
 
 func _ready() -> void:
-	max_health = 100
+	var health_multiplayer = GameData.upgrades["Health_upgrade"]["level"]
+	max_health = 100 + health_multiplayer * 10
+	var damage_multiplayer = GameData.upgrades["Attack_upgrade"]["level"]
+	basic_attack_damage += damage_multiplayer
 	add_to_group("player")
 	super()
 
