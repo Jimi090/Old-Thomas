@@ -3,7 +3,8 @@ extends Node
 const SAVE_PATH := "user://save.json"
 signal gold_changed(new_amount)
 signal upgrades_changed
-const default_level_progress = { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+func get_default_level_progress() -> Dictionary:
+	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
 
 # Variables to save
 var gold: int = 0:
@@ -78,7 +79,9 @@ func get_empty_level_progress():
 
 		level_progress[path] = { }
 		for level in levels:
-			level_progress[path][level] = default_level_progress
+			level_progress[path] = { }
+		for level in levels:
+			level_progress[path][level] = get_default_level_progress() # Call the function here!
 
 
 func clear_save():
