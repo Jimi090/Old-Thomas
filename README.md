@@ -26,7 +26,17 @@ Jump: Space or W or Up Arrow
 
 Basic attack: J or Right Mouse Button
 
-Made by Jimi and Amira for Thirdspace <3 
+## Process of Creating this Game
+
+This game is made by Amira and Jimi!
+We had to go through many challanges and well as victories through the process of creating this game that you will/are have played!
+The big main problem is that we practically live opposite from each other location wise with a timezone different which really gets messed up with school and sleep time.
+To put this in perspective when Jimi is working Amira is at school and while Amira is working Jimi is sleeping!
+This created a problem with communication because if we couldn't continue or submit properly and are not able to ask the other teammate to help it is super hard!!!
+To solve this we made sure to share what we will do before hand and what we have after!
+Together we have worked so hard to create a game for others to enjoy!
+
+This was made for Thirdspace <3
 
 https://lillylike123.itch.io/old-thomas
 
