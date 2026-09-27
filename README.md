@@ -12,9 +12,14 @@ In the future there is also planned to be a town and some nice game music! (Hoor
 
 I hope you enjoy this adventure. Good luck!
 
+<img width="1184" height="722" alt="image (13)" src="https://github.com/user-attachments/assets/3cf3aae7-de72-4f29-9a44-6f3c42f00549" />
+
+
 ## Game Structure
 
 This game is structured very uniquely! You follow thomas as you finish paths one by one. Each path having four levels and with 2 paths being avaliable currently. Ontop of that you are also able to go to the shop and buy upgrades!
+
+<img width="1184" height="722" alt="image (14)" src="https://github.com/user-attachments/assets/aff2db82-8e41-45d3-9be7-7695a77da799" />
 
 ## Controls
 
@@ -36,18 +41,10 @@ This created a problem with communication because if we couldn't continue or sub
 To solve this we made sure to share what we will do before hand and what we have after!
 Together we have worked so hard to create a game for others to enjoy!
 
+<img width="2730" height="1683" alt="screenshot-thomas2" src="https://github.com/user-attachments/assets/63ca2c5d-8360-406a-8e0a-dc5e11120198" />
+
+
 This was made for Thirdspace <3
 
 https://lillylike123.itch.io/old-thomas
 
-## Process of Creating this Game
-
-This game is made by Amira and Jimi!
-We had to go through many challanges and well as victories through the process of creating this game that you will/are have played!
-The big main problem is that we practically live opposite from each other location wise with a timezone different which really gets messed up with school and sleep time.
-To put this in perspective when Jimi is working Amira is at school and while Amira is working Jimi is sleeping!
-This created a problem with communication because if we couldn't continue or submit properly and are not able to ask the other teammate to help it is super hard!!!
-To solve this we made sure to share what we will do before hand and what we have after!
-Together we have worked so hard to create a game for others to enjoy!
-
-This was made for Thirdspace <3
