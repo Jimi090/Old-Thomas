@@ -21,7 +21,6 @@ func _on_health_changed(health):
 	elif percent >= 30:
 		style.bg_color = "#FFD700"
 	else:
-		print('xd')
 		style.bg_color = "#FF3B30"
 
 	health_bar.add_theme_stylebox_override("fill", style)
