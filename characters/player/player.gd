@@ -21,8 +21,13 @@ var direction: float
 func _ready() -> void:
 	var health_multiplayer = GameData.upgrades["Health_upgrade"]["level"]
 	max_health = 100 + health_multiplayer * 10
+
 	var damage_multiplayer = GameData.upgrades["Attack_upgrade"]["level"]
 	basic_attack_damage += damage_multiplayer
+
+	var speed_multiplayer = GameData.upgrades["Speed_upgrade"]["level"]
+	SPEED += speed_multiplayer * 20
+
 	add_to_group("player")
 	super()
 
@@ -81,10 +86,15 @@ func heal(amount: int) -> void:
 
 
 func die():
-	# temporary solution
-	position = Vector2(25, 0)
-	health = max_health
-	player_died.emit()
+	# chance of revival
+	var random = randi_range(1, 100)
+	var chance = 2 * int(GameData.upgrades["Revival_upgrade"]["level"])
+
+	if random <= chance:
+		health = max_health
+		position.y -= 100
+	else:
+		player_died.emit()
 
 
 func boost_attack(multiplier: float) -> void:
