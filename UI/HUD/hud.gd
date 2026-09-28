@@ -12,6 +12,19 @@ func _on_gold_changed(amount):
 
 func _on_health_changed(health):
 	health_bar.value = health
+	var percent = float(health) / player.max_health * 100
+
+	var style := health_bar.get_theme_stylebox("fill").duplicate()
+
+	if percent >= 60:
+		style.bg_color = "#32CD32"
+	elif percent >= 30:
+		style.bg_color = "#FFD700"
+	else:
+		print('xd')
+		style.bg_color = "#FF3B30"
+
+	health_bar.add_theme_stylebox_override("fill", style)
 
 
 func _ready() -> void:

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="2_53dev"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
-bg_color = Color(0.2, 0.8, 0.2, 1)
+bg_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
