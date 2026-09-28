@@ -2,9 +2,9 @@
 
 ## Description
 
-Join Thomas on an adventure as he conquers hurdles, path by path. Destroy monsters, collect coins, and help Thomas evolve as a person. 
-Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime. 
-Path 1 is centred around harvest time, when leaves change and the winter chill is drawing near. 
+Join Thomas on an adventure as he conquers hurdles, path by path. Destroy monsters, collect coins, and help Thomas evolve as a person.
+Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
+Path 1 is centred around harvest time, when leaves change and the winter chill is drawing near.
 Path 2 continues that harvest time feeling as well as having special treasure chests hidden in the levels.
 Plus there are more paths are coming soon, so make sure to keep playing!
 Additonally there is also a shop where you can buy upgrades to level up thomas!
@@ -36,7 +36,7 @@ This created a problem with communication because if we couldn't continue or sub
 To solve this we made sure to share what we will do before hand and what we have after!
 Together we have worked so hard to create a game for others to enjoy!
 
-## Photos 
+## Photos
 
 <img width="1184" height="722" alt="image (13)" src="https://github.com/user-attachments/assets/3cf3aae7-de72-4f29-9a44-6f3c42f00549" />
 
@@ -48,4 +48,3 @@ Together we have worked so hard to create a game for others to enjoy!
 This was made for Thirdspace <3
 
 https://lillylike123.itch.io/old-thomas
-

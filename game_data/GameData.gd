@@ -3,8 +3,7 @@ extends Node
 const SAVE_PATH := "user://save.json"
 signal gold_changed(new_amount)
 signal upgrades_changed
-func get_default_level_progress() -> Dictionary:
-	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+
 
 # Variables to save
 var gold: int = 0:
@@ -14,10 +13,14 @@ var gold: int = 0:
 
 var level_progress := { }
 
-var upgrades := {
+const default_upgrades := {
 	"Attack_upgrade": { "level": 0, "maxLevel": 5 },
 	"Health_upgrade": { "level": 0, "maxLevel": 5 },
-}:
+	"Speed_upgrade": { "level": 0, "maxLevel": 5 },
+	"Revival_upgrade": { "level": 0, "maxLevel": 5 },
+}
+
+@onready var upgrades := default_upgrades:
 	set(value):
 		upgrades = value
 		upgrades_changed.emit()
@@ -86,10 +89,11 @@ func get_empty_level_progress():
 
 func clear_save():
 	gold = 0
-	upgrades = {
-		"Attack_upgrade": { "level": 0, "maxLevel": 5 },
-		"Health_upgrade": { "level": 0, "maxLevel": 5 },
-	}
+	upgrades = default_upgrades
 	get_empty_level_progress()
 	save_data()
 	get_tree().quit()
+
+
+func get_default_level_progress() -> Dictionary:
+	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }

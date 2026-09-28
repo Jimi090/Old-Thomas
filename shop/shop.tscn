@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://shop/assets/sword.png" id="1_sxvro"]
 [ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://shop/assets/shield.png" id="2_givde"]
 [ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://shop/shop_item.tscn" id="3_givde"]
+[ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://shop/assets/shoe.png" id="5_2wf2a"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="5_gy7ao"]
+[ext_resource type="Texture2D" uid="uid://d18froc3tvv" path="res://shop/assets/necklace.png" id="6_xad5q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
 bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
@@ -51,10 +53,10 @@ autowrap_mode = 3
 
 [node name="Buy_btn" type="Button" parent="." unique_id=896786812]
 layout_mode = 0
-offset_left = 73.0
-offset_top = 126.0
-offset_right = 111.0
-offset_bottom = 157.0
+offset_left = 67.0
+offset_top = 139.0
+offset_right = 105.0
+offset_bottom = 170.0
 text = "Buy"
 
 [node name="Items_container" type="Control" parent="." unique_id=497329449]
@@ -64,9 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -106.0
-offset_top = -48.0
-offset_right = -6.0
+offset_left = -123.0
+offset_top = -60.0
+offset_right = -23.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -82,6 +85,24 @@ offset_left = 52.0
 offset_right = 372.0
 button_image = ExtResource("2_givde")
 description = "Increases Thomas' health by 10%"
+costs = Array[int]([5, 15, 30, 60, 120])
+
+[node name="Speed_upgrade" parent="Items_container" unique_id=439450475 instance=ExtResource("3_givde")]
+layout_mode = 0
+offset_top = 52.0
+offset_bottom = 372.0
+button_image = ExtResource("5_2wf2a")
+description = "Increases Thomas' speed by 10%"
+costs = Array[int]([5, 15, 30, 60, 120])
+
+[node name="Revival_upgrade" parent="Items_container" unique_id=556607063 instance=ExtResource("3_givde")]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 52.0
+offset_right = 372.0
+offset_bottom = 372.0
+button_image = ExtResource("6_xad5q")
+description = "Increases Thomas' revival chance by 2%"
 costs = Array[int]([5, 15, 30, 60, 120])
 
 [node name="GoldLabel" type="Label" parent="." unique_id=507711699]
