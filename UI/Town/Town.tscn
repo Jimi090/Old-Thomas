@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cqqlmplhsuk52"]
+
+[ext_resource type="Texture2D" uid="uid://4p10ku72i60q" path="res://UI/Town/assets/square.png" id="1_jgweu"]
+[ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
+
+[node name="Town" type="Control" unique_id=398235132]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1717801092]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 18.0
+offset_right = 1145.0
+offset_bottom = 971.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_jgweu")
+
+[node name="Quest" parent="." unique_id=890949428 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 49.0
+offset_right = 217.0
+offset_bottom = 89.0
+
+[node name="Quest2" parent="." unique_id=1342935382 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 49.0
+offset_right = 257.0
+offset_bottom = 89.0
+
+[node name="Quest3" parent="." unique_id=1842025466 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 49.0
+offset_right = 297.0
+offset_bottom = 89.0
+
+[node name="Quest4" parent="." unique_id=2068894225 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 82.0
+offset_right = 217.0
+offset_bottom = 122.0
