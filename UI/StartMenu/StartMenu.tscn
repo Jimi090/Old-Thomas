@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://7i4qhwyqmlrx" path="res://UI/StartMenu/option_button.tscn" id="2_7vcb3"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_8uev0"]
 [ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemy/sprite/idle-enemy.png" id="3_7vcb3"]
+[ext_resource type="Texture2D" uid="uid://crutaoijri1vg" path="res://characters/enemy/sprite/run-enemy.png" id="5_7vcb3"]
+[ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="6_tx4ui"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jntbr"]
 atlas = ExtResource("2_8uev0")
@@ -98,6 +100,60 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx4ui"]
+atlas = ExtResource("5_7vcb3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1n4e"]
+atlas = ExtResource("5_7vcb3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qejx2"]
+atlas = ExtResource("5_7vcb3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgxfv"]
+atlas = ExtResource("5_7vcb3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqbil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx4ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1n4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qejx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgxfv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1n4e"]
+texture = ExtResource("6_tx4ui")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_478fi"]
+sources/0 = SubResource("TileSetAtlasSource_b1n4e")
+
 [node name="StartMenu" type="Control" unique_id=2018449368]
 layout_mode = 3
 anchors_preset = 15
@@ -188,4 +244,16 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_8impv")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.021818904
 flip_h = true
+
+[node name="RunningEnemy" type="AnimatedSprite2D" parent="." unique_id=2095380238]
+position = Vector2(13, 166)
+sprite_frames = SubResource("SpriteFrames_qqbil")
+frame = 3
+frame_progress = 0.4085591
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=621356134]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray(0, 0, 3, 0, 4, 0, 0, 0, 1, 0, 2, 0, 0, 0, 6, 0, 4, 0, 0, 0, 3, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_478fi")

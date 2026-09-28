@@ -39,4 +39,8 @@ func _ready() -> void:
 
 
 func _on_player_death():
+	call_deferred("reload_level")
+
+
+func reload_level():
 	get_tree().reload_current_scene()
