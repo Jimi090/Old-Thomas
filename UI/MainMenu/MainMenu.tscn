@@ -77,25 +77,25 @@ tile_set = SubResource("TileSet_ri767")
 [node name="Path1" parent="." unique_id=514115052 instance=ExtResource("5_a712v")]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 30.0
+offset_top = 32.0
 offset_right = 43.0
-offset_bottom = 70.0
+offset_bottom = 72.0
 path_number = 1
 
 [node name="Path2" parent="." unique_id=1228126815 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 139.0
-offset_right = 133.0
-offset_bottom = 179.0
+offset_left = 3.0
+offset_top = 107.0
+offset_right = 43.0
+offset_bottom = 147.0
 path_number = 2
 
 [node name="Path3" parent="." unique_id=2076128032 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_left = 218.0
-offset_top = 0.0
-offset_right = 258.0
-offset_bottom = 40.0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 132.0
+offset_bottom = 179.0
 path_number = 3
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]

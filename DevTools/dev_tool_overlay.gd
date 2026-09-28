@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var panel: Panel = $Panel
+var fly_mode := false
 
 
 func _ready() -> void:
@@ -10,6 +11,13 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("DevTools"):
 		panel.visible = !panel.visible
+	if fly_mode:
+		var player = get_player()
+		if player:
+			if event.is_action_pressed("down"):
+				player.position.y += 20
+			if event.is_action_pressed("jump"):
+				player.position.y -= 20
 
 
 func _on_clear_save_btn_pressed() -> void:
@@ -17,18 +25,20 @@ func _on_clear_save_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/StartMenu/StartMenu.tscn")
 
 
-func _on_check_button_pressed() -> void:
+func _on_fly_button_pressed() -> void:
 	var player: Player = get_player()
 	if player:
 		if player.GRAVITY == 0:
 			player.GRAVITY = 1000
 			player.JUMP_FORCE = 320
+			fly_mode = false
 		else:
 			player.GRAVITY = 0
-			player.JUMP_FORCE = 30
+			player.JUMP_FORCE = 0
+			fly_mode = true
 
 
-func get_player():
+func get_player() -> Player:
 	return get_tree().get_first_node_in_group("player")
 
 

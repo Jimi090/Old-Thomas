@@ -7,6 +7,7 @@
 size = Vector2(10, 12)
 
 [node name="Potion" type="Area2D" unique_id=964302324]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_vtsqh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1813458717]
@@ -16,3 +17,5 @@ region_rect = Rect2(33.900627, 48.843998, 12.455566, 14.483223)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2146256878]
 shape = SubResource("RectangleShape2D_a814b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

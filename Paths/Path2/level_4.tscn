@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="3_qharc"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="4_cclqh"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="5_b6pbm"]
+[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="6_3xb0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qharc"]
 texture = ExtResource("2_ire3j")
@@ -465,3 +466,6 @@ position = Vector2(927, 105)
 
 [node name="Chest" parent="." index="21" unique_id=1623759673 instance=ExtResource("5_b6pbm")]
 position = Vector2(585, -272)
+
+[node name="Potion" parent="." index="22" unique_id=964302324 instance=ExtResource("6_3xb0a")]
+position = Vector2(676, -217)
