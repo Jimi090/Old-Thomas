@@ -5,41 +5,70 @@
 
 [node name="Town" type="Control" unique_id=398235132]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1717801092]
+[node name="Scroll" type="Control" parent="." unique_id=1988447799]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -72.0
+offset_right = -12.0
+offset_bottom = 72.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Scroll" unique_id=1717801092]
 layout_mode = 0
-offset_left = 163.0
-offset_top = 18.0
-offset_right = 1145.0
-offset_bottom = 971.0
+offset_right = 982.0
+offset_bottom = 953.0
 scale = Vector2(0.15, 0.15)
+mouse_filter = 2
 texture = ExtResource("1_jgweu")
 
-[node name="Quest" parent="." unique_id=890949428 instance=ExtResource("2_k0l85")]
-layout_mode = 0
-offset_left = 177.0
-offset_top = 49.0
-offset_right = 217.0
-offset_bottom = 89.0
+[node name="QuestContainer" type="Control" parent="Scroll" unique_id=150732261]
+anchors_preset = 0
+offset_left = 14.0
+offset_top = 43.0
+offset_right = 134.0
+offset_bottom = 118.0
 
-[node name="Quest2" parent="." unique_id=1342935382 instance=ExtResource("2_k0l85")]
+[node name="Quest" parent="Scroll/QuestContainer" unique_id=758985410 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 217.0
-offset_top = 49.0
-offset_right = 257.0
-offset_bottom = 89.0
 
-[node name="Quest3" parent="." unique_id=1842025466 instance=ExtResource("2_k0l85")]
+[node name="Quest2" parent="Scroll/QuestContainer" unique_id=1883662048 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 257.0
-offset_top = 49.0
-offset_right = 297.0
-offset_bottom = 89.0
+offset_left = 39.0
+offset_right = 2039.0
 
-[node name="Quest4" parent="." unique_id=2068894225 instance=ExtResource("2_k0l85")]
+[node name="Quest3" parent="Scroll/QuestContainer" unique_id=975479226 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 82.0
-offset_right = 217.0
-offset_bottom = 122.0
+offset_left = 78.0
+offset_right = 2078.0
+
+[node name="Quest4" parent="Scroll/QuestContainer" unique_id=20601831 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_top = 32.0
+offset_bottom = 2032.0
+
+[node name="Quest5" parent="Scroll/QuestContainer" unique_id=1132804773 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 32.0
+offset_right = 2039.0
+offset_bottom = 2032.0
+
+[node name="Quest6" parent="Scroll/QuestContainer" unique_id=1342761143 instance=ExtResource("2_k0l85")]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 32.0
+offset_right = 2078.0
+offset_bottom = 2032.0

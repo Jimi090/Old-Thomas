@@ -95,5 +95,9 @@ func clear_save():
 	get_tree().quit()
 
 
+func default_quests():
+	var quests: Array[String] = []
+
+
 func get_default_level_progress() -> Dictionary:
 	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
