@@ -126,7 +126,7 @@ func default_quests():
 		elif i < 10:
 			var ii := i - 4
 			quests[i] = {
-				"description": "Finish Path " + str(ii),
+				"description": "Finish Path " + str(ii) + ".",
 				"goal": ii,
 				"reward": ii * 4,
 				"completed": false,

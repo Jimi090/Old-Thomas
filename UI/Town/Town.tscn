@@ -43,7 +43,7 @@ offset_top = 43.0
 offset_right = 134.0
 offset_bottom = 118.0
 
-[node name="Quest" parent="Scroll/QuestContainer" unique_id=758985410 instance=ExtResource("2_k0l85")]
+[node name="Quest1" parent="Scroll/QuestContainer" unique_id=758985410 instance=ExtResource("2_k0l85")]
 layout_mode = 0
 
 [node name="Quest2" parent="Scroll/QuestContainer" unique_id=1883662048 instance=ExtResource("2_k0l85")]
@@ -55,22 +55,3 @@ offset_right = 2039.0
 layout_mode = 0
 offset_left = 78.0
 offset_right = 2078.0
-
-[node name="Quest4" parent="Scroll/QuestContainer" unique_id=20601831 instance=ExtResource("2_k0l85")]
-layout_mode = 0
-offset_top = 32.0
-offset_bottom = 2032.0
-
-[node name="Quest5" parent="Scroll/QuestContainer" unique_id=1132804773 instance=ExtResource("2_k0l85")]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 32.0
-offset_right = 2039.0
-offset_bottom = 2032.0
-
-[node name="Quest6" parent="Scroll/QuestContainer" unique_id=1342761143 instance=ExtResource("2_k0l85")]
-layout_mode = 0
-offset_left = 78.0
-offset_top = 32.0
-offset_right = 2078.0
-offset_bottom = 2032.0

@@ -14,5 +14,5 @@ func _on_body_entered(body: Node2D) -> void:
 		# mark as collected
 		if path and level:
 			GameData.level_progress[path][level]["coinsCollected"].append(coinNumber)
-
+		Events.coin_collected.emit()
 		queue_free()
