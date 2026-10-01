@@ -607,19 +607,19 @@ position = Vector2(1274, 224)
 position = Vector2(101, 96)
 
 [node name="Coin" parent="." index="10" unique_id=525547507 instance=ExtResource("6_uc3s5")]
-position = Vector2(288, 96)
+position = Vector2(288, 80)
 
 [node name="Coin2" parent="." index="11" unique_id=371922107 instance=ExtResource("6_uc3s5")]
-position = Vector2(415, 96)
+position = Vector2(415, 80)
 
 [node name="Coin3" parent="." index="12" unique_id=4870176 instance=ExtResource("6_uc3s5")]
-position = Vector2(352, 97)
+position = Vector2(352, 80)
 
 [node name="Coin4" parent="." index="13" unique_id=1530508229 instance=ExtResource("6_uc3s5")]
-position = Vector2(928, 161)
+position = Vector2(928, 145)
 
 [node name="Coin5" parent="." index="14" unique_id=670005816 instance=ExtResource("6_uc3s5")]
-position = Vector2(808, 135)
+position = Vector2(808, 128)
 
 [node name="Coin6" parent="." index="15" unique_id=749763958 instance=ExtResource("6_uc3s5")]
 position = Vector2(1226, 216)

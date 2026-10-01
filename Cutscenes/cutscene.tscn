@@ -155,7 +155,7 @@ tracks/0/path = NodePath("Coin:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.02),
+"times": PackedFloat32Array(0, 1.1766666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -167,10 +167,10 @@ tracks/1/path = NodePath("Coin:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1),
+"times": PackedFloat32Array(0, 1.2566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-61, 110.00001), Vector2(126, 110)]
+"values": [Vector2(-61, 110.00001), Vector2(112, 110)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -179,10 +179,10 @@ tracks/2/path = NodePath("Heart:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.1, 1.11),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.27),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(371.00003, 121), Vector2(204.56757, 121), Vector2(197.00002, 121)]
+"values": [Vector2(371.00003, 121), Vector2(204.00002, 121)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -191,7 +191,7 @@ tracks/3/path = NodePath("Heart:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.03),
+"times": PackedFloat32Array(0, 1.1866666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
