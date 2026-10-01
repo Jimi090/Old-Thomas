@@ -25,11 +25,17 @@ const default_upgrades := {
 		upgrades = value
 		upgrades_changed.emit()
 
+var quests := { }
 ###
 
 
 func save_data():
-	var data = { "gold": gold, "level_progress": level_progress, "upgrades": upgrades }
+	var data = {
+		"gold": gold,
+		"level_progress": level_progress,
+		"upgrades": upgrades,
+		"quests": quests,
+	}
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -48,12 +54,15 @@ func load_data():
 	level_progress = data.get("level_progress")
 	if data.get("upgrades"):
 		upgrades = data.get("upgrades")
+	if data.get("quests"):
+		quests = data.get("quests")
 
 
 func _ready() -> void:
 	load_data()
 	if level_progress == { }:
 		get_empty_level_progress()
+	default_quests()
 
 
 func get_empty_level_progress():
@@ -91,12 +100,36 @@ func clear_save():
 	gold = 0
 	upgrades = default_upgrades
 	get_empty_level_progress()
+	default_quests()
 	save_data()
 	get_tree().quit()
 
 
 func default_quests():
-	var quests: Array[String] = []
+	# kill x monsters
+	# finish x path
+	# collect x coins
+	for i in 15:
+		if i < 5:
+			quests[i] = {
+				"description": "Kill " + str(i * 2 + 2) + " shadows.",
+				"type": "k" + str(i * 2 + 2),
+				"reward": i + 1,
+			}
+		elif i < 10:
+			var ii := i - 4
+			quests[i] = {
+				"description": "Finish Path " + str(ii),
+				"type": "f" + str(ii),
+				"reward": ii * 4,
+			}
+		elif i < 15:
+			var ii := i - 9
+			quests[i] = {
+				"description": "Collect " + str(ii * 4 + 2) + " coins.",
+				"type": "c" + str(str(ii * 4 + 2)),
+				"reward": ii * 2,
+			}
 
 
 func get_default_level_progress() -> Dictionary:
