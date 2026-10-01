@@ -26,6 +26,8 @@ const default_upgrades := {
 		upgrades_changed.emit()
 
 var quests := { }
+
+var active_quests := { }
 ###
 
 
@@ -63,6 +65,7 @@ func _ready() -> void:
 	if level_progress == { }:
 		get_empty_level_progress()
 	default_quests()
+	get_active_quests()
 
 
 func get_empty_level_progress():
@@ -101,6 +104,7 @@ func clear_save():
 	upgrades = default_upgrades
 	get_empty_level_progress()
 	default_quests()
+
 	save_data()
 	get_tree().quit()
 
@@ -109,27 +113,51 @@ func default_quests():
 	# kill x monsters
 	# finish x path
 	# collect x coins
+	quests = { }
 	for i in 15:
 		if i < 5:
 			quests[i] = {
 				"description": "Kill " + str(i * 2 + 2) + " shadows.",
-				"type": "k" + str(i * 2 + 2),
+				"goal": i * 2 + 2,
 				"reward": i + 1,
+				"completed": false,
+				"progress": 0,
 			}
 		elif i < 10:
 			var ii := i - 4
 			quests[i] = {
 				"description": "Finish Path " + str(ii),
-				"type": "f" + str(ii),
+				"goal": ii,
 				"reward": ii * 4,
+				"completed": false,
+				"progress": 0,
 			}
 		elif i < 15:
 			var ii := i - 9
 			quests[i] = {
 				"description": "Collect " + str(ii * 4 + 2) + " coins.",
-				"type": "c" + str(str(ii * 4 + 2)),
+				"goal": ii * 4 + 2,
 				"reward": ii * 2,
+				"completed": false,
+				"progress": 0,
 			}
+
+
+func get_active_quests():
+	for i in 5:
+		if quests[i]["completed"] == false:
+			active_quests["kill"] = i
+			break
+	for i in 5:
+		i += 5
+		if quests[i]["completed"] == false:
+			active_quests["path"] = i
+			break
+	for i in 5:
+		i += 10
+		if quests[i]["completed"] == false:
+			active_quests["collect"] = i
+			break
 
 
 func get_default_level_progress() -> Dictionary:

@@ -7,6 +7,7 @@ extends Area2D
 
 func _on_body_entered(_body: Node2D) -> void:
 	GameData.level_progress[path_name][level_name]["finished"] = true
+	Events.level_completed.emit()
 	call_deferred("_go_to_main_menu")
 
 

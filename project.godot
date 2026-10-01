@@ -19,6 +19,8 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 GameData="*uid://by6ghnada1xin"
 DevToolOverlay="*uid://dh5oguu5fj6hb"
 GameManager="*uid://c1i8116khfqlb"
+Events="*uid://btwruuu54mgn"
+Quests="*uid://bitn5neb4pbwn"
 
 [display]
 

@@ -1,5 +1,7 @@
 extends Character
 
+signal enemy_died
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_range: Area2D = $AttackRange
 @onready var floor_check: RayCast2D = $FloorCheck
@@ -66,3 +68,8 @@ func fire_attack(body: CharacterBody2D):
 	fire.speed = 100
 
 	get_tree().current_scene.add_child(fire)
+
+
+func die():
+	Events.enemy_died.emit()
+	super()

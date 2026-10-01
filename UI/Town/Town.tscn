@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqqlmplhsuk52"]
 
 [ext_resource type="Texture2D" uid="uid://4p10ku72i60q" path="res://UI/Town/assets/square.png" id="1_jgweu"]
+[ext_resource type="Script" uid="uid://0vlcgngsxykg" path="res://UI/Town/town.gd" id="1_m2tqw"]
 [ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
 
 [node name="Town" type="Control" unique_id=398235132]
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_m2tqw")
 
 [node name="Scroll" type="Control" parent="." unique_id=1988447799]
 layout_mode = 1
