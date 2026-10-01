@@ -28,6 +28,8 @@ const default_upgrades := {
 var quests := { }
 
 var active_quests := { }
+
+var displaied_quests := { }
 ###
 
 
@@ -56,16 +58,27 @@ func load_data():
 	level_progress = data.get("level_progress")
 	if data.get("upgrades"):
 		upgrades = data.get("upgrades")
+
 	if data.get("quests"):
-		quests = data.get("quests")
+		quests = change_string_keys_to_int(data.get("quests"))
+	else:
+		default_quests()
+
+
+func change_string_keys_to_int(dic: Dictionary):
+	var result = { }
+	for key in dic:
+		result[int(key)] = dic[key]
+	return result
 
 
 func _ready() -> void:
 	load_data()
 	if level_progress == { }:
 		get_empty_level_progress()
-	default_quests()
+
 	get_active_quests()
+	get_displaied_quests()
 
 
 func get_empty_level_progress():
@@ -122,15 +135,18 @@ func default_quests():
 				"reward": i + 1,
 				"completed": false,
 				"progress": 0,
+				"collected": false,
 			}
 		elif i < 10:
 			var ii := i - 4
 			quests[i] = {
 				"description": "Finish Path " + str(ii) + ".",
-				"goal": ii,
+				"goal": 4,
 				"reward": ii * 4,
 				"completed": false,
 				"progress": 0,
+				"collected": false,
+				"levels_beaten": [],
 			}
 		elif i < 15:
 			var ii := i - 9
@@ -140,6 +156,7 @@ func default_quests():
 				"reward": ii * 2,
 				"completed": false,
 				"progress": 0,
+				"collected": false,
 			}
 
 
@@ -157,6 +174,23 @@ func get_active_quests():
 		i += 10
 		if quests[i]["completed"] == false:
 			active_quests["collect"] = i
+			break
+
+
+func get_displaied_quests():
+	for i in 5:
+		if quests[i]["collected"] == false:
+			displaied_quests["kill"] = i
+			break
+	for i in 5:
+		i += 5
+		if quests[i]["collected"] == false:
+			displaied_quests["path"] = i
+			break
+	for i in 5:
+		i += 10
+		if quests[i]["collected"] == false:
+			displaied_quests["collect"] = i
 			break
 
 

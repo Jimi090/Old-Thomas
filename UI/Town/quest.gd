@@ -12,6 +12,7 @@ var reward: int
 var progress: String
 var texture := "res://UI/Town/assets/enemy.png"
 var texture_scale := Vector2(32, 32)
+var quest_index: int
 
 
 func set_description():
@@ -20,3 +21,18 @@ func set_description():
 	label_3.text = "Reward: " + str(reward) + " gold"
 	texture_rect.texture = load(texture)
 	texture_rect.scale = texture_scale
+
+	var done := progress.split("/")[0]
+	var goal := progress.split("/")[1]
+	if done == goal:
+		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+
+
+func _on_pressed() -> void:
+	var done := progress.split("/")[0]
+	var goal := progress.split("/")[1]
+	if done == goal:
+		GameData.gold += reward
+		GameData.quests[quest_index]["collected"] = true
+		GameData.get_displaied_quests()
+		get_tree().reload_current_scene()

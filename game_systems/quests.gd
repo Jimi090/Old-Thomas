@@ -13,28 +13,19 @@ func _on_enemy_killed():
 	GameData.save_data()
 
 
-func _on_level_completion():
-	for path in GameData.level_progress:
-		var path_number: int = int(path[-1])
-		if is_path_completed(path_number):
-			GameData.quests[GameData.active_quests["path"]]["completed"] = true
-			GameData.get_active_quests()
-			GameData.save_data()
+func _on_level_completion(path, level):
+	if level not in GameData.quests[GameData.active_quests["path"]]["levels_beaten"]:
+		GameData.quests[GameData.active_quests["path"]]["levels_beaten"].append(level)
+		GameData.quests[GameData.active_quests["path"]]["progress"] += 1
+	'GameData.quests[GameData.active_quests["path"]]["completed"] = true
+	GameData.get_active_quests()
+	GameData.save_data()'
 
 
 func _on_coin_collection():
 	GameData.quests[GameData.active_quests["collect"]]["progress"] += 1
 	check_if_quest_completed(GameData.quests[GameData.active_quests["collect"]])
 	GameData.save_data()
-
-
-func is_path_completed(path_number):
-	var is_good := true
-	for level_name in GameData.level_progress["Path" + str(path_number)]:
-		var level = GameData.level_progress["Path" + str(path_number)][level_name]
-		if level["finished"] == false:
-			is_good = false
-	return is_good
 
 
 func check_if_quest_completed(quest):

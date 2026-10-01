@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4p10ku72i60q" path="res://UI/Town/assets/square.png" id="1_jgweu"]
 [ext_resource type="Script" uid="uid://0vlcgngsxykg" path="res://UI/Town/town.gd" id="1_m2tqw"]
 [ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="4_lapfu"]
 
 [node name="Town" type="Control" unique_id=398235132]
 layout_mode = 3
@@ -45,13 +46,27 @@ offset_bottom = 118.0
 
 [node name="Quest1" parent="Scroll/QuestContainer" unique_id=758985410 instance=ExtResource("2_k0l85")]
 layout_mode = 0
+offset_left = 0.9999999
+offset_right = 2001.0
+scale = Vector2(0.025, 0.025)
 
 [node name="Quest2" parent="Scroll/QuestContainer" unique_id=1883662048 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 39.0
-offset_right = 2039.0
+offset_left = 34.0
+offset_top = 41.0
+offset_right = 2034.0
+offset_bottom = 1541.0
+scale = Vector2(0.025, 0.025)
 
 [node name="Quest3" parent="Scroll/QuestContainer" unique_id=975479226 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 78.0
-offset_right = 2078.0
+offset_left = 63.0
+offset_top = -7.9999995
+offset_right = 2063.0
+offset_bottom = 1492.0
+scale = Vector2(0.025, 0.025)
+
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("4_lapfu")]
+layout_mode = 1
+offset_top = 4.0
+offset_bottom = 140.0
