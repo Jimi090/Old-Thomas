@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="2_gw7ii"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="5_gw7ii"]
+[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="5_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_l4gq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4gq6"]
@@ -589,6 +590,9 @@ tile_set = SubResource("TileSet_85wvi")
 [node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=1947384826]
 tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAAAbAAQAAQAJAAgAAAAcAAQAAQAKAAgAAAAdAAQAAQALAAgAAAAeAAQAAQAMAAgAAAAfAAQAAQANAAgAAABJAAUAAQAJAAgAAABKAAUAAQAKAAgAAABLAAUAAQALAAgAAABMAAUAAQAMAAgAAABNAAUAAQANAAgAAAA4APv/AQAHAAEAAAA4APz/AQAHAAIAAAA4AP3/AQAHAAMAAAA5AP3/AQAMAAEAAABFAAQAAQAJAAUAAAA1AAQAAQAKAAEAAAA1AAUAAQAKAAIAAAA1AAYAAQAKAAMAAAA0AAYAAQAJAAMAAAA2AAYAAQAMAAEAAABDAP7/AQAMAAIAAABDAP//AQAMAAMAAAAiAAAAAQAHAAEAAAAiAAEAAQAHAAIAAAAiAAIAAQAHAAMAAAAsAP3/AQAKAAEAAAAsAP7/AQAKAAIAAAAsAP//AQAKAAMAAAArAP//AQAJAAMAAAAtAP//AQALAAMAAABEAP//AQAIAAIAAAALAAEAAQAHAAEAAAALAAIAAQAHAAIAAAALAAMAAQAHAAMAAAAKAAMAAQAIAAIAAAAhAAIAAQAJAAUAAAAuAAAAAQAMAAEAAAA=")
 tile_set = SubResource("TileSet_ymtdt")
+
+[node name="Potion" parent="TileMapLayer2" index="0" unique_id=964302324 instance=ExtResource("5_l4gq6")]
+position = Vector2(1020, 103.00001)
 
 [node name="Enemy" parent="." index="5" unique_id=2006298918 instance=ExtResource("5_gw7ii")]
 position = Vector2(864, -31)

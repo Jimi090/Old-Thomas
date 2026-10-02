@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="4_6er1j"]
 [ext_resource type="Texture2D" uid="uid://b84sitjlbhgvu" path="res://tileset/midground_/summer_.png" id="4_moh8x"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="9_jev5a"]
+[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="10_6er1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mylrs"]
 texture = ExtResource("2_moh8x")
@@ -1083,3 +1084,6 @@ position = Vector2(560, 33)
 
 [node name="Coin5" parent="." index="13" unique_id=1517004364 instance=ExtResource("9_jev5a")]
 position = Vector2(753, 65)
+
+[node name="Potion" parent="." index="14" unique_id=964302324 instance=ExtResource("10_6er1j")]
+position = Vector2(433.00003, 71)

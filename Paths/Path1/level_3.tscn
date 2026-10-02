@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_7ylg2"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="5_ejp3m"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_7ylg2"]
+[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="7_7ylg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ylg2"]
 texture = ExtResource("1_q2b2h")
@@ -590,17 +591,17 @@ tile_set = SubResource("TileSet_1xnty")
 tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAABKAAYAAQAJAAgAAABLAAYAAQAKAAgAAABMAAYAAQALAAgAAABNAAYAAQAMAAgAAABOAAYAAQANAAgAAABBAAUAAQAKAAEAAABBAAYAAQAKAAIAAABBAAcAAQAKAAMAAABAAAcAAQAJAAMAAABCAAcAAQALAAMAAAA2AAgAAQAHAAEAAAA2AAkAAQAHAAIAAAA2AAoAAQAHAAMAAAA1AAoAAQANAAEAAAAjAAgAAQAJAAUAAAAoAAUAAQAJAAUAAAASAAMAAQAHAAEAAAASAAQAAQAHAAIAAAASAAUAAQAHAAMAAAATAAUAAQAMAAEAAABHAAYAAQAMAAEAAABPAAUAAQAJAAUAAABQAAQAAQAMAAIAAABQAAUAAQAMAAMAAAAJAAQAAQAMAAIAAAAJAAUAAQAMAAMAAAArAAMAAQAHAAEAAAArAAQAAQAHAAIAAAArAAUAAQAHAAMAAAAmAAoAAQAMAAEAAAAvAAgAAQAMAAIAAAAvAAkAAQAMAAMAAAA=")
 tile_set = SubResource("TileSet_gvy4u")
 
-[node name="Enemy" parent="." index="5" unique_id=2006298918 instance=ExtResource("5_ejp3m")]
-position = Vector2(426, 33)
-
-[node name="Enemy2" parent="." index="6" unique_id=1035426755 instance=ExtResource("5_ejp3m")]
+[node name="Enemy2" parent="." index="5" unique_id=1035426755 instance=ExtResource("5_ejp3m")]
 position = Vector2(906, 176)
 
-[node name="Enemy3" parent="." index="7" unique_id=37151332 instance=ExtResource("5_ejp3m")]
+[node name="Enemy3" parent="." index="6" unique_id=37151332 instance=ExtResource("5_ejp3m")]
 position = Vector2(127, 86)
 
-[node name="Enemy4" parent="." index="8" unique_id=1216943565 instance=ExtResource("5_ejp3m")]
+[node name="Enemy4" parent="." index="7" unique_id=1216943565 instance=ExtResource("5_ejp3m")]
 position = Vector2(675, 65)
+
+[node name="Enemy6" parent="." index="8" unique_id=2006298918 instance=ExtResource("5_ejp3m")]
+position = Vector2(421, 33)
 
 [node name="Enemy5" parent="." index="9" unique_id=38305069 instance=ExtResource("5_ejp3m")]
 position = Vector2(1096, 96)
@@ -622,3 +623,9 @@ position = Vector2(1024, 131)
 
 [node name="Coin6" parent="." index="15" unique_id=1915503720 instance=ExtResource("6_7ylg2")]
 position = Vector2(176, 83)
+
+[node name="Potion" parent="." index="16" unique_id=964302324 instance=ExtResource("7_7ylg2")]
+position = Vector2(217.00002, 87)
+
+[node name="Potion2" parent="." index="17" unique_id=61448090 instance=ExtResource("7_7ylg2")]
+position = Vector2(809.00006, 183)

@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://co1suqj1mdhxo"]
-
-[ext_resource type="AudioStream" uid="uid://cadt1voy7vt7y" path="res://Music/assets/example.mp3" id="1_oo85x"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1818634071]
-stream = ExtResource("1_oo85x")
-autoplay = true

@@ -21,6 +21,8 @@ DevToolOverlay="*uid://dh5oguu5fj6hb"
 GameManager="*uid://c1i8116khfqlb"
 Events="*uid://btwruuu54mgn"
 Quests="*uid://bitn5neb4pbwn"
+MusicManager="*uid://bnqoe8ipirqxh"
+SoundManager="*uid://ce36ka6nb4syd"
 
 [display]
 

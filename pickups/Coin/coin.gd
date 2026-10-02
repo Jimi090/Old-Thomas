@@ -15,4 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 		if path and level:
 			GameData.level_progress[path][level]["coinsCollected"].append(coinNumber)
 		Events.coin_collected.emit()
+		SoundManager.play_coin_sound()
 		queue_free()
