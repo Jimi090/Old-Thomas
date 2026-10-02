@@ -1,12 +1,14 @@
-[gd_scene format=3 uid="uid://cxkl8rjhn0lw5"]
+[gd_scene format=4 uid="uid://cxkl8rjhn0lw5"]
 
 [ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_d7xc6"]
+[ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="2_s13o8"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="3_0rwfu"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="4_nskb6"]
 [ext_resource type="Texture2D" uid="uid://83tkddntc1oi" path="res://tileset/midground_/desertDungeon_.png" id="5_km11y"]
 [ext_resource type="Texture2D" uid="uid://b84sitjlbhgvu" path="res://tileset/midground_/summer_.png" id="6_tb147"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="7_3dcck"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="8_tui15"]
+[ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="9_pyicl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mylrs"]
 texture = ExtResource("4_nskb6")
@@ -1047,11 +1049,37 @@ position = Vector2(24, 42)
 [node name="Key" parent="." index="1" unique_id=155803228]
 position = Vector2(839, 75)
 
-[node name="Chest" parent="." index="3" unique_id=1623759673 instance=ExtResource("3_0rwfu")]
+[node name="Enemy" parent="." index="2" unique_id=2006298918 instance=ExtResource("2_s13o8")]
+position = Vector2(678, 48)
+
+[node name="Enemy2" parent="." index="3" unique_id=1221713927 instance=ExtResource("2_s13o8")]
+position = Vector2(216, 17)
+
+[node name="Enemy3" parent="." index="4" unique_id=2092008976 instance=ExtResource("2_s13o8")]
+position = Vector2(507, 48)
+
+[node name="Chest" parent="." index="6" unique_id=1623759673 instance=ExtResource("3_0rwfu")]
 position = Vector2(409, -80)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." index="4" unique_id=51204068]
+[node name="TileMapLayer" type="TileMapLayer" parent="." index="7" unique_id=51204068]
+tile_map_data = PackedByteArray("AAABAAYAAgAEAAMAAAABAAcAAgAEAAQAAAAAAAYAAgADAAMAAAAAAAcAAgADAAQAAAADAAUAAgADAAIAAAAEAAUAAgAEAAIAAAADAAYAAgAJAAMAAAADAAcAAgAJAAQAAAADAAgAAgAJAAIAAAAFAAYAAgADAAMAAAAFAAcAAgADAAQAAAAGAAYAAgAEAAMAAAAGAAcAAgAEAAQAAAAEAAcAAgAKAAQAAAAEAAgAAgAKAAIAAAAEAAYAAgAKAAMAAAAFAAgAAgALAAEAAAAGAAgAAgAMAAEAAAAIAAQAAgADAAIAAAAJAAQAAgAEAAIAAAAKAAMAAgADAAMAAAAKAAQAAgADAAQAAAALAAMAAgAEAAMAAAALAAQAAgAEAAQAAAAMAAMAAgAGAAIAAAAMAAQAAgAGAAMAAAAMAAUAAgAGAAQAAAANAAMAAgAHAAIAAAANAAQAAgAHAAMAAAANAAUAAgAHAAQAAAAOAAMAAgAIAAIAAAAOAAQAAgAIAAMAAAAOAAUAAgAIAAQAAAALAAUAAgALAAIAAAAKAAUAAgALAAEAAAAMAAIAAgADAAIAAAANAAIAAgAEAAIAAAAOAAIAAgAFAAIAAAAPAAMAAgADAAIAAAAQAAMAAgAEAAIAAAARAAMAAgAFAAIAAAAPAAQAAgAJAAMAAAAPAAUAAgAJAAQAAAAQAAQAAgAKAAMAAAAQAAUAAgAKAAQAAAARAAQAAgALAAIAAAARAAUAAgALAAEAAAASAAQAAgAFAAIAAAAVAAUAAgAFAAIAAAAWAAUAAgADAAIAAAAXAAUAAgAEAAIAAAAWAAYAAgAJAAIAAAAXAAYAAgAKAAIAAAAXAAcAAgALAAIAAAAaAAUAAgADAAMAAAAaAAYAAgADAAQAAAAbAAUAAgAEAAMAAAAbAAYAAgAEAAQAAAAeAAUAAgAGAAIAAAAeAAYAAgAGAAMAAAAeAAcAAgAGAAQAAAAfAAUAAgAHAAIAAAAfAAYAAgAHAAMAAAAfAAcAAgAHAAQAAAAgAAUAAgAIAAIAAAAgAAYAAgAIAAMAAAAgAAcAAgAIAAQAAAAfAAQAAgADAAIAAAAgAAQAAgAEAAIAAAAhAAQAAgAFAAIAAAAeAAQAAgAFAAIAAAAhAAUAAgAJAAMAAAAhAAYAAgAJAAQAAAAiAAUAAgAKAAMAAAAiAAYAAgAKAAQAAAAiAAQAAgAJAAIAAAAjAAQAAgAKAAIAAAAiAAMAAgADAAIAAAAjAAMAAgAEAAIAAAAjAAUAAgALAAMAAAAjAAYAAgALAAQAAAAhAAcAAgAMAAEAAAAmAAUAAgADAAIAAAAnAAUAAgAEAAIAAAAoAAQAAgADAAMAAAAoAAUAAgADAAQAAAApAAQAAgAEAAMAAAApAAUAAgAEAAQAAAAqAAUAAgAGAAIAAAAqAAYAAgAGAAMAAAAqAAcAAgAGAAQAAAArAAUAAgAHAAIAAAArAAYAAgAHAAMAAAArAAcAAgAHAAQAAAAsAAUAAgAIAAIAAAAsAAYAAgAIAAMAAAAsAAcAAgAIAAQAAAAtAAYAAgAGAAIAAAAtAAcAAgAGAAMAAAAtAAgAAgAGAAQAAAAuAAYAAgAHAAIAAAAuAAcAAgAHAAMAAAAuAAgAAgAHAAQAAAAvAAYAAgAIAAIAAAAvAAcAAgAIAAMAAAAvAAgAAgAIAAQAAAAqAAQAAgAFAAIAAAArAAQAAgADAAIAAAAsAAQAAgAEAAIAAAAtAAUAAgADAAIAAAAuAAUAAgAEAAIAAAAvAAUAAgADAAIAAAAwAAUAAgAEAAIAAAAwAAYAAgAJAAMAAAAwAAcAAgAJAAQAAAAxAAYAAgAKAAMAAAAxAAcAAgAKAAQAAAA0AAYAAgAFAAMAAAA0AAcAAgAFAAQAAAAPAP//AgADAAIAAAAQAP//AgAEAAIAAAARAP7/AgADAAIAAAASAP7/AgAEAAIAAAATAP7/AgADAAIAAAAUAP7/AgAEAAIAAAAVAP3/AgADAAMAAAAVAP7/AgADAAQAAAAWAP3/AgAEAAMAAAAWAP7/AgAEAAQAAAARAP//AgAJAAIAAAASAP//AgAKAAIAAAAYAPz/AgADAAMAAAAYAP3/AgADAAQAAAAZAPz/AgAEAAMAAAAZAP3/AgAEAAQAAAA=")
 tile_set = SubResource("TileSet_6er1j")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="." index="5" unique_id=1514376472]
+[node name="TileMapLayer2" type="TileMapLayer" parent="." index="8" unique_id=1514376472]
+tile_map_data = PackedByteArray("AAAAAAQAAQAFAAQAAAAAAAUAAQAFAAUAAAAnAAIAAQAHAAEAAAAnAAMAAQAHAAIAAAAnAAQAAQAHAAMAAAAUAPv/AQAHAAEAAAAUAPz/AQAHAAIAAAAUAP3/AQAHAAMAAAAFAAMAAQAGAAEAAAAFAAQAAQAGAAIAAAAFAAUAAQAGAAMAAAAtAAQAAQAJAAUAAAA=")
 tile_set = SubResource("TileSet_ffkgi")
+
+[node name="Coin" parent="." index="9" unique_id=525547507 instance=ExtResource("9_pyicl")]
+position = Vector2(144, 49)
+
+[node name="Coin2" parent="." index="10" unique_id=1848980857 instance=ExtResource("9_pyicl")]
+position = Vector2(288, -48)
+
+[node name="Coin3" parent="." index="11" unique_id=1158557343 instance=ExtResource("9_pyicl")]
+position = Vector2(366, 64)
+
+[node name="Coin4" parent="." index="12" unique_id=37850634 instance=ExtResource("9_pyicl")]
+position = Vector2(560, 33)
+
+[node name="Coin5" parent="." index="13" unique_id=1517004364 instance=ExtResource("9_pyicl")]
+position = Vector2(753, 65)
