@@ -161,6 +161,9 @@ func default_quests():
 
 
 func get_active_quests():
+	active_quests["kill"] = null
+	active_quests["path"] = null
+	active_quests["collect"] = null
 	for i in 5:
 		if quests[i]["completed"] == false:
 			active_quests["kill"] = i
@@ -170,6 +173,7 @@ func get_active_quests():
 		if quests[i]["completed"] == false:
 			active_quests["path"] = i
 			break
+
 	for i in 5:
 		i += 10
 		if quests[i]["completed"] == false:
@@ -178,10 +182,14 @@ func get_active_quests():
 
 
 func get_displaied_quests():
+	displaied_quests["kill"] = null
+	displaied_quests["path"] = null
+	displaied_quests["collect"] = null
 	for i in 5:
 		if quests[i]["collected"] == false:
 			displaied_quests["kill"] = i
 			break
+
 	for i in 5:
 		i += 5
 		if quests[i]["collected"] == false:

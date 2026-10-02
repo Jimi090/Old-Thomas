@@ -16,14 +16,15 @@ var quest_index: int
 
 
 func set_description():
+	var done := int(progress.split("/")[0])
+	var goal := int(progress.split("/")[1])
+
 	label_1.text = description
-	label_2.text = progress
-	label_3.text = "Reward: " + str(reward) + " gold"
+	label_2.text = str(done) + "/" + str(goal)
+	label_3.text = "Reward: " + str(int(reward)) + " gold"
 	texture_rect.texture = load(texture)
 	texture_rect.scale = texture_scale
 
-	var done := progress.split("/")[0]
-	var goal := progress.split("/")[1]
 	if done == goal:
 		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
@@ -34,5 +35,6 @@ func _on_pressed() -> void:
 	if done == goal:
 		GameData.gold += reward
 		GameData.quests[quest_index]["collected"] = true
+		GameData.save_data()
 		GameData.get_displaied_quests()
 		get_tree().reload_current_scene()
