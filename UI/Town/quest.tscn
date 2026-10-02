@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dq88547ataoym" path="res://UI/Town/assets/IMG_0343.png" id="1_qrrje"]
 [ext_resource type="Script" uid="uid://b2thi5nlm7500" path="res://UI/Town/quest.gd" id="1_uwi5c"]
 [ext_resource type="FontFile" uid="uid://cmnu34ekfjc1c" path="res://UI/Town/assets/MedievalSharp.ttf" id="2_bkkgk"]
-[ext_resource type="Texture2D" uid="uid://brbbo0n0j6ds1" path="res://UI/Town/assets/coin-Sheet.png" id="4_1qjsc"]
 
 [node name="Quest" type="Button" unique_id=758985410]
 offset_right = 2000.0
@@ -31,8 +30,6 @@ offset_bottom = 790.0
 theme_override_colors/font_color = Color(0.09019608, 0.16470589, 0.27450982, 1)
 theme_override_fonts/font = ExtResource("2_bkkgk")
 theme_override_font_sizes/font_size = 200
-text = "Quest description
-"
 autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="." unique_id=1654390800]
@@ -51,8 +48,6 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.09019608, 0.16470589, 0.27450982, 1)
 theme_override_fonts/font = ExtResource("2_bkkgk")
 theme_override_font_sizes/font_size = 144
-text = "6/10
-"
 
 [node name="Label3" type="Label" parent="." unique_id=781664878]
 layout_mode = 1
@@ -70,7 +65,6 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.09019608, 0.16470589, 0.27450982, 1)
 theme_override_fonts/font = ExtResource("2_bkkgk")
 theme_override_font_sizes/font_size = 144
-text = "Reward: 10"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2076640284]
 layout_mode = 0
@@ -79,6 +73,5 @@ offset_top = 500.0
 offset_right = 814.0
 offset_bottom = 516.0
 scale = Vector2(24, 24)
-texture = ExtResource("4_1qjsc")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

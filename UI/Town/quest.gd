@@ -13,23 +13,32 @@ var progress: String
 var texture := "res://UI/Town/assets/enemy.png"
 var texture_scale := Vector2(32, 32)
 var quest_index: int
+var all_quests_completed := false
 
 
 func set_description():
-	var done := int(progress.split("/")[0])
-	var goal := int(progress.split("/")[1])
+	if !all_quests_completed:
+		var done := int(progress.split("/")[0])
+		var goal := int(progress.split("/")[1])
 
-	label_1.text = description
-	label_2.text = str(done) + "/" + str(goal)
-	label_3.text = "Reward: " + str(int(reward)) + " gold"
-	texture_rect.texture = load(texture)
-	texture_rect.scale = texture_scale
+		label_1.text = description
+		label_2.text = str(done) + "/" + str(goal)
+		label_3.text = "Reward: " + str(int(reward)) + " gold"
+		texture_rect.texture = load(texture)
+		texture_rect.scale = texture_scale
 
-	if done == goal:
-		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		if done == goal:
+			mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	else:
+		label_1.text = "No more quests"
+		texture_rect.texture = load(texture)
+		texture_rect.scale = texture_scale
 
 
 func _on_pressed() -> void:
+	if all_quests_completed:
+		return
+
 	var done := progress.split("/")[0]
 	var goal := progress.split("/")[1]
 	if done == goal:

@@ -1,7 +1,5 @@
 extends Character
 
-signal enemy_died
-
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_range: Area2D = $AttackRange
 @onready var floor_check: RayCast2D = $FloorCheck
