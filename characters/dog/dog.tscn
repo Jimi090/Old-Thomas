@@ -107,6 +107,7 @@ height = 14.0
 
 [node name="Dog" type="CharacterBody2D" unique_id=720855982]
 scale = Vector2(1.5, 1.5)
+collision_layer = 8
 script = ExtResource("1_dnsml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1086635619]
@@ -116,7 +117,12 @@ autoplay = "idle"
 frame_progress = 0.93876904
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2134734807]
-visible = false
 position = Vector2(-1, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_qqbil")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=736359015]
+target_position = Vector2(24, 74.66667)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=381072513]
+target_position = Vector2(8.666667, 5.3333335)
