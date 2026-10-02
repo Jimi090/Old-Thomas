@@ -10,9 +10,8 @@ extends Panel
 
 var diamonds_amount_to_show := 0:
 	set(value):
-		show_diamonds(value)
+		show_diamonds(value) 
 		diamonds_amount_to_show = value
-
 var selected := false:
 	set(value):
 		if value == true:

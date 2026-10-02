@@ -47,11 +47,14 @@ func save_data():
 
 func load_data():
 	if not FileAccess.file_exists(SAVE_PATH):
+		default_quests()
 		return
+		
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	var data = JSON.parse_string(file.get_as_text())
 
 	if data == null:
+		default_quests()
 		return
 
 	gold = data.get("gold", 0)
