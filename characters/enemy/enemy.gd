@@ -13,8 +13,8 @@ signal enemy_died
 
 const PROJECTILE = preload("uid://cymdi8bpgwy1w")
 
-var damage := 20
-var attack_cooldown := 2.5
+var damage := 10
+var attack_cooldown := 1.2
 
 var direction: float
 
@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	direction = 1
 	state = State.RUN
-	max_health = 20
+	max_health = 50
 	super()
 
 
@@ -65,7 +65,7 @@ func fire_attack(body: CharacterBody2D):
 	fire.global_position = global_position
 	fire.damage = damage
 	fire.target_position = body.global_position
-	fire.speed = 100
+	fire.speed = 250
 
 	get_tree().current_scene.add_child(fire)
 

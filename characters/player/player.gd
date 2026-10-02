@@ -7,26 +7,26 @@ signal player_died
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var basic_attack_range: Area2D = $BasicAttackRange
 
-@export var SPEED := 200
+@export var SPEED := 170
 @export var GRAVITY := 1000
 @export var JUMP_FORCE := 320
 @export var attack_multi := 1.0
 @export var speed_multi := 1.0
 
-var basic_attack_damage := 10
+var basic_attack_damage := 15
 
 var direction: float
 
 
 func _ready() -> void:
 	var health_multiplayer = GameData.upgrades["Health_upgrade"]["level"]
-	max_health = 100 + health_multiplayer * 10
+	max_health = 80 + health_multiplayer * 15
 
 	var damage_multiplayer = GameData.upgrades["Attack_upgrade"]["level"]
-	basic_attack_damage += damage_multiplayer
+	basic_attack_damage += damage_multiplayer * 2
 
 	var speed_multiplayer = GameData.upgrades["Speed_upgrade"]["level"]
-	SPEED += speed_multiplayer * 20
+	SPEED += speed_multiplayer * 10
 
 	add_to_group("player")
 	super()
