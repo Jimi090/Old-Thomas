@@ -5,6 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="4_lapfu"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lapfu"]
+bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
 [node name="Town" type="Control" unique_id=398235132]
 layout_mode = 3
 anchors_preset = 15
@@ -14,6 +23,15 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_m2tqw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=921947381]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.43048432, 0.05917798, 1)
 
 [node name="Scroll" type="Control" parent="." unique_id=1988447799]
 layout_mode = 1
@@ -70,3 +88,21 @@ scale = Vector2(0.025, 0.025)
 layout_mode = 1
 offset_top = 4.0
 offset_bottom = 140.0
+
+[node name="Label" type="Label" parent="." unique_id=884985836]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -56.0
+offset_right = 123.0
+offset_bottom = 56.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_lapfu")
+text = "Complete quests to earn gold! Quests are tracked automatically. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

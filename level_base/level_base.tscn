@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c3nhtsrchfvhs" path="res://level_base/level_base.gd" id="1_yheth"]
 [ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="2_yheth"]
 [ext_resource type="PackedScene" uid="uid://bfpcxuyyt6brx" path="res://UI/HUD/HUD.tscn" id="3_dtys8"]
+[ext_resource type="PackedScene" uid="uid://btwerd1bo4qxi" path="res://characters/dog/dog.tscn" id="5_dtys8"]
 
 [node name="LevelBase" type="Node2D" unique_id=1826943140]
 script = ExtResource("1_yheth")
@@ -15,4 +16,7 @@ position = Vector2(16, 35)
 position = Vector2(51, 17)
 
 [node name="HUD" parent="." unique_id=150336644 node_paths=PackedStringArray("player") instance=ExtResource("3_dtys8")]
+player = NodePath("../Player")
+
+[node name="Dog" parent="." unique_id=720855982 node_paths=PackedStringArray("player") instance=ExtResource("5_dtys8")]
 player = NodePath("../Player")
