@@ -1,3 +1,4 @@
+class_name Enemy
 extends Character
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -47,6 +48,7 @@ func _ready() -> void:
 
 
 func _on_attack_range_body_entered(body: Character) -> void:
+	state = State.IDLE
 	while body.health > 0 and attack_range.overlaps_body(body):
 		if body.position.x > position.x:
 			direction = 1
@@ -71,3 +73,8 @@ func fire_attack(body: CharacterBody2D):
 func die():
 	Events.enemy_died.emit()
 	super()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if state == State.TAKE_DAMAGE:
+		state = State.RUN
