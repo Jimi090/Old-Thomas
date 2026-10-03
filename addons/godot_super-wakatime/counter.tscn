@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4t47uj61wtu5"]
 
-[node name="Counter" type="Panel"]
+[node name="Counter" type="Panel" unique_id=515090629]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 0
 grow_vertical = 0
 size_flags_vertical = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=848304691]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1714498239]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1

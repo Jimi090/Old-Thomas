@@ -89,7 +89,7 @@ func die():
 	# chance of revival
 	var random = randi_range(1, 100)
 	var chance = 2 * int(GameData.upgrades["Revival_upgrade"]["level"])
-
+	SoundManager.play_death_sound()
 	if random <= chance:
 		health = max_health
 		position.y -= 100

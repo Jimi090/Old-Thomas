@@ -5,7 +5,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_ydsml"]
 font = ExtResource("2_iqsrb")
-font_color = Color(0.9764706, 0.9764706, 0.4392157, 1)
+font_size = 14
+font_color = Color(0.980967, 0.9738869, 0.4552098, 1)
 
 [node name="FloatingText" type="Node2D" unique_id=766569166]
 script = ExtResource("1_iqsrb")
