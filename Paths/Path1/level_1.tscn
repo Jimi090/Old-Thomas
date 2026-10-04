@@ -591,29 +591,26 @@ tile_set = SubResource("TileSet_p0pqx")
 tile_map_data = PackedByteArray("AAAIAAgAAQAJAAUAAAAlAAcAAQAJAAUAAAA6AAIAAQAHAAEAAAA6AAMAAQAHAAIAAAA6AAQAAQAHAAMAAAA5AAQAAQAMAAEAAAAzAP//AQAMAAEAAAA1APz/AQAKAAEAAAA1AP3/AQAKAAIAAAA1AP7/AQAKAAMAAAA0AP7/AQAJAAMAAAA2AP7/AQALAAMAAAA2AAUAAQAJAAUAAABOAP7/AQAHAAEAAABOAP//AQAHAAIAAABOAAAAAQAHAAMAAAA/AAAAAQAMAAIAAAA/AAEAAQAMAAMAAAAqAAcAAQAKAAgAAAArAAcAAQALAAgAAAAsAAcAAQAMAAgAAAAuAAYAAQAMAAEAAAAAAAQAAQAFAAQAAAAAAAUAAQAFAAUAAAA+AAEAAQAJAAUAAAASAAAAAQAHAAIAAAASAAEAAQAHAAMAAAASAP//AQAHAAEAAAANAAEAAQAGAAEAAAANAAIAAQAGAAIAAAANAAMAAQAGAAMAAAAOAAMAAQAMAAEAAAAdAAYAAQAHAAEAAAAdAAcAAQAHAAIAAAAdAAgAAQAHAAMAAAAhAAMAAQAMAAIAAAAhAAQAAQAMAAMAAAA=")
 tile_set = SubResource("TileSet_mupgg")
 
-[node name="Enemy" parent="." index="5" unique_id=2006298918 instance=ExtResource("6_0eqkp")]
-position = Vector2(830, 80)
-
-[node name="Enemy2" parent="." index="6" unique_id=1762193301 instance=ExtResource("6_0eqkp")]
+[node name="Enemy2" parent="." index="5" unique_id=1762193301 instance=ExtResource("6_0eqkp")]
 position = Vector2(259, 160)
 
-[node name="Enemy3" parent="." index="7" unique_id=9524864 instance=ExtResource("6_0eqkp")]
+[node name="Enemy3" parent="." index="6" unique_id=9524864 instance=ExtResource("6_0eqkp")]
 position = Vector2(1202, 16)
 
-[node name="Coin" parent="." index="8" unique_id=525547507 instance=ExtResource("7_0eqkp")]
+[node name="Coin" parent="." index="7" unique_id=525547507 instance=ExtResource("7_0eqkp")]
 position = Vector2(583, 16)
 
-[node name="Coin3" parent="." index="9" unique_id=702707788 instance=ExtResource("7_0eqkp")]
+[node name="Coin3" parent="." index="8" unique_id=702707788 instance=ExtResource("7_0eqkp")]
 position = Vector2(344, 159)
 
-[node name="Coin2" parent="." index="10" unique_id=395362570 instance=ExtResource("7_0eqkp")]
+[node name="Coin2" parent="." index="9" unique_id=395362570 instance=ExtResource("7_0eqkp")]
 position = Vector2(1040, 8)
 
-[node name="Coin4" parent="." index="11" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
+[node name="Coin4" parent="." index="10" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
 position = Vector2(692, 101)
 
-[node name="Coin5" parent="." index="12" unique_id=232306144 instance=ExtResource("7_0eqkp")]
+[node name="Coin5" parent="." index="11" unique_id=232306144 instance=ExtResource("7_0eqkp")]
 position = Vector2(881, -23)
 
-[node name="Ghost" parent="." index="14" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
-position = Vector2(148, 106)
+[node name="Ghost" parent="." index="13" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
+position = Vector2(803, 80)

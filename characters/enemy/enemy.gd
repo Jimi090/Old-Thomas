@@ -68,8 +68,8 @@ func fire_attack(body: CharacterBody2D):
 	fire.speed = 250
 
 	get_tree().current_scene.add_child(fire)
-
-
+	
+	
 func die():
 	Events.enemy_died.emit()
 	super()

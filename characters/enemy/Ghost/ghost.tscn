@@ -67,7 +67,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrtow"]
-size = Vector2(14, 15)
+size = Vector2(24, 26)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_olw3v"]
 radius = 40.549355
@@ -76,12 +76,12 @@ radius = 40.549355
 script = ExtResource("1_olw3v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1777053938]
-position = Vector2(28, 28)
+position = Vector2(0, -0.5)
+scale = Vector2(1.625, 1.6875)
 sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767135069]
-position = Vector2(28, 28.5)
 shape = SubResource("RectangleShape2D_nrtow")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=42104295]
