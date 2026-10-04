@@ -1,9 +1,20 @@
 extends Node
 
-const SAVE_PATH := "user://save.json"
+const SAVE_PATH := "user://savegame.dat"
+
 signal gold_changed(new_amount)
 signal upgrades_changed
 
+const default_upgrades := {
+	"Attack_upgrade": { "level": 0, "maxLevel": 5 },
+	"Health_upgrade": { "level": 0, "maxLevel": 5 },
+	"Speed_upgrade": { "level": 0, "maxLevel": 5 },
+	"Revival_upgrade": { "level": 0, "maxLevel": 5 },
+}
+
+var active_quests := { }
+
+var displaied_quests := { }
 
 # Variables to save
 var gold: int = 0:
@@ -13,119 +24,58 @@ var gold: int = 0:
 
 var level_progress := { }
 
-const default_upgrades := {
-	"Attack_upgrade": { "level": 0, "maxLevel": 5 },
-	"Health_upgrade": { "level": 0, "maxLevel": 5 },
-	"Speed_upgrade": { "level": 0, "maxLevel": 5 },
-	"Revival_upgrade": { "level": 0, "maxLevel": 5 },
-}
-
 @onready var upgrades := default_upgrades:
 	set(value):
 		upgrades = value
 		upgrades_changed.emit()
 
 var quests := { }
-
-var active_quests := { }
-
-var displaied_quests := { }
 ###
 
 
 func save_data():
-	var data = {
+	var save = {
 		"gold": gold,
 		"level_progress": level_progress,
 		"upgrades": upgrades,
 		"quests": quests,
 	}
-
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	file.store_string(JSON.stringify(data))
+	file.store_var(save)
 
 
 func load_data():
 	if not FileAccess.file_exists(SAVE_PATH):
-		default_quests()
 		return
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var data = JSON.parse_string(file.get_as_text())
+	var save = file.get_var()
 
-	if data == null:
-		default_quests()
+	if save == { }:
 		return
 
-	gold = data.get("gold", 0)
-	level_progress = data.get("level_progress")
-	if data.get("upgrades"):
-		upgrades = data.get("upgrades")
+	gold = save["gold"]
+	level_progress = save["level_progress"]
+	upgrades = save["upgrades"]
+	quests = save["quests"]
 
-	if data.get("quests"):
-		quests = change_string_keys_to_int(data.get("quests"))
-	else:
-		default_quests()
+	if level_progress == { } or upgrades == { } or quests == { }:
+		return
 
-
-func change_string_keys_to_int(dic: Dictionary):
-	var result = { }
-	for key in dic:
-		result[int(key)] = dic[key]
-	return result
-
-
-func _ready() -> void:
-	load_data()
-	if level_progress == { }:
-		get_empty_level_progress()
-
-	get_active_quests()
-	get_displaied_quests()
-
-
-func get_empty_level_progress():
-	var paths_dir := DirAccess.open("res://Paths/")
-	paths_dir.list_dir_begin()
-	var paths := []
-	var pathFileName := paths_dir.get_next()
-
-	while pathFileName != "":
-		paths.append(pathFileName)
-
-		pathFileName = paths_dir.get_next()
-	paths.sort()
-
-	for path in paths:
-		var path_dir := DirAccess.open("res://Paths/" + path)
-		path_dir.list_dir_begin()
-		var levels := []
-		var levelFileName := path_dir.get_next()
-
-		while levelFileName != "":
-			levels.append(levelFileName)
-
-			levelFileName = path_dir.get_next()
-		levels.sort()
-
-		level_progress[path] = { }
-		for level in levels:
-			level_progress[path] = { }
-		for level in levels:
-			level_progress[path][level] = get_default_level_progress() # Call the function here!
+	return OK
 
 
 func clear_save():
 	gold = 0
 	upgrades = default_upgrades
-	get_empty_level_progress()
-	default_quests()
+	get_empty_levels_progress()
+	get_default_quests()
 
 	save_data()
-	get_tree().quit()
+	load_data()
 
 
-func default_quests():
+func get_default_quests():
 	# kill x monsters
 	# finish x path
 	# collect x coins
@@ -164,6 +114,8 @@ func default_quests():
 
 
 func get_active_quests():
+	if len(quests) < 5:
+		return
 	active_quests["kill"] = null
 	active_quests["path"] = null
 	active_quests["collect"] = null
@@ -182,6 +134,7 @@ func get_active_quests():
 		if quests[i]["completed"] == false:
 			active_quests["collect"] = i
 			break
+	return OK
 
 
 func get_displaied_quests():
@@ -205,5 +158,45 @@ func get_displaied_quests():
 			break
 
 
+func get_empty_levels_progress():
+	var paths_dir := DirAccess.open("res://Paths/")
+	paths_dir.list_dir_begin()
+	var paths := []
+	var pathFileName := paths_dir.get_next()
+
+	while pathFileName != "":
+		paths.append(pathFileName)
+
+		pathFileName = paths_dir.get_next()
+	paths.sort()
+
+	for path in paths:
+		var path_dir := DirAccess.open("res://Paths/" + path)
+		path_dir.list_dir_begin()
+		var levels := []
+		var levelFileName := path_dir.get_next()
+
+		while levelFileName != "":
+			levels.append(levelFileName)
+
+			levelFileName = path_dir.get_next()
+		levels.sort()
+
+		level_progress[path] = { }
+		for level in levels:
+			level_progress[path] = { }
+		for level in levels:
+			level_progress[path][level] = get_default_level_progress() # Call the function here!
+
+
 func get_default_level_progress() -> Dictionary:
 	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+
+
+func _ready() -> void:
+	var status = load_data()
+	if status != OK:
+		clear_save()
+
+	get_active_quests()
+	get_displaied_quests()
