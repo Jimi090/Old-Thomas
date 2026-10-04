@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://chiq7i2heh7tq"]
+
+[ext_resource type="Script" uid="uid://cpenjh4etu04i" path="res://characters/enemy/Ghost/ghost.gd" id="1_olw3v"]
+[ext_resource type="Texture2D" uid="uid://bqnd24dlvjgoc" path="res://characters/enemy/Ghost/ghost-idle.png" id="2_wos7i"]
+[ext_resource type="Texture2D" uid="uid://2gj4xxfk0led" path="res://characters/enemy/Ghost/ghost-run.png" id="3_6831b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22d58"]
+atlas = ExtResource("2_wos7i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr4v4"]
+atlas = ExtResource("2_wos7i")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pdh2"]
+atlas = ExtResource("2_wos7i")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jpnr"]
+atlas = ExtResource("2_wos7i")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lct8e"]
+atlas = ExtResource("2_wos7i")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61nxr"]
+atlas = ExtResource("3_6831b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjot0"]
+atlas = ExtResource("3_6831b")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22d58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr4v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pdh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jpnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lct8e")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61nxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjot0")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrtow"]
+size = Vector2(14, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_olw3v"]
+radius = 40.549355
+
+[node name="Ghost" type="CharacterBody2D" unique_id=1822596800]
+script = ExtResource("1_olw3v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1777053938]
+position = Vector2(28, 28)
+sprite_frames = SubResource("SpriteFrames_nrtow")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767135069]
+position = Vector2(28, 28.5)
+shape = SubResource("RectangleShape2D_nrtow")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=42104295]
+visible = false
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=859814279]
+shape = SubResource("CircleShape2D_olw3v")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=342872970]
+visible = false
+target_position = Vector2(3, 26)
+
+[node name="FloorCheck" type="RayCast2D" parent="FloorCheck" unique_id=913237586]
+visible = false
+target_position = Vector2(3, 26)
