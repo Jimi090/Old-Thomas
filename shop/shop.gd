@@ -48,8 +48,6 @@ func _on_buy_btn_pressed() -> void:
 			update_description()
 			selected.diamonds_amount_to_show += 1
 			GameData.save_data()
-		else:
-			print('xd')
 
 
 func _on_gold_changed(gold):
