@@ -421,7 +421,7 @@ position = Vector2(87, 65)
 position = Vector2(256, 94)
 
 [node name="Enemy3" parent="." index="6" unique_id=980283988 instance=ExtResource("3_qharc")]
-position = Vector2(332, 13)
+position = Vector2(337, 16)
 
 [node name="Enemy6" parent="." index="7" unique_id=278829745 instance=ExtResource("3_qharc")]
 position = Vector2(577, -177)
@@ -439,10 +439,10 @@ position = Vector2(284, 68)
 position = Vector2(284, 68)
 
 [node name="Ghost" parent="." index="12" unique_id=1822596800 instance=ExtResource("5_81ai3")]
-position = Vector2(371, 141)
+position = Vector2(370, 134)
 
 [node name="Ghost2" parent="." index="13" unique_id=2051070764 instance=ExtResource("5_81ai3")]
-position = Vector2(626, 144)
+position = Vector2(626, 135)
 
 [node name="Coin5" parent="." index="14" unique_id=1426852532 instance=ExtResource("4_cclqh")]
 position = Vector2(593, -77)
