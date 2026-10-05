@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="2_ire3j"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="3_qharc"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="4_cclqh"]
+[ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemy/Ghost/ghost.tscn" id="5_81ai3"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="5_b6pbm"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="6_3xb0a"]
 
@@ -422,26 +423,26 @@ position = Vector2(256, 94)
 [node name="Enemy3" parent="." index="6" unique_id=980283988 instance=ExtResource("3_qharc")]
 position = Vector2(332, 13)
 
-[node name="Enemy4" parent="." index="7" unique_id=880256774 instance=ExtResource("3_qharc")]
-position = Vector2(395, 141)
-
-[node name="Enemy5" parent="." index="8" unique_id=954391455 instance=ExtResource("3_qharc")]
-position = Vector2(637, 138)
-
-[node name="Enemy6" parent="." index="9" unique_id=278829745 instance=ExtResource("3_qharc")]
+[node name="Enemy6" parent="." index="7" unique_id=278829745 instance=ExtResource("3_qharc")]
 position = Vector2(577, -177)
 
-[node name="Coin" parent="." index="10" unique_id=525547507 instance=ExtResource("4_cclqh")]
+[node name="Coin" parent="." index="8" unique_id=525547507 instance=ExtResource("4_cclqh")]
 position = Vector2(127, 114)
 
-[node name="Coin2" parent="." index="11" unique_id=1560218197 instance=ExtResource("4_cclqh")]
+[node name="Coin2" parent="." index="9" unique_id=1560218197 instance=ExtResource("4_cclqh")]
 position = Vector2(222, 132)
 
-[node name="Coin3" parent="." index="12" unique_id=1752483819 instance=ExtResource("4_cclqh")]
+[node name="Coin3" parent="." index="10" unique_id=1752483819 instance=ExtResource("4_cclqh")]
 position = Vector2(284, 68)
 
-[node name="Coin4" parent="." index="13" unique_id=975098274 instance=ExtResource("4_cclqh")]
+[node name="Coin4" parent="." index="11" unique_id=975098274 instance=ExtResource("4_cclqh")]
 position = Vector2(284, 68)
+
+[node name="Ghost" parent="." index="12" unique_id=1822596800 instance=ExtResource("5_81ai3")]
+position = Vector2(371, 141)
+
+[node name="Ghost2" parent="." index="13" unique_id=2051070764 instance=ExtResource("5_81ai3")]
+position = Vector2(626, 144)
 
 [node name="Coin5" parent="." index="14" unique_id=1426852532 instance=ExtResource("4_cclqh")]
 position = Vector2(593, -77)
@@ -472,3 +473,6 @@ position = Vector2(188, 135)
 
 [node name="Potion3" parent="." index="23" unique_id=1020177583 instance=ExtResource("6_3xb0a")]
 position = Vector2(874, 151)
+
+[node name="Dog" parent="." index="24" unique_id=720855982]
+position = Vector2(-27, -47)

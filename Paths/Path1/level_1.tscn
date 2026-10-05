@@ -595,7 +595,7 @@ tile_set = SubResource("TileSet_mupgg")
 position = Vector2(259, 160)
 
 [node name="Enemy3" parent="." index="6" unique_id=9524864 instance=ExtResource("6_0eqkp")]
-position = Vector2(1202, 16)
+position = Vector2(819, 80)
 
 [node name="Coin" parent="." index="7" unique_id=525547507 instance=ExtResource("7_0eqkp")]
 position = Vector2(583, 16)
@@ -613,4 +613,4 @@ position = Vector2(692, 101)
 position = Vector2(881, -23)
 
 [node name="Ghost" parent="." index="13" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
-position = Vector2(803, 80)
+position = Vector2(1185, 4)
