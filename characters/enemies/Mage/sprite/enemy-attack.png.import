@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d35rss8uolvut"
-path="res://.godot/imported/idle-enemy.png-c467d3db09732c7869a9cd3e1a628ce1.ctex"
+uid="uid://s26m8a45fhyy"
+path="res://.godot/imported/enemy-attack.png-e91b11ae9686d9a8f7277d36a04b3c1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemy/sprite/idle-enemy.png"
-dest_files=["res://.godot/imported/idle-enemy.png-c467d3db09732c7869a9cd3e1a628ce1.ctex"]
+source_file="res://characters/enemies/Mage/sprite/enemy-attack.png"
+dest_files=["res://.godot/imported/enemy-attack.png-e91b11ae9686d9a8f7277d36a04b3c1d.ctex"]
 
 [params]
 

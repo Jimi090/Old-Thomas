@@ -28,6 +28,8 @@ func _ready() -> void:
 	var speed_multiplayer = GameData.upgrades["Speed_upgrade"]["level"]
 	SPEED += speed_multiplayer * 10
 
+	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+
 	add_to_group("player")
 	super()
 
@@ -71,9 +73,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_animation_finished() -> void:
-	if state == State.BASIC_ATTACK or state == State.TAKE_DAMAGE or state == State.JUMP:
-		state = State.IDLE
+func basic_attack(attack_range, damage):
+	state = State.BASIC_ATTACK
+	var bodies = attack_range.get_overlapping_bodies()
+	for body in bodies:
+		body.take_damage(damage)
 
 
 func _on_health_changed():

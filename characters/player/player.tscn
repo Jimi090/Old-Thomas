@@ -222,5 +222,3 @@ shape = SubResource("RectangleShape2D_g1dw6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2130282150]
 position_smoothing_enabled = true
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]

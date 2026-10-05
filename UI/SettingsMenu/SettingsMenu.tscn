@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bdwa8rq6rnrr2"]
 
-[ext_resource type="Script" uid="uid://0rxm4n3i5nat" path="res://settings_menu.gd" id="1_qvyjs"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_n5um7"]
-[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="3_e2rca"]
+[ext_resource type="Script" uid="uid://0rxm4n3i5nat" path="res://UI/SettingsMenu/settings_menu.gd" id="1_ickeq"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_f6fof"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="3_78k07"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
-font = ExtResource("2_n5um7")
+font = ExtResource("2_f6fof")
 
 [sub_resource type="LabelSettings" id="LabelSettings_kara3"]
-font = ExtResource("2_n5um7")
+font = ExtResource("2_f6fof")
 font_size = 9
 
 [node name="SettingsMenu" type="Control" unique_id=1620429959]
@@ -16,7 +16,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_qvyjs")
+script = ExtResource("1_ickeq")
 
 [node name="Panel" type="Panel" parent="." unique_id=203270832]
 modulate = Color(0.8751483, 0.8751483, 0.87514824, 1)
@@ -52,7 +52,7 @@ offset_top = 50.0
 offset_right = 87.0
 offset_bottom = 66.0
 
-[node name="BackButton" parent="Panel" unique_id=2064163710 instance=ExtResource("3_e2rca")]
+[node name="BackButton" parent="Panel" unique_id=2064163710 instance=ExtResource("3_78k07")]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 5.9999995

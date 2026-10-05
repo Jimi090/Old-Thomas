@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cxkl8rjhn0lw5"]
 
 [ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_d7xc6"]
-[ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemy/Enemy.tscn" id="2_s13o8"]
+[ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="2_s13o8"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="3_0rwfu"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="4_nskb6"]
 [ext_resource type="Texture2D" uid="uid://83tkddntc1oi" path="res://tileset/midground_/desertDungeon_.png" id="5_km11y"]

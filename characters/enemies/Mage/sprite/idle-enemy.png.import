@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdpwngfus66oc"
-path="res://.godot/imported/bigcoolproj.png-d2b6c2d95cd6f6effa12b9fdbfa8d9ca.ctex"
+uid="uid://d35rss8uolvut"
+path="res://.godot/imported/idle-enemy.png-bdb6fc53c7c5edfd8ba7be2a82b5f192.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemy/Fire Projectile/Projectile assets/bigcoolproj.png"
-dest_files=["res://.godot/imported/bigcoolproj.png-d2b6c2d95cd6f6effa12b9fdbfa8d9ca.ctex"]
+source_file="res://characters/enemies/Mage/sprite/idle-enemy.png"
+dest_files=["res://.godot/imported/idle-enemy.png-bdb6fc53c7c5edfd8ba7be2a82b5f192.ctex"]
 
 [params]
 

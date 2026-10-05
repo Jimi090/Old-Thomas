@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cymdi8bpgwy1w"]
 
-[ext_resource type="Script" uid="uid://bedia3c3pkcpo" path="res://characters/enemy/Fire Projectile/fire_projectile.gd" id="1_o70y5"]
-[ext_resource type="Texture2D" uid="uid://bqvcvg45bgxue" path="res://characters/enemy/Fire Projectile/Projectile assets/bigflameproj.png" id="2_p034l"]
+[ext_resource type="Script" uid="uid://bedia3c3pkcpo" path="res://characters/enemies/Fire Projectile/fire_projectile.gd" id="1_o70y5"]
+[ext_resource type="Texture2D" uid="uid://bqvcvg45bgxue" path="res://characters/enemies/Fire Projectile/Projectile assets/bigflameproj.png" id="2_p034l"]
 
 [node name="Fire_Projectile" type="Area2D" unique_id=1292995666]
 scale = Vector2(2, 2)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s2m84cx43s2t"
-path="res://.godot/imported/spritesheetver.png-59ea2bf3374861ffe5d996c5447e1ce5.ctex"
+uid="uid://2gj4xxfk0led"
+path="res://.godot/imported/ghost-run.png-a95e9029aba17f484216642deb036e71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemy/Fire Projectile/Projectile assets/spritesheetver.png"
-dest_files=["res://.godot/imported/spritesheetver.png-59ea2bf3374861ffe5d996c5447e1ce5.ctex"]
+source_file="res://characters/enemies/Ghost/sprite/ghost-run.png"
+dest_files=["res://.godot/imported/ghost-run.png-a95e9029aba17f484216642deb036e71.ctex"]
 
 [params]
 

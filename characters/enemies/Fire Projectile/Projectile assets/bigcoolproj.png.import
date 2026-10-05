@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqnd24dlvjgoc"
-path="res://.godot/imported/ghost-idle.png-23b6a72bba7603eac64fcaa6893bf7b3.ctex"
+uid="uid://bdpwngfus66oc"
+path="res://.godot/imported/bigcoolproj.png-55ffdb8546adcba422119c52e1a59b56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemy/Ghost/ghost-idle.png"
-dest_files=["res://.godot/imported/ghost-idle.png-23b6a72bba7603eac64fcaa6893bf7b3.ctex"]
+source_file="res://characters/enemies/Fire Projectile/Projectile assets/bigcoolproj.png"
+dest_files=["res://.godot/imported/bigcoolproj.png-55ffdb8546adcba422119c52e1a59b56.ctex"]
 
 [params]
 

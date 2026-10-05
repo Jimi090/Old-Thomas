@@ -1,69 +1,69 @@
 [gd_scene format=3 uid="uid://dreagav0roqr6"]
 
-[ext_resource type="Script" uid="uid://bg6ycsb6fohbl" path="res://characters/enemy/enemy.gd" id="1_ey2db"]
-[ext_resource type="Texture2D" uid="uid://s26m8a45fhyy" path="res://characters/enemy/sprite/enemy-attack.png" id="2_e0t8f"]
-[ext_resource type="Texture2D" uid="uid://dy4embuxbk2g8" path="res://characters/enemy/sprite/damaged-enemy.png" id="3_cnuwa"]
-[ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemy/sprite/idle-enemy.png" id="4_micc2"]
-[ext_resource type="Texture2D" uid="uid://crutaoijri1vg" path="res://characters/enemy/sprite/run-enemy.png" id="5_vftwx"]
+[ext_resource type="Script" uid="uid://d2oevmrw6gwnl" path="res://characters/enemies/Mage/mage.gd" id="1_6i37p"]
+[ext_resource type="Texture2D" uid="uid://s26m8a45fhyy" path="res://characters/enemies/Mage/sprite/enemy-attack.png" id="2_eytik"]
+[ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemies/Mage/sprite/idle-enemy.png" id="3_oyiyx"]
+[ext_resource type="Texture2D" uid="uid://crutaoijri1vg" path="res://characters/enemies/Mage/sprite/run-enemy.png" id="4_2iw3q"]
+[ext_resource type="Texture2D" uid="uid://dy4embuxbk2g8" path="res://characters/enemies/Mage/sprite/damaged-enemy.png" id="5_pklm1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hh6x"]
-atlas = ExtResource("2_e0t8f")
+atlas = ExtResource("2_eytik")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnjrc"]
-atlas = ExtResource("2_e0t8f")
+atlas = ExtResource("2_eytik")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lm2r7"]
-atlas = ExtResource("2_e0t8f")
+atlas = ExtResource("2_eytik")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_32mxs"]
-atlas = ExtResource("2_e0t8f")
+atlas = ExtResource("2_eytik")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6q3y"]
-atlas = ExtResource("4_micc2")
+atlas = ExtResource("3_oyiyx")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqmjr"]
-atlas = ExtResource("4_micc2")
+atlas = ExtResource("3_oyiyx")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_et7lg"]
-atlas = ExtResource("4_micc2")
+atlas = ExtResource("3_oyiyx")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd6oj"]
-atlas = ExtResource("4_micc2")
+atlas = ExtResource("3_oyiyx")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0y2nb"]
-atlas = ExtResource("4_micc2")
+atlas = ExtResource("3_oyiyx")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0m5t"]
-atlas = ExtResource("5_vftwx")
+atlas = ExtResource("4_2iw3q")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bu5f"]
-atlas = ExtResource("5_vftwx")
+atlas = ExtResource("4_2iw3q")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sfxxb"]
-atlas = ExtResource("5_vftwx")
+atlas = ExtResource("4_2iw3q")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30gw1"]
-atlas = ExtResource("5_vftwx")
+atlas = ExtResource("4_2iw3q")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_obssx"]
-atlas = ExtResource("3_cnuwa")
+atlas = ExtResource("5_pklm1")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f14m0"]
-atlas = ExtResource("3_cnuwa")
+atlas = ExtResource("5_pklm1")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
@@ -143,11 +143,11 @@ size = Vector2(18, 19)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ey2db"]
 radius = 40.549355
 
-[node name="Enemy" type="CharacterBody2D" unique_id=2006298918]
+[node name="Mage" type="CharacterBody2D" unique_id=2006298918]
 scale = Vector2(2, 2)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_ey2db")
+script = ExtResource("1_6i37p")
 metadata/_custom_type_script = "uid://dgsbxe6ot30r3"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=141217313]
@@ -169,12 +169,7 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_ey2db")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=71231742]
-visible = false
 target_position = Vector2(3, 26)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=562945465]
-visible = false
 target_position = Vector2(12, 5)
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
