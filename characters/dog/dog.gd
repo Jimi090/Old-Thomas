@@ -48,8 +48,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func play_animation(state):
-	match state:
+func play_animation(new_state):
+	match new_state:
 		STATES.IDLE:
 			animated_sprite_2d.play("idle")
 		STATES.RUN:

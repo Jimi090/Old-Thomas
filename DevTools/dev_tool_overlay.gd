@@ -28,12 +28,12 @@ func _on_clear_save_btn_pressed() -> void:
 func _on_fly_button_pressed() -> void:
 	var player: Player = get_player()
 	if player:
-		if player.GRAVITY == 0:
-			player.GRAVITY = 1000
-			player.JUMP_FORCE = 320
+		if player.gravity == 0:
+			player.gravity = GB.GRAVITY
+			player.JUMP_FORCE = GB.player.jump_force
 			fly_mode = false
 		else:
-			player.GRAVITY = 0
+			player.gravity = 0
 			player.JUMP_FORCE = 0
 			fly_mode = true
 
@@ -45,7 +45,7 @@ func get_player() -> Player:
 func _on_infinite_health_button_pressed() -> void:
 	var player: Player = get_player()
 	if player:
-		if player.health > player.max_health:
-			player.health = player.max_health
+		if player.health > player.MAX_HEALTH:
+			player.health = player.MAX_HEALTH
 		else:
 			player.health = 10000

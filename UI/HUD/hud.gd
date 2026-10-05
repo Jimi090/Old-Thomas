@@ -12,7 +12,7 @@ func _on_gold_changed(amount):
 
 func _on_health_changed(health):
 	health_bar.value = health
-	var percent = float(health) / player.max_health * 100
+	var percent = float(health) / player.MAX_HEALTH * 100
 
 	var style := health_bar.get_theme_stylebox("fill").duplicate()
 
@@ -30,7 +30,7 @@ func _ready() -> void:
 	GameData.gold_changed.connect(_on_gold_changed)
 	player.health_changed.connect(_on_health_changed)
 
-	health_bar.max_value = player.max_health
-	health_bar.value = player.max_health
+	health_bar.max_value = player.MAX_HEALTH
+	health_bar.value = player.MAX_HEALTH
 
 	gold_label.text = "Gold: " + str(GameData.gold)

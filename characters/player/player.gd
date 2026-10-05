@@ -7,26 +7,25 @@ signal player_died
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var basic_attack_range: Area2D = $BasicAttackRange
 
-@export var SPEED := 170
-@export var GRAVITY := 1000
-@export var JUMP_FORCE := 320
-@export var attack_multi := 1.0
-@export var speed_multi := 1.0
+var SPEED := GB.player.speed
+var basic_attack_damage := GB.player.damage
+var JUMP_FORCE := GB.player.jump_force
 
-var basic_attack_damage := 15
-
+var attack_multi := 1.0
+var speed_multi := 1.0
 var direction: float
+var gravity := GB.GRAVITY
 
 
 func _ready() -> void:
 	var health_multiplayer = GameData.upgrades["Health_upgrade"]["level"]
-	max_health = 80 + health_multiplayer * 15
+	MAX_HEALTH = GB.player.health + health_multiplayer * GB.player.health / 10
 
 	var damage_multiplayer = GameData.upgrades["Attack_upgrade"]["level"]
-	basic_attack_damage += damage_multiplayer * 2
+	basic_attack_damage += damage_multiplayer * GB.player.damage / 10
 
 	var speed_multiplayer = GameData.upgrades["Speed_upgrade"]["level"]
-	SPEED += speed_multiplayer * 10
+	SPEED += speed_multiplayer * GB.player.speed / 10
 
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
 
@@ -37,7 +36,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# gravity
 	if not is_on_floor():
-		velocity.y += GRAVITY * delta
+		velocity.y += gravity * delta
 
 	# walking
 	direction = Input.get_axis("left", "right")
@@ -85,7 +84,7 @@ func _on_health_changed():
 
 
 func heal(amount: int) -> void:
-	health = min(max_health, health + amount)
+	health = min(MAX_HEALTH, health + amount)
 	health_changed.emit(health)
 
 
@@ -95,7 +94,7 @@ func die():
 	var chance = 2 * int(GameData.upgrades["Revival_upgrade"]["level"])
 	SoundManager.play_death_sound()
 	if random <= chance:
-		health = max_health
+		health = MAX_HEALTH
 		position.y -= 100
 	else:
 		player_died.emit()

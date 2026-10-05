@@ -1,20 +1,24 @@
 extends Enemy
 
+const FIRE_PROJECTILE = preload("uid://cymdi8bpgwy1w")
+
 
 func _ready() -> void:
 	animated_sprite_2d = $AnimatedSprite2D
 	attack_range = $AttackRange
 	floor_check = $FloorCheck
 	wall_check = $WallCheck
-	SPEED = 100
-	DAMAGE = 10
-	ATTACK_COOLDOWN = 1.2
-	max_health = 50
+	SPEED = GB.mage.speed
+	DAMAGE = GB.mage.damage
+	ATTACK_COOLDOWN = GB.mage.attack_cooldown
+	MAX_HEALTH = GB.mage.health
+	JUMP_FORCE = GB.mage.jump_force
+
 	super()
 
 
 func attack(body: CharacterBody2D):
-	var fire: Fire_Projectile = PROJECTILE.instantiate()
+	var fire: Fire_Projectile = FIRE_PROJECTILE.instantiate()
 
 	fire.global_position = global_position
 	fire.damage = DAMAGE

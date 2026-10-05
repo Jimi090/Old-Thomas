@@ -6,14 +6,10 @@ var attack_range: Area2D
 var floor_check: RayCast2D
 var wall_check: RayCast2D
 
-var GRAVITY := 1000
-var JUMP_FORCE := 200
-
 var SPEED: int
 var DAMAGE: int
 var ATTACK_COOLDOWN: float
-
-var PROJECTILE = preload("uid://cymdi8bpgwy1w")
+var JUMP_FORCE: int
 
 var direction: float = 1
 
@@ -27,7 +23,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# gravity
 	if not is_on_floor():
-		velocity.y += GRAVITY * delta
+		velocity.y += GB.GRAVITY * delta
 
 	if state != State.BASIC_ATTACK:
 		# rotate
@@ -62,7 +58,7 @@ func _on_attack_range_body_entered(body: Character) -> void:
 	state = State.RUN
 
 
-func attack(body: CharacterBody2D):
+func attack(_body: CharacterBody2D):
 	pass
 
 

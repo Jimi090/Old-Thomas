@@ -1,7 +1,7 @@
 class_name Character
 extends CharacterBody2D
 
-@export var max_health: int
+@export var MAX_HEALTH: int
 
 var health: int:
 	set(value):
@@ -20,7 +20,7 @@ var state = State.IDLE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	health = max_health
+	health = MAX_HEALTH
 
 
 func take_damage(damage: int):
