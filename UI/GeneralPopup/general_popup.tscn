@@ -2,8 +2,35 @@
 
 [ext_resource type="Script" uid="uid://drf54by4gnxpn" path="res://UI/GeneralPopup/general_popup.gd" id="1_pq7lb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri767"]
+bg_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.30980393, 0.3647059, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.30980393, 0.3647059, 1, 1)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq7lb"]
+bg_color = Color(0.34901962, 0.40392157, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_belrj"]
+bg_color = Color(0.44313726, 0.5019608, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="GeneralPopup" type="Panel" unique_id=247699040]
-visible = false
 z_index = 100
 anchors_preset = 8
 anchor_left = 0.5
@@ -16,16 +43,8 @@ offset_right = 90.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ri767")
 script = ExtResource("1_pq7lb")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=614398843]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1521470578]
 custom_minimum_size = Vector2(1, 1)
@@ -41,9 +60,11 @@ offset_right = 70.0
 offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.9607843, 0.98039216, 1)
 theme_override_font_sizes/font_size = 10
 text = "Edit this in text varaible"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="." unique_id=251383627]
@@ -53,13 +74,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -11.5
-offset_top = -26.0
-offset_right = 11.5
-offset_bottom = -4.0
+offset_left = -30.0
+offset_top = -22.0
+offset_right = 30.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 10
-text = "OK"
+theme_override_styles/normal = SubResource("StyleBoxFlat_pq7lb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_belrj")
+text = "Continue"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
