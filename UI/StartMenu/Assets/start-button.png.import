@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nhflt2jej8aw"
-path="res://.godot/imported/ghost-damaged.png-112ad197c94fc3522ab2e0c3394d4f18.ctex"
+uid="uid://dnda3t44jpapb"
+path="res://.godot/imported/start-button.png-9d5a03682e144ac37dabfba7bcb655b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemies/Ghost/sprite/ghost-damaged.png"
-dest_files=["res://.godot/imported/ghost-damaged.png-112ad197c94fc3522ab2e0c3394d4f18.ctex"]
+source_file="res://UI/StartMenu/Assets/start-button.png"
+dest_files=["res://.godot/imported/start-button.png-9d5a03682e144ac37dabfba7bcb655b7.ctex"]
 
 [params]
 
