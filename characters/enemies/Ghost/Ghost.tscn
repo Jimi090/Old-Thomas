@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://t263dcmt3mm7" path="res://characters/enemies/Ghost/ghost.gd" id="1_olw3v"]
 [ext_resource type="Texture2D" uid="uid://bqnd24dlvjgoc" path="res://characters/enemies/Ghost/sprite/ghost-idle.png" id="2_wos7i"]
 [ext_resource type="Texture2D" uid="uid://2gj4xxfk0led" path="res://characters/enemies/Ghost/sprite/ghost-run.png" id="3_6831b"]
+[ext_resource type="Texture2D" uid="uid://nhflt2jej8aw" path="res://characters/enemies/Ghost/sprite/ghost-damaged.png" id="4_4wlvw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22d58"]
 atlas = ExtResource("2_wos7i")
@@ -32,9 +33,13 @@ region = Rect2(0, 0, 16, 16)
 atlas = ExtResource("3_6831b")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n811m"]
-atlas = ExtResource("3_6831b")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgaxu"]
+atlas = ExtResource("4_4wlvw")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64ma7"]
+atlas = ExtResource("4_4wlvw")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
 animations = [{
@@ -71,7 +76,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n811m")
+"texture": SubResource("AtlasTexture_fgaxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64ma7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64ma7")
 }],
 "loop": 0,
 "name": &"take_damage",

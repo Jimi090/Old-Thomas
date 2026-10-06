@@ -14,10 +14,10 @@ func _on_body_entered(body: Node2D) -> void:
 		queue_free()
 
 
-func apply_affect(player: Node2D) -> void:
+func apply_affect(player: Player) -> void:
 	match potion_type:
 		TypePotion.HEALTH:
-			player.heal(25)
+			player.heal(GB.player.health / 4)
 		TypePotion.ATTACK:
 			player.boost_attack(1.5)
 		TypePotion.SPEED:

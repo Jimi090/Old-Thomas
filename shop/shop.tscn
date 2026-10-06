@@ -77,7 +77,6 @@ grow_vertical = 2
 layout_mode = 0
 button_image = ExtResource("1_sxvro")
 description = "Increases Thomas' damage by 10%"
-costs = Array[int]([5, 15, 30, 60, 120])
 
 [node name="Health_upgrade" parent="Items_container" unique_id=1483561637 instance=ExtResource("3_givde")]
 layout_mode = 0
@@ -85,7 +84,6 @@ offset_left = 52.0
 offset_right = 372.0
 button_image = ExtResource("2_givde")
 description = "Increases Thomas' health by 10%"
-costs = Array[int]([5, 15, 30, 60, 120])
 
 [node name="Speed_upgrade" parent="Items_container" unique_id=439450475 instance=ExtResource("3_givde")]
 layout_mode = 0
@@ -93,7 +91,6 @@ offset_top = 52.0
 offset_bottom = 372.0
 button_image = ExtResource("5_2wf2a")
 description = "Increases Thomas' speed by 10%"
-costs = Array[int]([5, 15, 30, 60, 120])
 
 [node name="Revival_upgrade" parent="Items_container" unique_id=556607063 instance=ExtResource("3_givde")]
 layout_mode = 0
@@ -103,7 +100,6 @@ offset_right = 372.0
 offset_bottom = 372.0
 button_image = ExtResource("6_xad5q")
 description = "Increases Thomas' revival chance by 2%"
-costs = Array[int]([5, 15, 30, 60, 120])
 
 [node name="GoldLabel" type="Label" parent="." unique_id=507711699]
 layout_mode = 0

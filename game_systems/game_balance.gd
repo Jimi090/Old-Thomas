@@ -24,7 +24,21 @@ class CharacterStats:
 		self.jump_force = jump_force
 
 
+class ShopUpgrades:
+	var prices: Array[int]
+
+
+	func _init(prices: Array[int]) -> void:
+		self.prices = prices
+
+
 var player := CharacterStats.new(80, 15, 1.0, 170, 320)
 var ghost := CharacterStats.new(70, 20, 1, 50, 200)
 var mage := CharacterStats.new(50, 10, 1.2, 100, 200)
+
+var attack_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])
+var health_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])
+var speed_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])
+var revival_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])
+
 const GRAVITY := 1000

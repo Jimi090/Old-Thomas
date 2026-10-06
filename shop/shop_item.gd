@@ -6,11 +6,11 @@ extends Panel
 @onready var button: Button = $Button
 
 @export var description: String
-@export var costs: Array[int]
+var costs: Array[int]
 
 var diamonds_amount_to_show := 0:
 	set(value):
-		show_diamonds(value) 
+		show_diamonds(value)
 		diamonds_amount_to_show = value
 var selected := false:
 	set(value):

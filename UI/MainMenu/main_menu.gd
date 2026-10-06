@@ -3,12 +3,12 @@ extends Control
 @onready var path_1: Button = $Path1
 @onready var path_2: Button = $Path2
 @onready var path_3: Button = $Path3
-@onready var not_available_popup: Panel = $NotAvailablePopup
-@onready var close_pupup_button: Button = $NotAvailablePopup/Button
 @onready var shop_btn: Button = $ShopBtn
 @onready var church_btn: Button = $ChurchBtn
+
 const SHOP = preload("uid://tf36yngqrqgr")
 const TOWN = preload("uid://cqqlmplhsuk52")
+const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 
 
 func _ready() -> void:
@@ -36,8 +36,7 @@ func open_town():
 
 
 func _on_click_not_available():
+	var not_available_popup: GeneralPopup = GENERAL_POPUP.instantiate()
+	not_available_popup.text = "This feature is not available in this version.\nSorry about that! We'll try to do better next time :)"
+	add_child(not_available_popup)
 	not_available_popup.show()
-
-
-func _on_button_pressed() -> void:
-	not_available_popup.hide()

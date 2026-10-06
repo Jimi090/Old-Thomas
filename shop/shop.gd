@@ -31,6 +31,11 @@ func update_description():
 
 
 func _ready() -> void:
+	items_container.get_child(0).costs = GB.attack_upgrade.prices
+	items_container.get_child(1).costs = GB.health_upgrade.prices
+	items_container.get_child(2).costs = GB.speed_upgrade.prices
+	items_container.get_child(3).costs = GB.revival_upgrade.prices
+
 	set_signals()
 	GameData.gold_changed.connect(_on_gold_changed)
 	_on_gold_changed(GameData.gold)
