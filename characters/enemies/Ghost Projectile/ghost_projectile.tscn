@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6xfvvv4p5msq"]
+
+[ext_resource type="Texture2D" uid="uid://bcdjjkwyqdo52" path="res://characters/enemies/Ghost Projectile/smallcircleproj.png" id="1_4cgxb"]
+[ext_resource type="Script" uid="uid://5lsmsiy1ymo7" path="res://characters/enemies/Ghost Projectile/ghost_projectile.gd" id="1_fyntr"]
+
+[node name="GhostProjectile" type="Area2D" unique_id=1529597663]
+scale = Vector2(1.5, 1.5)
+collision_mask = 4
+script = ExtResource("1_fyntr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1697055913]
+texture = ExtResource("1_4cgxb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=101518503]
+polygon = PackedVector2Array(-3, -5, -5, -3, -5, 2, -3, 4, 2, 4, 4, 2, 4, -3, 2, -5)

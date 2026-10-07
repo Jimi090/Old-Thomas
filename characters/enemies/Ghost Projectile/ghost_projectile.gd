@@ -1,9 +1,9 @@
-class_name Fire_Projectile
+class_name Ghost_Projectile
 extends Projectile
 
 
 func _ready() -> void:
 	sprite2d = $Sprite2D
-	speed = 200
-	lifespan = 2.0
+	speed = 160
+	lifespan = 1.6
 	super()

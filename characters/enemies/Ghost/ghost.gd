@@ -1,6 +1,6 @@
 extends Enemy
 
-const FIRE_PROJECTILE = preload("uid://cymdi8bpgwy1w")
+const GHOST_PROJECTILE = preload("uid://c6xfvvv4p5msq")
 
 
 func _ready() -> void:
@@ -18,11 +18,11 @@ func _ready() -> void:
 
 
 func attack(body: CharacterBody2D):
-	var fire: Fire_Projectile = FIRE_PROJECTILE.instantiate()
+	var ghost_proj: Ghost_Projectile = GHOST_PROJECTILE.instantiate()
 
-	fire.global_position = global_position
-	fire.damage = DAMAGE
-	fire.target_position = body.global_position
-	fire.speed = 250
+	ghost_proj.global_position = global_position
+	ghost_proj.damage = DAMAGE
+	ghost_proj.target_position = body.global_position
+	ghost_proj.speed = 200
 
-	get_tree().current_scene.add_child(fire)
+	get_tree().current_scene.add_child(ghost_proj)
