@@ -177,6 +177,8 @@ func get_empty_levels_progress():
 		var levelFileName := path_dir.get_next()
 
 		while levelFileName != "":
+			if levelFileName.ends_with(".remap"):
+				levelFileName = levelFileName.left(-6)
 			levels.append(levelFileName)
 
 			levelFileName = path_dir.get_next()
