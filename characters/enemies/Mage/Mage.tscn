@@ -83,7 +83,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"basic_attack",
-"speed": 6.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,7 +152,7 @@ metadata/_custom_type_script = "uid://dgsbxe6ot30r3"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=141217313]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"take_damage"
+animation = &"basic_attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419303714]

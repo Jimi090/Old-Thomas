@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://2gj4xxfk0led" path="res://characters/enemies/Ghost/sprite/ghost-run.png" id="3_6831b"]
 [ext_resource type="Texture2D" uid="uid://nhflt2jej8aw" path="res://characters/enemies/Ghost/sprite/ghost-damaged.png" id="4_4wlvw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wlvw"]
+atlas = ExtResource("3_6831b")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_22d58"]
 atlas = ExtResource("2_wos7i")
 region = Rect2(0, 0, 16, 16)
@@ -43,6 +47,14 @@ region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wlvw")
+}],
+"loop": 0,
+"name": &"basic_attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_22d58")
@@ -104,7 +116,7 @@ script = ExtResource("1_olw3v")
 position = Vector2(3.0000002, 4.0000005)
 scale = Vector2(1.9999999, 2.25)
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"take_damage"
+animation = &"basic_attack"
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767135069]

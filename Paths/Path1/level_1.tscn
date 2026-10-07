@@ -600,17 +600,17 @@ position = Vector2(819, 80)
 [node name="Coin" parent="." index="7" unique_id=525547507 instance=ExtResource("7_0eqkp")]
 position = Vector2(583, 16)
 
-[node name="Coin3" parent="." index="8" unique_id=702707788 instance=ExtResource("7_0eqkp")]
+[node name="Ghost" parent="." index="8" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
+position = Vector2(1185, 4)
+
+[node name="Coin3" parent="." index="9" unique_id=702707788 instance=ExtResource("7_0eqkp")]
 position = Vector2(344, 159)
 
-[node name="Coin2" parent="." index="9" unique_id=395362570 instance=ExtResource("7_0eqkp")]
+[node name="Coin2" parent="." index="10" unique_id=395362570 instance=ExtResource("7_0eqkp")]
 position = Vector2(1040, 8)
 
-[node name="Coin4" parent="." index="10" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
+[node name="Coin4" parent="." index="11" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
 position = Vector2(692, 101)
 
-[node name="Coin5" parent="." index="11" unique_id=232306144 instance=ExtResource("7_0eqkp")]
+[node name="Coin5" parent="." index="12" unique_id=232306144 instance=ExtResource("7_0eqkp")]
 position = Vector2(881, -23)
-
-[node name="Ghost" parent="." index="13" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
-position = Vector2(1185, 4)

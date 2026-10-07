@@ -17,12 +17,12 @@ func _ready() -> void:
 	super()
 
 
-func attack(body: CharacterBody2D):
+func create_projectile(_body: Player):
 	var ghost_proj: Ghost_Projectile = GHOST_PROJECTILE.instantiate()
 
 	ghost_proj.global_position = global_position
 	ghost_proj.damage = DAMAGE
-	ghost_proj.target_position = body.global_position
+	ghost_proj.target_position = _body.global_position
 	ghost_proj.speed = 200
 
 	get_tree().current_scene.add_child(ghost_proj)

@@ -11,7 +11,8 @@ func _ready() -> void:
 	v_box_container.columns = 2
 
 	var levels = GameData.level_progress[path]
-	var previous_level
+	var previous_level = null
+
 	for level in levels:
 		var btn: Button = LEVEL_BUTTON.instantiate()
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL

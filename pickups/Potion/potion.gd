@@ -17,6 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 func apply_affect(player: Player) -> void:
 	match potion_type:
 		TypePotion.HEALTH:
+			@warning_ignore("integer_division")
 			player.heal(GB.player.health / 4)
 		TypePotion.ATTACK:
 			player.boost_attack(1.5)
