@@ -27,8 +27,9 @@ GB="*uid://bqkeo4l6pj3yc"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=1144
+window/size/initial_position_type=0
+window/size/borderless=true
 window/stretch/mode="canvas_items"
 
 [editor_plugins]

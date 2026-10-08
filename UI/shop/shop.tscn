@@ -1,19 +1,36 @@
 [gd_scene format=3 uid="uid://tf36yngqrqgr"]
 
+<<<<<<< Updated upstream:UI/shop/shop.tscn
 [ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://UI/shop/shop.gd" id="1_mrnko"]
 [ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://UI/shop/assets/sword.png" id="1_sxvro"]
 [ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://UI/shop/assets/shield.png" id="2_givde"]
 [ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://UI/shop/shop_item.tscn" id="3_givde"]
 [ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://UI/shop/assets/shoe.png" id="5_2wf2a"]
+=======
+[ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://shop/shop.gd" id="1_mrnko"]
+[ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://shop/assets/sword.png" id="1_sxvro"]
+[ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://shop/assets/shield.png" id="2_givde"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_xad5q"]
+[ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://shop/shop_item.tscn" id="3_givde"]
+[ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://shop/assets/shoe.png" id="5_2wf2a"]
+>>>>>>> Stashed changes:shop/shop.tscn
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="5_gy7ao"]
 [ext_resource type="Texture2D" uid="uid://d18froc3tvv" path="res://UI/shop/assets/necklace.png" id="6_xad5q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
-bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
+bg_color = Color(0, 0, 0, 0.56078434)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_utlf6"]
+font = ExtResource("2_xad5q")
+font_size = 11
+
+[sub_resource type="LabelSettings" id="LabelSettings_3al1m"]
+font = ExtResource("2_xad5q")
+font_size = 11
 
 [node name="Shop" type="Control" unique_id=1447708281]
 layout_mode = 3
@@ -47,6 +64,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_givde")
 text = "Choose your product and click \"Buy\""
+label_settings = SubResource("LabelSettings_utlf6")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -103,12 +121,13 @@ description = "Increases Thomas' revival chance by 2%"
 
 [node name="GoldLabel" type="Label" parent="." unique_id=507711699]
 layout_mode = 0
-offset_left = 273.0
-offset_top = 3.0
-offset_right = 313.0
-offset_bottom = 26.0
+offset_left = 246.0
+offset_top = 4.0
+offset_right = 299.0
+offset_bottom = 27.0
 theme_override_font_sizes/font_size = 10
 text = "Gold: "
+label_settings = SubResource("LabelSettings_3al1m")
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("5_gy7ao")]
 layout_mode = 1

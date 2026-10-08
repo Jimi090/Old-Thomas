@@ -4,15 +4,20 @@
 [ext_resource type="Script" uid="uid://0vlcgngsxykg" path="res://UI/Town/town.gd" id="1_m2tqw"]
 [ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="4_lapfu"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="5_6a0ct"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lapfu"]
-bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
+bg_color = Color(0, 0, 0, 0.61960787)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 expand_margin_left = 10.0
 expand_margin_right = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ljlg5"]
+font = ExtResource("5_6a0ct")
+font_size = 9
 
 [node name="Town" type="Control" unique_id=398235132]
 layout_mode = 3
@@ -102,6 +107,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_lapfu")
 text = "Complete quests to earn gold! Quests are tracked automatically. "
+label_settings = SubResource("LabelSettings_ljlg5")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
