@@ -1,34 +1,28 @@
 [gd_scene format=3 uid="uid://doyer7g4qd2mn"]
 
 [ext_resource type="Script" uid="uid://drf54by4gnxpn" path="res://UI/GeneralPopup/general_popup.gd" id="1_pq7lb"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_belrj"]
+[ext_resource type="Texture2D" uid="uid://dqbckqw26p203" path="res://UI/StartMenu/Assets/ok-button(active).png" id="3_utlf6"]
+[ext_resource type="Texture2D" uid="uid://b3kl6ko4vyokd" path="res://UI/StartMenu/Assets/ok-button.png" id="4_3al1m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri767"]
-bg_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.30980393, 0.3647059, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.30980393, 0.3647059, 1, 1)
-shadow_size = 2
+[sub_resource type="LabelSettings" id="LabelSettings_belrj"]
+font = ExtResource("2_belrj")
+font_size = 14
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_pq7lb"]
+font = ExtResource("2_belrj")
+font_size = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq7lb"]
-bg_color = Color(0.34901962, 0.40392157, 1, 1)
+bg_color = Color(0.77727795, 0.3254596, 0.33035123, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_belrj"]
-bg_color = Color(0.44313726, 0.5019608, 1, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ht62f"]
+texture = ExtResource("3_utlf6")
 
 [node name="GeneralPopup" type="Panel" unique_id=247699040]
 z_index = 100
@@ -43,7 +37,6 @@ offset_right = 90.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ri767")
 script = ExtResource("1_pq7lb")
 
 [node name="Title" type="Label" parent="." unique_id=35258164]
@@ -52,12 +45,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -90.0
-offset_top = 4.0
+offset_top = 8.0
 offset_right = 90.0
-offset_bottom = 24.0
+offset_bottom = 28.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 13
 text = "Title"
+label_settings = SubResource("LabelSettings_belrj")
 horizontal_alignment = 1
 
 [node name="Description" type="Label" parent="." unique_id=1521470578]
@@ -68,15 +62,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -70.0
-offset_top = -30.0
-offset_right = 70.0
-offset_bottom = 30.0
+offset_left = -76.0
+offset_top = -33.0
+offset_right = 78.0
+offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.68235296, 0.7058824, 0.8156863, 1)
 theme_override_font_sizes/font_size = 10
 text = "Edit this in description_text variable"
+label_settings = SubResource("LabelSettings_pq7lb")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -88,17 +83,22 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -30.0
-offset_top = -22.0
-offset_right = 30.0
+offset_left = -36.0
+offset_top = -40.0
+offset_right = 57.75
+offset_bottom = 16.25
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.8, 0.8)
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 10
+theme_override_fonts/font = ExtResource("2_belrj")
+theme_override_font_sizes/font_size = 8
 theme_override_styles/normal = SubResource("StyleBoxFlat_pq7lb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_belrj")
-text = "Continue"
+theme_override_styles/hover = SubResource("StyleBoxTexture_ht62f")
+icon = ExtResource("4_3al1m")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
