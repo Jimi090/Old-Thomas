@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
 [ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
-[ext_resource type="Texture2D" uid="uid://caft8y1peiy0y" path="res://UI/MainMenu/assets/padlock.png" id="7_a712v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -104,8 +103,3 @@ layout_mode = 1
 offset_top = 4.0
 offset_bottom = 140.0
 destiantion = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011129279]
-position = Vector2(111.875, 154.5)
-scale = Vector2(1.8653842, 1.9499996)
-texture = ExtResource("7_a712v")

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d4f81gr1fokvf" path="res://UI/MainMenu/assets/signpost.png" id="1_1we5y"]
 [ext_resource type="Script" uid="uid://drl5kfk6wvm4b" path="res://UI/MainMenu/path_button.gd" id="1_rga7j"]
 [ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="2_rga7j"]
+[ext_resource type="Texture2D" uid="uid://caft8y1peiy0y" path="res://UI/MainMenu/assets/padlock.png" id="4_6nr7b"]
 
 [node name="Path" type="Button" unique_id=514115052]
 offset_left = 6.0
@@ -30,3 +31,18 @@ theme_override_fonts/font = ExtResource("2_rga7j")
 theme_override_font_sizes/font_size = 12
 text = "Path"
 horizontal_alignment = 1
+
+[node name="Padlock" type="TextureRect" parent="." unique_id=915078555]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -10.0
+offset_top = 23.0
+offset_right = 3.0
+offset_bottom = 43.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_6nr7b")
+stretch_mode = 2

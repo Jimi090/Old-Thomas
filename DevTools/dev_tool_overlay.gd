@@ -14,9 +14,9 @@ func _input(event: InputEvent) -> void:
 	if fly_mode:
 		var player = get_player()
 		if player:
-			if event.is_action_pressed("down"):
+			if event.is_action("down"):
 				player.position.y += 20
-			if event.is_action_pressed("jump"):
+			if event.is_action("jump"):
 				player.position.y -= 20
 
 

@@ -22,6 +22,7 @@ func _ready() -> void:
 		var title := "Path Locked"
 		var desc := "Before you can enter this path, finish Path 1"
 		path_2.pressed.connect(create_general_popup.bind(title, desc))
+		path_2.padlock.visible = true
 
 	if is_path_finished("2") == true:
 		path_3.pressed.connect(_on_click_not_available)
@@ -29,6 +30,7 @@ func _ready() -> void:
 		var title := "Path Locked"
 		var desc := "Before you can enter this path, finish Path 2"
 		path_3.pressed.connect(create_general_popup.bind(title, desc))
+		path_3.padlock.visible = true
 
 
 func is_path_finished(number: String):

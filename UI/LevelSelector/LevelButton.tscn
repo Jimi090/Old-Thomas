@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cv3q0ojxxmjm3"]
 
+[ext_resource type="Texture2D" uid="uid://dkhbkrgwrb8bu" path="res://UI/LevelSelector/padlock.png" id="1_trke2"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkyhf"]
 bg_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
 border_width_left = 1
@@ -13,6 +15,25 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="LevelButton" type="Button" unique_id=805949277]
+custom_minimum_size = Vector2(140, 80)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_gkyhf")
 text = "1"
+
+[node name="Padlock" type="TextureRect" parent="." unique_id=1884423527]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -38.0
+offset_right = -17.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+texture = ExtResource("1_trke2")
+stretch_mode = 2

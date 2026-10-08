@@ -211,21 +211,19 @@ horizontal_alignment = 1
 
 [node name="PlayBtn" parent="." unique_id=320541208 instance=ExtResource("2_7vcb3")]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.4
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.4
-offset_left = -72.0
-offset_top = -51.0
-offset_right = 73.0
-offset_bottom = 39.0
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -54.0
+offset_right = 45.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_tdetd")
 icon = ExtResource("5_1y0td")
-flat = true
-icon_alignment = 1
 expand_icon = true
 
 [node name="SettingsBtn" parent="." unique_id=1690298222 instance=ExtResource("2_7vcb3")]
@@ -236,34 +234,30 @@ anchor_top = 0.55
 anchor_right = 0.5
 anchor_bottom = 0.55
 offset_left = -45.0
-offset_top = -44.0
+offset_top = -23.0
 offset_right = 45.0
-offset_bottom = 61.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_cc5vj")
 icon = ExtResource("5_tdetd")
-flat = true
-icon_alignment = 1
 expand_icon = true
 
 [node name="ExitBtn" parent="." unique_id=1348261010 instance=ExtResource("2_7vcb3")]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.7
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.7
-offset_left = -70.0
-offset_top = -24.0
-offset_right = 71.0
-offset_bottom = 67.0
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 26.0
+offset_right = 45.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_1y0td")
 icon = ExtResource("6_1y0td")
-flat = true
-icon_alignment = 1
 expand_icon = true
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1838247519]

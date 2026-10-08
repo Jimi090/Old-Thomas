@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://7i4qhwyqmlrx"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xxki4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_vbmfa"]
 
 [node name="OptionBtn" type="Button" unique_id=320541208]
-offset_right = 80.0
-offset_bottom = 25.0
+offset_right = 33.0
+offset_bottom = 19.0
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 12
-icon = SubResource("ViewportTexture_xxki4")
+icon = SubResource("ViewportTexture_vbmfa")
+flat = true
+icon_alignment = 1

@@ -28,7 +28,11 @@ func _ready() -> void:
 		else:
 			if !previous_level or levels[previous_level]["finished"] == true:
 				btn.pressed.connect(lunch_level.bind("res://Paths/" + path + "/" + level))
+				var style := btn.get_theme_stylebox("normal").duplicate()
+				style.bg_color = Color.DARK_RED
+				btn.add_theme_stylebox_override("normal", style)
 			else:
+				btn.get_child(0).visible = true
 				btn.pressed.connect(show_level_locked_popup)
 
 		previous_level = level

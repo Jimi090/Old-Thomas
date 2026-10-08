@@ -1,6 +1,7 @@
 extends Button
 
 @export var path_number: int
+@onready var padlock: TextureRect = $Padlock
 
 
 func _ready() -> void:

@@ -7,3 +7,8 @@ func _ready() -> void:
 	speed = 160
 	lifespan = 1.6
 	super()
+
+
+func _physics_process(delta: float) -> void:
+	rotate(0.3)
+	super(delta)
