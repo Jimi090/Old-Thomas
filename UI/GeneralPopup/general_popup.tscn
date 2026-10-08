@@ -5,6 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://dqbckqw26p203" path="res://UI/StartMenu/Assets/ok-button(active).png" id="3_utlf6"]
 [ext_resource type="Texture2D" uid="uid://b3kl6ko4vyokd" path="res://UI/StartMenu/Assets/ok-button.png" id="4_3al1m"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri767"]
+bg_color = Color(0.1764706, 0.1764706, 0.1764706, 0.98039216)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="LabelSettings" id="LabelSettings_belrj"]
 font = ExtResource("2_belrj")
 font_size = 14
@@ -37,6 +44,7 @@ offset_right = 90.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ri767")
 script = ExtResource("1_pq7lb")
 
 [node name="Title" type="Label" parent="." unique_id=35258164]

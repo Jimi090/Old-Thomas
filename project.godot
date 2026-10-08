@@ -30,7 +30,6 @@ GB="*uid://bqkeo4l6pj3yc"
 window/size/viewport_width=320
 window/size/viewport_height=180
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 

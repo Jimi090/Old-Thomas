@@ -86,8 +86,6 @@ scale = Vector2(0.025, 0.025)
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("4_lapfu")]
 layout_mode = 1
-offset_top = 4.0
-offset_bottom = 140.0
 
 [node name="Label" type="Label" parent="." unique_id=884985836]
 custom_minimum_size = Vector2(1, 1)

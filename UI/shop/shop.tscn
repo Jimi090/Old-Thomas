@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://tf36yngqrqgr"]
+
+[ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://UI/shop/shop.gd" id="1_mrnko"]
+[ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://UI/shop/assets/sword.png" id="1_sxvro"]
+[ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://UI/shop/assets/shield.png" id="2_givde"]
+[ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://UI/shop/shop_item.tscn" id="3_givde"]
+[ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://UI/shop/assets/shoe.png" id="5_2wf2a"]
+[ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="5_gy7ao"]
+[ext_resource type="Texture2D" uid="uid://d18froc3tvv" path="res://UI/shop/assets/necklace.png" id="6_xad5q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
+bg_color = Color(0.74829584, 0.63592, 0.3933731, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Shop" type="Control" unique_id=1447708281]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_mrnko")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1507047419]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0.37254903, 0.49803922, 1)
+
+[node name="Description" type="Label" parent="." unique_id=1282455742]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.0047575, 1.0127867)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_givde")
+text = "Choose your product and click \"Buy\""
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buy_btn" type="Button" parent="." unique_id=896786812]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 139.0
+offset_right = 105.0
+offset_bottom = 170.0
+text = "Buy"
+
+[node name="Items_container" type="Control" parent="." unique_id=497329449]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -60.0
+offset_right = -23.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Attack_upgrade" parent="Items_container" unique_id=775961121 instance=ExtResource("3_givde")]
+layout_mode = 0
+button_image = ExtResource("1_sxvro")
+description = "Increases Thomas' damage by 10%"
+
+[node name="Health_upgrade" parent="Items_container" unique_id=1483561637 instance=ExtResource("3_givde")]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 372.0
+button_image = ExtResource("2_givde")
+description = "Increases Thomas' health by 10%"
+
+[node name="Speed_upgrade" parent="Items_container" unique_id=439450475 instance=ExtResource("3_givde")]
+layout_mode = 0
+offset_top = 52.0
+offset_bottom = 372.0
+button_image = ExtResource("5_2wf2a")
+description = "Increases Thomas' speed by 10%"
+
+[node name="Revival_upgrade" parent="Items_container" unique_id=556607063 instance=ExtResource("3_givde")]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 52.0
+offset_right = 372.0
+offset_bottom = 372.0
+button_image = ExtResource("6_xad5q")
+description = "Increases Thomas' revival chance by 2%"
+
+[node name="GoldLabel" type="Label" parent="." unique_id=507711699]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 3.0
+offset_right = 313.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 10
+text = "Gold: "
+
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("5_gy7ao")]
+layout_mode = 1
+
+[connection signal="pressed" from="Buy_btn" to="." method="_on_buy_btn_pressed"]

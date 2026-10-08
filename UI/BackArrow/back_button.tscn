@@ -9,7 +9,8 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-expand_margin_left = 8.0
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meldj"]
 bg_color = Color(0, 0, 0, 1)
@@ -17,7 +18,8 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-expand_margin_left = 8.0
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri767"]
 bg_color = Color(0.20392157, 0.23137255, 0.28235295, 1)
@@ -25,19 +27,21 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-expand_margin_left = 8.0
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [node name="BackButton" type="Button" unique_id=2064163710]
 offset_left = 4.0
-offset_top = 1.0
-offset_right = 140.0
-offset_bottom = 137.0
-scale = Vector2(0.09976433, 0.100852035)
+offset_top = 4.0
+offset_right = 154.0
+offset_bottom = 154.0
+scale = Vector2(0.1, 0.1)
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_jhcbk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_meldj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ri767")
 icon = ExtResource("1_5ru66")
+icon_alignment = 1
 script = ExtResource("2_meldj")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -26,5 +26,3 @@ columns = 3
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("2_3qqqg")]
 layout_mode = 1
-offset_top = 4.0
-offset_bottom = 140.0
