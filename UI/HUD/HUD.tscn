@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1aewfowog0rh" path="res://UI/HUD/hud.gd" id="1_yixhe"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="2_53dev"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_dm5mv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
 bg_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
@@ -9,6 +10,10 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_stoff"]
+font = ExtResource("2_dm5mv")
+font_size = 11
 
 [node name="HUD" type="CanvasLayer" unique_id=150336644]
 script = ExtResource("1_yixhe")
@@ -31,6 +36,8 @@ offset_right = 40.0
 offset_bottom = 27.0
 grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_dm5mv")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/fill = SubResource("StyleBoxFlat_yixhe")
 value = 100.0
 
@@ -39,12 +46,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -54.0
-offset_top = 12.0
-offset_bottom = 23.0
+offset_left = -66.0
+offset_top = 17.0
+offset_right = -2.0
+offset_bottom = 30.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 10
 text = "Gold: 0"
+label_settings = SubResource("LabelSettings_stoff")
 horizontal_alignment = 2
 
 [node name="BackButton" parent="UI" unique_id=2064163710 instance=ExtResource("2_53dev")]
