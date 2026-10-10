@@ -2,13 +2,13 @@ extends Control
 
 @export_file("*.tscn") var village_scene: String = "res://UI/MainMenu/MainMenu.tscn"
 @onready var story_label: Label = $StoryLabel
-@onready var prompt_label: Label = $PromptLabel 
+@onready var prompt_label: Label = $PromptLabel
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 var pages: Array[String] = [
 	"Though his hair has turned gray and the years have grown long behind him, Thomas realizes his life story is still unfinished.",
 	"Leaving the comfort of his quiet home, he steps onto unfamiliar paths, seeking a deeper evolution.",
-	"He searches not for gold or glory, but for a lost feeling, a deep truth, or a companion to help him truly change before his journey ends."
+	"He searches not for gold or glory, but for a lost feeling, a deep truth, or a companion to help him truly change before his journey ends.",
 ]
 
 var current_page: int = 0
@@ -16,6 +16,7 @@ var current_char: int = 0
 var timer: float = 0.0
 var letter_time: float = 0.03
 var is_typing: bool = false
+
 
 func _ready() -> void:
 	if anim_player:
@@ -27,6 +28,7 @@ func _ready() -> void:
 	current_page = 0
 	current_char = 0
 	is_typing = true
+
 
 func _process(delta: float) -> void:
 	if is_typing:
@@ -42,6 +44,7 @@ func _process(delta: float) -> void:
 			if prompt_label:
 				prompt_label.show()
 
+
 func _input(event: InputEvent) -> void:
 	if not is_typing and (event.is_action_pressed("ui_accept") or event.is_action_pressed("jump")):
 		current_page += 1
@@ -55,9 +58,12 @@ func _input(event: InputEvent) -> void:
 			if current_page == 1 and anim_player:
 				anim_player.play("Home fade")
 			if current_page == 2 and anim_player:
-				anim_player.play("animation") 
+				anim_player.play("animation")
 		else:
 			go_to_village()
+	if event.is_action_pressed("down"):
+		go_to_village()
+
 
 func go_to_village() -> void:
 	if village_scene:

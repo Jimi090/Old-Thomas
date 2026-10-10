@@ -27,6 +27,7 @@ func new_game():
 
 
 func exit_game():
+	GameData.save_data()
 	GameManager.quit_game()
 
 

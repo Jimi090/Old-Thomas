@@ -30,6 +30,10 @@ var level_progress := { }
 		upgrades_changed.emit()
 
 var quests := { }
+
+var game_settings := { }
+
+var variables_to_save := ["gold", "level_progress", "upgrades", "quests", "game_settings"]
 ###
 
 
@@ -39,6 +43,7 @@ func save_data():
 		"level_progress": level_progress,
 		"upgrades": upgrades,
 		"quests": quests,
+		"game_settings": game_settings,
 	}
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_var(save)
@@ -54,13 +59,23 @@ func load_data():
 	if save == { }:
 		return
 
+	for i in variables_to_save:
+		if !save.has(i):
+			return
+
+	for variable in save:
+		if typeof(save[variable]) == TYPE_DICTIONARY:
+			if save[variable] == { }:
+				return
+		elif typeof(save[variable]) == TYPE_INT:
+			if save[variable] == 0:
+				return
+
 	gold = save["gold"]
 	level_progress = save["level_progress"]
 	upgrades = save["upgrades"]
 	quests = save["quests"]
-
-	if level_progress == { } or upgrades == { } or quests == { }:
-		return
+	game_settings = save["game_settings"]
 
 	return OK
 
@@ -70,6 +85,7 @@ func clear_save():
 	upgrades = default_upgrades
 	get_empty_levels_progress()
 	get_default_quests()
+	get_default_game_settings()
 
 	save_data()
 	load_data()
@@ -195,12 +211,26 @@ func get_default_level_progress() -> Dictionary:
 	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
 
 
+func get_default_game_settings():
+	game_settings = { "Audio": { "GeneralVolume": 50, "MusicVolume": 50, "SFXVolume": 50 } }
+
+
+func apply_game_settings():
+	change_bus_volume_to("Master", game_settings["Audio"]["GeneralVolume"])
+	change_bus_volume_to("Music", game_settings["Audio"]["MusicVolume"])
+	change_bus_volume_to("SFX", game_settings["Audio"]["SFXVolume"])
+
+
+func change_bus_volume_to(bus: String, value: float):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus), linear_to_db(value / 100.0))
+
+
 func _ready() -> void:
 	var status = load_data()
 	if status != OK:
 		clear_save()
-	for i in level_progress:
-		for ii in level_progress[i]:
-			level_progress[i][ii]["finished"] = true
+
+	apply_game_settings()
+
 	get_active_quests()
 	get_displaied_quests()
