@@ -25,7 +25,7 @@ func _ready() -> void:
 		path_2.padlock.visible = true
 
 	if is_path_finished("2") == true:
-		path_3.pressed.connect(_on_click_not_available)
+		path_3.pressed.connect(_on_click_path_button.bind(path_3.path_number))
 	else:
 		var title := "Path Locked"
 		var desc := "Before you can enter this path, finish Path 2"

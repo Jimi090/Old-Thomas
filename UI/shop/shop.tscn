@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://tf36yngqrqgr"]
 
-[ext_resource type="Script" path="res://shop/shop.gd" id="1_7hdkg"]
+[ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://UI/shop/shop.gd" id="1_7hdkg"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_2y1v1"]
-[ext_resource type="PackedScene" path="res://shop/shop_item.tscn" id="3_clrk4"]
-[ext_resource type="Texture2D" path="res://shop/assets/sword.png" id="4_tfwm2"]
-[ext_resource type="Texture2D" path="res://shop/assets/shield.png" id="5_ny626"]
-[ext_resource type="Texture2D" path="res://shop/assets/shoe.png" id="6_iypip"]
-[ext_resource type="Texture2D" path="res://shop/assets/necklace.png" id="7_d7i62"]
+[ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://UI/shop/shop_item.tscn" id="3_clrk4"]
+[ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://UI/shop/assets/sword.png" id="4_tfwm2"]
+[ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://UI/shop/assets/shield.png" id="5_ny626"]
+[ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://UI/shop/assets/shoe.png" id="6_iypip"]
+[ext_resource type="Texture2D" uid="uid://d18froc3tvv" path="res://UI/shop/assets/necklace.png" id="7_d7i62"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="8_eh40j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
@@ -123,9 +123,5 @@ label_settings = SubResource("LabelSettings_3al1m")
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("8_eh40j")]
 layout_mode = 1
-offset_right = 140.0
-offset_bottom = 140.0
-scale = Vector2(0.09976433, 0.100852035)
-icon_alignment = 0
 
 [connection signal="pressed" from="Buy_btn" to="." method="_on_buy_btn_pressed"]

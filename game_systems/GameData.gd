@@ -199,6 +199,8 @@ func _ready() -> void:
 	var status = load_data()
 	if status != OK:
 		clear_save()
-
+	for i in level_progress:
+		for ii in level_progress[i]:
+			level_progress[i][ii]["finished"] = true
 	get_active_quests()
 	get_displaied_quests()
