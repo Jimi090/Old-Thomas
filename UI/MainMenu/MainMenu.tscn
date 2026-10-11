@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
 [ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="7_a712v"]
+[ext_resource type="PackedScene" uid="uid://djosr1t6fp8tb" path="res://Dialogue/Dialogue.tscn" id="8_1dhmk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -30,6 +32,56 @@ texture_region_size = Vector2i(256, 128)
 
 [sub_resource type="TileSet" id="TileSet_ri767"]
 sources/0 = SubResource("TileSetAtlasSource_ri767")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a712v"]
+atlas = ExtResource("7_a712v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dhmk"]
+atlas = ExtResource("7_a712v")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhcbk"]
+atlas = ExtResource("7_a712v")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32jca"]
+atlas = ExtResource("7_a712v")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srm2j"]
+atlas = ExtResource("7_a712v")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoxer"]
+atlas = ExtResource("7_a712v")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a712v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dhmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhcbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32jca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srm2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoxer")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [node name="MainMenu" type="Control" unique_id=219022643]
 layout_mode = 3
@@ -101,3 +153,21 @@ path_number = 3
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
 layout_mode = 1
 destiantion = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835001980]
+position = Vector2(161, 107)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_478fi")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.97446626
+flip_h = true
+
+[node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("8_1dhmk")]
+layout_mode = 0
+offset_left = 123.00001
+offset_top = 82.0
+offset_right = 173.0
+offset_bottom = 112.0
+scale = Vector2(0.6, 0.6)
+text = "Hello, where should I go?"

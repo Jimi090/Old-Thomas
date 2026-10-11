@@ -10,15 +10,11 @@
 [node name="LevelBase" type="Node2D" unique_id=1826943140]
 script = ExtResource("1_yheth")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1239077768]
-scroll_scale = Vector2(0.15, 0.15)
-repeat_size = Vector2(320, 0)
-autoscroll = Vector2(-100, 0)
-repeat_times = 3
+[node name="Background" type="Parallax2D" parent="." unique_id=1239077768]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(320, 180)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=217716528]
-position = Vector2(12, -107.00001)
-scale = Vector2(1.00625, 1.7722223)
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=217716528]
 texture = ExtResource("6_n2acl")
 centered = false
 

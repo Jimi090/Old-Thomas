@@ -577,10 +577,10 @@ sources/1 = SubResource("TileSetAtlasSource_j4mj7")
 
 [node name="Level1" unique_id=1826943140 instance=ExtResource("2_0eqkp")]
 
-[node name="Player" parent="." index="0" unique_id=289370131]
+[node name="Player" parent="." index="1" unique_id=289370131]
 position = Vector2(29, 41)
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1317, -6)
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." index="3" unique_id=49708787]
