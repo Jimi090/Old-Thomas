@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Old Thomas"
+config/description="A game about Old Thomas"
+config/version="4.0.0"
 run/main_scene="uid://cidsvy4wrqrsh"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/use_filter=false
 
 [audio]
 
@@ -33,10 +37,7 @@ GB="*uid://bqkeo4l6pj3yc"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/initial_position_type=0
-window/size/borderless=true
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 
