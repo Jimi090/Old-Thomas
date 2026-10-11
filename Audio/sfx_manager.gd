@@ -1,8 +1,8 @@
 extends AudioStreamPlayer
 
-var coinsnd = preload("res://Sound/assets/coinsound.mp3")
-var deathsnd = preload("res://Sound/assets/deathsound.mp3")
-var buttonsnd = preload("res://Sound/assets/buttonsound.mp3")
+var coinsnd = preload("res://Audio/assets/coinsound.mp3")
+var deathsnd = preload("res://Audio/assets/deathsound.mp3")
+var buttonsnd = preload("res://Audio/assets/buttonsound.mp3")
 
 
 func _ready():
