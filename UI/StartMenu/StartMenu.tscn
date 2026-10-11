@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cpekusg22v2bv" path="res://UI/StartMenu/Assets/quit-button(active).png" id="4_tdetd"]
 [ext_resource type="Texture2D" uid="uid://dnda3t44jpapb" path="res://UI/StartMenu/Assets/start-button.png" id="5_1y0td"]
 [ext_resource type="Texture2D" uid="uid://crutaoijri1vg" path="res://characters/enemies/Mage/sprite/run-enemy.png" id="5_7vcb3"]
-[ext_resource type="Texture2D" uid="uid://d3wii33uop24q" path="res://UI/StartMenu/Assets/sound-button.pmg.png" id="5_tdetd"]
 [ext_resource type="Texture2D" uid="uid://ipjjisarqq6p" path="res://UI/StartMenu/Assets/quit-button.png" id="6_1y0td"]
 [ext_resource type="Texture2D" uid="uid://dyqk6p1qtjax7" path="res://UI/StartMenu/Assets/sound-button(active).png" id="6_cc5vj"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="6_tx4ui"]
+[ext_resource type="Texture2D" uid="uid://j66hup3j14a" path="res://UI/StartMenu/Assets/config-button.png" id="7_cc5vj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qejx2"]
 font = ExtResource("2_x2dvx")
@@ -240,7 +240,7 @@ offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_cc5vj")
-icon = ExtResource("5_tdetd")
+icon = ExtResource("7_cc5vj")
 expand_icon = true
 
 [node name="ExitBtn" parent="." unique_id=1348261010 instance=ExtResource("2_7vcb3")]
