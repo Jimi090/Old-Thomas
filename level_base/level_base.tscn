@@ -11,10 +11,9 @@
 script = ExtResource("1_yheth")
 
 [node name="Background" type="Parallax2D" parent="." unique_id=1239077768]
-scroll_scale = Vector2(0, 0)
-repeat_size = Vector2(320, 180)
+repeat_size = Vector2(320, 179)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=217716528]
+[node name="backgroundImg" type="Sprite2D" parent="Background" unique_id=217716528]
 texture = ExtResource("6_n2acl")
 centered = false
 
