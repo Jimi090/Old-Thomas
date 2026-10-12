@@ -6,7 +6,7 @@ Join Thomas on an adventure as he conquers hurdles, path by path. Destroy monste
 Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
 Path 1 is centred around harvest and autumn time, when leaves change and the winter chill is drawing near.
 Path 2 continues that harvest and autumn time feeling, as well as having special treasure chests hidden in the levels.
-Path 3 takes it to the next level as the game gets a little bit more harder for Thomas (still tying into the autumn theme of course!)
+Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!)
 Plus, more paths are coming soon, so make sure to keep playing!
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
 And you can't forget about the excellent music; it really helps set the mood!!!
@@ -16,7 +16,7 @@ I hope you enjoy this adventure. Good luck!
 ## Game Structure
 
 This game is structured very uniquely! You follow Thomas as you finish paths one by one. 
-Each path having four levels and with 3 paths being avaliable currently. Ontop of that you are also able to go to the shop and buy upgrades!
+Each path has four levels, with 3 paths being available currently. On top of that you are also able to go to the shop and buy upgrades!
 
 ## Controls
 
@@ -29,16 +29,6 @@ Jump: Space or W or Up Arrow
 Basic attack: J or Right Mouse Button
 
 Skip cutscene: S 
-
-## What we added this week!
-
-This week we worked on polshing the game a lot. 
-We polished the settings page to allow a variety of settings and not just sound. (because that is what we had/needed previously)
-Also the ghost enemy was polished up with it's own unique attack. (For the future there is also a base enemy to easy creation)
-Now there is also a beautiful background in the paths. This ensures Thomas isn't adventuring in pitch black lol!
-The UI was revamped a lot to make it much more appealing to the eye. This included buttons, pop-ups, and much much more!!!
-And you can't forget the new path no.3!!! It's a little more challenging, but still has the autumn feel!
-Hope you enjoy the new features of this week!!! 
 
 ## Process of Creating this Game
 
@@ -59,7 +49,5 @@ Together we have worked so hard to create a game for others to enjoy!
 
 <img width="1184" height="722" alt="image (14)" src="https://github.com/user-attachments/assets/aff2db82-8e41-45d3-9be7-7695a77da799" />
 
-
-This was made for Thirdspace <3
 
 https://lillylike123.itch.io/old-thomas
