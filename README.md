@@ -2,10 +2,10 @@
 
 ## Description
 
-Join Thomas on an adventure as he conquers hurdles, path by path. Destroy monsters, collect coins, and help Thomas evolve as a person.
+Join Thomas on an adventure as he conquers hurdles, one path at a time. Destroy monsters, collect coins, and help Thomas evolve as a person.
 Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
 Path 1 is centred around harvest and autumn time, when leaves change and the winter chill is drawing near.
-Path 2 continues that harvest and autumn time feeling, as well as having special treasure chests hidden in the levels.
+Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels.
 Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!)
 Plus, more paths are coming soon, so make sure to keep playing!
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
@@ -32,7 +32,7 @@ Skip cutscene: S
 
 ## Process of Creating this Game
 
-This game is made by Amira and Jimi for Thirdspace!!!
+This game is made by Amira and Jimi 
 
 We had to go through many challanges and well as victories through the process of creating this game that you will/are have played!
 The big main problem is that we practically live opposite each other location-wise, with a different time zone, which really gets messed up with school and sleep time.
