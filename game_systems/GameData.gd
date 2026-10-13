@@ -24,7 +24,7 @@ var gold: int = 0:
 
 var level_progress := { }
 
-@onready var upgrades := default_upgrades:
+@onready var upgrades := default_upgrades.duplicate(true):
 	set(value):
 		upgrades = value
 		upgrades_changed.emit()
@@ -67,9 +67,6 @@ func load_data():
 		if typeof(save[variable]) == TYPE_DICTIONARY:
 			if save[variable] == { }:
 				return
-		elif typeof(save[variable]) == TYPE_INT:
-			if save[variable] == 0:
-				return
 
 	gold = save["gold"]
 	level_progress = save["level_progress"]
@@ -82,7 +79,7 @@ func load_data():
 
 func clear_save():
 	gold = 0
-	upgrades = default_upgrades
+	upgrades = default_upgrades.duplicate(true)
 	get_empty_levels_progress()
 	get_default_quests()
 	get_default_game_settings()
