@@ -9,6 +9,7 @@ Path 2 continues that harvest and autumn feel, plus special treasure chests hidd
 Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!)
 Plus, more paths are coming soon, so make sure to keep playing!
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
+
 And you can't forget about the excellent music; it really helps set the mood!!!
 
 I hope you enjoy this adventure. Good luck!
@@ -20,11 +21,7 @@ Each path has four levels, with 3 paths being available currently. On top of tha
 
 ## Controls
 
-Go left: A or <-
-
-Go right: D or ->
-
-Jump: Space or W or Up Arrow
+@@ -27,9 +28,22 @@ Jump: Space or W or Up Arrow
 
 Basic attack: J or Right Mouse Button
 
