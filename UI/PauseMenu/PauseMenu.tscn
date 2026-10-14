@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnndn3g33utwd"]
 
-[ext_resource type="PackedScene" uid="uid://cd4gb52uecpaq" path="res://UI/FloatingMenu/FloatingMenuButton.tscn" id="1_gkovu"]
-[ext_resource type="Script" uid="uid://jabhuok5nsqq" path="res://UI/FloatingMenu/floating_menu.gd" id="1_kpccm"]
+[ext_resource type="PackedScene" uid="uid://cd4gb52uecpaq" path="res://UI/PauseMenu/PauseMenuButton.tscn" id="1_gkovu"]
+[ext_resource type="Script" uid="uid://jabhuok5nsqq" path="res://UI/PauseMenu/pause_menu.gd" id="1_kpccm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkovu"]
 bg_color = Color(0.14117648, 0.23137255, 0.41960785, 0.48235294)
@@ -10,7 +10,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="FloatingMenu" type="Panel" unique_id=1102822172]
+[node name="PauseMenu" type="Panel" unique_id=1102822172]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -25,7 +25,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gkovu")
 script = ExtResource("1_kpccm")
 
-[node name="FloatingMenu" type="VBoxContainer" parent="." unique_id=1247613229]
+[node name="Container" type="VBoxContainer" parent="." unique_id=1247613229]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -35,18 +35,18 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="ResumeButton" parent="FloatingMenu" unique_id=292128479 instance=ExtResource("1_gkovu")]
+[node name="ResumeButton" parent="Container" unique_id=292128479 instance=ExtResource("1_gkovu")]
 layout_mode = 2
 text = "Resume"
 
-[node name="SettingsButton" parent="FloatingMenu" unique_id=1241292303 instance=ExtResource("1_gkovu")]
+[node name="SettingsButton" parent="Container" unique_id=1241292303 instance=ExtResource("1_gkovu")]
 layout_mode = 2
 text = "Settings"
 
-[node name="RestartButton" parent="FloatingMenu" unique_id=919849380 instance=ExtResource("1_gkovu")]
+[node name="RestartButton" parent="Container" unique_id=919849380 instance=ExtResource("1_gkovu")]
 layout_mode = 2
 text = "Restart Level"
 
-[node name="MainMenuButton" parent="FloatingMenu" unique_id=1779079396 instance=ExtResource("1_gkovu")]
+[node name="MainMenuButton" parent="Container" unique_id=1779079396 instance=ExtResource("1_gkovu")]
 layout_mode = 2
 text = "Main Menu"

@@ -26,7 +26,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="ResumeButton" type="Button" unique_id=292128479]
+[node name="Button" type="Button" unique_id=292128479]
 mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_pv37d")
 theme_override_font_sizes/font_size = 10
