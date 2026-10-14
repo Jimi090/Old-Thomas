@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="6_0eqkp"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="7_0eqkp"]
 [ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="7_pwgcu"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_pwgcu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jy4y3"]
 texture = ExtResource("1_5ywli")
@@ -614,3 +615,12 @@ position = Vector2(692, 101)
 
 [node name="Coin5" parent="." index="12" unique_id=232306144 instance=ExtResource("7_0eqkp")]
 position = Vector2(881, -23)
+
+[node name="Cinnamon" parent="." index="15" unique_id=1674478770 instance=ExtResource("8_pwgcu")]
+position = Vector2(411, 161)
+
+[node name="Cinnamon2" parent="." index="16" unique_id=1928131632 instance=ExtResource("8_pwgcu")]
+position = Vector2(170, 128)
+
+[node name="Cinnamon3" parent="." index="17" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
+position = Vector2(1120, 2)

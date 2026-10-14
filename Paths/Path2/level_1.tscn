@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b84sitjlbhgvu" path="res://tileset/midground_/summer_.png" id="4_moh8x"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="9_jev5a"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="10_6er1j"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="11_p8cuj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mylrs"]
 texture = ExtResource("2_moh8x")
@@ -1044,11 +1045,8 @@ sources/1 = SubResource("TileSetAtlasSource_08q4g")
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_4tjvn")]
 
-[node name="Player" parent="." index="0" unique_id=289370131]
+[node name="Player" parent="." index="1" unique_id=289370131]
 position = Vector2(24, 42)
-
-[node name="Key" parent="." index="1" unique_id=155803228]
-position = Vector2(839, 75)
 
 [node name="Enemy" parent="." index="2" unique_id=2006298918 instance=ExtResource("2_jev5a")]
 position = Vector2(678, 48)
@@ -1058,6 +1056,9 @@ position = Vector2(216, 17)
 
 [node name="Enemy3" parent="." index="4" unique_id=2092008976 instance=ExtResource("2_jev5a")]
 position = Vector2(507, 48)
+
+[node name="Key" parent="." index="5" unique_id=155803228]
+position = Vector2(839, 75)
 
 [node name="Chest" parent="." index="6" unique_id=1623759673 instance=ExtResource("3_6er1j")]
 position = Vector2(409, -80)
@@ -1082,8 +1083,11 @@ position = Vector2(366, 64)
 [node name="Coin4" parent="." index="12" unique_id=37850634 instance=ExtResource("9_jev5a")]
 position = Vector2(560, 33)
 
-[node name="Coin5" parent="." index="13" unique_id=1517004364 instance=ExtResource("9_jev5a")]
-position = Vector2(753, 65)
-
-[node name="Potion" parent="." index="14" unique_id=964302324 instance=ExtResource("10_6er1j")]
+[node name="Potion" parent="." index="13" unique_id=964302324 instance=ExtResource("10_6er1j")]
 position = Vector2(433.00003, 71)
+
+[node name="Cinnamon" parent="." index="16" unique_id=29856295 instance=ExtResource("11_p8cuj")]
+position = Vector2(263, 33)
+
+[node name="Cinnamon2" parent="." index="17" unique_id=608314457 instance=ExtResource("11_p8cuj")]
+position = Vector2(757, 65)

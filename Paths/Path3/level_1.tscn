@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="7_3behe"]
 [ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="7_d7xc6"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="8_s13o8"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="10_s13o8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ylg2"]
 texture = ExtResource("2_8c432")
@@ -579,10 +580,10 @@ sources/1 = SubResource("TileSetAtlasSource_7puyd")
 
 [node name="Level3" unique_id=1826943140 instance=ExtResource("1_yxhvq")]
 
-[node name="Player" parent="." index="0" unique_id=289370131]
+[node name="Player" parent="." index="1" unique_id=289370131]
 position = Vector2(41, 43)
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1262, 17)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=1084265566]
@@ -616,3 +617,18 @@ position = Vector2(678, 6)
 
 [node name="Coin" parent="." index="13" unique_id=525547507 instance=ExtResource("6_lml6d")]
 position = Vector2(397, -32)
+
+[node name="Coin2" parent="." index="14" unique_id=159509966 instance=ExtResource("6_lml6d")]
+position = Vector2(454, 93)
+
+[node name="Cinnamon" parent="." index="16" unique_id=1265788226 instance=ExtResource("10_s13o8")]
+position = Vector2(141, 45)
+
+[node name="Cinnamon2" parent="." index="17" unique_id=412162285 instance=ExtResource("10_s13o8")]
+position = Vector2(205, 47)
+
+[node name="Cinnamon3" parent="." index="18" unique_id=1226794882 instance=ExtResource("10_s13o8")]
+position = Vector2(1157, 14)
+
+[node name="Cinnamon4" parent="." index="19" unique_id=767543279 instance=ExtResource("10_s13o8")]
+position = Vector2(909, -1)

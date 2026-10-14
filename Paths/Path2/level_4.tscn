@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="5_81ai3"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="5_b6pbm"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="6_3xb0a"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_h6rqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qharc"]
 texture = ExtResource("2_ire3j")
@@ -407,7 +408,7 @@ sources/0 = SubResource("TileSetAtlasSource_qharc")
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_hq3s7")]
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1053, 102)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=1029823295]
@@ -474,5 +475,14 @@ position = Vector2(188, 135)
 [node name="Potion3" parent="." index="23" unique_id=1020177583 instance=ExtResource("6_3xb0a")]
 position = Vector2(874, 151)
 
-[node name="Dog" parent="." index="24" unique_id=720855982]
+[node name="Dog" parent="." index="25" unique_id=720855982]
 position = Vector2(-27, -47)
+
+[node name="Cinnamon" parent="." index="26" unique_id=1017657161 instance=ExtResource("8_h6rqv")]
+position = Vector2(721, -91)
+
+[node name="Cinnamon2" parent="." index="27" unique_id=945935547 instance=ExtResource("8_h6rqv")]
+position = Vector2(834, 110)
+
+[node name="Cinnamon3" parent="." index="28" unique_id=1910564122 instance=ExtResource("8_h6rqv")]
+position = Vector2(453, 141)

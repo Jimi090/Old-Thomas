@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="5_pm3it"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="6_fvi0u"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="7_oc5n6"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_mhr3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qharc"]
 texture = ExtResource("2_mhr3c")
@@ -407,7 +408,7 @@ sources/0 = SubResource("TileSetAtlasSource_qharc")
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_tx2ea")]
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1029, 23)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=1029823295]
@@ -419,9 +420,6 @@ position = Vector2(708, -63)
 
 [node name="Ghost" parent="Chest" index="2" unique_id=1822596800 instance=ExtResource("4_62hfy")]
 position = Vector2(-89, 20)
-
-[node name="Dog" parent="." index="5" unique_id=720855982]
-position = Vector2(-29, -47)
 
 [node name="Coin" parent="." index="6" unique_id=525547507 instance=ExtResource("5_pm3it")]
 position = Vector2(127, 65)
@@ -441,11 +439,20 @@ position = Vector2(896, 65)
 [node name="Potion" parent="." index="11" unique_id=964302324 instance=ExtResource("6_fvi0u")]
 position = Vector2(777, 23)
 
-[node name="Ghost" parent="." index="12" unique_id=446991984 instance=ExtResource("4_62hfy")]
+[node name="Mage2" parent="." index="12" unique_id=2006298918 instance=ExtResource("7_oc5n6")]
+position = Vector2(488, -25)
+
+[node name="Ghost" parent="." index="13" unique_id=446991984 instance=ExtResource("4_62hfy")]
 position = Vector2(501, 90)
 
-[node name="Mage" parent="Ghost" index="6" unique_id=2006298918 instance=ExtResource("7_oc5n6")]
-position = Vector2(-13, -115)
-
-[node name="Mage" parent="." index="13" unique_id=443163896 instance=ExtResource("7_oc5n6")]
+[node name="Mage" parent="." index="14" unique_id=443163896 instance=ExtResource("7_oc5n6")]
 position = Vector2(963, 49)
+
+[node name="Dog" parent="." index="15" unique_id=720855982]
+position = Vector2(-29, -47)
+
+[node name="Cinnamon" parent="." index="16" unique_id=638454625 instance=ExtResource("8_mhr3c")]
+position = Vector2(237, 65)
+
+[node name="Cinnamon2" parent="." index="17" unique_id=795623089 instance=ExtResource("8_mhr3c")]
+position = Vector2(305, 65)

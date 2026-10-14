@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="5_gw7ii"]
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="5_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_l4gq6"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_85wvi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4gq6"]
 texture = ExtResource("1_k3o4x")
@@ -577,10 +578,10 @@ sources/1 = SubResource("TileSetAtlasSource_58a74")
 
 [node name="Level4" unique_id=1826943140 instance=ExtResource("1_gw7ii")]
 
-[node name="Player" parent="." index="0" unique_id=289370131]
+[node name="Player" parent="." index="1" unique_id=289370131]
 position = Vector2(41, 50)
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1316, 37)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=624615222]
@@ -621,8 +622,14 @@ position = Vector2(1048, -47)
 [node name="Coin4" parent="." index="13" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
 position = Vector2(976, -30)
 
-[node name="Coin5" parent="." index="14" unique_id=1214575219 instance=ExtResource("6_l4gq6")]
-position = Vector2(976, 130)
-
-[node name="Coin6" parent="." index="15" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
+[node name="Coin6" parent="." index="14" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
 position = Vector2(801, 67)
+
+[node name="Cinnamon" parent="." index="17" unique_id=429135449 instance=ExtResource("8_85wvi")]
+position = Vector2(463, 51)
+
+[node name="Cinnamon2" parent="." index="18" unique_id=1016509675 instance=ExtResource("8_85wvi")]
+position = Vector2(975, 130)
+
+[node name="Cinnamon3" parent="." index="19" unique_id=820564306 instance=ExtResource("8_85wvi")]
+position = Vector2(1210, 67)

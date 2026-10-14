@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="6_8laii"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_j1jb0"]
 [ext_resource type="PackedScene" uid="uid://d2u56arifnaj4" path="res://pickups/Chest/chest.tscn" id="9_b2yrd"]
+[ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="10_8laii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1jb0"]
 texture = ExtResource("1_2hv30")
@@ -579,10 +580,10 @@ sources/1 = SubResource("TileSetAtlasSource_flpbj")
 
 [node name="Level2" unique_id=1826943140 instance=ExtResource("1_0knnk")]
 
-[node name="Player" parent="." index="0" unique_id=289370131]
+[node name="Player" parent="." index="1" unique_id=289370131]
 position = Vector2(40, 45)
 
-[node name="Key" parent="." index="1" unique_id=155803228]
+[node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(1320, 53)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=548662229]
@@ -620,14 +621,14 @@ position = Vector2(735, 129)
 [node name="Coin4" parent="." index="14" unique_id=71686968 instance=ExtResource("6_j1jb0")]
 position = Vector2(800, 113)
 
-[node name="Coin5" parent="." index="15" unique_id=550679859 instance=ExtResource("6_j1jb0")]
-position = Vector2(559, 113)
-
-[node name="Coin6" parent="." index="16" unique_id=1107939063 instance=ExtResource("6_j1jb0")]
+[node name="Coin6" parent="." index="15" unique_id=1107939063 instance=ExtResource("6_j1jb0")]
 position = Vector2(1201, 98)
 
-[node name="Coin7" parent="." index="17" unique_id=1676002935 instance=ExtResource("6_j1jb0")]
+[node name="Coin7" parent="." index="16" unique_id=1676002935 instance=ExtResource("6_j1jb0")]
 position = Vector2(336, 97)
 
-[node name="Chest" parent="." index="18" unique_id=1623759673 instance=ExtResource("9_b2yrd")]
+[node name="Chest" parent="." index="17" unique_id=1623759673 instance=ExtResource("9_b2yrd")]
 position = Vector2(1129, 113)
+
+[node name="Cinnamon" parent="." index="19" unique_id=1995851129 instance=ExtResource("10_8laii")]
+position = Vector2(560, 113)
