@@ -51,6 +51,7 @@ func _on_fs_button_toggled(toggled_on: bool):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	GameData.game_settings["Fullscreen"] = toggled_on
+	GameData.save_data()
 
 
 func _on_clear_save_button_pressed():

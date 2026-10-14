@@ -4,7 +4,7 @@ extends Area2D
 const FLOATING_TEXT = preload("res://UI/FloatingText/FloatingText.tscn")
 
 @export var value := 3
-@export var coinNumber: int
+@export var cinnamonNumber: int
 @export var path: String
 @export var level: String
 
@@ -15,13 +15,11 @@ func _on_body_entered(body: Node2D) -> void:
 
 		# mark as collected
 		if path and level:
-			GameData.level_progress[path][level]["coinsCollected"].append(coinNumber)
-		Events.coin_collected.emit()
-		SoundManager.play_coin_sound()
+			GameData.level_progress[path][level]["cinnamonsCollected"].append(cinnamonNumber)
 
 		var text_instance = FLOATING_TEXT.instantiate()
 		text_instance.global_position = global_position
 		get_tree().current_scene.add_child(text_instance)
-		text_instance.setup(1)
+		text_instance.setup(value)
 
 		queue_free()

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://eb3a8ydts1xo" path="res://UI/Town/assets/board.png" id="2_6a0ct"]
 [ext_resource type="PackedScene" uid="uid://c2a7jdinjjukx" path="res://UI/Town/quest.tscn" id="2_k0l85"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="4_lapfu"]
-[ext_resource type="Texture2D" uid="uid://bd0eakicq50yk" path="res://UI/Town/assets/box1.png" id="4_x3eng"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="5_6a0ct"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lapfu"]
@@ -55,49 +54,43 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Scroll" unique_id=1717801092]
 layout_mode = 0
-offset_left = -8.0
-offset_top = -36.0
-offset_right = 1105.3333
-offset_bottom = 1164.0
-scale = Vector2(0.15, 0.15)
+offset_left = -30.999998
+offset_top = -55.0
+offset_right = 1082.3333
+offset_bottom = 1145.0
+scale = Vector2(0.17, 0.17)
 mouse_filter = 2
 texture = ExtResource("2_6a0ct")
 
 [node name="QuestContainer" type="Control" parent="Scroll" unique_id=150732261]
 anchors_preset = 0
-offset_left = 14.0
-offset_top = 43.0
-offset_right = 134.0
-offset_bottom = 118.0
+offset_left = -13.0
+offset_top = 22.0
+offset_right = 135.0
+offset_bottom = 136.0
 
 [node name="Quest1" parent="Scroll/QuestContainer" unique_id=758985410 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = -21.999998
-offset_top = -19.000002
-offset_right = 5937.9995
-offset_bottom = 4760.9995
-scale = Vector2(0.025, 0.025)
-icon = ExtResource("4_x3eng")
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 17.0
+offset_bottom = 18.0
 expand_icon = true
 
 [node name="Quest2" parent="Scroll/QuestContainer" unique_id=1883662048 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 6.0000005
-offset_top = 24.0
-offset_right = 6286.0
-offset_bottom = 5203.999
-scale = Vector2(0.025, 0.025)
-icon = ExtResource("4_x3eng")
+offset_left = 83.0
+offset_top = 16.000002
+offset_right = 91.0
+offset_bottom = 24.000002
 expand_icon = true
 
 [node name="Quest3" parent="Scroll/QuestContainer" unique_id=975479226 instance=ExtResource("2_k0l85")]
 layout_mode = 0
-offset_left = 40.0
-offset_top = -19.000002
-offset_right = 6399.999
-offset_bottom = 4701.0
-scale = Vector2(0.025, 0.025)
-icon = ExtResource("4_x3eng")
+offset_left = 29.0
+offset_top = 66.99999
+offset_right = 37.0
+offset_bottom = 74.99999
 expand_icon = true
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("4_lapfu")]

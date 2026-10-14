@@ -22,6 +22,6 @@ func _on_body_entered(body: Node2D) -> void:
 		var text_instance = FLOATING_TEXT.instantiate()
 		text_instance.global_position = global_position
 		get_tree().current_scene.add_child(text_instance)
-		text_instance.setup(1)
+		text_instance.setup(value)
 
 		queue_free()

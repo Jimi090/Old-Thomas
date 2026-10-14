@@ -204,7 +204,12 @@ func get_empty_levels_progress():
 
 
 func get_default_level_progress() -> Dictionary:
-	return { "finished": false, "coinsCollected": [], "chestsCollected": [] }
+	return {
+		"finished": false,
+		"coinsCollected": [],
+		"chestsCollected": [],
+		"cinnamonsCollected": [],
+	}
 
 
 func get_default_game_settings():

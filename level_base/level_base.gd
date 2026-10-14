@@ -14,9 +14,12 @@ func _ready() -> void:
 	var nodes := get_children()
 	var coinCounter := 0
 	var chestCounter := 0
+	var cinnamonCounter := 0
 
 	var collectedCoins = GameData.level_progress[path][level]["coinsCollected"]
 	var collectedChests = GameData.level_progress[path][level]["chestsCollected"]
+	var collectedCinnamons = GameData.level_progress[path][level]["cinnamonsCollected"]
+
 	for node in nodes:
 		if node is Coin:
 			if coinCounter in collectedCoins:
@@ -35,6 +38,15 @@ func _ready() -> void:
 				node.path = path
 				node.level = level
 			chestCounter += 1
+		if node is Cinnamon:
+			if cinnamonCounter in collectedCinnamons:
+				node.queue_free()
+			else:
+				node.cinnamonNumber = cinnamonCounter
+				node.path = path
+				node.level = level
+			cinnamonCounter += 1
+
 	player.player_died.connect(_on_player_death)
 
 
