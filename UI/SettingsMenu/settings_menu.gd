@@ -4,6 +4,7 @@ extends Control
 @onready var h_slider_mv: HSlider = $SettingsContainer/Audio/Sliders/HSliderMV
 @onready var h_slider_sfx: HSlider = $SettingsContainer/Audio/Sliders/HSliderSFX
 @onready var fs_button: CheckButton = $SettingsContainer/Graphics/FsButton
+@onready var clear_save_button: Button = $SettingsContainer/Buttons/ClearSaveButton
 
 
 func _ready():
@@ -16,6 +17,8 @@ func _ready():
 
 	fs_button.toggled.connect(_on_fs_button_toggled)
 	fs_button.button_pressed = GameData.game_settings["Fullscreen"]
+
+	clear_save_button.pressed.connect(_on_clear_save_button_pressed)
 
 
 func _on_general_volume_changed(value: float):
@@ -48,3 +51,8 @@ func _on_fs_button_toggled(toggled_on: bool):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	GameData.game_settings["Fullscreen"] = toggled_on
+
+
+func _on_clear_save_button_pressed():
+	GameData.clear_save()
+	get_tree().change_scene_to_file("uid://cidsvy4wrqrsh")

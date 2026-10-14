@@ -82,7 +82,6 @@ func clear_save():
 	upgrades = default_upgrades.duplicate(true)
 	get_empty_levels_progress()
 	get_default_quests()
-	get_default_game_settings()
 
 	save_data()
 	load_data()
