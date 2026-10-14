@@ -7,6 +7,10 @@ enum Destination {
 @export var destiantion: Destination
 
 
+func _ready() -> void:
+	pressed.connect(_on_pressed)
+
+
 func _on_pressed() -> void:
 	match destiantion:
 		Destination.MENU:

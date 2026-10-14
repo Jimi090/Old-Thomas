@@ -6,6 +6,8 @@
 [node name="LevelSelector" type="Control" unique_id=1458111347]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
 script = ExtResource("1_3qqqg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=622445174]
@@ -15,14 +17,21 @@ offset_bottom = 180.0
 color = Color(0, 0.37254903, 0.49803922, 1)
 
 [node name="VBoxContainer" type="GridContainer" parent="." unique_id=2066744217]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 310.0
-offset_bottom = 170.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -79.0
+offset_right = 136.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 8
-columns = 3
+columns = 2
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("2_3qqqg")]
 layout_mode = 1

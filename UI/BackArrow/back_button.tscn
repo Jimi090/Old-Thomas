@@ -43,5 +43,3 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ri767")
 icon = ExtResource("1_5ru66")
 icon_alignment = 1
 script = ExtResource("2_meldj")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
