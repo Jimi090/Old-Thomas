@@ -8,8 +8,6 @@
 [sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
 font = ExtResource("2_f6fof")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_478fi"]
-
 [node name="SettingsMenu" type="Control" unique_id=1620429959]
 layout_mode = 3
 anchors_preset = 0
@@ -24,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.08627451, 0.07058824, 0.16470589, 1)
+color = Color(0.14117648, 0.23137255, 0.41960785, 1)
 
 [node name="SettingsText" type="Label" parent="." unique_id=1116116688]
 layout_mode = 0
@@ -43,7 +41,7 @@ offset_right = 154.1
 offset_bottom = 154.1
 destiantion = 1
 
-[node name="SettingsContainer" type="Panel" parent="." unique_id=203270832]
+[node name="SettingsContainer" type="VBoxContainer" parent="." unique_id=11359172]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -51,18 +49,24 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -160.0
-offset_top = -160.0
+offset_top = -150.0
 offset_right = 160.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_478fi")
+theme_override_constants/separation = 12
+
+[node name="Separator1" type="ColorRect" parent="SettingsContainer" unique_id=206162648]
+custom_minimum_size = Vector2(240, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(1, 0.81960785, 0.4, 1)
 
 [node name="Audio" type="Control" parent="SettingsContainer" unique_id=1221157332]
-anchors_preset = 0
-offset_left = 12.0
-offset_top = 16.0
-offset_right = 320.0
-offset_bottom = 69.0
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="LabelGV" type="Label" parent="SettingsContainer/Audio" unique_id=852313237]
 layout_mode = 0
@@ -93,9 +97,9 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -34.0
+offset_left = 20.0
 offset_top = -4.0
-offset_right = 66.0
+offset_right = 120.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -120,3 +124,38 @@ offset_right = 80.0
 offset_bottom = 48.0
 value = 50.0
 rounded = true
+
+[node name="Separator2" type="ColorRect" parent="SettingsContainer" unique_id=1337124539]
+custom_minimum_size = Vector2(240, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(1, 0.81960785, 0.4, 1)
+
+[node name="Graphics" type="Control" parent="SettingsContainer" unique_id=183261355]
+custom_minimum_size = Vector2(200, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="SettingsContainer/Graphics" unique_id=1155114367]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 23.0
+text = "FullScreen
+"
+label_settings = ExtResource("4_f6fof")
+
+[node name="FsButton" type="CheckButton" parent="SettingsContainer/Graphics" unique_id=1921786119]
+layout_mode = 0
+offset_left = 140.0
+offset_top = -8.0
+offset_right = 184.0
+offset_bottom = 16.0
+
+[node name="Separator3" type="ColorRect" parent="SettingsContainer" unique_id=1295653106]
+custom_minimum_size = Vector2(240, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(1, 0.81960785, 0.4, 1)

@@ -3,6 +3,7 @@ extends Control
 @onready var h_slider_gv: HSlider = $SettingsContainer/Audio/Sliders/HSliderGV
 @onready var h_slider_mv: HSlider = $SettingsContainer/Audio/Sliders/HSliderMV
 @onready var h_slider_sfx: HSlider = $SettingsContainer/Audio/Sliders/HSliderSFX
+@onready var fs_button: CheckButton = $SettingsContainer/Graphics/FsButton
 
 
 func _ready():
@@ -12,6 +13,9 @@ func _ready():
 	h_slider_gv.value = GameData["game_settings"]["Audio"]["GeneralVolume"]
 	h_slider_mv.value = GameData["game_settings"]["Audio"]["MusicVolume"]
 	h_slider_sfx.value = GameData["game_settings"]["Audio"]["SFXVolume"]
+
+	fs_button.toggled.connect(_on_fs_button_toggled)
+	fs_button.button_pressed = GameData.game_settings["Fullscreen"]
 
 
 func _on_general_volume_changed(value: float):
@@ -36,3 +40,11 @@ func change_bus_volume_to(bus: String, value: float):
 		"SFX":
 			GameData.game_settings["Audio"]["SFXVolume"] = value
 	GameData.save_data()
+
+
+func _on_fs_button_toggled(toggled_on: bool):
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	GameData.game_settings["Fullscreen"] = toggled_on

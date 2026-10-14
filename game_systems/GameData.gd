@@ -209,7 +209,10 @@ func get_default_level_progress() -> Dictionary:
 
 
 func get_default_game_settings():
-	game_settings = { "Audio": { "GeneralVolume": 50, "MusicVolume": 50, "SFXVolume": 50 } }
+	game_settings = {
+		"Audio": { "GeneralVolume": 50, "MusicVolume": 50, "SFXVolume": 50 },
+		"Fullscreen": true,
+	}
 
 
 func apply_game_settings():
@@ -217,9 +220,21 @@ func apply_game_settings():
 	change_bus_volume_to("Music", game_settings["Audio"]["MusicVolume"])
 	change_bus_volume_to("SFX", game_settings["Audio"]["SFXVolume"])
 
+	if not game_settings.has("Fullscreen"):
+		clear_save()
+
+	change_fullscreen_mode_to(game_settings["Fullscreen"])
+
 
 func change_bus_volume_to(bus: String, value: float):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus), linear_to_db(value / 100.0))
+
+
+func change_fullscreen_mode_to(is_fullscreen: bool):
+	if is_fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
 func _ready() -> void:
