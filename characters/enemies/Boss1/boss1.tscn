@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://devaxj0ueg6l2"]
+
+[ext_resource type="Texture2D" uid="uid://blvutuuvqewbn" path="res://characters/enemies/Boss1/boss1-idle.png" id="1_un6jb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_008f7"]
+atlas = ExtResource("1_un6jb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk8lb"]
+atlas = ExtResource("1_un6jb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24205"]
+atlas = ExtResource("1_un6jb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_008f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk8lb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24205")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8k64i"]
+size = Vector2(40, 53.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
+radius = 63.1981
+
+[node name="Boss1" type="CharacterBody2D" unique_id=1954414926]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
+position = Vector2(13.5, 15.5)
+scale = Vector2(1.84375, 1.96875)
+sprite_frames = SubResource("SpriteFrames_nrtow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
+position = Vector2(17, 16.25)
+shape = SubResource("RectangleShape2D_8k64i")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1874958705]
+visible = false
+position = Vector2(19, 16)
+shape = SubResource("CircleShape2D_srkg8")
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
+target_position = Vector2(23, 16)
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
+target_position = Vector2(17, 69)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1625407692]
+wait_time = 1.2

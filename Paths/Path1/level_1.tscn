@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_htsat"]
 [ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="6_0eqkp"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="7_0eqkp"]
-[ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="7_pwgcu"]
+[ext_resource type="PackedScene" uid="uid://devaxj0ueg6l2" path="res://characters/enemies/Boss1/boss1.tscn" id="8_d6jbu"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_pwgcu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jy4y3"]
@@ -601,26 +601,26 @@ position = Vector2(819, 80)
 [node name="Coin" parent="." index="7" unique_id=525547507 instance=ExtResource("7_0eqkp")]
 position = Vector2(583, 16)
 
-[node name="Ghost" parent="." index="8" unique_id=1822596800 instance=ExtResource("7_pwgcu")]
-position = Vector2(1185, 4)
-
-[node name="Coin3" parent="." index="9" unique_id=702707788 instance=ExtResource("7_0eqkp")]
+[node name="Coin3" parent="." index="8" unique_id=702707788 instance=ExtResource("7_0eqkp")]
 position = Vector2(344, 159)
 
-[node name="Coin2" parent="." index="10" unique_id=395362570 instance=ExtResource("7_0eqkp")]
+[node name="Coin2" parent="." index="9" unique_id=395362570 instance=ExtResource("7_0eqkp")]
 position = Vector2(1040, 8)
 
-[node name="Coin4" parent="." index="11" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
+[node name="Coin4" parent="." index="10" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
 position = Vector2(692, 101)
 
-[node name="Coin5" parent="." index="12" unique_id=232306144 instance=ExtResource("7_0eqkp")]
+[node name="Coin5" parent="." index="11" unique_id=232306144 instance=ExtResource("7_0eqkp")]
 position = Vector2(881, -23)
 
-[node name="Cinnamon" parent="." index="15" unique_id=1674478770 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon" parent="." index="14" unique_id=1674478770 instance=ExtResource("8_pwgcu")]
 position = Vector2(411, 161)
 
-[node name="Cinnamon2" parent="." index="16" unique_id=1928131632 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon2" parent="." index="15" unique_id=1928131632 instance=ExtResource("8_pwgcu")]
 position = Vector2(170, 128)
 
-[node name="Cinnamon3" parent="." index="17" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon3" parent="." index="16" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
 position = Vector2(1120, 2)
+
+[node name="Boss1" parent="." index="17" unique_id=1954414926 instance=ExtResource("8_d6jbu")]
+position = Vector2(1184, -11)
