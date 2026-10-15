@@ -29,6 +29,9 @@ func _ready():
 
 
 func change_scene_to_destination():
+	get_tree().paused = true
+	return_destination.get_child(-1).show()
+	get_tree().paused = false
 	get_tree().change_scene_to_node(return_destination)
 
 

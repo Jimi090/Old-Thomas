@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bclefgai3qfrv"]
+
+[ext_resource type="Texture2D" uid="uid://c5mop4jjxsind" path="res://UI/PauseMenuButton/pause.png" id="1_1se28"]
+[ext_resource type="Script" uid="uid://bjfi7axanljnk" path="res://UI/PauseMenuButton/pause_menu_button.gd" id="2_8ho03"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1se28"]
+bg_color = Color(0.14509805, 0.16470589, 0.20392157, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ho03"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ad20"]
+bg_color = Color(0.20392157, 0.23137255, 0.28235295, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="PauseMenuButton" type="Button" unique_id=1747087023]
+process_mode = 3
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 404.0
+offset_bottom = 404.0
+scale = Vector2(0.04, 0.04)
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1se28")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ho03")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ad20")
+icon = ExtResource("1_1se28")
+icon_alignment = 1
+script = ExtResource("2_8ho03")
