@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvutuuvqewbn"
-path="res://.godot/imported/boss1-idle.png-168a714821292442226f2fca6f1a5ddd.ctex"
+uid="uid://cej5h6cg5ky2w"
+path="res://.godot/imported/boss1-run.png-eda0b1442e809b19ec49beb624eeac84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemies/Boss1/boss1-idle.png"
-dest_files=["res://.godot/imported/boss1-idle.png-168a714821292442226f2fca6f1a5ddd.ctex"]
+source_file="res://characters/enemies/Boss1/sprite/boss1-run.png"
+dest_files=["res://.godot/imported/boss1-run.png-eda0b1442e809b19ec49beb624eeac84.ctex"]
 
 [params]
 
