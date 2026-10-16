@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://devaxj0ueg6l2"]
 
-[ext_resource type="Texture2D" uid="uid://blvutuuvqewbn" path="res://characters/enemies/Boss1/boss1-idle.png" id="1_un6jb"]
+[ext_resource type="Script" uid="uid://c38dywk8rbunt" path="res://characters/enemies/Boss1/boss_1.gd" id="1_24205"]
+[ext_resource type="Texture2D" path="res://characters/enemies/Boss1/boss1-idle.png" id="1_un6jb"]
+[ext_resource type="Texture2D" uid="uid://cej5h6cg5ky2w" path="res://characters/enemies/Boss1/sprite/boss1-run.png" id="3_srkg8"]
+[ext_resource type="Texture2D" uid="uid://0tupf7a21084" path="res://characters/enemies/Boss1/sprite/boss1-attack.png" id="4_2awvr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_008f7"]
 atlas = ExtResource("1_un6jb")
@@ -13,6 +16,42 @@ region = Rect2(32, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_24205"]
 atlas = ExtResource("1_un6jb")
 region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k64i"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_macy4"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4dmr"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri4hl"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc2sy"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wyyy"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p5cn"]
+atlas = ExtResource("3_srkg8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnd1o"]
+atlas = ExtResource("4_2awvr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uacn"]
+atlas = ExtResource("4_2awvr")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
 animations = [{
@@ -27,25 +66,65 @@ animations = [{
 "texture": SubResource("AtlasTexture_24205")
 }],
 "loop": 1,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k64i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_macy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4dmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri4hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc2sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wyyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p5cn")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnd1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uacn")
+}],
+"loop": 1,
+"name": &"take_damage",
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8k64i"]
-size = Vector2(40, 53.5)
+size = Vector2(42, 53.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
 radius = 63.1981
 
 [node name="Boss1" type="CharacterBody2D" unique_id=1954414926]
+script = ExtResource("1_24205")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 position = Vector2(13.5, 15.5)
 scale = Vector2(1.84375, 1.96875)
 sprite_frames = SubResource("SpriteFrames_nrtow")
+animation = &"take_damage"
+frame_progress = 0.9854698
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
-position = Vector2(17, 16.25)
+position = Vector2(18, 16)
 shape = SubResource("RectangleShape2D_8k64i")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
@@ -57,11 +136,11 @@ visible = false
 position = Vector2(19, 16)
 shape = SubResource("CircleShape2D_srkg8")
 
-[node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
-target_position = Vector2(23, 16)
-
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
 target_position = Vector2(17, 69)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
+target_position = Vector2(23, 16)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1625407692]
 wait_time = 1.2
