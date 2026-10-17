@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="5_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_85wvi"]
+[ext_resource type="PackedScene" uid="uid://devaxj0ueg6l2" path="res://characters/enemies/Boss1/boss1.tscn" id="9_k1adq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4gq6"]
 texture = ExtResource("1_k3o4x")
@@ -633,3 +634,6 @@ position = Vector2(975, 130)
 
 [node name="Cinnamon3" parent="." index="19" unique_id=820564306 instance=ExtResource("8_85wvi")]
 position = Vector2(1210, 67)
+
+[node name="Boss1" parent="." index="20" unique_id=1954414926 instance=ExtResource("9_k1adq")]
+position = Vector2(1289, 33)

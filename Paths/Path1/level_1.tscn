@@ -614,13 +614,15 @@ position = Vector2(692, 101)
 position = Vector2(881, -23)
 
 [node name="Cinnamon3" parent="." index="14" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
+z_index = 1
 position = Vector2(1118, 8)
 
 [node name="Cinnamon4" parent="." index="15" unique_id=215436099 instance=ExtResource("8_pwgcu")]
+z_index = 1
 position = Vector2(163, 133)
 
 [node name="Cinnamon5" parent="." index="16" unique_id=273843434 instance=ExtResource("8_pwgcu")]
 position = Vector2(510, 85)
 
 [node name="Boss1" parent="." index="17" unique_id=1954414926 instance=ExtResource("8_d6jbu")]
-position = Vector2(1230, -11)
+position = Vector2(1225, 0)
