@@ -5,6 +5,10 @@ extends Area2D
 @export var level_name: String
 
 
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+
 func _on_body_entered(_body: Node2D) -> void:
 	GameData.level_progress[path_name][level_name]["finished"] = true
 	Events.level_completed.emit(path_name, level_name)

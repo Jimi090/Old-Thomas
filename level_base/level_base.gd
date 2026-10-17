@@ -9,8 +9,17 @@ func _ready() -> void:
 	var path = file_path.get_slice("/", 1)
 	var level = file_path.get_slice("/", 2)
 
-	key.path_name = path
-	key.level_name = level
+	if (
+		int(level[-6]) != len(GameData.level_progress[path])
+		or not FileAccess.file_exists(
+			"res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
+		)
+	):
+		key.path_name = path
+		key.level_name = level
+	else:
+		key.body_entered.disconnect(key._on_body_entered)
+		key.body_entered.connect(change_scene_to_boss_arena.bind(path))
 
 	var nodes := get_children()
 	var coinCounter := 0
@@ -57,3 +66,16 @@ func _on_player_death():
 
 func reload_level():
 	get_tree().reload_current_scene()
+
+
+func change_scene_to_boss_arena(_body, path):
+	var file_path = "res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
+
+	if FileAccess.file_exists(file_path):
+		call_deferred("change_scene", file_path)
+	else:
+		print('xd')
+
+
+func change_scene(file_path):
+	get_tree().change_scene_to_file(file_path)
