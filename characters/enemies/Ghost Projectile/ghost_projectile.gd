@@ -4,6 +4,7 @@ extends Projectile
 
 func _ready() -> void:
 	sprite2d = $Sprite2D
+	collision_polygon_2d = $CollisionPolygon2D
 	speed = 160
 	lifespan = 1.6
 	super()

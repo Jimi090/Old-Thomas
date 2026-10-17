@@ -8,6 +8,7 @@ func _ready() -> void:
 	attack_range = $AttackRange
 	floor_check = $FloorCheck
 	wall_check = $WallCheck
+	collision_shape_2d = $CollisionShape2D
 	SPEED = GB.mage.speed
 	DAMAGE = GB.mage.damage
 	ATTACK_COOLDOWN = GB.mage.attack_cooldown

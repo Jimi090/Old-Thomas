@@ -2,6 +2,7 @@ class_name Enemy
 extends Character
 
 var animated_sprite_2d: AnimatedSprite2D
+var collision_shape_2d: CollisionShape2D
 var attack_range: Area2D
 var floor_check: RayCast2D
 var wall_check: RayCast2D
@@ -80,6 +81,7 @@ func change_direction_to(new_direction: int):
 	direction = new_direction
 	floor_check.target_position.x *= -1
 	wall_check.target_position.x *= -1
+	collision_shape_2d.position.x *= -1
 	animated_sprite_2d.flip_h = direction < 0
 
 

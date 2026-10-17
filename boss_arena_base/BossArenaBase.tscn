@@ -23,3 +23,6 @@ position = Vector2(16, 35)
 position = Vector2(51, 17)
 
 [node name="HUD" parent="." unique_id=150336644 instance=ExtResource("4_i4j03")]
+
+[node name="KeyMarker2D" type="Marker2D" parent="." unique_id=1340855194]
+position = Vector2(10, 112)

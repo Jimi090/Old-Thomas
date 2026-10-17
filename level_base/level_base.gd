@@ -8,6 +8,7 @@ func _ready() -> void:
 	var file_path = scene_file_path.substr(6)
 	var path = file_path.get_slice("/", 1)
 	var level = file_path.get_slice("/", 2)
+
 	key.path_name = path
 	key.level_name = level
 

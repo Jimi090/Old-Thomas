@@ -8,11 +8,12 @@ func _ready() -> void:
 	attack_range = $AttackRange
 	floor_check = $FloorCheck
 	wall_check = $WallCheck
-	SPEED = GB.mage.speed
-	DAMAGE = GB.mage.damage
-	ATTACK_COOLDOWN = GB.mage.attack_cooldown
-	MAX_HEALTH = GB.mage.health
-	JUMP_FORCE = GB.mage.jump_force
+	collision_shape_2d = $CollisionShape2D
+	SPEED = GB.boss1.speed
+	DAMAGE = GB.boss1.damage
+	ATTACK_COOLDOWN = GB.boss1.attack_cooldown
+	MAX_HEALTH = GB.boss1.health
+	JUMP_FORCE = GB.boss1.jump_force
 
 	super()
 

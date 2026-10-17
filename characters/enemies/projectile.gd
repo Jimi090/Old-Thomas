@@ -9,6 +9,7 @@ var target_position := Vector2.ZERO
 var direction := Vector2.ZERO
 
 var sprite2d: Sprite2D
+var collision_polygon_2d: CollisionPolygon2D
 
 
 func _on_body_entered(body: CharacterBody2D) -> void:
@@ -20,6 +21,7 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	direction = (target_position - global_position).normalized()
 	sprite2d.rotation = direction.angle() + PI
+	collision_polygon_2d.rotation = direction.angle() + PI
 	await get_tree().create_timer(lifespan).timeout
 	queue_free()
 
