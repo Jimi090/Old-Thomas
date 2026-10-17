@@ -15,9 +15,11 @@ func _ready() -> void:
 			"res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
 		)
 	):
+		# normal level
 		key.path_name = path
 		key.level_name = level
 	else:
+		# last level (tp to boss fight)
 		key.body_entered.disconnect(key._on_body_entered)
 		key.body_entered.connect(change_scene_to_boss_arena.bind(path))
 

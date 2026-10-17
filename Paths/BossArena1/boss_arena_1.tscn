@@ -417,7 +417,7 @@ tile_map_data = PackedByteArray("AAAAABAAAAAAAAMAAAAAABEAAAAAAAQAAAABABAAAAABAAM
 tile_set = SubResource("TileSet_jnnth")
 
 [node name="Boss1" parent="." index="5" unique_id=1954414926 instance=ExtResource("3_jnnth")]
-position = Vector2(152, 219)
+position = Vector2(324, 222)
 
 [node name="KeyMarker2D" parent="." index="6" unique_id=1340855194]
 position = Vector2(307, 245)
