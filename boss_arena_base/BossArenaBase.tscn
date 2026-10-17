@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dj7aeaa2sfwa"]
+
+[ext_resource type="Script" uid="uid://ci4ihs73te43h" path="res://boss_arena_base/boss_arena_base.gd" id="1_5t4wo"]
+[ext_resource type="Texture2D" uid="uid://dp1qo475waxic" path="res://level_base/background/cloudbg.png" id="1_8j6xw"]
+[ext_resource type="PackedScene" uid="uid://b0fqim18ew3u8" path="res://characters/player/player.tscn" id="2_5t4wo"]
+[ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="3_oyncc"]
+[ext_resource type="PackedScene" uid="uid://bfpcxuyyt6brx" path="res://UI/HUD/HUD.tscn" id="4_i4j03"]
+
+[node name="BossArenaBase" type="Node2D" unique_id=1157194156]
+script = ExtResource("1_5t4wo")
+
+[node name="Background" type="Parallax2D" parent="." unique_id=1799335536]
+repeat_size = Vector2(320, 179)
+
+[node name="backgroundImg" type="Sprite2D" parent="Background" unique_id=1356439868]
+texture = ExtResource("1_8j6xw")
+centered = false
+
+[node name="Player" parent="." unique_id=289370131 instance=ExtResource("2_5t4wo")]
+position = Vector2(16, 35)
+
+[node name="Key" parent="." unique_id=155803228 instance=ExtResource("3_oyncc")]
+position = Vector2(51, 17)
+
+[node name="HUD" parent="." unique_id=150336644 instance=ExtResource("4_i4j03")]

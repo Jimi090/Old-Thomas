@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://devaxj0ueg6l2" path="res://characters/enemies/Boss1/boss1.tscn" id="8_d6jbu"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_pwgcu"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jy4y3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwgcu"]
 texture = ExtResource("1_5ywli")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.0791512, 8, -1.6187286, 8, 8, -8, 8)
@@ -404,7 +404,7 @@ texture = ExtResource("1_5ywli")
 
 [sub_resource type="TileSet" id="TileSet_p0pqx"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jy4y3")
+sources/0 = SubResource("TileSetAtlasSource_pwgcu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ie1li"]
 texture = ExtResource("2_r4pei")

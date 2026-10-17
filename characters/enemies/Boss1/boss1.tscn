@@ -106,9 +106,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y5gpq")
 }],
-"loop": 1,
-"name": &"attack",
-"speed": 9.0
+"loop": 0,
+"name": &"basic_attack",
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -157,32 +157,33 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_37rti")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"take_damage",
 "speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8k64i"]
-size = Vector2(52.625, 62.375)
+size = Vector2(20, 27)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
 radius = 59.008472
 
 [node name="Boss1" type="CharacterBody2D" unique_id=1954414926]
+scale = Vector2(2, 2)
 script = ExtResource("1_24205")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
-position = Vector2(13, 12.000001)
-scale = Vector2(1.84375, 1.96875)
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"run"
-frame_progress = 0.18193361
+animation = &"idle"
+offset = Vector2(6.5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
-position = Vector2(4, 12)
+visible = false
+position = Vector2(2.5, -0.5)
 shape = SubResource("RectangleShape2D_8k64i")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
+visible = false
 collision_layer = 4
 collision_mask = 4
 
@@ -192,9 +193,11 @@ position = Vector2(10, 12)
 shape = SubResource("CircleShape2D_srkg8")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
+visible = false
 target_position = Vector2(17, 69)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
+visible = false
 target_position = Vector2(23, 16)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1625407692]
