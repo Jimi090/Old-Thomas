@@ -21,7 +21,7 @@ Each path has four levels, with 3 paths being available currently. On top of tha
 
 ## Controls
 
-@@ -27,9 +28,22 @@ Jump: Space or W or Up Arrow
+Jump: Space or W or Up Arrow
 
 Basic attack: J or Right Mouse Button
 
@@ -36,7 +36,7 @@ The big main problem is that we practically live opposite each other location-wi
 To put this in perspective, when Jimi is working, Amira is at school and while Amira is working, Jimi is sleeping!
 This created a problem with communication because if we couldn't continue or submit properly and are not able to ask the other teammate to help, it was super hard!!!
 To solve this, we made sure to share what we will do beforehand and what we have after!
-Together we have worked so hard to create a game for others to enjoy!
+Together, we have worked so hard to create a game for others to enjoy!
 
 ## Photos
 
