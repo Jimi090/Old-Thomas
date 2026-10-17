@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var key: Key = $Key
 @onready var player: Player = $Player
+@onready var hud: HUD = $HUD
 
 
 func _ready() -> void:

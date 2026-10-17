@@ -176,8 +176,9 @@ script = ExtResource("1_24205")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"idle"
-frame_progress = 0.88486177
+animation = &"basic_attack"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 visible = false
