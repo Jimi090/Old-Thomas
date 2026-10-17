@@ -72,7 +72,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"new_animation_1",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_korjc"]
@@ -88,6 +88,7 @@ scale = Vector2(1.6134257, 1.45081)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"new_animation_1"
 autoplay = "new_animation_1"
+frame_progress = 0.4670515
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838423969]
 position = Vector2(3.703701, 1.8518505)
