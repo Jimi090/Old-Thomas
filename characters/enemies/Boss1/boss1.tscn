@@ -34,15 +34,15 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("2_srkg8")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mnd1o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_srkg8"]
 atlas = ExtResource("3_2awvr")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2uacn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnd1o"]
 atlas = ExtResource("3_2awvr")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8m3sb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uacn"]
 atlas = ExtResource("3_2awvr")
 region = Rect2(64, 0, 32, 32)
 
@@ -112,17 +112,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_srkg8")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mnd1o")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2uacn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8m3sb")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 4.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -163,10 +163,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8k64i"]
-size = Vector2(45, 58.75)
+size = Vector2(52.625, 62.375)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
-radius = 63.1981
+radius = 59.008472
 
 [node name="Boss1" type="CharacterBody2D" unique_id=1954414926]
 script = ExtResource("1_24205")
@@ -175,11 +175,11 @@ script = ExtResource("1_24205")
 position = Vector2(13, 12.000001)
 scale = Vector2(1.84375, 1.96875)
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"idle"
-frame_progress = 0.20596859
+animation = &"run"
+frame_progress = 0.18193361
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
-position = Vector2(19.5, 13.375)
+position = Vector2(4, 12)
 shape = SubResource("RectangleShape2D_8k64i")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
@@ -188,7 +188,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1874958705]
 visible = false
-position = Vector2(19, 16)
+position = Vector2(10, 12)
 shape = SubResource("CircleShape2D_srkg8")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
