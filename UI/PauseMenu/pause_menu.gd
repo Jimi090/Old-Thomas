@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name PauseMenu
 
 @onready var resume_button: Button = $Panel/Container/ResumeButton
 @onready var settings_button: Button = $Panel/Container/SettingsButton

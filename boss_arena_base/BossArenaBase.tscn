@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b0fqim18ew3u8" path="res://characters/player/player.tscn" id="2_5t4wo"]
 [ext_resource type="PackedScene" uid="uid://jumq148hg26s" path="res://pickups/Key/key.tscn" id="3_oyncc"]
 [ext_resource type="PackedScene" uid="uid://bfpcxuyyt6brx" path="res://UI/HUD/HUD.tscn" id="4_i4j03"]
+[ext_resource type="Script" uid="uid://cxeu3t7xmui5o" path="res://level_base/esc_handler.gd" id="6_oyncc"]
 
 [node name="BossArenaBase" type="Node2D" unique_id=1157194156]
 script = ExtResource("1_5t4wo")
@@ -26,3 +27,7 @@ position = Vector2(51, 17)
 
 [node name="KeyMarker2D" type="Marker2D" parent="." unique_id=1340855194]
 position = Vector2(10, 112)
+
+[node name="EscHandler" type="Node2D" parent="." unique_id=349885490]
+process_mode = 3
+script = ExtResource("6_oyncc")
