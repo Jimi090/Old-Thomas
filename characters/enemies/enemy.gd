@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		state = State.BASIC_ATTACK
 		attack(attack_range.get_overlapping_bodies()[0])
 
-	# is the player in range
+	# if player not in range
 	if bodies.is_empty():
 		# is there an obstacle in the way
 		if wall_check.is_colliding() and is_on_floor():

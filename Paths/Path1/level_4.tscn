@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="5_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="6_l4gq6"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_85wvi"]
-[ext_resource type="PackedScene" uid="uid://devaxj0ueg6l2" path="res://characters/enemies/Boss1/boss1.tscn" id="9_k1adq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4gq6"]
 texture = ExtResource("1_k3o4x")
@@ -611,29 +610,29 @@ position = Vector2(1153, 56)
 [node name="Enemy5" parent="." index="9" unique_id=87181825 instance=ExtResource("5_gw7ii")]
 position = Vector2(116, 80)
 
-[node name="Coin" parent="." index="10" unique_id=525547507 instance=ExtResource("6_l4gq6")]
+[node name="Enemy6" parent="." index="10" unique_id=1454876929 instance=ExtResource("5_gw7ii")]
+position = Vector2(1278, 47)
+
+[node name="Coin" parent="." index="11" unique_id=525547507 instance=ExtResource("6_l4gq6")]
 position = Vector2(257, 37)
 
-[node name="Coin2" parent="." index="11" unique_id=1191198511 instance=ExtResource("6_l4gq6")]
+[node name="Coin2" parent="." index="12" unique_id=1191198511 instance=ExtResource("6_l4gq6")]
 position = Vector2(640, 19)
 
-[node name="Coin3" parent="." index="12" unique_id=1536961559 instance=ExtResource("6_l4gq6")]
+[node name="Coin3" parent="." index="13" unique_id=1536961559 instance=ExtResource("6_l4gq6")]
 position = Vector2(1048, -47)
 
-[node name="Coin4" parent="." index="13" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
+[node name="Coin4" parent="." index="14" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
 position = Vector2(976, -30)
 
-[node name="Coin6" parent="." index="14" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
+[node name="Coin6" parent="." index="15" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
 position = Vector2(801, 67)
 
-[node name="Cinnamon" parent="." index="17" unique_id=429135449 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon" parent="." index="18" unique_id=429135449 instance=ExtResource("8_85wvi")]
 position = Vector2(463, 51)
 
-[node name="Cinnamon2" parent="." index="18" unique_id=1016509675 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon2" parent="." index="19" unique_id=1016509675 instance=ExtResource("8_85wvi")]
 position = Vector2(975, 130)
 
-[node name="Cinnamon3" parent="." index="19" unique_id=820564306 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon3" parent="." index="20" unique_id=820564306 instance=ExtResource("8_85wvi")]
 position = Vector2(1210, 67)
-
-[node name="Boss1" parent="." index="20" unique_id=1954414926 instance=ExtResource("9_k1adq")]
-position = Vector2(1289, 33)

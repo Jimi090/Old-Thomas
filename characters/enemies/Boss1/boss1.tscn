@@ -34,6 +34,10 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("2_srkg8")
 region = Rect2(192, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m3sb"]
+atlas = ExtResource("2_srkg8")
+region = Rect2(192, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_srkg8"]
 atlas = ExtResource("3_2awvr")
 region = Rect2(0, 0, 32, 32)
@@ -112,6 +116,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8m3sb")
+}],
+"loop": 1,
+"name": &"charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_srkg8")
 }, {
 "duration": 1.0,
@@ -176,9 +188,7 @@ script = ExtResource("1_24205")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"basic_attack"
-frame = 6
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 visible = false
@@ -196,8 +206,8 @@ position = Vector2(10, 12)
 shape = SubResource("CircleShape2D_srkg8")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
-visible = false
-target_position = Vector2(17, 69)
+position = Vector2(-6, 1.5)
+target_position = Vector2(26, 38.5)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
 visible = false
@@ -205,3 +215,11 @@ target_position = Vector2(23, 16)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1625407692]
 wait_time = 1.2
+
+[node name="Weapon" type="Area2D" parent="." unique_id=2076295791]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Weapon" unique_id=437937850]
+position = Vector2(0, 3)
+polygon = PackedVector2Array(0, 0, 0, 5, 16, 5, 16, 2, 11, 0)
