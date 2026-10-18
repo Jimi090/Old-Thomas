@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://hd1swkxvd3qt"]
+
+[ext_resource type="Script" uid="uid://o8mgulsob25w" path="res://characters/enemies/Axe Projectile/axe_projectile.gd" id="1_0pce3"]
+[ext_resource type="Texture2D" uid="uid://ddrxk7h5avi81" path="res://characters/enemies/Axe Projectile/Axe-Projectile.png" id="1_o6og7"]
+
+[node name="AxeProjectile" type="Area2D" unique_id=231658911]
+scale = Vector2(1.5, 1.5)
+collision_mask = 4
+script = ExtResource("1_0pce3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1591377869]
+texture = ExtResource("1_o6og7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1916414346]
+polygon = PackedVector2Array(-8, 4, -1, -2, -3, -3, 2, -8, 9, -2, 3, 5, 1, 5, 1, 1, 0, 1, -5, 7)

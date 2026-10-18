@@ -1,6 +1,6 @@
 extends Enemy
 
-const FIRE_PROJECTILE = preload("uid://cymdi8bpgwy1w")
+const AXE_PROJECTILE = preload("uid://hd1swkxvd3qt")
 
 @onready var weapon: Area2D = $Weapon
 @onready var charge_timer: Timer = $ChargeTimer
@@ -40,11 +40,11 @@ func _physics_process(delta: float) -> void:
 	if state == Boss_State.CHARGE:
 		velocity.x = direction * CHARGE_SPEED
 
-		var bodies = weapon.get_overlapping_bodies()
+		var bodies_in_weapon_range = weapon.get_overlapping_bodies()
 
-		if not bodies.is_empty():
-			bodies[0].take_damage(CHARGE_DAMAGE)
-			bodies[0].velocity.x = direction * CHARGE_PUSH_FORCE
+		if not bodies_in_weapon_range.is_empty():
+			bodies_in_weapon_range[0].take_damage(CHARGE_DAMAGE)
+			bodies_in_weapon_range[0].velocity.x = direction * CHARGE_PUSH_FORCE
 			state = Boss_State.RUN
 			velocity.x = 0
 
@@ -92,16 +92,28 @@ func _physics_process(delta: float) -> void:
 
 
 func create_projectile(_body: Player):
-	var fire: Fire_Projectile = FIRE_PROJECTILE.instantiate()
+	var axe1: Axe_Projectile = AXE_PROJECTILE.instantiate()
+	var axe2: Axe_Projectile = AXE_PROJECTILE.instantiate()
+	var axe3: Axe_Projectile = AXE_PROJECTILE.instantiate()
 
-	fire.global_position = global_position
-	fire.damage = DAMAGE
-	fire.target_position = _body.global_position
-	fire.speed = 250
+	axe1.global_position = global_position
+	axe2.global_position = global_position
+	axe3.global_position = global_position
 
-	get_tree().current_scene.add_child(fire)
+	axe1.damage = DAMAGE
+	axe2.damage = DAMAGE
+	axe3.damage = DAMAGE
+
+	axe1.target_position = _body.global_position
+	axe2.target_position = _body.global_position + Vector2(0, 50)
+	axe3.target_position = _body.global_position + Vector2(0, -50)
+
+	get_tree().current_scene.add_child(axe1)
+	get_tree().current_scene.add_child(axe2)
+	get_tree().current_scene.add_child(axe3)
 
 
+@warning_ignore("shadowed_variable_base_class")
 func update_animation(animated_sprite_2d):
 	match state:
 		Boss_State.IDLE:
