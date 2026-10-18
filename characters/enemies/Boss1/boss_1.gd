@@ -3,6 +3,7 @@ extends Enemy
 const FIRE_PROJECTILE = preload("uid://cymdi8bpgwy1w")
 
 @onready var weapon: Area2D = $Weapon
+@onready var charge_timer: Timer = $ChargeTimer
 
 enum Boss_State {
 	IDLE,
@@ -13,9 +14,10 @@ enum Boss_State {
 	CHARGE,
 }
 
-const CHARGE_SPEED := 100
-const CHARGE_DAMAGE := 10
-const CHARGE_PUSH_FORCE := 500
+const CHARGE_SPEED := 300
+const CHARGE_DAMAGE := 40
+const CHARGE_PUSH_FORCE := 700
+const CHARGE_COOLDOWN = 6.0
 
 
 func _ready() -> void:
@@ -37,16 +39,22 @@ func _physics_process(delta: float) -> void:
 	# charge
 	if state == Boss_State.CHARGE:
 		velocity.x = direction * CHARGE_SPEED
+
 		var bodies = weapon.get_overlapping_bodies()
+
 		if not bodies.is_empty():
 			bodies[0].take_damage(CHARGE_DAMAGE)
 			bodies[0].velocity.x = direction * CHARGE_PUSH_FORCE
 			state = Boss_State.RUN
+			velocity.x = 0
+
 		if not floor_check.is_colliding():
+			velocity.x = 0
 			state = Boss_State.RUN
 
 		move_and_slide()
 		return
+
 	# gravity
 	if not is_on_floor():
 		velocity.y += GB.GRAVITY * delta
@@ -58,12 +66,9 @@ func _physics_process(delta: float) -> void:
 	var bodies = attack_range.get_overlapping_bodies()
 
 	# attack
-	if can_attack and not bodies.is_empty():
-		'state = State.BASIC_ATTACK
-		attack(attack_range.get_overlapping_bodies()[0])'
-		#tmp
-		if state != Boss_State.RUN:
-			charge(bodies[0])
+	if can_attack and not bodies.is_empty() and state != Boss_State.CHARGE:
+		state = State.BASIC_ATTACK
+		attack(attack_range.get_overlapping_bodies()[0])
 
 	# if player not in range
 	if bodies.is_empty():
@@ -122,15 +127,29 @@ func charge(player: Character):
 		new_direction = -1
 
 	direction = new_direction
+	update_animation(animated_sprite_2d)
 	change_direction_to(direction)
 
 
 func change_direction_to(new_direction: int):
-	if direction == new_direction:
-		return
 	direction = new_direction
-	floor_check.target_position.x *= -1
-	wall_check.target_position.x *= -1
-	collision_shape_2d.position.x *= -1
-	weapon.scale.x *= -1
-	animated_sprite_2d.flip_h = direction < 0
+	if direction > 0:
+		floor_check.target_position.x = abs(floor_check.target_position.x)
+		wall_check.target_position.x = abs(wall_check.target_position.x)
+		collision_shape_2d.position.x = -1 * abs(collision_shape_2d.position.x)
+		weapon.scale.x = abs(weapon.scale.x)
+		animated_sprite_2d.flip_h = false
+	else:
+		floor_check.target_position.x = -1 * abs(floor_check.target_position.x)
+		wall_check.target_position.x = -1 * abs(wall_check.target_position.x)
+		collision_shape_2d.position.x = abs(collision_shape_2d.position.x)
+		weapon.scale.x = -1 * abs(weapon.scale.x)
+		animated_sprite_2d.flip_h = true
+
+
+func _on_charge_timer_timeout() -> void:
+	for node in get_parent().get_children():
+		if node is Player:
+			if state != Boss_State.CHARGE:
+				charge(node)
+	charge_timer.wait_time = CHARGE_COOLDOWN

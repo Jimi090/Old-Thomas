@@ -191,7 +191,6 @@ sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
-visible = false
 position = Vector2(-4, 2.5)
 shape = SubResource("RectangleShape2D_8k64i")
 
@@ -201,20 +200,17 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1874958705]
-visible = false
 position = Vector2(10, 12)
 shape = SubResource("CircleShape2D_srkg8")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
+visible = false
 position = Vector2(-6, 1.5)
 target_position = Vector2(26, 38.5)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
 visible = false
 target_position = Vector2(23, 16)
-
-[node name="ShootTimer" type="Timer" parent="." unique_id=1625407692]
-wait_time = 1.2
 
 [node name="Weapon" type="Area2D" parent="." unique_id=2076295791]
 collision_layer = 0
@@ -223,3 +219,9 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Weapon" unique_id=437937850]
 position = Vector2(0, 3)
 polygon = PackedVector2Array(0, 0, 0, 5, 16, 5, 16, 2, 11, 0)
+
+[node name="ChargeTimer" type="Timer" parent="." unique_id=441698421]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="ChargeTimer" to="." method="_on_charge_timer_timeout"]
