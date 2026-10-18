@@ -589,7 +589,7 @@ tile_map_data = PackedByteArray("AAAkAAgAAAAAAAMAAAAkAAkAAAAAAAQAAAAlAAgAAAABAAM
 tile_set = SubResource("TileSet_p0pqx")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="." index="4" unique_id=308697645]
-tile_map_data = PackedByteArray("AAAIAAgAAQAJAAUAAAAlAAcAAQAJAAUAAAA6AAIAAQAHAAEAAAA6AAMAAQAHAAIAAAA6AAQAAQAHAAMAAAA5AAQAAQAMAAEAAAAzAP//AQAMAAEAAAA1APz/AQAKAAEAAAA1AP3/AQAKAAIAAAA1AP7/AQAKAAMAAAA0AP7/AQAJAAMAAAA2AP7/AQALAAMAAAA2AAUAAQAJAAUAAAA/AAAAAQAMAAIAAAA/AAEAAQAMAAMAAAAqAAcAAQAKAAgAAAArAAcAAQALAAgAAAAsAAcAAQAMAAgAAAAuAAYAAQAMAAEAAAAAAAQAAQAFAAQAAAAAAAUAAQAFAAUAAAASAAAAAQAHAAIAAAASAAEAAQAHAAMAAAASAP//AQAHAAEAAAANAAEAAQAGAAEAAAANAAIAAQAGAAIAAAANAAMAAQAGAAMAAAAOAAMAAQAMAAEAAAAdAAYAAQAHAAEAAAAdAAcAAQAHAAIAAAAdAAgAAQAHAAMAAAAhAAMAAQAMAAIAAAAhAAQAAQAMAAMAAAB3AAQAAQALAAgAAAB4AAQAAQAMAAgAAABqAP7/AQAHAAEAAABqAP//AQAHAAIAAABqAAAAAQAHAAMAAABrAAAAAQAMAAEAAABOAP7/AQAKAAEAAABOAP//AQAKAAIAAABOAAAAAQAKAAMAAABPAAAAAQALAAMAAABNAAAAAQAJAAMAAABNAAEAAQAJAAUAAABWAAAAAQAIAAMAAABWAAEAAQAIAAQAAABWAAIAAQAIAAUAAABXAAIAAQAIAAIAAAAjAAUAAQANAAMAAAA=")
+tile_map_data = PackedByteArray("AAAIAAgAAQAJAAUAAAAlAAcAAQAJAAUAAAA6AAIAAQAHAAEAAAA6AAMAAQAHAAIAAAA6AAQAAQAHAAMAAAA5AAQAAQAMAAEAAAAzAP//AQAMAAEAAAA1APz/AQAKAAEAAAA1AP3/AQAKAAIAAAA1AP7/AQAKAAMAAAA0AP7/AQAJAAMAAAA2AP7/AQALAAMAAAA2AAUAAQAJAAUAAAA/AAAAAQAMAAIAAAA/AAEAAQAMAAMAAAAqAAcAAQAKAAgAAAArAAcAAQALAAgAAAAsAAcAAQAMAAgAAAAuAAYAAQAMAAEAAAAAAAQAAQAFAAQAAAAAAAUAAQAFAAUAAAASAAAAAQAHAAIAAAASAAEAAQAHAAMAAAASAP//AQAHAAEAAAANAAEAAQAGAAEAAAANAAIAAQAGAAIAAAANAAMAAQAGAAMAAAAOAAMAAQAMAAEAAAAdAAYAAQAHAAEAAAAdAAcAAQAHAAIAAAAdAAgAAQAHAAMAAAAhAAMAAQAMAAIAAAAhAAQAAQAMAAMAAAB3AAQAAQALAAgAAAB4AAQAAQAMAAgAAABqAP7/AQAHAAEAAABqAP//AQAHAAIAAABqAAAAAQAHAAMAAABrAAAAAQAMAAEAAABOAP7/AQAKAAEAAABOAP//AQAKAAIAAABOAAAAAQAKAAMAAABPAAAAAQALAAMAAABNAAAAAQAJAAMAAABNAAEAAQAJAAUAAABWAAAAAQAIAAMAAABWAAEAAQAIAAQAAABWAAIAAQAIAAUAAABXAAIAAQAIAAIAAAAjAAUAAQANAAMAAAB1AAIAAQAMAAIAAAB1AAMAAQAMAAMAAAB2AAMAAQAJAAUAAAA=")
 tile_set = SubResource("TileSet_mupgg")
 
 [node name="Enemy2" parent="." index="5" unique_id=1762193301 instance=ExtResource("6_0eqkp")]
@@ -604,40 +604,43 @@ position = Vector2(583, 16)
 [node name="Coin3" parent="." index="8" unique_id=702707788 instance=ExtResource("7_0eqkp")]
 position = Vector2(344, 159)
 
-[node name="Coin2" parent="." index="9" unique_id=395362570 instance=ExtResource("7_0eqkp")]
+[node name="Coin7" parent="." index="9" unique_id=530250517 instance=ExtResource("7_0eqkp")]
+position = Vector2(344, 126)
+
+[node name="Coin2" parent="." index="10" unique_id=395362570 instance=ExtResource("7_0eqkp")]
 position = Vector2(1040, 8)
 
-[node name="Coin4" parent="." index="10" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
+[node name="Coin4" parent="." index="11" unique_id=1361053611 instance=ExtResource("7_0eqkp")]
 position = Vector2(692, 101)
 
-[node name="Coin5" parent="." index="11" unique_id=232306144 instance=ExtResource("7_0eqkp")]
+[node name="Coin5" parent="." index="12" unique_id=232306144 instance=ExtResource("7_0eqkp")]
 position = Vector2(881, -23)
 
-[node name="Coin6" parent="." index="12" unique_id=1819423978 instance=ExtResource("7_0eqkp")]
+[node name="Coin6" parent="." index="13" unique_id=1819423978 instance=ExtResource("7_0eqkp")]
 position = Vector2(1744, -18)
 
-[node name="Cinnamon3" parent="." index="15" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon3" parent="." index="16" unique_id=1572807677 instance=ExtResource("8_pwgcu")]
 z_index = 1
 position = Vector2(1296.0001, -2)
 
-[node name="Cinnamon6" parent="." index="16" unique_id=1288463570 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon6" parent="." index="17" unique_id=1288463570 instance=ExtResource("8_pwgcu")]
 z_index = 1
 position = Vector2(1518.0001, 52)
 
-[node name="Cinnamon7" parent="." index="17" unique_id=1611688788 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon7" parent="." index="18" unique_id=1611688788 instance=ExtResource("8_pwgcu")]
 z_index = 1
 position = Vector2(1582, 37)
 
-[node name="Cinnamon8" parent="." index="18" unique_id=1377560254 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon8" parent="." index="19" unique_id=1377560254 instance=ExtResource("8_pwgcu")]
 z_index = 1
 position = Vector2(1647.0001, 23)
 
-[node name="Cinnamon4" parent="." index="19" unique_id=215436099 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon4" parent="." index="20" unique_id=215436099 instance=ExtResource("8_pwgcu")]
 z_index = 1
 position = Vector2(163, 133)
 
-[node name="Cinnamon5" parent="." index="20" unique_id=273843434 instance=ExtResource("8_pwgcu")]
+[node name="Cinnamon5" parent="." index="21" unique_id=273843434 instance=ExtResource("8_pwgcu")]
 position = Vector2(510, 85)
 
-[node name="Boss1" parent="." index="21" unique_id=1954414926 instance=ExtResource("8_d6jbu")]
-position = Vector2(2013, 55)
+[node name="Boss1" parent="." index="22" unique_id=1954414926 instance=ExtResource("8_d6jbu")]
+position = Vector2(1972, 32)
