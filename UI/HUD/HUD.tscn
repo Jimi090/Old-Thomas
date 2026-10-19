@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://d1aewfowog0rh" path="res://UI/HUD/hud.gd" id="1_yixhe"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_dm5mv"]
 [ext_resource type="PackedScene" uid="uid://bclefgai3qfrv" path="res://UI/PauseMenuButton/PauseMenuButton.tscn" id="4_7v3yo"]
+[ext_resource type="PackedScene" uid="uid://c46jhj8ni50l5" path="res://UI/CircleCooldownBar/CircleCooldownBar.tscn" id="4_gaqij"]
+[ext_resource type="Texture2D" uid="uid://dog4hcsaemmo5" path="res://characters/player/Apple projectile/apple.png" id="5_vb885"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
 bg_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
@@ -67,3 +69,22 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 400.0
 offset_bottom = 400.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI" unique_id=1209383138]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 50.0
+offset_bottom = 44.0
+
+[node name="RangeAttackCooldownBar" parent="UI" unique_id=82024705 instance=ExtResource("4_gaqij")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 20.0
+
+[node name="TextureRect" parent="UI/RangeAttackCooldownBar" index="0" unique_id=119608997]
+texture = ExtResource("5_vb885")
+
+[editable path="UI/RangeAttackCooldownBar"]

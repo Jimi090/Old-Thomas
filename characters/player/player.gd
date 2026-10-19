@@ -141,6 +141,7 @@ func _input(event: InputEvent) -> void:
 			ranged_attack()
 			range_attack_cooldown_timer.wait_time = ranged_attack_cooldown
 			can_range_attack = false
+			$"../HUD/UI/RangeAttackCooldownBar/".restart()
 
 
 func _on_range_attack_cooldown_timeout() -> void:
