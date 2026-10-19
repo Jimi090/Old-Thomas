@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cvyftohgcpsl0"]
+
+[ext_resource type="Script" uid="uid://drhuq12nn7l8s" path="res://characters/player/Apple projectile/apple_projectile.gd" id="1_07yuk"]
+[ext_resource type="Texture2D" uid="uid://dog4hcsaemmo5" path="res://characters/player/Apple projectile/apple.png" id="1_brms8"]
+
+[node name="AppleProjectile" type="Area2D" unique_id=2117745066]
+collision_mask = 2
+script = ExtResource("1_07yuk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=319712842]
+polygon = PackedVector2Array(-6, -1, -3, -3, -3, -6, -2, -7, -1, -7, 4, -6, 7, -4, 7, 0, 6, 4, 3, 7, -3, 7, -6, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1591958194]
+texture = ExtResource("1_brms8")

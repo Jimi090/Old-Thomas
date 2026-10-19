@@ -404,7 +404,7 @@ sources/0 = SubResource("TileSetAtlasSource_wk83b")
 [node name="BossArena1" unique_id=1157194156 instance=ExtResource("1_mxcvx")]
 
 [node name="Player" parent="." index="1" unique_id=289370131]
-position = Vector2(27, 172)
+position = Vector2(115, 184)
 
 [node name="Key" parent="." index="2" unique_id=155803228]
 position = Vector2(233, -165)
@@ -417,7 +417,7 @@ tile_map_data = PackedByteArray("AAAAABAAAAAAAAMAAAAAABEAAAAAAAQAAAABABAAAAABAAM
 tile_set = SubResource("TileSet_jnnth")
 
 [node name="Boss1" parent="." index="5" unique_id=1954414926 instance=ExtResource("3_jnnth")]
-position = Vector2(324, 222)
+position = Vector2(488, 221)
 
 [node name="KeyMarker2D" parent="." index="6" unique_id=1340855194]
 position = Vector2(307, 245)

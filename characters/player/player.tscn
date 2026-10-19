@@ -222,3 +222,7 @@ shape = SubResource("RectangleShape2D_g1dw6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2130282150]
 position_smoothing_enabled = true
+
+[node name="RangeAttackCooldown" type="Timer" parent="." unique_id=1591187655]
+
+[connection signal="timeout" from="RangeAttackCooldown" to="." method="_on_range_attack_cooldown_timeout"]

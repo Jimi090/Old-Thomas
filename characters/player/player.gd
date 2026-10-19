@@ -6,15 +6,22 @@ signal player_died
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var basic_attack_range: Area2D = $BasicAttackRange
+@onready var range_attack_cooldown_timer: Timer = $RangeAttackCooldown
+
+const APPLE_PROJECTILE = preload("uid://cvyftohgcpsl0")
 
 var SPEED := GB.player.speed
 var basic_attack_damage := GB.player.damage
+var ranged_attack_damage := 20
+var ranged_attack_cooldown = 6.0
 var JUMP_FORCE := GB.player.jump_force
 
 var attack_multi := 1.0
 var speed_multi := 1.0
 var direction: float
 var gravity := GB.GRAVITY
+
+var can_range_attack := true
 
 
 func _ready() -> void:
@@ -28,6 +35,8 @@ func _ready() -> void:
 	SPEED += speed_multiplayer * GB.player.speed / 10
 
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	range_attack_cooldown_timer.wait_time = ranged_attack_cooldown
+	range_attack_cooldown_timer.start()
 
 	add_to_group("player")
 	super()
@@ -40,6 +49,7 @@ func _physics_process(delta: float) -> void:
 
 	# walking
 	direction = Input.get_axis("left", "right")
+
 	if direction != 0:
 		animated_sprite_2d.flip_h = direction < 0
 		if direction < 0:
@@ -79,6 +89,23 @@ func basic_attack(attack_range, damage):
 		body.take_damage(damage)
 
 
+func ranged_attack():
+	var apple := APPLE_PROJECTILE.instantiate()
+
+	apple.global_position = global_position
+	apple.damage = ranged_attack_damage
+	if direction != 0:
+		apple.target_position = global_position + Vector2(direction, 0)
+	else:
+		if animated_sprite_2d.flip_h:
+			apple.target_position = global_position + Vector2(-1, 0)
+		else:
+			apple.target_position = global_position + Vector2(1, 0)
+	apple.speed = 300
+
+	get_tree().current_scene.add_child(apple)
+
+
 func _on_health_changed():
 	health_changed.emit(health)
 
@@ -106,3 +133,15 @@ func boost_attack(multiplier: float) -> void:
 
 func boost_speed(multiplier: float) -> void:
 	SPEED = int(SPEED * multiplier)
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Ranged Attack"):
+		if can_range_attack:
+			ranged_attack()
+			range_attack_cooldown_timer.wait_time = ranged_attack_cooldown
+			can_range_attack = false
+
+
+func _on_range_attack_cooldown_timeout() -> void:
+	can_range_attack = true

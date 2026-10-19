@@ -41,4 +41,8 @@ func spawn_coins():
 			key_marker_2d.global_position.x + offset,
 			key_marker_2d.global_position.y,
 		)
-		get_tree().current_scene.add_child(coin)
+		call_deferred("add_child_to_scene", coin)
+
+
+func add_child_to_scene(child):
+	get_tree().current_scene.add_child(child)
