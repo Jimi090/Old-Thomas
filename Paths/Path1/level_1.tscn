@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="7_0eqkp"]
 [ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="8_d6jbu"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_pwgcu"]
-[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="9_d6jbu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwgcu"]
 texture = ExtResource("1_5ywli")
@@ -661,7 +660,6 @@ position = Vector2(163, 133)
 [node name="Cinnamon5" parent="." index="26" unique_id=273843434 instance=ExtResource("8_pwgcu")]
 position = Vector2(510, 85)
 
-<<<<<<< Updated upstream
 [node name="Ghost" parent="." index="28" unique_id=1822596800 instance=ExtResource("8_d6jbu")]
 position = Vector2(1933, 41)
 
@@ -670,11 +668,3 @@ position = Vector2(956, -102)
 
 [node name="Ghost3" parent="." index="30" unique_id=1085084195 instance=ExtResource("8_d6jbu")]
 position = Vector2(1066, -150)
-=======
-[node name="Boss1" parent="." index="22" unique_id=1954414926 instance=ExtResource("8_d6jbu")]
-position = Vector2(1972, 32)
-MAX_HEALTH = null
-
-[node name="Potion" parent="." index="24" unique_id=964302324 instance=ExtResource("9_d6jbu")]
-position = Vector2(1804, 7)
->>>>>>> Stashed changes

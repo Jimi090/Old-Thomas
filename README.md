@@ -2,7 +2,7 @@
 
 ## Description
 
-Join Thomas on an adventure as he conquers hurdles, one path at a time. Destroy monsters, collect coins and cinnamon, and help Thomas evolve as a person.
+Join Thomas on an adventure as he conquers hurdles, one path at a time. Destroy monsters, collect coins, and help Thomas evolve as a person.
 Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
 Path 1 is centred around harvest and autumn time, when leaves change and the winter chill is drawing near.
 Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels.
@@ -12,15 +12,12 @@ Additionally, there is also a shop where you can buy upgrades to level up Thomas
 
 And you can't forget about the excellent music; it really helps set the mood!!!
 
-*Seasonal Event* New cinnamon collectable! Collect cinnamon on your journeys and get 3x more coins each. (Who doesn't like cinnamon hehehe)
-
 I hope you enjoy this adventure. Good luck!
 
 ## Game Structure
 
 This game is structured very uniquely! You follow Thomas as you finish paths one by one. 
 Each path has four levels, with 3 paths being available currently. On top of that you are also able to go to the shop and buy upgrades!
-At the end of paths you must defeat a diffucult boss! You may want to gear up!!!
 
 ## Controls
 
@@ -40,16 +37,6 @@ To put this in perspective, when Jimi is working, Amira is at school and while A
 This created a problem with communication because if we couldn't continue or submit properly and are not able to ask the other teammate to help, it was super hard!!!
 To solve this, we made sure to share what we will do beforehand and what we have after!
 Together, we have worked so hard to create a game for others to enjoy!
-
-## New Features
-
-This week we implemented a boss for the end of paths with it's own projectile.
-Additonally the levels in path one were extended to be a bit longer!
-There is also a new cinnamon collectable/pickup added.
-A pause menu was added as well (which took so longs so hopefully it was worth it!)
-And you can't forget the cleaner UI! (like in the shop and town)
-There may be some more features I cann't remember from the top of my head. but you will likely notice it in the game when playing!
-
 
 ## Photos
 
