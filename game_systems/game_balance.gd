@@ -32,7 +32,7 @@ class ShopUpgrades:
 		self.prices = prices
 
 
-var player := CharacterStats.new(80, 15, 1.0, 170, 320)
+var player := CharacterStats.new(80, 15, 0.5, 170, 320)
 var ghost := CharacterStats.new(70, 20, 1, 50, 200)
 var mage := CharacterStats.new(50, 10, 1.2, 100, 200)
 

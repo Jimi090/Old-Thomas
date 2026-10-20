@@ -6,6 +6,7 @@ class_name HUD
 @onready var health_bar: ProgressBar = $UI/HealthBar
 @onready var gold_label: Label = $UI/GoldLabel
 @onready var range_attack_cooldown_bar: Control = $UI/RangeAttackCooldownBar
+@onready var basic_attack_cooldown_bar: Control = $UI/BasicAttackCooldownBar
 
 
 func _on_gold_changed(amount):
@@ -37,4 +38,5 @@ func _ready() -> void:
 
 	gold_label.text = "Gold: " + str(GameData.gold)
 
+	basic_attack_cooldown_bar.cooldown = player.basic_attack_cooldown
 	range_attack_cooldown_bar.cooldown = player.ranged_attack_cooldown

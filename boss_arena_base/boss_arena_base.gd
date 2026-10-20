@@ -25,7 +25,7 @@ func _on_player_death():
 
 
 func reload_level():
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 
 func _on_boss_death():

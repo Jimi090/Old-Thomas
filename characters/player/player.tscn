@@ -225,4 +225,7 @@ position_smoothing_enabled = true
 
 [node name="RangeAttackCooldown" type="Timer" parent="." unique_id=1591187655]
 
+[node name="BasicAttackCooldown" type="Timer" parent="." unique_id=897153921]
+
 [connection signal="timeout" from="RangeAttackCooldown" to="." method="_on_range_attack_cooldown_timeout"]
+[connection signal="timeout" from="BasicAttackCooldown" to="." method="_on_basic_attack_cooldown_timeout"]
