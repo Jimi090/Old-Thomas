@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="3_78k07"]
 [ext_resource type="LabelSettings" uid="uid://c4lxkpd0kf3p7" path="res://UI/SettingsMenu/label_settings.tres" id="4_f6fof"]
 [ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="5_78k07"]
+[ext_resource type="Texture2D" uid="uid://cwmtog4twag16" path="res://UI/SettingsMenu/assets/clear-button.png" id="6_s7png"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
 font = ExtResource("2_f6fof")
@@ -193,10 +194,24 @@ size_flags_vertical = 4
 
 [node name="ClearSaveButton" type="Button" parent="SettingsContainer/Buttons" unique_id=98881027]
 layout_mode = 0
-offset_right = 56.0
-offset_bottom = 20.0
+offset_left = 122.0
+offset_top = -8.0
+offset_right = 203.0
+offset_bottom = 24.0
 theme_override_fonts/font = ExtResource("5_78k07")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_78k07")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s7png")
-text = "Clear save"
+icon = ExtResource("6_s7png")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="." unique_id=2005571608]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 148.0
+offset_right = 159.0
+offset_bottom = 171.0
+text = "Clear Save?
+"
+label_settings = ExtResource("4_f6fof")

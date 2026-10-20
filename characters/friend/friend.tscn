@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://co7ko4a0gj5ca" path="res://characters/friend/friend.gd" id="1_3bu2g"]
 [ext_resource type="Texture2D" uid="uid://duoeyp8ngqrs1" path="res://characters/friend/assets/idle-friend.png" id="1_kdsyc"]
 [ext_resource type="Texture2D" uid="uid://dkap2vvi37h5v" path="res://characters/friend/assets/run-friend.png" id="2_3bu2g"]
+[ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="3_wbath"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbath"]
 atlas = ExtResource("1_kdsyc")
@@ -27,6 +28,10 @@ region = Rect2(64, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8xjo0"]
 atlas = ExtResource("1_kdsyc")
 region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e1d2"]
+atlas = ExtResource("3_wbath")
+region = Rect2(0, 0, 50, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wpix"]
 atlas = ExtResource("2_3bu2g")
@@ -71,6 +76,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8e1d2")
+}],
+"loop": 1,
+"name": &"parachute",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1wpix")
 }, {
 "duration": 1.0,
@@ -96,7 +109,7 @@ script = ExtResource("1_3bu2g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1301907593]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"idle"
+animation = &"parachute"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=571636890]
