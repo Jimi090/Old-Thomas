@@ -10,6 +10,7 @@ signal player_died
 @onready var range_attack_cooldown_timer: Timer = $RangeAttackCooldown
 
 const APPLE_PROJECTILE = preload("uid://cvyftohgcpsl0")
+const FRIEND = preload("uid://8r5vqloxlhgk")
 
 var SPEED := GB.player.speed
 var basic_attack_damage := GB.player.damage
@@ -154,6 +155,25 @@ func _input(event: InputEvent) -> void:
 			range_attack_cooldown_timer.wait_time = ranged_attack_cooldown
 			can_range_attack = false
 			$"../HUD/UI/RangeAttackCooldownBar/".restart()
+
+	# friend ability
+	if event.is_action_pressed("Ability1"):
+		friend_ability()
+
+
+func friend_ability():
+	var nearest_enemy: Enemy
+	var min_distance := 99999999.0
+
+	for enemy: Enemy in get_tree().get_nodes_in_group("Enemy"):
+		var distance := global_position.distance_to(enemy.global_position)
+		if distance < min_distance:
+			min_distance = distance
+			nearest_enemy = enemy
+
+	var friend := FRIEND.instantiate()
+	friend.target_body = nearest_enemy
+	get_tree().current_scene.add_child(friend)
 
 
 func _on_range_attack_cooldown_timeout() -> void:

@@ -19,6 +19,7 @@ var previous_position := Vector2(0, 0)
 
 func _ready() -> void:
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	add_to_group("Enemy")
 	super()
 
 
