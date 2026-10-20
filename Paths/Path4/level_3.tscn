@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dq62au2ca1ul8"]
+[gd_scene format=3 uid="uid://dq62au2ca1ul8"]
 
 [ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_1qlhr"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="2_r62y4"]
@@ -6,10 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b84sitjlbhgvu" path="res://tileset/midground_/summer_.png" id="4_ydnqf"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="5_qs6dh"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="6_id62b"]
-[ext_resource type="PackedScene" uid="uid://dm5o11yjlprnr" path="res://pickups/Potion/Potion.tscn" id="7_s3kmo"]
-[ext_resource type="PackedScene" uid="uid://dharn33rhc8ko" path="res://pickups/Coin/Coin.tscn" id="8_m6ny2"]
-[ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="9_h5wbw"]
-[ext_resource type="PackedScene" uid="uid://dreagav0roqr6" path="res://characters/enemies/Mage/Mage.tscn" id="10_rvj6w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mylrs"]
 texture = ExtResource("2_r62y4")
@@ -1051,39 +1047,7 @@ position = Vector2(24, 42)
 position = Vector2(833, 97)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=51204068]
-tile_map_data = PackedByteArray("AAABAAYAAgAEAAMAAAABAAcAAgAEAAQAAAAAAAYAAgADAAMAAAAAAAcAAgADAAQAAAAFAAUAAgADAAIAAAAGAAUAAgAEAAIAAAAHAAQAAgADAAMAAAAHAAUAAgADAAQAAAAIAAQAAgAEAAMAAAAIAAUAAgAEAAQAAAAJAAMAAgAFAAMAAAAJAAQAAgAFAAQAAAAKAAQAAgAFAAMAAAAKAAUAAgAFAAQAAAAJAAUAAgALAAIAAAALAAQAAgADAAMAAAALAAUAAgADAAQAAAAMAAQAAgAEAAMAAAAMAAUAAgAEAAQAAAANAAUAAgAFAAIAAAAOAAUAAgADAAIAAAAPAAUAAgAEAAIAAAATAAMAAgADAAMAAAATAAQAAgADAAQAAAAUAAMAAgAEAAMAAAAUAAQAAgAEAAQAAAAVAAQAAgAFAAMAAAAVAAUAAgAFAAQAAAAWAAUAAgAFAAIAAAAXAAUAAgADAAIAAAAYAAUAAgAEAAIAAAAZAAUAAgAFAAIAAAAaAAQAAgADAAMAAAAaAAUAAgADAAQAAAAbAAQAAgAEAAMAAAAbAAUAAgAEAAQAAAAWAAEAAgADAAIAAAAXAAEAAgAEAAIAAAAYAAAAAgADAAMAAAAYAAEAAgADAAQAAAAZAAAAAgAEAAMAAAAZAAEAAgAEAAQAAAAaAP//AgADAAIAAAAbAP//AgAEAAIAAAAaAAAAAgAJAAIAAAAbAAAAAgAKAAIAAAAcAP//AgADAAMAAAAcAAAAAgADAAQAAAAdAP//AgAEAAMAAAAdAAAAAgAEAAQAAAAcAAUAAgADAAMAAAAcAAYAAgADAAQAAAAdAAUAAgAEAAMAAAAdAAYAAgAEAAQAAAAeAP//AgAGAAIAAAAeAAAAAgAGAAMAAAAeAAEAAgAGAAQAAAAfAP//AgAHAAIAAAAfAAAAAgAHAAMAAAAfAAEAAgAHAAQAAAAgAP//AgAIAAIAAAAgAAAAAgAIAAMAAAAgAAEAAgAIAAQAAAAeAAYAAgADAAIAAAAfAAYAAgAEAAIAAAAgAAYAAgAFAAIAAAAeAP7/AgADAAIAAAAfAP7/AgAEAAIAAAAgAP7/AgAFAAIAAAAhAAUAAgADAAMAAAAhAAYAAgADAAQAAAAiAAUAAgAEAAMAAAAiAAYAAgAEAAQAAAAjAAUAAgAJAAMAAAAjAAYAAgAJAAQAAAAkAAUAAgAKAAMAAAAkAAYAAgAKAAQAAAAjAAQAAgADAAIAAAAkAAQAAgAEAAIAAAAqAAQAAgADAAMAAAAqAAUAAgADAAQAAAArAAQAAgAEAAMAAAArAAUAAgAEAAQAAAAuAAUAAgAGAAIAAAAuAAYAAgAGAAMAAAAuAAcAAgAGAAQAAAAvAAUAAgAHAAIAAAAvAAYAAgAHAAMAAAAvAAcAAgAHAAQAAAAwAAUAAgAIAAIAAAAwAAYAAgAIAAMAAAAwAAcAAgAIAAQAAAAuAAQAAgADAAIAAAAvAAQAAgAEAAIAAAAwAAQAAgAFAAIAAAAxAAYAAgADAAMAAAAxAAcAAgADAAQAAAAyAAYAAgAEAAMAAAAyAAcAAgAEAAQAAAAzAAcAAgADAAIAAAA0AAcAAgAEAAIAAAA=")
 tile_set = SubResource("TileSet_6er1j")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=1514376472]
-tile_map_data = PackedByteArray("AAAAAAQAAQAFAAQAAAAAAAUAAQAFAAUAAAAlAAQAAQAJAAgAAAAmAAQAAQAKAAgAAAAnAAQAAQALAAgAAAAoAAQAAQAMAAgAAAApAAQAAQANAAgAAAA=")
 tile_set = SubResource("TileSet_ffkgi")
-
-[node name="Potion" parent="." index="5" unique_id=964302324 instance=ExtResource("7_s3kmo")]
-position = Vector2(520, -41)
-
-[node name="Coin2" parent="." index="7" unique_id=525547507 instance=ExtResource("8_m6ny2")]
-position = Vector2(576, 44)
-
-[node name="Coin3" parent="." index="8" unique_id=897277115 instance=ExtResource("8_m6ny2")]
-position = Vector2(153, 7)
-
-[node name="Coin4" parent="." index="9" unique_id=765735550 instance=ExtResource("8_m6ny2")]
-position = Vector2(153, 32)
-
-[node name="Coin5" parent="." index="10" unique_id=271890043 instance=ExtResource("8_m6ny2")]
-position = Vector2(434, 48)
-
-[node name="Coin6" parent="." index="11" unique_id=38577234 instance=ExtResource("8_m6ny2")]
-position = Vector2(800, 82)
-
-[node name="Ghost" parent="." index="12" unique_id=1822596800 instance=ExtResource("9_h5wbw")]
-position = Vector2(634, 42)
-
-[node name="Mage" parent="." index="13" unique_id=2006298918 instance=ExtResource("10_rvj6w")]
-position = Vector2(443, -32)
-
-[node name="Ghost2" parent="." index="14" unique_id=1141380729 instance=ExtResource("9_h5wbw")]
-position = Vector2(190, 38)
-
-[node name="Mage2" parent="." index="15" unique_id=1562927936 instance=ExtResource("10_rvj6w")]
-position = Vector2(467, 64)
