@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://co2hrb78m8fia" path="res://UI/MainMenu/assets/town.png" id="2_8x0bb"]
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
 [ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
+[ext_resource type="Texture2D" uid="uid://p1ehjwcnfgos" path="res://UI/Home/home.png" id="5_jhcbk"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="7_a712v"]
 [ext_resource type="PackedScene" uid="uid://djosr1t6fp8tb" path="res://Dialogue/Dialogue.tscn" id="8_1dhmk"]
@@ -99,6 +100,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.18039216, 0.49019608, 0.19607843, 1)
 
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
+z_index = 1
+layout_mode = 1
+destiantion = 1
+
 [node name="ShopBtn" type="Button" parent="." unique_id=50165495]
 layout_mode = 0
 offset_left = 268.0
@@ -121,10 +127,17 @@ mouse_default_cursor_shape = 2
 icon = ExtResource("2_8x0bb")
 flat = true
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=43598028]
-scale = Vector2(0.3, 0.3)
-tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAApABYAAAACAAMAAAApAA4AAAADAAMAAAAxAAoAAAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAAJAAYAAAACAAMAAAA5AB4AAAACAAMAAABBACIAAAACAAMAAAA5ABYAAAADAAMAAABBABIAAAADAAMAAAAZABYAAAADAAMAAAARABoAAAADAAMAAAAJAB4AAAADAAMAAAABACIAAAADAAMAAAAxABoAAAAAAAEAAAApAB4AAAADAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAARAAoAAAAAAAEAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAAJAA4AAAADAAMAAAABABIAAAADAAMAAAABAAIAAAACAAMAAAA=")
-tile_set = SubResource("TileSet_ri767")
+[node name="HomeBtn" type="Button" parent="." unique_id=86880024]
+z_index = 1
+layout_mode = 0
+offset_left = 142.0
+offset_top = 86.0
+offset_right = 281.0
+offset_bottom = 222.0
+scale = Vector2(0.4, 0.4)
+mouse_default_cursor_shape = 2
+icon = ExtResource("5_jhcbk")
+flat = true
 
 [node name="Path1" parent="." unique_id=514115052 instance=ExtResource("5_a712v")]
 layout_mode = 0
@@ -150,12 +163,13 @@ offset_right = 132.0
 offset_bottom = 179.0
 path_number = 3
 
-[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
-layout_mode = 1
-destiantion = 1
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=43598028]
+scale = Vector2(0.3, 0.3)
+tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAApABYAAAACAAMAAAApAA4AAAADAAMAAAAxAAoAAAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAAJAAYAAAACAAMAAAA5AB4AAAACAAMAAABBACIAAAACAAMAAAA5ABYAAAADAAMAAABBABIAAAADAAMAAAAZABYAAAADAAMAAAARABoAAAADAAMAAAAJAB4AAAADAAMAAAABACIAAAADAAMAAAAxABoAAAAAAAEAAAApAB4AAAADAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAARAAoAAAAAAAEAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAAJAA4AAAADAAMAAAABABIAAAADAAMAAAABAAIAAAACAAMAAAA=")
+tile_set = SubResource("TileSet_ri767")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835001980]
-position = Vector2(161, 107)
+position = Vector2(100, 87)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"idle"
@@ -165,9 +179,9 @@ flip_h = true
 
 [node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("8_1dhmk")]
 layout_mode = 0
-offset_left = 123.00001
-offset_top = 82.0
-offset_right = 173.0
-offset_bottom = 112.0
+offset_left = 62.000008
+offset_top = 60.0
+offset_right = 112.0
+offset_bottom = 90.0
 scale = Vector2(0.6, 0.6)
 text = "Hello, where should I go?"

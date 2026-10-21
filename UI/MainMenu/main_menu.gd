@@ -5,15 +5,18 @@ extends Control
 @onready var path_3: Button = $Path3
 @onready var shop_btn: Button = $ShopBtn
 @onready var church_btn: Button = $ChurchBtn
+@onready var home_btn: Button = $HomeBtn
 
 const SHOP = preload("uid://tf36yngqrqgr")
 const TOWN = preload("uid://cqqlmplhsuk52")
+const HOME = preload("uid://c7uauh106urq2")
 const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 
 
 func _ready() -> void:
 	shop_btn.pressed.connect(open_shop)
 	church_btn.pressed.connect(open_town)
+	home_btn.pressed.connect(open_home)
 	path_1.pressed.connect(_on_click_path_button.bind(path_1.path_number))
 
 	if is_path_finished("1") == true:
@@ -57,6 +60,11 @@ func open_shop():
 func open_town():
 	var town = TOWN.instantiate()
 	get_tree().change_scene_to_node(town)
+
+
+func open_home():
+	var home = HOME.instantiate()
+	get_tree().change_scene_to_node(home)
 
 
 func create_general_popup(title: String, description: String):

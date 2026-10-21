@@ -171,14 +171,18 @@ func get_displaied_quests():
 
 
 func get_empty_levels_progress():
+	level_progress = { }
 	var paths_dir := DirAccess.open("res://Paths/")
 	paths_dir.list_dir_begin()
 	var paths := []
 	var pathFileName := paths_dir.get_next()
 
 	while pathFileName != "":
-		paths.append(pathFileName)
+		if "Boss" in pathFileName:
+			pathFileName = paths_dir.get_next()
+			continue
 
+		paths.append(pathFileName)
 		pathFileName = paths_dir.get_next()
 	paths.sort()
 

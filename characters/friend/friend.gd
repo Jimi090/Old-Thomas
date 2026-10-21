@@ -9,7 +9,7 @@ func _ready() -> void:
 	if not is_instance_valid(target_body):
 		queue_free()
 		return
-	print('xd', target_body.global_position)
+
 	global_position = target_body.global_position + Vector2(-60, -200)
 
 
