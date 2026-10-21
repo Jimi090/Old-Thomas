@@ -105,14 +105,17 @@ radius = 6.0
 height = 18.0
 
 [node name="Friend" type="CharacterBody2D" unique_id=2081753675]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_3bu2g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1301907593]
+position = Vector2(0, -25)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"parachute"
-autoplay = "idle"
+autoplay = "parachute"
+frame_progress = 0.44263265
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=571636890]
-visible = false
-position = Vector2(-2, 0)
+position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_8e1d2")

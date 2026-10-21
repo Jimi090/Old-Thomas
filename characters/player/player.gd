@@ -26,6 +26,7 @@ var gravity := GB.GRAVITY
 
 var can_range_attack := true
 var can_basic_attack := true
+var ability1_used := false
 
 
 func _ready() -> void:
@@ -158,7 +159,10 @@ func _input(event: InputEvent) -> void:
 
 	# friend ability
 	if event.is_action_pressed("Ability1"):
-		friend_ability()
+		if not ability1_used:
+			friend_ability()
+			ability1_used = true
+			$"../HUD/UI/Ability1CooldownBar/".restart()
 
 
 func friend_ability():

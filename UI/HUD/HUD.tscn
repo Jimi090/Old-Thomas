@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bclefgai3qfrv" path="res://UI/PauseMenuButton/PauseMenuButton.tscn" id="4_7v3yo"]
 [ext_resource type="PackedScene" uid="uid://c46jhj8ni50l5" path="res://UI/CircleCooldownBar/CircleCooldownBar.tscn" id="4_gaqij"]
 [ext_resource type="Texture2D" uid="uid://dog4hcsaemmo5" path="res://characters/player/Apple projectile/apple.png" id="5_vb885"]
+[ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_q8dl0"]
 [ext_resource type="Texture2D" uid="uid://xt28boxk6p5f" path="res://UI/HUD/player_fist.png" id="6_vb885"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
@@ -86,6 +87,16 @@ offset_bottom = 20.0
 [node name="TextureRect" parent="UI/RangeAttackCooldownBar" index="0" unique_id=119608997]
 texture = ExtResource("5_vb885")
 
+[node name="Ability1CooldownBar" parent="UI" unique_id=1545634904 instance=ExtResource("4_gaqij")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 4.0
+offset_right = 112.0
+offset_bottom = 20.0
+
+[node name="TextureRect" parent="UI/Ability1CooldownBar" index="0" unique_id=119608997]
+texture = ExtResource("6_q8dl0")
+
 [node name="PauseMenuButton" parent="UI" unique_id=1747087023 instance=ExtResource("4_7v3yo")]
 layout_mode = 1
 anchors_preset = -1
@@ -100,3 +111,4 @@ offset_bottom = 400.0
 
 [editable path="UI/BasicAttackCooldownBar"]
 [editable path="UI/RangeAttackCooldownBar"]
+[editable path="UI/Ability1CooldownBar"]

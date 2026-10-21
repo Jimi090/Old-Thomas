@@ -5,7 +5,7 @@ extends Control
 @onready var h_slider_mv: HSlider = $SettingsContainer/Audio/Sliders/HSliderMV
 @onready var h_slider_sfx: HSlider = $SettingsContainer/Audio/Sliders/HSliderSFX
 @onready var fs_button: CheckButton = $SettingsContainer/Graphics/FsButton
-@onready var clear_save_button: Button = $SettingsContainer/Buttons/ClearSaveButton
+@onready var clear_save_button: Button = $SettingsContainer/Clear/ClearSaveButton
 
 var return_destination = null
 
