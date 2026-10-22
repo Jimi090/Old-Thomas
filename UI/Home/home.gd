@@ -3,20 +3,28 @@ extends Control
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var player_animated_sprite_2d: AnimatedSprite2D = $PlayerAnimatedSprite2D
 @onready var dog_animated_sprite_2d: AnimatedSprite2D = $DogAnimatedSprite2D
+@onready var friend_animated_sprite_2d: AnimatedSprite2D = $FriendAnimatedSprite2D
+@onready var flying_friend_sprite_2d: Sprite2D = $FlyingFriendSprite2D
+@onready var grid_container: GridContainer = $GridContainer
 
 var patrol_distance := 100
 var PATROL_SPEED = 150
 var point1: float
 var point2: float
 var direction := 1
+var progress_decimal: float
 
 
 func _ready() -> void:
 	update_progress_bar()
 	random_dog_flips()
+	friends_entrance()
+	show_chests()
 
 	point1 = player_animated_sprite_2d.position.x - patrol_distance
 	point2 = player_animated_sprite_2d.position.x + patrol_distance
+
+	friend_animated_sprite_2d.hide()
 
 
 func _process(delta: float) -> void:
@@ -25,8 +33,11 @@ func _process(delta: float) -> void:
 		dog_animated_sprite_2d.flip_h = direction < 0
 	if player_animated_sprite_2d.position.x >= dog_animated_sprite_2d.position.x:
 		player_animated_sprite_2d.flip_h = true
+		friend_animated_sprite_2d.flip_h = true
 	else:
 		player_animated_sprite_2d.flip_h = false
+		friend_animated_sprite_2d.flip_h = false
+
 	dog_animated_sprite_2d.position.x += direction * PATROL_SPEED * delta
 
 
@@ -41,6 +52,7 @@ func update_progress_bar():
 
 	progress_bar.max_value = all_levels
 	progress_bar.value = completed_levels
+	progress_decimal = float(completed_levels) / float(all_levels)
 
 
 func random_dog_flips():
@@ -70,3 +82,26 @@ func dog_flip():
 			.tween_property(dog_animated_sprite_2d, "position:y", dog_animated_sprite_2d.position.y, JUMP_LENGTH) \
 			.set_trans(Tween.TRANS_SINE) \
 			.set_ease(Tween.EASE_OUT)
+
+
+func friends_entrance():
+	var tween = create_tween()
+	var duration := 3.0
+	tween.tween_property(
+		flying_friend_sprite_2d,
+		"position",
+		friend_animated_sprite_2d.position,
+		duration,
+	)
+	await tween.finished
+	flying_friend_sprite_2d.hide()
+	friend_animated_sprite_2d.show()
+
+
+func show_chests():
+	var total := grid_container.get_child_count()
+	var counter := 1
+	for chest in grid_container.get_children():
+		if 100.0 / float(total) * counter > progress_decimal * 100:
+			chest.hide()
+		counter += 1

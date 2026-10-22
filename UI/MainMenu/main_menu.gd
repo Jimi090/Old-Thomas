@@ -3,6 +3,7 @@ extends Control
 @onready var path_1: Button = $Path1
 @onready var path_2: Button = $Path2
 @onready var path_3: Button = $Path3
+@onready var path_4: Button = $Path4
 @onready var shop_btn: Button = $ShopBtn
 @onready var church_btn: Button = $ChurchBtn
 @onready var home_btn: Button = $HomeBtn
@@ -34,6 +35,14 @@ func _ready() -> void:
 		var desc := "Before you can enter this path, finish Path 2"
 		path_3.pressed.connect(create_general_popup.bind(title, desc))
 		path_3.padlock.visible = true
+
+	if is_path_finished("3") == true:
+		path_4.pressed.connect(_on_click_path_button.bind(path_4.path_number))
+	else:
+		var title := "Path Locked"
+		var desc := "Before you can enter this path, finish Path 3"
+		path_4.pressed.connect(create_general_popup.bind(title, desc))
+		path_4.padlock.visible = true
 
 
 func is_path_finished(number: String):

@@ -99,10 +99,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 4.0
-offset_right = 3.0
-offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.2, 0.58431375, 0.14509805, 1)
@@ -170,6 +166,15 @@ offset_right = 132.0
 offset_bottom = 179.0
 path_number = 3
 
+[node name="Path4" parent="." unique_id=554041010 instance=ExtResource("5_a712v")]
+z_index = 1
+layout_mode = 0
+offset_left = 254.0
+offset_top = 137.0
+offset_right = 294.0
+offset_bottom = 177.0
+path_number = 4
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=43598028]
 scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAApABYAAAACAAMAAAApAA4AAAADAAMAAAAxAAoAAAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAAJAAYAAAACAAMAAAA5AB4AAAACAAMAAABBACIAAAACAAMAAAA5ABYAAAADAAMAAABBABIAAAADAAMAAAAZABYAAAADAAMAAAARABoAAAADAAMAAAAJAB4AAAADAAMAAAABACIAAAADAAMAAAAxABoAAAAAAAEAAAApAB4AAAADAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAARAAoAAAAAAAEAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAAJAA4AAAADAAMAAAABABIAAAADAAMAAAABAAIAAAACAAMAAAA=")
@@ -225,7 +230,7 @@ position = Vector2(131, 125)
 texture = ExtResource("11_migmm")
 
 [node name="Flower12" type="Sprite2D" parent="." unique_id=2140533831]
-position = Vector2(262, 167)
+position = Vector2(246, 166)
 texture = ExtResource("10_wdl18")
 
 [node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("8_1dhmk")]

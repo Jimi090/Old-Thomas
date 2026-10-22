@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="1_ofpfa"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_vy2cl"]
 [ext_resource type="Texture2D" uid="uid://cgt0wwcdjyv2a" path="res://characters/dog/Sprite/dog-run.png" id="4_pplcb"]
+[ext_resource type="Texture2D" uid="uid://duoeyp8ngqrs1" path="res://characters/friend/assets/idle-friend.png" id="5_hpyr8"]
+[ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_etao0"]
+[ext_resource type="Texture2D" uid="uid://ctjq0i6kb1x0o" path="res://pickups/Chest/Chest.png" id="8_ygfbf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofpfa"]
 content_margin_left = 2.0
@@ -115,6 +118,56 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y8cr"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxito"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcho6"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d46ys"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug7we"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdv1"]
+atlas = ExtResource("5_hpyr8")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pplcb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7y8cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxito")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcho6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d46ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug7we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdv1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Home" type="Control" unique_id=750356424]
 layout_mode = 3
 anchors_preset = 0
@@ -129,7 +182,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.23529412, 0.4392157, 0.85490197, 1)
+color = Color(0.6942566, 0.32487407, 0.43952236, 1)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1269541263]
 layout_mode = 1
@@ -154,7 +207,7 @@ offset_right = 154.01
 offset_bottom = 154.01
 
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318381936]
-position = Vector2(148, 121)
+position = Vector2(135, 121.00001)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"idle"
@@ -167,3 +220,88 @@ sprite_frames = SubResource("SpriteFrames_2j1r1")
 animation = &"run"
 autoplay = "run"
 frame_progress = 0.33253926
+
+[node name="FriendAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=526009710]
+position = Vector2(188, 122)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_pplcb")
+autoplay = "default"
+
+[node name="FlyingFriendSprite2D" type="Sprite2D" parent="." unique_id=255917782]
+position = Vector2(100, -43)
+scale = Vector2(3, 3)
+texture = ExtResource("6_etao0")
+offset = Vector2(-1, -25)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=823461733]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -59.0
+offset_right = -9.0
+offset_bottom = 59.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 2
+
+[node name="TextureRect4" type="TextureRect" parent="GridContainer" unique_id=355602513]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="GridContainer" unique_id=1409371203]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="GridContainer" unique_id=612746811]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="GridContainer" unique_id=112452680]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="GridContainer" unique_id=501056266]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer" unique_id=163210930]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer" unique_id=1218347140]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
+
+[node name="TextureRect1" type="TextureRect" parent="GridContainer" unique_id=549487305]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_ygfbf")
+stretch_mode = 5
