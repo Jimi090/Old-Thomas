@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dq62au2ca1ul8"]
+[gd_scene format=4 uid="uid://dq62au2ca1ul8"]
 
 [ext_resource type="PackedScene" uid="uid://y0v4t71jr6l7" path="res://level_base/level_base.tscn" id="1_1qlhr"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="2_r62y4"]
@@ -868,7 +868,7 @@ sources/0 = SubResource("TileSetAtlasSource_mylrs")
 sources/1 = SubResource("TileSetAtlasSource_moh8x")
 sources/2 = SubResource("TileSetAtlasSource_jev5a")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8cuj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekwwc"]
 texture = ExtResource("5_qs6dh")
 0:0/0 = 0
 1:0/0 = 0
@@ -883,7 +883,7 @@ texture = ExtResource("5_qs6dh")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_08q4g"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xukj8"]
 texture = ExtResource("6_id62b")
 3:0/0 = 0
 4:0/0 = 0
@@ -1035,8 +1035,8 @@ texture = ExtResource("6_id62b")
 
 [sub_resource type="TileSet" id="TileSet_ffkgi"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_p8cuj")
-sources/1 = SubResource("TileSetAtlasSource_08q4g")
+sources/0 = SubResource("TileSetAtlasSource_ekwwc")
+sources/1 = SubResource("TileSetAtlasSource_xukj8")
 
 [node name="LevelBase" unique_id=1826943140 instance=ExtResource("1_1qlhr")]
 
@@ -1044,10 +1044,12 @@ sources/1 = SubResource("TileSetAtlasSource_08q4g")
 position = Vector2(24, 42)
 
 [node name="Key" parent="." index="2" unique_id=155803228]
-position = Vector2(833, 97)
+position = Vector2(833, 116)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="3" unique_id=51204068]
+tile_map_data = PackedByteArray("AAABAAQAAAAAAAgAAAABAAUAAAAAAAkAAAACAAQAAAABAAgAAAACAAUAAAABAAkAAAADAAUAAAACAAgAAAADAAYAAAACAAkAAAAEAAYAAAAAAAcAAAAFAAYAAAABAAcAAAAGAAcAAAACAAcAAAAHAAYAAAAAAAgAAAAHAAcAAAAAAAkAAAAIAAYAAAABAAgAAAAIAAcAAAABAAkAAAAJAAUAAAAAAAgAAAAJAAYAAAAAAAkAAAAKAAUAAAABAAgAAAAKAAYAAAABAAkAAAAJAAcAAAAGAAcAAAAKAAcAAAAHAAcAAAAFAAcAAAAIAAcAAAANAAMAAAAAAAcAAAAOAAMAAAABAAcAAAAPAAMAAAACAAcAAAAOAAQAAAAGAAgAAAAOAAUAAAAGAAkAAAAPAAQAAAAHAAgAAAAPAAUAAAAHAAkAAAAQAAIAAAAAAAgAAAAQAAMAAAAAAAkAAAARAAIAAAABAAgAAAARAAMAAAABAAkAAAAQAAQAAAAGAAcAAAARAAQAAAAHAAcAAAASAAEAAAAAAAcAAAATAAEAAAABAAcAAAAUAAEAAAACAAcAAAASAAIAAAADAAcAAAASAAMAAAADAAgAAAASAAQAAAADAAkAAAATAAIAAAAEAAcAAAATAAMAAAAEAAgAAAATAAQAAAAEAAkAAAAUAAIAAAAFAAcAAAAUAAMAAAAFAAgAAAAUAAQAAAAFAAkAAAAXAAMAAAAAAAcAAAAYAAMAAAABAAcAAAAZAAMAAAACAAcAAAAaAAQAAAAAAAcAAAAbAAQAAAABAAcAAAAcAAQAAAACAAcAAAAYAAQAAAAGAAgAAAAYAAUAAAAGAAkAAAAZAAQAAAAHAAgAAAAZAAUAAAAHAAkAAAAaAAUAAAAGAAgAAAAaAAYAAAAGAAkAAAAbAAUAAAAHAAgAAAAbAAYAAAAHAAkAAAAXAAQAAAAIAAcAAAAcAAUAAAAIAAcAAAAiAAQAAAAAAAgAAAAiAAUAAAAAAAkAAAAjAAQAAAABAAgAAAAjAAUAAAABAAkAAAAjAAYAAAAGAAgAAAAjAAcAAAAGAAkAAAAkAAQAAAACAAcAAAAkAAUAAAAGAAcAAAAkAAYAAAAHAAgAAAAkAAcAAAAHAAkAAAAlAAQAAAAAAAcAAAAlAAUAAAAHAAcAAAAlAAYAAAAGAAgAAAAlAAcAAAAGAAkAAAAmAAUAAAAIAAcAAAAmAAYAAAAHAAgAAAAmAAQAAAABAAcAAAAmAAcAAAAHAAkAAAAnAAUAAAACAAcAAAAnAAYAAAAIAAcAAAAqAAcAAAACAAgAAAAqAAgAAAACAAkAAAArAAgAAAACAAgAAAArAAkAAAACAAkAAAAsAAgAAAACAAgAAAAsAAkAAAACAAkAAAAtAAkAAAAAAAcAAAAuAAkAAAABAAcAAAAvAAoAAAAAAAcAAAAwAAoAAAABAAcAAAAxAAkAAAAAAAgAAAAxAAoAAAAAAAkAAAAyAAkAAAABAAgAAAAyAAoAAAABAAkAAAAzAAgAAAAAAAgAAAAzAAkAAAAAAAkAAAA0AAgAAAABAAgAAAA0AAkAAAABAAkAAAAuAAoAAAAIAAcAAAA=")
 tile_set = SubResource("TileSet_6er1j")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=1514376472]
+tile_map_data = PackedByteArray("AAAdAAQAAQAJAAgAAAAeAAQAAQAKAAgAAAAfAAQAAQALAAgAAAAgAAQAAQAMAAgAAAAhAAQAAQANAAgAAAA=")
 tile_set = SubResource("TileSet_ffkgi")
