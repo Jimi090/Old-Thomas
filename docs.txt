@@ -10,3 +10,6 @@ It also should inherent from class Character.
 
 For storing variables globaly(to access easily in all scripts) and saving them after the game closes use:
 GameData.gd and add variable there. Then add taht variable to laod_data() and save_data() functions
+
+After path1 player unlocks dog.
+After path2 player unlocks friend.
