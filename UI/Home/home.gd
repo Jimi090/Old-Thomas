@@ -5,7 +5,7 @@ extends Control
 @onready var dog_animated_sprite_2d: AnimatedSprite2D = $DogAnimatedSprite2D
 @onready var friend_animated_sprite_2d: AnimatedSprite2D = $FriendAnimatedSprite2D
 @onready var flying_friend_sprite_2d: Sprite2D = $FlyingFriendSprite2D
-@onready var grid_container: GridContainer = $GridContainer
+@onready var chest_container: Control = $ChestContainer
 
 var patrol_distance := 100
 var PATROL_SPEED = 150
@@ -99,9 +99,11 @@ func friends_entrance():
 
 
 func show_chests():
-	var total := grid_container.get_child_count()
+	var total := chest_container.get_child_count()
 	var counter := 1
-	for chest in grid_container.get_children():
+	var children = chest_container.get_children()
+	children.reverse()
+	for chest in children:
 		if 100.0 / float(total) * counter > progress_decimal * 100:
 			chest.hide()
 		counter += 1

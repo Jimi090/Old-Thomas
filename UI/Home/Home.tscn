@@ -233,74 +233,105 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_etao0")
 offset = Vector2(-1, -25)
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=823461733]
+[node name="ChestContainer" type="Control" parent="." unique_id=2113579603]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -85.0
-offset_top = -59.0
-offset_right = -9.0
-offset_bottom = 59.5
+offset_left = -90.0
+offset_top = -56.5
+offset_right = -13.0
+offset_bottom = 56.5
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/h_separation = -1
-theme_override_constants/v_separation = -1
-columns = 2
 
-[node name="TextureRect4" type="TextureRect" parent="GridContainer" unique_id=355602513]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="ChestContainer" unique_id=355602513]
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 22.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect5" type="TextureRect" parent="GridContainer" unique_id=1409371203]
-layout_mode = 2
+[node name="TextureRect2" type="TextureRect" parent="ChestContainer" unique_id=1422438785]
+layout_mode = 0
+offset_left = 38.0
+offset_right = 68.0
+offset_bottom = 22.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect6" type="TextureRect" parent="GridContainer" unique_id=612746811]
-layout_mode = 2
+[node name="TextureRect3" type="TextureRect" parent="ChestContainer" unique_id=275682225]
+layout_mode = 0
+offset_top = 28.0
+offset_right = 30.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect7" type="TextureRect" parent="GridContainer" unique_id=112452680]
-layout_mode = 2
+[node name="TextureRect4" type="TextureRect" parent="ChestContainer" unique_id=431226922]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 28.0
+offset_right = 68.0
+offset_bottom = 50.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect8" type="TextureRect" parent="GridContainer" unique_id=501056266]
-layout_mode = 2
+[node name="TextureRect5" type="TextureRect" parent="ChestContainer" unique_id=1286493520]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 30.0
+offset_bottom = 78.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="GridContainer" unique_id=163210930]
-layout_mode = 2
+[node name="TextureRect6" type="TextureRect" parent="ChestContainer" unique_id=1525795831]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 56.0
+offset_right = 68.0
+offset_bottom = 78.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="GridContainer" unique_id=1218347140]
-layout_mode = 2
+[node name="TextureRect7" type="TextureRect" parent="ChestContainer" unique_id=789199385]
+layout_mode = 0
+offset_top = 84.0
+offset_right = 30.0
+offset_bottom = 106.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="TextureRect1" type="TextureRect" parent="GridContainer" unique_id=549487305]
-layout_mode = 2
+[node name="TextureRect8" type="TextureRect" parent="ChestContainer" unique_id=1227836432]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 84.0
+offset_right = 68.0
+offset_bottom = 106.0
+scale = Vector2(1.3, 1.3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
