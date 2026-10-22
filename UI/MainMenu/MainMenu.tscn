@@ -98,7 +98,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.18039216, 0.49019608, 0.19607843, 1)
+color = Color(0.2, 0.58431375, 0.14509805, 1)
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
 z_index = 1
@@ -108,9 +108,9 @@ destiantion = 1
 [node name="ShopBtn" type="Button" parent="." unique_id=50165495]
 layout_mode = 0
 offset_left = 268.0
-offset_top = 40.0
+offset_top = 36.0
 offset_right = 324.0
-offset_bottom = 89.0
+offset_bottom = 85.0
 mouse_default_cursor_shape = 2
 icon = ExtResource("1_8fkdr")
 flat = true

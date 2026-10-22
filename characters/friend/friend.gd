@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 		return
 
 	velocity = global_position.direction_to(target_body.global_position) * SPEED * delta
-	if global_position.distance_to(target_body.global_position) <= 30:
+	if global_position.distance_to(target_body.global_position) <= 40:
 		target_body.take_damage(DAMAGE)
 		queue_free()
 	move_and_slide()

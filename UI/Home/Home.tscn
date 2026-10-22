@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dun2yl0eall1b" path="res://UI/Home/home.gd" id="1_2j1r1"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="1_ofpfa"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_vy2cl"]
+[ext_resource type="Texture2D" uid="uid://cgt0wwcdjyv2a" path="res://characters/dog/Sprite/dog-run.png" id="4_pplcb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofpfa"]
 content_margin_left = 2.0
@@ -78,6 +79,42 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ry1w"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fkp1"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye2oi"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fah2u"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2j1r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ry1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fkp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye2oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fah2u")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 8.0
+}]
+
 [node name="Home" type="Control" unique_id=750356424]
 layout_mode = 3
 anchors_preset = 0
@@ -116,9 +153,17 @@ offset_top = 4.01
 offset_right = 154.01
 offset_bottom = 154.01
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318381936]
+[node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318381936]
 position = Vector2(148, 121)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="DogAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011160984]
+position = Vector2(91, 136)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_2j1r1")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.33253926
