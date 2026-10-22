@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="7_a712v"]
 [ext_resource type="PackedScene" uid="uid://djosr1t6fp8tb" path="res://Dialogue/Dialogue.tscn" id="8_1dhmk"]
+[ext_resource type="Texture2D" uid="uid://cwhn40x1cun85" path="res://UI/MainMenu/assets/flower.png" id="8_eoxer"]
+[ext_resource type="Texture2D" uid="uid://b3oxhl2kyiww" path="res://UI/MainMenu/assets/flower3.png" id="10_wdl18"]
+[ext_resource type="Texture2D" uid="uid://b18lxj8o7t2wi" path="res://UI/MainMenu/assets/flower2.png" id="11_migmm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -96,6 +99,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 3.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.18039216, 0.49019608, 0.19607843, 1)
@@ -168,6 +175,10 @@ scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAApABYAAAACAAMAAAApAA4AAAADAAMAAAAxAAoAAAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAAJAAYAAAACAAMAAAA5AB4AAAACAAMAAABBACIAAAACAAMAAAA5ABYAAAADAAMAAABBABIAAAADAAMAAAAZABYAAAADAAMAAAARABoAAAADAAMAAAAJAB4AAAADAAMAAAABACIAAAADAAMAAAAxABoAAAAAAAEAAAApAB4AAAADAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAARAAoAAAAAAAEAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAAJAA4AAAADAAMAAAABABIAAAADAAMAAAABAAIAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_ri767")
 
+[node name="Flower6" type="Sprite2D" parent="." unique_id=1986633959]
+position = Vector2(77, 100)
+texture = ExtResource("8_eoxer")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835001980]
 position = Vector2(100, 87)
 scale = Vector2(2, 2)
@@ -177,6 +188,46 @@ autoplay = "idle"
 frame_progress = 0.97446626
 flip_h = true
 
+[node name="Flower5" type="Sprite2D" parent="." unique_id=609302959]
+position = Vector2(46, 92)
+texture = ExtResource("10_wdl18")
+
+[node name="Flower4" type="Sprite2D" parent="." unique_id=889975001]
+position = Vector2(95, 19)
+texture = ExtResource("11_migmm")
+
+[node name="Flower3" type="Sprite2D" parent="." unique_id=738478261]
+position = Vector2(240, 96)
+texture = ExtResource("11_migmm")
+
+[node name="Flower7" type="Sprite2D" parent="." unique_id=867320188]
+position = Vector2(251, 71)
+texture = ExtResource("10_wdl18")
+
+[node name="Flower8" type="Sprite2D" parent="." unique_id=2014149974]
+position = Vector2(237, 22)
+texture = ExtResource("8_eoxer")
+
+[node name="Flower9" type="Sprite2D" parent="." unique_id=1087164927]
+position = Vector2(225, 154)
+texture = ExtResource("8_eoxer")
+
+[node name="Flower13" type="Sprite2D" parent="." unique_id=1711522861]
+position = Vector2(305, 125)
+texture = ExtResource("8_eoxer")
+
+[node name="Flower10" type="Sprite2D" parent="." unique_id=1165627673]
+position = Vector2(69, 162)
+texture = ExtResource("10_wdl18")
+
+[node name="Flower11" type="Sprite2D" parent="." unique_id=1910490515]
+position = Vector2(131, 125)
+texture = ExtResource("11_migmm")
+
+[node name="Flower12" type="Sprite2D" parent="." unique_id=2140533831]
+position = Vector2(262, 167)
+texture = ExtResource("10_wdl18")
+
 [node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("8_1dhmk")]
 layout_mode = 0
 offset_left = 62.000008
@@ -185,3 +236,11 @@ offset_right = 112.0
 offset_bottom = 90.0
 scale = Vector2(0.6, 0.6)
 text = "Hello, where should I go?"
+
+[node name="Flower2" type="Sprite2D" parent="." unique_id=1000128536]
+position = Vector2(198, 19)
+texture = ExtResource("10_wdl18")
+
+[node name="Flower" type="Sprite2D" parent="." unique_id=144584611]
+position = Vector2(64, 11)
+texture = ExtResource("8_eoxer")
