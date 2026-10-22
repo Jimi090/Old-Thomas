@@ -629,23 +629,29 @@ position = Vector2(176, 83)
 [node name="Potion" parent="." index="16" unique_id=964302324 instance=ExtResource("7_7ylg2")]
 position = Vector2(217.00002, 87)
 
-[node name="Potion2" parent="." index="17" unique_id=61448090 instance=ExtResource("7_7ylg2")]
+[node name="Potion3" parent="." index="17" unique_id=772883835 instance=ExtResource("7_7ylg2")]
+position = Vector2(1448, 56.000008)
+
+[node name="Potion2" parent="." index="18" unique_id=61448090 instance=ExtResource("7_7ylg2")]
 position = Vector2(809.00006, 183)
 
-[node name="Ghost" parent="." index="21" unique_id=1822596800 instance=ExtResource("9_7puyd")]
-position = Vector2(1654, 102)
+[node name="Potion4" parent="." index="19" unique_id=632971862 instance=ExtResource("7_7ylg2")]
+position = Vector2(1688, 104.00001)
 
-[node name="Ghost2" parent="." index="22" unique_id=1109458766 instance=ExtResource("9_7puyd")]
+[node name="Ghost" parent="." index="23" unique_id=1822596800 instance=ExtResource("9_7puyd")]
+position = Vector2(1657, 104)
+
+[node name="Ghost2" parent="." index="24" unique_id=1109458766 instance=ExtResource("9_7puyd")]
 position = Vector2(1344, 70)
 
-[node name="Cinnamon" parent="." index="23" unique_id=596537907 instance=ExtResource("8_630bk")]
+[node name="Cinnamon" parent="." index="25" unique_id=596537907 instance=ExtResource("8_630bk")]
 position = Vector2(1774.0001, 131)
 
-[node name="Cinnamon2" parent="." index="24" unique_id=974488033 instance=ExtResource("8_630bk")]
+[node name="Cinnamon2" parent="." index="26" unique_id=974488033 instance=ExtResource("8_630bk")]
 position = Vector2(1839, 131)
 
-[node name="Cinnamon3" parent="." index="25" unique_id=629974056 instance=ExtResource("8_630bk")]
+[node name="Cinnamon3" parent="." index="27" unique_id=629974056 instance=ExtResource("8_630bk")]
 position = Vector2(1903, 131)
 
-[node name="Coin7" parent="." index="26" unique_id=1226786585 instance=ExtResource("6_7ylg2")]
+[node name="Coin7" parent="." index="28" unique_id=1226786585 instance=ExtResource("6_7ylg2")]
 position = Vector2(1481, 33)

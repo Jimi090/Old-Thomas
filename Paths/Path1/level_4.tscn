@@ -596,56 +596,59 @@ tile_set = SubResource("TileSet_ymtdt")
 [node name="Potion" parent="." index="5" unique_id=964302324 instance=ExtResource("5_l4gq6")]
 position = Vector2(1020, 103.00001)
 
-[node name="Enemy" parent="." index="6" unique_id=2006298918 instance=ExtResource("5_gw7ii")]
+[node name="Potion2" parent="." index="6" unique_id=324985802 instance=ExtResource("5_l4gq6")]
+position = Vector2(1778, 23)
+
+[node name="Enemy" parent="." index="7" unique_id=2006298918 instance=ExtResource("5_gw7ii")]
 position = Vector2(864, -31)
 
-[node name="Enemy2" parent="." index="7" unique_id=494445774 instance=ExtResource("5_gw7ii")]
+[node name="Enemy2" parent="." index="8" unique_id=494445774 instance=ExtResource("5_gw7ii")]
 position = Vector2(356, 32)
 
-[node name="Enemy3" parent="." index="8" unique_id=246185343 instance=ExtResource("5_gw7ii")]
+[node name="Enemy3" parent="." index="9" unique_id=246185343 instance=ExtResource("5_gw7ii")]
 position = Vector2(914, 96)
 
-[node name="Enemy4" parent="." index="9" unique_id=710527861 instance=ExtResource("5_gw7ii")]
+[node name="Enemy4" parent="." index="10" unique_id=710527861 instance=ExtResource("5_gw7ii")]
 position = Vector2(1153, 56)
 
-[node name="Enemy5" parent="." index="10" unique_id=87181825 instance=ExtResource("5_gw7ii")]
+[node name="Enemy5" parent="." index="11" unique_id=87181825 instance=ExtResource("5_gw7ii")]
 position = Vector2(116, 80)
 
-[node name="Enemy6" parent="." index="11" unique_id=1454876929 instance=ExtResource("5_gw7ii")]
+[node name="Enemy6" parent="." index="12" unique_id=1454876929 instance=ExtResource("5_gw7ii")]
 position = Vector2(1316, 32)
 
-[node name="Coin" parent="." index="12" unique_id=525547507 instance=ExtResource("6_l4gq6")]
+[node name="Coin" parent="." index="13" unique_id=525547507 instance=ExtResource("6_l4gq6")]
 position = Vector2(257, 37)
 
-[node name="Coin2" parent="." index="13" unique_id=1191198511 instance=ExtResource("6_l4gq6")]
+[node name="Coin2" parent="." index="14" unique_id=1191198511 instance=ExtResource("6_l4gq6")]
 position = Vector2(640, 19)
 
-[node name="Coin3" parent="." index="14" unique_id=1536961559 instance=ExtResource("6_l4gq6")]
+[node name="Coin3" parent="." index="15" unique_id=1536961559 instance=ExtResource("6_l4gq6")]
 position = Vector2(1048, -47)
 
-[node name="Coin4" parent="." index="15" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
+[node name="Coin4" parent="." index="16" unique_id=2061919772 instance=ExtResource("6_l4gq6")]
 position = Vector2(976, -30)
 
-[node name="Coin6" parent="." index="16" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
+[node name="Coin6" parent="." index="17" unique_id=1175210929 instance=ExtResource("6_l4gq6")]
 position = Vector2(801, 67)
 
-[node name="Cinnamon" parent="." index="19" unique_id=429135449 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon" parent="." index="20" unique_id=429135449 instance=ExtResource("8_85wvi")]
 position = Vector2(463, 51)
 
-[node name="Cinnamon2" parent="." index="20" unique_id=1016509675 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon2" parent="." index="21" unique_id=1016509675 instance=ExtResource("8_85wvi")]
 position = Vector2(975, 130)
 
-[node name="Cinnamon4" parent="." index="21" unique_id=1151447405 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon4" parent="." index="22" unique_id=1151447405 instance=ExtResource("8_85wvi")]
 position = Vector2(1878, 40)
 
-[node name="Cinnamon3" parent="." index="22" unique_id=820564306 instance=ExtResource("8_85wvi")]
+[node name="Cinnamon3" parent="." index="23" unique_id=820564306 instance=ExtResource("8_85wvi")]
 position = Vector2(1210, 67)
 
-[node name="Ghost" parent="." index="24" unique_id=1822596800 instance=ExtResource("9_k1adq")]
+[node name="Ghost" parent="." index="25" unique_id=1822596800 instance=ExtResource("9_k1adq")]
 position = Vector2(1716, -12)
 
-[node name="Coin5" parent="." index="25" unique_id=1670421149 instance=ExtResource("6_l4gq6")]
+[node name="Coin5" parent="." index="26" unique_id=1670421149 instance=ExtResource("6_l4gq6")]
 position = Vector2(1536, 66)
 
-[node name="Coin7" parent="." index="26" unique_id=94517520 instance=ExtResource("6_l4gq6")]
+[node name="Coin7" parent="." index="27" unique_id=94517520 instance=ExtResource("6_l4gq6")]
 position = Vector2(1410, 96)
