@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cwhn40x1cun85" path="res://UI/MainMenu/assets/flower.png" id="8_eoxer"]
 [ext_resource type="Texture2D" uid="uid://b3oxhl2kyiww" path="res://UI/MainMenu/assets/flower3.png" id="10_wdl18"]
 [ext_resource type="Texture2D" uid="uid://b18lxj8o7t2wi" path="res://UI/MainMenu/assets/flower2.png" id="11_migmm"]
+[ext_resource type="Texture2D" uid="uid://6nj0kkfdbegk" path="res://UI/MainMenu/assets/mushroomver2.png" id="12_wdl18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -205,9 +206,10 @@ texture = ExtResource("11_migmm")
 position = Vector2(240, 96)
 texture = ExtResource("11_migmm")
 
-[node name="Flower7" type="Sprite2D" parent="." unique_id=867320188]
-position = Vector2(251, 71)
-texture = ExtResource("10_wdl18")
+[node name="Mushroom" type="Sprite2D" parent="." unique_id=867320188]
+position = Vector2(253.8125, 70.68751)
+scale = Vector2(1.1484361, 1.0859375)
+texture = ExtResource("12_wdl18")
 
 [node name="Flower8" type="Sprite2D" parent="." unique_id=2014149974]
 position = Vector2(237, 22)
@@ -222,8 +224,9 @@ position = Vector2(305, 125)
 texture = ExtResource("8_eoxer")
 
 [node name="Flower10" type="Sprite2D" parent="." unique_id=1165627673]
-position = Vector2(69, 162)
-texture = ExtResource("10_wdl18")
+position = Vector2(70.5, 161)
+scale = Vector2(1.1875, 1.125)
+texture = ExtResource("12_wdl18")
 
 [node name="Flower11" type="Sprite2D" parent="." unique_id=1910490515]
 position = Vector2(131, 125)
@@ -247,5 +250,6 @@ position = Vector2(198, 19)
 texture = ExtResource("10_wdl18")
 
 [node name="Flower" type="Sprite2D" parent="." unique_id=144584611]
-position = Vector2(64, 11)
-texture = ExtResource("8_eoxer")
+position = Vector2(65, 10.5)
+scale = Vector2(1.1250001, 1.0625)
+texture = ExtResource("12_wdl18")

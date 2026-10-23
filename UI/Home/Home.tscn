@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dun2yl0eall1b" path="res://UI/Home/home.gd" id="1_2j1r1"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="1_ofpfa"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_vy2cl"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_ygfbf"]
 [ext_resource type="Texture2D" uid="uid://cgt0wwcdjyv2a" path="res://characters/dog/Sprite/dog-run.png" id="4_pplcb"]
 [ext_resource type="Texture2D" uid="uid://duoeyp8ngqrs1" path="res://characters/friend/assets/idle-friend.png" id="5_hpyr8"]
 [ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_etao0"]
@@ -168,6 +169,22 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
+font = ExtResource("2_ygfbf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ry1w"]
+bg_color = Color(0, 0, 0, 0.61960787)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fkp1"]
+font = ExtResource("2_ygfbf")
+font_size = 9
+
 [node name="Home" type="Control" unique_id=750356424]
 layout_mode = 3
 anchors_preset = 0
@@ -182,18 +199,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6942566, 0.32487407, 0.43952236, 1)
+color = Color(0.21742064, 0.36755404, 0.58147305, 1)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1269541263]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -50.0
+offset_left = -28.0
 offset_top = 8.0
-offset_right = 50.0
+offset_right = 72.0
 offset_bottom = 28.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ygfbf")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/background = SubResource("StyleBoxFlat_ofpfa")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vy2cl")
@@ -201,20 +219,20 @@ value = 50.0
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("1_ofpfa")]
 layout_mode = 0
-offset_left = 4.01
-offset_top = 4.01
-offset_right = 154.01
-offset_bottom = 154.01
+offset_left = 6.01
+offset_top = 6.0100007
+offset_right = 156.01
+offset_bottom = 156.01
 
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318381936]
-position = Vector2(135, 121.00001)
+position = Vector2(159, 151)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="DogAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011160984]
-position = Vector2(91, 136)
+position = Vector2(120, 161.00002)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_2j1r1")
 animation = &"run"
@@ -222,7 +240,7 @@ autoplay = "run"
 frame_progress = 0.33253926
 
 [node name="FriendAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=526009710]
-position = Vector2(188, 122)
+position = Vector2(207, 151)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_pplcb")
 autoplay = "default"
@@ -240,10 +258,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -56.5
-offset_right = -13.0
-offset_bottom = 56.5
+offset_left = -86.0
+offset_top = -26.0
+offset_right = -9.0
+offset_bottom = 87.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -336,3 +354,32 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=1509579128]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 9.0
+offset_right = 101.0
+offset_bottom = 25.0
+text = "Home"
+label_settings = SubResource("LabelSettings_nrtow")
+
+[node name="Label2" type="Label" parent="." unique_id=1734461472]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -49.0
+offset_right = 110.0
+offset_bottom = 53.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ry1w")
+text = "Complete quests to earn gold! Quests are tracked automatically. "
+label_settings = SubResource("LabelSettings_2fkp1")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
