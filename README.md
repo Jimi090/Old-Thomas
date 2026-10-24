@@ -11,14 +11,14 @@ Plus, more paths and features are always coming out, so make sure to keep playin
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
 And you can't forget about the excellent music; it really helps set the mood!!! (it's advenutre and zelda themed hehe)
 
-*Seasonal Event* 
+*Seasonal Event*
 New cinnamon collectable! Collect cinnamon on your journeys and get 3x more coins each. (Who doesn't like cinnamon??? hehehe)
 
 I hope you enjoy this adventure. Good luck! (Yippppee!)
 
 ## Game Structure
 
-This game is structured very uniquely! You follow Thomas as you finish paths one by one. 
+This game is structured very uniquely! You follow Thomas as you finish paths one by one.
 Each path has four levels, with 3 paths being available currently. On top of that you are also able to go to the shop and buy upgrades!
 At the end of paths you must defeat a diffucult boss! You may want to gear up!!!
 
@@ -28,7 +28,11 @@ Jump: Space or W or Up Arrow
 
 Basic attack: J or Right Mouse Button
 
-Skip cutscene: S 
+Ranged attack: K or Left Mouse Button
+
+Ability: 1
+
+Skip cutscene: S
 
 ## New Features
 
@@ -42,7 +46,7 @@ There may be some more features I can't remember from the top of my head. but yo
 
 ## AI Usage
 
-AI was used in this project for 
+AI was used in this project for
 - debugging the code for the ghost (but has now been updated by a human)
 - debugging code for the cutscene in Godot (as this is the first time I have ever made a cutscene and woah that was hard a first lol)
 - understanding the debugger (some of the stuff were so hard to understand for my lil brain *sob*)
@@ -60,7 +64,7 @@ Together, we have worked so hard to create a game for others to enjoy!
 
 *Also note for this week! I had to revert some commits due to conflicts and redo some level changes ALL OVER AGAIN. but it should how in the git history!
 
-<3 <3 <3 
+<3 <3 <3
 
 ## Photos
 
