@@ -21,7 +21,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_sxvro")
 script = ExtResource("1_dgxqr")
 
 [node name="Button" type="Button" parent="." unique_id=1945297369]
-texture_filter = 2
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -38,6 +38,8 @@ size_flags_vertical = 0
 mouse_default_cursor_shape = 2
 icon = ExtResource("2_x1owf")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="DiamondsContainer" type="HBoxContainer" parent="." unique_id=1037767489]
 layout_mode = 1

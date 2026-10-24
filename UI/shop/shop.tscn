@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://UI/shop/shop.gd" id="1_7hdkg"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_2y1v1"]
+[ext_resource type="Texture2D" uid="uid://idqw1wpukfut" path="res://UI/shop/assets/buy-button.png" id="3_2y1v1"]
 [ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://UI/shop/shop_item.tscn" id="3_clrk4"]
-[ext_resource type="Texture2D" uid="uid://bd1e0dw5jkev0" path="res://UI/shop/assets/sword.png" id="4_tfwm2"]
-[ext_resource type="Texture2D" uid="uid://dj5bkdp5c6rqq" path="res://UI/shop/assets/shield.png" id="5_ny626"]
-[ext_resource type="Texture2D" uid="uid://cpvfguu6bip6d" path="res://UI/shop/assets/shoe.png" id="6_iypip"]
-[ext_resource type="Texture2D" uid="uid://d18froc3tvv" path="res://UI/shop/assets/necklace.png" id="7_d7i62"]
+[ext_resource type="Texture2D" uid="uid://bwffx8fvjg0qi" path="res://UI/shop/assets/sword-pixel.png" id="4_7hdkg"]
+[ext_resource type="Texture2D" uid="uid://ck4jjddv4w4dv" path="res://UI/shop/assets/shield-pixel.png" id="5_7hdkg"]
+[ext_resource type="Texture2D" uid="uid://c6m687m52qrkt" path="res://UI/shop/assets/shoe-pixel.png" id="6_7hdkg"]
+[ext_resource type="Texture2D" uid="uid://bi4ggldubpcb3" path="res://UI/shop/assets/necklace-pixel.png" id="7_7hdkg"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="8_eh40j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
@@ -63,11 +64,13 @@ autowrap_mode = 3
 
 [node name="Buy_btn" type="Button" parent="." unique_id=896786812]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 139.0
-offset_right = 105.0
-offset_bottom = 170.0
-text = "Buy"
+offset_left = 53.0
+offset_top = 125.0
+offset_right = 125.0
+offset_bottom = 184.0
+icon = ExtResource("3_2y1v1")
+flat = true
+expand_icon = true
 
 [node name="Items_container" type="Control" parent="." unique_id=497329449]
 layout_mode = 1
@@ -85,21 +88,21 @@ grow_vertical = 2
 
 [node name="Attack_upgrade" parent="Items_container" unique_id=775961121 instance=ExtResource("3_clrk4")]
 layout_mode = 0
-button_image = ExtResource("4_tfwm2")
+button_image = ExtResource("4_7hdkg")
 description = "Increases Thomas' damage by 10%"
 
 [node name="Health_upgrade" parent="Items_container" unique_id=1483561637 instance=ExtResource("3_clrk4")]
 layout_mode = 0
 offset_left = 52.0
 offset_right = 372.0
-button_image = ExtResource("5_ny626")
+button_image = ExtResource("5_7hdkg")
 description = "Increases Thomas' health by 10%"
 
 [node name="Speed_upgrade" parent="Items_container" unique_id=439450475 instance=ExtResource("3_clrk4")]
 layout_mode = 0
 offset_top = 52.0
 offset_bottom = 372.0
-button_image = ExtResource("6_iypip")
+button_image = ExtResource("6_7hdkg")
 description = "Increases Thomas' speed by 10%"
 
 [node name="Revival_upgrade" parent="Items_container" unique_id=556607063 instance=ExtResource("3_clrk4")]
@@ -108,7 +111,7 @@ offset_left = 52.0
 offset_top = 52.0
 offset_right = 372.0
 offset_bottom = 372.0
-button_image = ExtResource("7_d7i62")
+button_image = ExtResource("7_7hdkg")
 description = "Increases Thomas' revival chance by 2%"
 
 [node name="GoldLabel" type="Label" parent="." unique_id=507711699]
