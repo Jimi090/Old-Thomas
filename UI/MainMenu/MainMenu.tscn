@@ -10,9 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="7_a712v"]
 [ext_resource type="PackedScene" uid="uid://djosr1t6fp8tb" path="res://Dialogue/Dialogue.tscn" id="8_1dhmk"]
 [ext_resource type="Texture2D" uid="uid://cwhn40x1cun85" path="res://UI/MainMenu/assets/flower.png" id="8_eoxer"]
+[ext_resource type="Texture2D" uid="uid://bjtt7i8phrpfw" path="res://characters/player/sprite/run-player.png" id="9_wdl18"]
 [ext_resource type="Texture2D" uid="uid://b3oxhl2kyiww" path="res://UI/MainMenu/assets/flower3.png" id="10_wdl18"]
 [ext_resource type="Texture2D" uid="uid://b18lxj8o7t2wi" path="res://UI/MainMenu/assets/flower2.png" id="11_migmm"]
 [ext_resource type="Texture2D" uid="uid://6nj0kkfdbegk" path="res://UI/MainMenu/assets/mushroomver2.png" id="12_wdl18"]
+[ext_resource type="Script" uid="uid://d4audfmd1x7he" path="res://UI/MainMenu/movable_player.gd" id="13_jt3i8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -62,6 +64,22 @@ region = Rect2(64, 0, 16, 16)
 atlas = ExtResource("7_a712v")
 region = Rect2(80, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_migmm"]
+atlas = ExtResource("9_wdl18")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt3i8"]
+atlas = ExtResource("9_wdl18")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q33u5"]
+atlas = ExtResource("9_wdl18")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvgpy"]
+atlas = ExtResource("9_wdl18")
+region = Rect2(48, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
 animations = [{
 "frames": [{
@@ -86,7 +104,40 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_migmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt3i8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q33u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvgpy")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 7.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_migmm"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt3i8"]
+size = Vector2(320, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q33u5"]
+size = Vector2(9, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvgpy"]
+size = Vector2(320, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qf4k"]
+size = Vector2(6, 180)
 
 [node name="MainMenu" type="Control" unique_id=219022643]
 layout_mode = 3
@@ -107,7 +158,15 @@ color = Color(0.2, 0.58431375, 0.14509805, 1)
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
 z_index = 1
 layout_mode = 1
+focus_mode = 0
 destiantion = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackButton" unique_id=1470120024]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BackButton/StaticBody2D" unique_id=1870612049]
+position = Vector2(4.3478374, 39.130535)
+polygon = PackedVector2Array(-4.3478394, -39.130535, 145.65215, -39.130535, 145.65215, 110.86945, -4.3478394, 110.86945)
 
 [node name="ShopBtn" type="Button" parent="." unique_id=50165495]
 layout_mode = 0
@@ -115,65 +174,90 @@ offset_left = 268.0
 offset_top = 36.0
 offset_right = 324.0
 offset_bottom = 85.0
+focus_mode = 0
 mouse_default_cursor_shape = 2
 icon = ExtResource("1_8fkdr")
 flat = true
 
+[node name="StaticBody2D" type="StaticBody2D" parent="ShopBtn" unique_id=1285533922]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ShopBtn/StaticBody2D" unique_id=1932955153]
+position = Vector2(4.3478374, 39.130535)
+polygon = PackedVector2Array(4.6521606, -34.13054, 47.65216, -33.13054, 41.65216, 2.869461, -0.34783936, 3.869461)
+
 [node name="ChurchBtn" type="Button" parent="." unique_id=1056776551]
-z_index = 1
+z_index = 2
+y_sort_enabled = true
 layout_mode = 0
 offset_left = 131.0
 offset_top = 15.999999
 offset_right = 267.0
 offset_bottom = 136.0
 scale = Vector2(0.4599988, 0.4599988)
+focus_mode = 0
 mouse_default_cursor_shape = 2
 icon = ExtResource("2_8x0bb")
 flat = true
 
-[node name="HomeBtn" type="Button" parent="." unique_id=86880024]
+[node name="StaticBody2D" type="StaticBody2D" parent="ChurchBtn" unique_id=1050710460]
 z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChurchBtn/StaticBody2D" unique_id=1066146590]
+position = Vector2(4.3478374, 39.130535)
+polygon = PackedVector2Array(8.695679, 7.6293945e-06, 21.739197, 7.6293945e-06, 28.260925, 7.6293945e-06, 47.826202, -17.391342, 76.08716, -17.391342, 95.652405, -2.173912, 126.08728, -2.173912, 126.08728, 60.869728, 95.652405, 67.39149, 73.91324, 69.56541, 58.6958, 67.39149, 43.478363, 69.56541, 0, 60.869728, 0, 19.565277, 0, 7.6293945e-06)
+
+[node name="HomeBtn" type="Button" parent="." unique_id=86880024]
+z_index = 2
 layout_mode = 0
 offset_left = 142.0
 offset_top = 86.0
 offset_right = 281.0
 offset_bottom = 222.0
 scale = Vector2(0.4, 0.4)
+focus_mode = 0
 mouse_default_cursor_shape = 2
 icon = ExtResource("5_jhcbk")
 flat = true
 
+[node name="StaticBody2D" type="StaticBody2D" parent="HomeBtn" unique_id=1043469861]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HomeBtn/StaticBody2D" unique_id=1661546232]
+position = Vector2(4.3478374, 39.130535)
+polygon = PackedVector2Array(0.65216064, 15.869461, 15.652161, 0.86946106, 18.15216, -11.630539, 30.65216, -14.130539, 50.65216, -14.130539, 88.15216, -1.630539, 128.15213, 10.869461, 130.65213, 63.36946, 125.65213, 65.86946, 128.15213, 90.86946, 3.1521606, 90.86946, 3.1521606, 65.86946, -1.8478394, 60.86946)
+
 [node name="Path1" parent="." unique_id=514115052 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 32.0
-offset_right = 43.0
-offset_bottom = 72.0
+offset_left = 0.9999999
+offset_top = 23.0
+offset_right = 41.0
+offset_bottom = 63.0
 path_number = 1
 
 [node name="Path2" parent="." unique_id=1228126815 instance=ExtResource("5_a712v")]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 107.0
+offset_top = 120.0
 offset_right = 43.0
-offset_bottom = 147.0
+offset_bottom = 160.0
 path_number = 2
 
 [node name="Path3" parent="." unique_id=2076128032 instance=ExtResource("5_a712v")]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 139.0
-offset_right = 132.0
-offset_bottom = 179.0
+offset_left = 99.00001
+offset_top = 147.0
+offset_right = 139.0
+offset_bottom = 187.0
 path_number = 3
 
 [node name="Path4" parent="." unique_id=554041010 instance=ExtResource("5_a712v")]
-z_index = 1
 layout_mode = 0
-offset_left = 254.0
-offset_top = 137.0
-offset_right = 294.0
-offset_bottom = 177.0
+offset_left = 262.00003
+offset_top = 149.0
+offset_right = 302.00003
+offset_bottom = 189.0
 path_number = 4
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=43598028]
@@ -181,75 +265,111 @@ scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AAAhABIAAAAAAAEAAAAZAA4AAAACAAMAAAApABYAAAACAAMAAAApAA4AAAADAAMAAAAxAAoAAAADAAMAAAA5AAYAAAADAAMAAABBAAIAAAADAAMAAAAJAAYAAAACAAMAAAA5AB4AAAACAAMAAABBACIAAAACAAMAAAA5ABYAAAADAAMAAABBABIAAAADAAMAAAAZABYAAAADAAMAAAARABoAAAADAAMAAAAJAB4AAAADAAMAAAABACIAAAADAAMAAAAxABoAAAAAAAEAAAApAB4AAAADAAMAAAAhACIAAAADAAMAAAAZACYAAAADAAMAAAARAAoAAAAAAAEAAAAZAAYAAAADAAMAAAAhAAIAAAADAAMAAAApAP7/AAADAAMAAAAJAA4AAAADAAMAAAABABIAAAADAAMAAAABAAIAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_ri767")
 
-[node name="Flower6" type="Sprite2D" parent="." unique_id=1986633959]
+[node name="Plants" type="Node2D" parent="." unique_id=2097093964]
+
+[node name="Flower6" type="Sprite2D" parent="Plants" unique_id=1986633959]
 position = Vector2(77, 100)
 texture = ExtResource("8_eoxer")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835001980]
-position = Vector2(100, 87)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.97446626
-flip_h = true
-
-[node name="Flower5" type="Sprite2D" parent="." unique_id=609302959]
+[node name="Flower5" type="Sprite2D" parent="Plants" unique_id=609302959]
 position = Vector2(46, 92)
 texture = ExtResource("10_wdl18")
 
-[node name="Flower4" type="Sprite2D" parent="." unique_id=889975001]
+[node name="Flower4" type="Sprite2D" parent="Plants" unique_id=889975001]
 position = Vector2(95, 19)
 texture = ExtResource("11_migmm")
 
-[node name="Flower3" type="Sprite2D" parent="." unique_id=738478261]
+[node name="Flower3" type="Sprite2D" parent="Plants" unique_id=738478261]
 position = Vector2(240, 96)
 texture = ExtResource("11_migmm")
 
-[node name="Mushroom" type="Sprite2D" parent="." unique_id=867320188]
+[node name="Mushroom" type="Sprite2D" parent="Plants" unique_id=867320188]
 position = Vector2(253.8125, 70.68751)
 scale = Vector2(1.1484361, 1.0859375)
 texture = ExtResource("12_wdl18")
 
-[node name="Flower8" type="Sprite2D" parent="." unique_id=2014149974]
+[node name="Flower8" type="Sprite2D" parent="Plants" unique_id=2014149974]
 position = Vector2(237, 22)
 texture = ExtResource("8_eoxer")
 
-[node name="Flower9" type="Sprite2D" parent="." unique_id=1087164927]
+[node name="Flower9" type="Sprite2D" parent="Plants" unique_id=1087164927]
 position = Vector2(225, 154)
 texture = ExtResource("8_eoxer")
 
-[node name="Flower13" type="Sprite2D" parent="." unique_id=1711522861]
+[node name="Flower13" type="Sprite2D" parent="Plants" unique_id=1711522861]
 position = Vector2(305, 125)
 texture = ExtResource("8_eoxer")
 
-[node name="Flower10" type="Sprite2D" parent="." unique_id=1165627673]
+[node name="Flower10" type="Sprite2D" parent="Plants" unique_id=1165627673]
 position = Vector2(70.5, 161)
 scale = Vector2(1.1875, 1.125)
 texture = ExtResource("12_wdl18")
 
-[node name="Flower11" type="Sprite2D" parent="." unique_id=1910490515]
+[node name="Flower11" type="Sprite2D" parent="Plants" unique_id=1910490515]
 position = Vector2(131, 125)
 texture = ExtResource("11_migmm")
 
-[node name="Flower12" type="Sprite2D" parent="." unique_id=2140533831]
+[node name="Flower12" type="Sprite2D" parent="Plants" unique_id=2140533831]
 position = Vector2(246, 166)
 texture = ExtResource("10_wdl18")
 
-[node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("8_1dhmk")]
-layout_mode = 0
-offset_left = 62.000008
-offset_top = 60.0
-offset_right = 112.0
-offset_bottom = 90.0
-scale = Vector2(0.6, 0.6)
-text = "Hello, where should I go?"
-
-[node name="Flower2" type="Sprite2D" parent="." unique_id=1000128536]
+[node name="Flower2" type="Sprite2D" parent="Plants" unique_id=1000128536]
 position = Vector2(198, 19)
 texture = ExtResource("10_wdl18")
 
-[node name="Flower" type="Sprite2D" parent="." unique_id=144584611]
+[node name="Flower" type="Sprite2D" parent="Plants" unique_id=144584611]
 position = Vector2(65, 10.5)
 scale = Vector2(1.1250001, 1.0625)
 texture = ExtResource("12_wdl18")
+
+[node name="MovablePlayer" type="CharacterBody2D" parent="." unique_id=2087018888]
+z_index = 1
+position = Vector2(104, 92)
+script = ExtResource("13_jt3i8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MovablePlayer" unique_id=1835001980]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_478fi")
+animation = &"run"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.13675587
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovablePlayer" unique_id=422436507]
+position = Vector2(-2, 1)
+shape = SubResource("CapsuleShape2D_migmm")
+
+[node name="Dialogue" parent="MovablePlayer" unique_id=976314930 instance=ExtResource("8_1dhmk")]
+offset_left = -37.0
+offset_top = -25.0
+offset_right = 12.999992
+offset_bottom = 5.0
+scale = Vector2(0.6, 0.6)
+text = "Hello, where should I go?"
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=850311139]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boundaries" unique_id=1769094084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=301147857]
+position = Vector2(160, -2)
+shape = SubResource("RectangleShape2D_jt3i8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Boundaries" unique_id=1805640896]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D2" unique_id=1429569421]
+position = Vector2(-4.5, 90)
+shape = SubResource("RectangleShape2D_q33u5")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Boundaries" unique_id=1833390682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D3" unique_id=1962185993]
+position = Vector2(160, 183)
+shape = SubResource("RectangleShape2D_hvgpy")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Boundaries" unique_id=1602738730]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=2067216539]
+position = Vector2(323, 90)
+shape = SubResource("RectangleShape2D_4qf4k")

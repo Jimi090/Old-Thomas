@@ -6,10 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://caft8y1peiy0y" path="res://UI/MainMenu/assets/padlock.png" id="4_6nr7b"]
 
 [node name="Path" type="Button" unique_id=514115052]
+z_index = 1
 offset_left = 6.0
 offset_top = 38.0
 offset_right = 46.0
 offset_bottom = 78.0
+scale = Vector2(0.7, 0.7)
+focus_mode = 0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("1_rga7j")
@@ -46,3 +49,9 @@ grow_horizontal = 0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_6nr7b")
 stretch_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1628727880]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1653009749]
+polygon = PackedVector2Array(1.4285707, 4.285717, 15.714285, 4.285717, 15.714285, 0, 24.285711, 0, 24.285711, 4.285717, 40, 4.285717, 40, 27.142857, 24.285711, 27.142857, 24.285711, 41.42857, 15.714285, 41.42857, 15.714285, 27.142857, 0, 27.142857, 0, 4.285717)

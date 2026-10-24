@@ -12,7 +12,8 @@ func _ready() -> void:
 	var level = file_path.get_slice("/", 2)
 
 	if path[-1] == "1":
-		dog.queue_free()
+		if dog:
+			dog.queue_free()
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
 	elif path[-1] == "2":

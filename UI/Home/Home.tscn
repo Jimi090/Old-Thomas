@@ -219,10 +219,10 @@ value = 50.0
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("1_ofpfa")]
 layout_mode = 0
-offset_left = 6.01
-offset_top = 6.0100007
-offset_right = 156.01
-offset_bottom = 156.01
+offset_left = 4.01
+offset_top = 4.01
+offset_right = 154.01
+offset_bottom = 154.01
 
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318381936]
 position = Vector2(159, 151)
