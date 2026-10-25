@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://drl5kfk6wvm4b" path="res://UI/MainMenu/path_button.gd" id="1_rga7j"]
 [ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="2_rga7j"]
 [ext_resource type="Texture2D" uid="uid://caft8y1peiy0y" path="res://UI/MainMenu/assets/padlock.png" id="4_6nr7b"]
+[ext_resource type="PackedScene" uid="uid://fdt43rm78eoy" path="res://UI/MainMenu/player_detector.tscn" id="5_y7tch"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvhsi"]
+radius = 28.713928
 
 [node name="Path" type="Button" unique_id=514115052]
 z_index = 1
@@ -55,3 +59,13 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1653009749]
 polygon = PackedVector2Array(1.4285707, 4.285717, 15.714285, 4.285717, 15.714285, 0, 24.285711, 0, 24.285711, 4.285717, 40, 4.285717, 40, 27.142857, 24.285711, 27.142857, 24.285711, 41.42857, 15.714285, 41.42857, 15.714285, 27.142857, 0, 27.142857, 0, 4.285717)
+
+[node name="PlayerDetector" parent="." unique_id=1252997287 instance=ExtResource("5_y7tch")]
+visible = false
+position = Vector2(-24.285713, -19.999998)
+
+[node name="CollisionShape2D" parent="PlayerDetector" index="0" unique_id=1497682237]
+position = Vector2(44.285713, 39.999996)
+shape = SubResource("CircleShape2D_yvhsi")
+
+[editable path="PlayerDetector"]
