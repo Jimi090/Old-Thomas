@@ -5,7 +5,7 @@ extends Control
 @onready var path_3: Button = $Path3
 @onready var path_4: Button = $Path4
 @onready var shop_btn: Button = $ShopBtn
-@onready var town_btn: Button = $TownBtn
+@onready var church_btn: Button = $ChurchBtn
 @onready var home_btn: Button = $HomeBtn
 
 const SHOP = preload("uid://tf36yngqrqgr")
@@ -16,7 +16,7 @@ const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 
 func _ready() -> void:
 	shop_btn.pressed.connect(open_shop)
-	town_btn.pressed.connect(open_town)
+	church_btn.pressed.connect(open_town)
 	home_btn.pressed.connect(open_home)
 	path_1.pressed.connect(_on_click_path_button.bind(path_1.path_number))
 

@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://v0hkjjsnkejg" path="res://UI/MainMenu/assets/path dirt.png" id="3_nahvw"]
 [ext_resource type="PackedScene" uid="uid://duo1fi1ph7hv6" path="res://UI/MainMenu/path_button.tscn" id="5_a712v"]
 [ext_resource type="Texture2D" uid="uid://p1ehjwcnfgos" path="res://UI/Home/home.png" id="5_jhcbk"]
-[ext_resource type="PackedScene" uid="uid://fdt43rm78eoy" path="res://UI/MainMenu/player_detector.tscn" id="6_q33u5"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="6_ri767"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="7_a712v"]
 [ext_resource type="PackedScene" uid="uid://djosr1t6fp8tb" path="res://Dialogue/Dialogue.tscn" id="8_1dhmk"]
@@ -16,15 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://b18lxj8o7t2wi" path="res://UI/MainMenu/assets/flower2.png" id="11_migmm"]
 [ext_resource type="Texture2D" uid="uid://6nj0kkfdbegk" path="res://UI/MainMenu/assets/mushroomver2.png" id="12_wdl18"]
 [ext_resource type="Script" uid="uid://d4audfmd1x7he" path="res://UI/MainMenu/movable_player.gd" id="13_jt3i8"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4qf4k"]
-radius = 125.62342
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hvgpy"]
-radius = 35.22783
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_q33u5"]
-radius = 78.38176
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri767"]
 resource_name = "Path"
@@ -165,25 +155,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.2, 0.58431375, 0.14509805, 1)
 
-[node name="BackBtn" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
+[node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("6_ri767")]
 z_index = 1
 layout_mode = 1
 focus_mode = 0
 destiantion = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="BackBtn" unique_id=1470120024]
+[node name="StaticBody2D" type="StaticBody2D" parent="BackButton" unique_id=1470120024]
 visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BackBtn/StaticBody2D" unique_id=1870612049]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BackButton/StaticBody2D" unique_id=1870612049]
 position = Vector2(4.3478374, 39.130535)
 polygon = PackedVector2Array(-4.3478394, -39.130535, 145.65215, -39.130535, 145.65215, 110.86945, -4.3478394, 110.86945)
-
-[node name="PlayerDetector" parent="BackBtn" unique_id=1252997287 instance=ExtResource("6_q33u5")]
-visible = false
-position = Vector2(9.999999, 0)
-
-[node name="CollisionShape2D" parent="BackBtn/PlayerDetector" index="0" unique_id=1497682237]
-shape = SubResource("CircleShape2D_4qf4k")
 
 [node name="ShopBtn" type="Button" parent="." unique_id=50165495]
 layout_mode = 0
@@ -203,14 +186,7 @@ visible = false
 position = Vector2(4.3478374, 39.130535)
 polygon = PackedVector2Array(4.6521606, -34.13054, 47.65216, -33.13054, 41.65216, 2.869461, -0.34783936, 3.869461)
 
-[node name="PlayerDetector" parent="ShopBtn" unique_id=1860425107 instance=ExtResource("6_q33u5")]
-visible = false
-
-[node name="CollisionShape2D" parent="ShopBtn/PlayerDetector" index="0" unique_id=1497682237]
-position = Vector2(28.999992, 26)
-shape = SubResource("CircleShape2D_hvgpy")
-
-[node name="TownBtn" type="Button" parent="." unique_id=1056776551]
+[node name="ChurchBtn" type="Button" parent="." unique_id=1056776551]
 z_index = 2
 y_sort_enabled = true
 layout_mode = 0
@@ -224,21 +200,13 @@ mouse_default_cursor_shape = 2
 icon = ExtResource("2_8x0bb")
 flat = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TownBtn" unique_id=1050710460]
-visible = false
+[node name="StaticBody2D" type="StaticBody2D" parent="ChurchBtn" unique_id=1050710460]
 z_index = 1
 y_sort_enabled = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TownBtn/StaticBody2D" unique_id=1066146590]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChurchBtn/StaticBody2D" unique_id=1066146590]
 position = Vector2(4.3478374, 39.130535)
 polygon = PackedVector2Array(8.695679, 7.6293945e-06, 21.739197, 7.6293945e-06, 28.260925, 7.6293945e-06, 58.6958, -32.608776, 69.5654, -32.608776, 95.652405, -2.173912, 126.08728, -2.173912, 126.08728, 60.869728, 95.652405, 67.39149, 76.08716, 73.913246, 52.17404, 76.087166, 43.478363, 69.56541, 0, 60.869728, 0, 19.565277, 0, 7.6293945e-06)
-
-[node name="PlayerDetector" parent="TownBtn" unique_id=1897385488 instance=ExtResource("6_q33u5")]
-visible = false
-
-[node name="CollisionShape2D" parent="TownBtn/PlayerDetector" index="0" unique_id=1497682237]
-position = Vector2(63.043644, 69.5654)
-shape = SubResource("CircleShape2D_q33u5")
 
 [node name="HomeBtn" type="Button" parent="." unique_id=86880024]
 z_index = 2
@@ -259,9 +227,6 @@ visible = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HomeBtn/StaticBody2D" unique_id=1661546232]
 position = Vector2(4.3478374, 39.130535)
 polygon = PackedVector2Array(0.65216064, 15.869461, 15.652161, 0.86946106, 18.15216, -11.630539, 30.65216, -14.130539, 50.65216, -14.130539, 88.15216, -1.630539, 128.15213, 10.869461, 130.65213, 63.36946, 125.65213, 65.86946, 128.15213, 90.86946, 3.1521606, 90.86946, 3.1521606, 65.86946, -1.8478394, 60.86946)
-
-[node name="PlayerDetector" parent="HomeBtn" unique_id=1571712309 instance=ExtResource("6_q33u5")]
-visible = false
 
 [node name="Path1" parent="." unique_id=514115052 instance=ExtResource("5_a712v")]
 layout_mode = 0
@@ -371,14 +336,13 @@ frame = 2
 frame_progress = 0.13675587
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovablePlayer" unique_id=422436507]
-visible = false
 position = Vector2(-2, 1)
 shape = SubResource("CapsuleShape2D_migmm")
 
 [node name="Dialogue" parent="MovablePlayer" unique_id=976314930 instance=ExtResource("8_1dhmk")]
-offset_left = -38.0
+offset_left = -37.0
 offset_top = -25.0
-offset_right = 11.999992
+offset_right = 12.999992
 offset_bottom = 5.0
 scale = Vector2(0.6, 0.6)
 text = "Hello, where should I go?"
@@ -409,7 +373,3 @@ shape = SubResource("RectangleShape2D_hvgpy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=2067216539]
 position = Vector2(323, 90)
 shape = SubResource("RectangleShape2D_4qf4k")
-
-[editable path="BackBtn/PlayerDetector"]
-[editable path="ShopBtn/PlayerDetector"]
-[editable path="TownBtn/PlayerDetector"]

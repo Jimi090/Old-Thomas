@@ -15,7 +15,7 @@ enum Boss_State {
 }
 
 const CHARGE_SPEED := 300
-const CHARGE_DAMAGE := 20
+const CHARGE_DAMAGE := 40
 const CHARGE_PUSH_FORCE := 700
 const CHARGE_COOLDOWN = 6.0
 
