@@ -61,6 +61,7 @@ visible = false
 polygon = PackedVector2Array(1.4285707, 4.285717, 15.714285, 4.285717, 15.714285, 0, 24.285711, 0, 24.285711, 4.285717, 40, 4.285717, 40, 27.142857, 24.285711, 27.142857, 24.285711, 41.42857, 15.714285, 41.42857, 15.714285, 27.142857, 0, 27.142857, 0, 4.285717)
 
 [node name="PlayerDetector" parent="." unique_id=1252997287 instance=ExtResource("5_y7tch")]
+visible = false
 position = Vector2(-24.285713, -19.999998)
 
 [node name="CollisionShape2D" parent="PlayerDetector" index="0" unique_id=1497682237]
