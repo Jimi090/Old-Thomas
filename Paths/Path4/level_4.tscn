@@ -629,17 +629,20 @@ position = Vector2(1277, 225)
 [node name="Potion" parent="." index="19" unique_id=964302324 instance=ExtResource("8_f4ag1")]
 position = Vector2(738, 118)
 
-[node name="Potion2" parent="." index="20" unique_id=1062261328 instance=ExtResource("8_f4ag1")]
+[node name="Potion3" parent="." index="20" unique_id=611616199 instance=ExtResource("8_f4ag1")]
+position = Vector2(1205, 199)
+
+[node name="Potion2" parent="." index="21" unique_id=1062261328 instance=ExtResource("8_f4ag1")]
 position = Vector2(1407, 167)
 
-[node name="Cinnamon" parent="." index="21" unique_id=2118643571 instance=ExtResource("9_swri4")]
+[node name="Cinnamon" parent="." index="22" unique_id=2118643571 instance=ExtResource("9_swri4")]
 position = Vector2(1085, 150)
 
-[node name="Cinnamon2" parent="." index="22" unique_id=1015984289 instance=ExtResource("9_swri4")]
+[node name="Cinnamon2" parent="." index="23" unique_id=1015984289 instance=ExtResource("9_swri4")]
 position = Vector2(671, 167.00002)
 
-[node name="Cinnamon3" parent="." index="23" unique_id=834992109 instance=ExtResource("9_swri4")]
+[node name="Cinnamon3" parent="." index="24" unique_id=834992109 instance=ExtResource("9_swri4")]
 position = Vector2(383, 88)
 
-[node name="Cinnamon4" parent="." index="24" unique_id=1742470919 instance=ExtResource("9_swri4")]
+[node name="Cinnamon4" parent="." index="25" unique_id=1742470919 instance=ExtResource("9_swri4")]
 position = Vector2(1344.0001, 199)

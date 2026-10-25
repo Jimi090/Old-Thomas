@@ -5,8 +5,9 @@
 Join Thomas on an adventure as he conquers hurdles, one path at a time. Destroy monsters, collect coins and cinnamon, and help Thomas evolve as a person.
 Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
 Path 1 is centred around harvest and autumn time, when leaves change and the winter chill is drawing near.
-Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels.
-Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!)
+Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels, plus you get a cute lil dog :)!
+Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!). And you can't forget the new friend you meet along the way!
+Path 4 keeps the nice autumn theme but also IS HARDER!!! 
 Plus, more paths and features are always coming out, so make sure to keep playing every week!!!
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
 And you can't forget about the excellent music; it really helps set the mood!!! (it's advenutre and zelda themed hehe)
@@ -19,7 +20,10 @@ I hope you enjoy this adventure. Good luck! (Yippppee!)
 ## Game Structure
 
 This game is structured very uniquely! You follow Thomas as you finish paths one by one.
-Each path has four levels, with 3 paths being available currently. On top of that you are also able to go to the shop and buy upgrades!
+Each path has four levels, with 4 paths being available currently. 
+On top of that you are also able to go to the shop and buy upgrades!
+Visit the town to complete quests and earn rewards!
+Can't forget to occasionally visit home to meet the friends you met along the way as well as collectables!!!
 At the end of paths you must defeat a diffucult boss! You may want to gear up!!!
 
 ## Controls
@@ -30,19 +34,26 @@ Basic attack: J or Right Mouse Button
 
 Ranged attack: K or Left Mouse Button
 
-Ability: 1
+Friend ability: 1
 
 Skip cutscene: S
 
 ## New Features
 
-This week we implemented a boss for the end of paths with it's own projectile.
-Additonally the levels in path one were extended to be a bit longer!
-There is also a new cinnamon collectable/pickup added.
-A pause menu was added as well (which took so longs so hopefully it was worth it!)
-And you can't forget the cleaner UI! (like in the shop and town)
-Settings were also updated for more personalization and features!
-There may be some more features I can't remember from the top of my head. but you will likely notice it in the game when playing! (too much updates to keep track of lololol!)
+This week lot of new features were added!
+First we have the path 2 boss finished.
+We have a friend ability that can help deal damage to enemies.
+We have uped the UI throught the game (especially the shop!)
+We have also allowed Thomas to walk around in the main menu using movement controls and enter different paths, the shop, your home, or town through this method.
+There is a new path 4 <3 !!!
+Levels were updated to be much more polished and nicer for gameplay.
+New range attack!
+New home in the main menu, where you can see collectables and happiness.
+Main menu was beautified with flowers and mushrooms!
+You can now view the cooldown for different attack options when in a level.
+That should be it for this week (again lots of stuff were made so I may have missed a few minor changes!)
+
+Also we have followed the theme again this week! I don't know if you saw, but the new friend ability ties in with theme best friend! This is because after completing path 2 you would meet you new best friend and they will be able to help you when in need!
 
 ## AI Usage
 
@@ -50,6 +61,7 @@ AI was used in this project for
 - debugging the code for the ghost (but has now been updated by a human)
 - debugging code for the cutscene in Godot (as this is the first time I have ever made a cutscene and woah that was hard a first lol)
 - understanding the debugger (some of the stuff were so hard to understand for my lil brain *sob*)
+- fixing the git commits (asked what was needed to fix the mess)
 
 ## Process of Creating this Game
 
@@ -62,7 +74,7 @@ This created a problem with communication because if we couldn't continue or sub
 To solve this, we made sure to share what we will do beforehand and what we have after!
 Together, we have worked so hard to create a game for others to enjoy!
 
-*Also note for this week! I had to revert some commits due to conflicts and redo some level changes ALL OVER AGAIN. but it should how in the git history!
+*Also note for week 5! I had to revert some commits due to conflicts and redo some level changes ALL OVER AGAIN. but it should how in the git history!
 
 <3 <3 <3
 
