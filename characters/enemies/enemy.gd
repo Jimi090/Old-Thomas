@@ -12,7 +12,7 @@ var DAMAGE: int
 var ATTACK_COOLDOWN: float
 var JUMP_FORCE: int
 
-var direction: int = 1
+var direction: float = 1
 var can_attack := true
 var previous_position := Vector2(0, 0)
 
@@ -36,7 +36,6 @@ func _physics_process(delta: float) -> void:
 
 	# attack
 	if can_attack and not bodies.is_empty():
-		state = State.BASIC_ATTACK
 		attack(attack_range.get_overlapping_bodies()[0])
 
 	# if player not in range
@@ -76,7 +75,7 @@ func attack(body: Character) -> void:
 	can_attack = true
 
 
-func change_direction_to(new_direction: int):
+func change_direction_to(new_direction: float):
 	if direction == new_direction:
 		return
 	direction = new_direction

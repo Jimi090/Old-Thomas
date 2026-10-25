@@ -92,6 +92,11 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 9.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"take_damage",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kara3"]
@@ -109,7 +114,6 @@ script = ExtResource("1_ipwhs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"idle"
-frame_progress = 0.8471245
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 visible = false
@@ -126,7 +130,6 @@ shape = SubResource("CircleShape2D_srkg8")
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
 visible = false
-position = Vector2(-6, 1.5)
 target_position = Vector2(26, 38.5)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
@@ -141,8 +144,8 @@ collision_mask = 4
 position = Vector2(-15, 0)
 polygon = PackedVector2Array(-1, -12, -1, -6.5, 0, -0.5, 3, 5, 5, 5, 5, 2.5, 4, -10.5, 3, -12)
 
-[node name="ChargeTimer" type="Timer" parent="." unique_id=441698421]
+[node name="MeteorShowerTimer" type="Timer" parent="." unique_id=441698421]
 wait_time = 2.0
 autostart = true
 
-[connection signal="timeout" from="ChargeTimer" to="." method="_on_charge_timer_timeout"]
+[connection signal="timeout" from="MeteorShowerTimer" to="." method="_on_meteor_shower_timer_timeout"]
