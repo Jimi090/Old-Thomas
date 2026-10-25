@@ -17,3 +17,8 @@ func _on_pressed() -> void:
 			GameManager.go_to_main_menu()
 		Destination.START:
 			GameManager.go_to_start_menu()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ESC"):
+		_on_pressed()

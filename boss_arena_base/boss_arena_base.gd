@@ -3,6 +3,7 @@ extends Node2D
 @onready var key: Key = $Key
 @onready var player: Player = $Player
 @onready var key_marker_2d: Marker2D = $KeyMarker2D
+@onready var hud: HUD = $HUD
 
 const COIN = preload("uid://dharn33rhc8ko")
 var coin_number: int
@@ -18,6 +19,13 @@ func _ready():
 	coin_number = int(path[-1]) * 10
 	key.path_name = path
 	key.level_name = level
+
+	if path[-1] == "1":
+		player.ability1_used = true
+		hud.get_child(0).get_node("Ability1CooldownBar").hide()
+	elif path[-1] == "2":
+		player.ability1_used = true
+		hud.get_child(0).get_node("Ability1CooldownBar").hide()
 
 
 func _on_player_death():

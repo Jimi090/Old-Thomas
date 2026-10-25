@@ -191,6 +191,7 @@ sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
+visible = false
 position = Vector2(-4, 2.5)
 shape = SubResource("RectangleShape2D_8k64i")
 
