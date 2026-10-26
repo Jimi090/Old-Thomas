@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cxnxmdjm8xfvb"]
+
+[ext_resource type="Script" uid="uid://cq0bkiajsgq7s" path="res://characters/enemies/Boss2/boss_2.gd" id="1_ywpu0"]
+[ext_resource type="Texture2D" uid="uid://bbwyb0xp5sp4u" path="res://characters/enemies/Boss3/sprite/boss3-idle.png" id="2_ojsll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dwhe"]
+atlas = ExtResource("2_ojsll")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dwhe")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kara3"]
+size = Vector2(33, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
+radius = 59.008472
+
+[node name="Boss2" type="CharacterBody2D" unique_id=1954414926]
+scale = Vector2(2, 2)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ywpu0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
+sprite_frames = SubResource("SpriteFrames_nrtow")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
+visible = false
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_kara3")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
+visible = false
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1874958705]
+shape = SubResource("CircleShape2D_srkg8")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
+visible = false
+target_position = Vector2(26, 38.5)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
+visible = false
+target_position = Vector2(23, 16)
+
+[node name="MeteorShowerTimer" type="Timer" parent="." unique_id=441698421]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="MeteorShowerTimer" to="." method="_on_meteor_shower_timer_timeout"]
