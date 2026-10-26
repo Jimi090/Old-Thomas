@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://duoeyp8ngqrs1" path="res://characters/friend/assets/idle-friend.png" id="5_hpyr8"]
 [ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_etao0"]
 [ext_resource type="Texture2D" uid="uid://ctjq0i6kb1x0o" path="res://pickups/Chest/Chest.png" id="8_ygfbf"]
+[ext_resource type="Texture2D" uid="uid://1mglo31b32u1" path="res://UI/Home/cross.png" id="9_8ry1w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofpfa"]
 content_margin_left = 2.0
@@ -169,9 +170,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
-font = ExtResource("2_ygfbf")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ry1w"]
 bg_color = Color(0, 0, 0, 0.61960787)
 corner_radius_top_left = 10
@@ -206,9 +204,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -28.0
+offset_left = -50.0
 offset_top = 8.0
-offset_right = 72.0
+offset_right = 50.0
 offset_bottom = 28.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_ygfbf")
@@ -355,16 +353,7 @@ size_flags_vertical = 3
 texture = ExtResource("8_ygfbf")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="." unique_id=1509579128]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 9.0
-offset_right = 101.0
-offset_bottom = 25.0
-text = "Home"
-label_settings = SubResource("LabelSettings_nrtow")
-
-[node name="Label2" type="Label" parent="." unique_id=1734461472]
+[node name="WelcomeLabel" type="Label" parent="." unique_id=1734461472]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 1
 anchors_preset = 4
@@ -383,3 +372,16 @@ label_settings = SubResource("LabelSettings_2fkp1")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="CloseWelcomeLabelButton" type="Button" parent="WelcomeLabel" unique_id=1072524805]
+layout_mode = 0
+offset_left = 79.99999
+offset_top = 5.0
+offset_right = 344.0
+offset_bottom = 269.0
+scale = Vector2(0.04, 0.04)
+mouse_default_cursor_shape = 2
+icon = ExtResource("9_8ry1w")
+flat = true
+
+[connection signal="pressed" from="WelcomeLabel/CloseWelcomeLabelButton" to="." method="_on_close_welcome_label_button_pressed"]

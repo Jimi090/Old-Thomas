@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c6m687m52qrkt" path="res://UI/shop/assets/shoe-pixel.png" id="6_7hdkg"]
 [ext_resource type="Texture2D" uid="uid://bi4ggldubpcb3" path="res://UI/shop/assets/necklace-pixel.png" id="7_7hdkg"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="8_eh40j"]
+[ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="10_clrk4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_givde"]
 bg_color = Color(0, 0, 0, 0.56078434)
@@ -126,5 +127,8 @@ label_settings = SubResource("LabelSettings_3al1m")
 
 [node name="BackButton" parent="." unique_id=2064163710 instance=ExtResource("8_eh40j")]
 layout_mode = 1
+
+[node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("10_clrk4")]
+position = Vector2(181, 77)
 
 [connection signal="pressed" from="Buy_btn" to="." method="_on_buy_btn_pressed"]

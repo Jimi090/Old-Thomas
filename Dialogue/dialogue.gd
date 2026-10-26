@@ -1,11 +1,22 @@
 extends Panel
 class_name Dialogue
-@export var text: String
 @onready var label: Label = $Label
+var text: String:
+	set(value):
+		text = value
+		if text == "":
+			queue_free()
+		else:
+			change_text()
 
 
 func _ready() -> void:
-	label.text = text
+	change_text()
+
+
+func change_text():
+	if label != null:
+		label.text = text
 
 
 func change_sharp_corner_to(corner: Corner):

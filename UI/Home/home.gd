@@ -6,6 +6,7 @@ extends Control
 @onready var friend_animated_sprite_2d: AnimatedSprite2D = $FriendAnimatedSprite2D
 @onready var flying_friend_sprite_2d: Sprite2D = $FlyingFriendSprite2D
 @onready var chest_container: Control = $ChestContainer
+@onready var welcome_label: Label = $WelcomeLabel
 
 var patrol_distance := 100
 var PATROL_SPEED = 150
@@ -17,8 +18,15 @@ var progress_decimal: float
 
 func _ready() -> void:
 	update_progress_bar()
-	random_dog_flips()
-	friends_entrance()
+	if progress_decimal >= 0.25:
+		random_dog_flips()
+	else:
+		dog_animated_sprite_2d.hide()
+	if progress_decimal >= 0.5:
+		friends_entrance()
+	else:
+		friend_animated_sprite_2d.hide()
+		flying_friend_sprite_2d.hide()
 	show_chests()
 
 	point1 = player_animated_sprite_2d.position.x - patrol_distance
@@ -107,3 +115,7 @@ func show_chests():
 		if 100.0 / float(total) * counter > progress_decimal * 100:
 			chest.hide()
 		counter += 1
+
+
+func _on_close_welcome_label_button_pressed() -> void:
+	welcome_label.hide()

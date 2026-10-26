@@ -4,9 +4,16 @@ const DIALOGUE = preload("uid://djosr1t6fp8tb")
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var start_dialogue: Panel = $Dialogue
+@export var start_dialogue_text: String
 
 @onready var current_dialogue: Dialogue = start_dialogue
 @onready var current_dialogue_button: Button = null
+
+enum Type {
+	MAIN_MENU,
+	NORMAL_UI,
+}
+@export var type: Type = Type.NORMAL_UI
 
 var SPEED := 50
 
@@ -20,7 +27,11 @@ var dialogue_position: Dialogue_Position = Dialogue_Position.TOP_LEFT
 
 
 func _ready() -> void:
-	hide_start_dialogue()
+	if start_dialogue_text:
+		start_dialogue.text = start_dialogue_text
+		hide_start_dialogue()
+	else:
+		start_dialogue.queue_free()
 
 
 func _physics_process(delta: float) -> void:
@@ -110,8 +121,27 @@ func when_out_range_of_button(_button):
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Enter") and current_dialogue_button:
-		current_dialogue_button.pressed.emit()
+	if event.is_action_pressed("Enter"):
+		if type == Type.MAIN_MENU:
+			if current_dialogue_button:
+				current_dialogue_button.pressed.emit()
+		elif type == Type.NORMAL_UI:
+			var pos = get_global_transform_with_canvas() * Vector2.ZERO
+			for node in get_tree().current_scene.get_children():
+				if node is Button and node.visible and node.get_global_rect().has_point(pos):
+					node.pressed.emit()
+					break
+				else:
+					for node2 in node.get_children():
+						if (
+							(node2 is Button or node2 is Shop_item) and node2.visible
+							and node2.get_global_rect().has_point(pos)
+						):
+							if node2 is Shop_item:
+								node2.get_child(0).pressed.emit()
+							else:
+								node2.pressed.emit()
+							break
 
 
 func move_dialogue():

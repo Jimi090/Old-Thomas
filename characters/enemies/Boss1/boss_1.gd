@@ -143,7 +143,7 @@ func charge(player: Character):
 	change_direction_to(direction)
 
 
-func change_direction_to(new_direction: int):
+func change_direction_to(new_direction: float):
 	direction = new_direction
 	if direction > 0:
 		floor_check.target_position.x = abs(floor_check.target_position.x)
