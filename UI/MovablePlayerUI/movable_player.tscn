@@ -105,13 +105,15 @@ frame = 2
 frame_progress = 0.13675587
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1140617658]
-visible = false
 position = Vector2(-2, 1)
 shape = SubResource("CapsuleShape2D_migmm")
 
 [node name="Dialogue" parent="." unique_id=976314930 instance=ExtResource("4_2npw3")]
-offset_left = -38.0
-offset_top = -25.0
-offset_right = 11.999992
-offset_bottom = 5.0
+offset_left = -39.0
+offset_top = -26.0
+offset_right = 11.0
+offset_bottom = 4.0
 scale = Vector2(0.6, 0.6)
+
+[node name="DialoguePositionMarker" type="Marker2D" parent="." unique_id=1319151419]
+position = Vector2(-9, -8)

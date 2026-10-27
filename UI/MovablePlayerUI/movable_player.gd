@@ -8,6 +8,7 @@ const DIALOGUE = preload("uid://djosr1t6fp8tb")
 
 @onready var current_dialogue: Dialogue = start_dialogue
 @onready var current_dialogue_button: Button = null
+@onready var dialogue_position_marker: Marker2D = $DialoguePositionMarker
 
 enum Type {
 	MAIN_MENU,
@@ -29,12 +30,19 @@ var dialogue_position: Dialogue_Position = Dialogue_Position.TOP_LEFT
 func _ready() -> void:
 	if start_dialogue_text:
 		start_dialogue.text = start_dialogue_text
-		hide_start_dialogue()
 	else:
 		start_dialogue.queue_free()
 	if type == Type.NORMAL_UI:
 		scale = Vector2(0.5, 0.5)
+		dialogue_position_marker.scale = Vector2.ONE
+		start_dialogue.scale = Vector2(1.5, 1.5)
+
+		start_dialogue.position = dialogue_position_marker.position - (
+			(start_dialogue.size + Vector2(0, 25)) * start_dialogue.scale
+		)
+
 		SPEED = 200
+	await hide_start_dialogue()
 
 
 func _physics_process(delta: float) -> void:
@@ -83,13 +91,12 @@ func _physics_process(delta: float) -> void:
 				Dialogue_Position.BOTTOM_RIGHT:
 					dialogue_position = Dialogue_Position.TOP_RIGHT
 
-		move_dialogue()
-
+	move_dialogue()
 	move_and_slide()
 
 
 func hide_start_dialogue():
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	if start_dialogue:
 		start_dialogue.queue_free()
 		current_dialogue = null
