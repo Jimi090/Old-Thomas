@@ -289,5 +289,5 @@ tile_map_data = PackedByteArray(0, 0, 6, 0, 4, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 
 tile_set = SubResource("TileSet_478fi")
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("14_v5vrn")]
-position = Vector2(118, 115)
+position = Vector2(217, 124)
 start_dialogue_text = "Hi, welocme to Old Thomas! You can use me using WASD and Enter"

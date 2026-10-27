@@ -170,16 +170,26 @@ func move_dialogue():
 	if current_dialogue == null:
 		return
 
+	var scaler: Vector2
+
 	match dialogue_position:
 		Dialogue_Position.TOP_LEFT:
 			current_dialogue.change_sharp_corner_to(CORNER_BOTTOM_RIGHT)
-			current_dialogue.position = Vector2(-38, -25)
+			dialogue_position_marker.position = Vector2(-9, -10)
+			scaler = Vector2(0, 0)
 		Dialogue_Position.TOP_RIGHT:
 			current_dialogue.change_sharp_corner_to(CORNER_BOTTOM_LEFT)
-			current_dialogue.position = Vector2(10, -25)
+			dialogue_position_marker.position = Vector2(9, -10)
+			scaler = Vector2(1, 0)
 		Dialogue_Position.BOTTOM_LEFT:
 			current_dialogue.change_sharp_corner_to(CORNER_TOP_RIGHT)
-			current_dialogue.position = Vector2(-38, 12)
+			dialogue_position_marker.position = Vector2(-9, 10)
+			scaler = Vector2(0, 1)
 		Dialogue_Position.BOTTOM_RIGHT:
 			current_dialogue.change_sharp_corner_to(CORNER_TOP_LEFT)
-			current_dialogue.position = Vector2(9, 12)
+			dialogue_position_marker.position = Vector2(9, 10)
+			scaler = Vector2(1, 1)
+
+	current_dialogue.position = dialogue_position_marker.position - (
+		current_dialogue.size * current_dialogue.scale
+	) + scaler * current_dialogue.size * current_dialogue.scale

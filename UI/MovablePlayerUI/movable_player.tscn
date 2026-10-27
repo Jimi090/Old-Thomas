@@ -97,6 +97,7 @@ z_index = 1
 script = ExtResource("1_j02nd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1395959891]
+position = Vector2(2, -1)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"run"
@@ -116,4 +117,4 @@ offset_bottom = 4.0
 scale = Vector2(0.6, 0.6)
 
 [node name="DialoguePositionMarker" type="Marker2D" parent="." unique_id=1319151419]
-position = Vector2(-9, -8)
+position = Vector2(-9, -10)
