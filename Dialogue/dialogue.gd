@@ -17,6 +17,9 @@ func _ready() -> void:
 func change_text():
 	if label != null:
 		label.text = text
+		label.reset_size()
+		await get_tree().process_frame
+		size = label.get_minimum_size() + Vector2(24, 12)
 
 
 func change_sharp_corner_to(corner: Corner):

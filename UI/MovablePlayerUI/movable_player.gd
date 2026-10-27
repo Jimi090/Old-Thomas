@@ -3,7 +3,7 @@ extends CharacterBody2D
 const DIALOGUE = preload("uid://djosr1t6fp8tb")
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var start_dialogue: Panel = $Dialogue
+@onready var start_dialogue: Dialogue = $Dialogue
 @export var start_dialogue_text: String
 
 @onready var current_dialogue: Dialogue = start_dialogue
@@ -15,7 +15,7 @@ enum Type {
 }
 @export var type: Type = Type.NORMAL_UI
 
-var SPEED := 50
+var SPEED := 100
 
 enum Dialogue_Position {
 	TOP_LEFT,
@@ -32,6 +32,9 @@ func _ready() -> void:
 		hide_start_dialogue()
 	else:
 		start_dialogue.queue_free()
+	if type == Type.NORMAL_UI:
+		scale = Vector2(0.5, 0.5)
+		SPEED = 200
 
 
 func _physics_process(delta: float) -> void:
@@ -46,7 +49,14 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.flip_h = true
 		animated_sprite_2d.play("run")
 
-	velocity = direction * SPEED * delta * 100
+	velocity.x = move_toward(velocity.x, direction.x * SPEED, delta * 1000)
+	velocity.y = move_toward(velocity.y, direction.y * SPEED, delta * 1000)
+
+	var offset = 8
+	position.x = min(320 - offset, position.x)
+	position.x = max(offset, position.x)
+	position.y = min(180 - offset, position.y)
+	position.y = max(offset, position.y)
 
 	if current_dialogue:
 		# flip x
@@ -127,21 +137,26 @@ func _input(event: InputEvent) -> void:
 				current_dialogue_button.pressed.emit()
 		elif type == Type.NORMAL_UI:
 			var pos = get_global_transform_with_canvas() * Vector2.ZERO
-			for node in get_tree().current_scene.get_children():
-				if node is Button and node.visible and node.get_global_rect().has_point(pos):
-					node.pressed.emit()
-					break
-				else:
-					for node2 in node.get_children():
-						if (
-							(node2 is Button or node2 is Shop_item) and node2.visible
-							and node2.get_global_rect().has_point(pos)
-						):
-							if node2 is Shop_item:
-								node2.get_child(0).pressed.emit()
-							else:
-								node2.pressed.emit()
-							break
+			check_for_buttons(get_tree().current_scene, pos)
+
+
+func check_for_buttons(node: Node, pos: Vector2):
+	var children = node.get_children()
+	if len(children) == 0:
+		return
+	for node2 in children:
+		if (
+			(node2 is Button or node2 is Shop_item) and node2.visible
+			and node2.get_global_rect().has_point(pos)
+		):
+			if node2 is Shop_item:
+				node2.get_child(0).pressed.emit()
+			else:
+				node2.pressed.emit()
+			return
+		else:
+			check_for_buttons(node2, pos)
+	return
 
 
 func move_dialogue():

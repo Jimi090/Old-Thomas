@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_etao0"]
 [ext_resource type="Texture2D" uid="uid://ctjq0i6kb1x0o" path="res://pickups/Chest/Chest.png" id="8_ygfbf"]
 [ext_resource type="Texture2D" uid="uid://1mglo31b32u1" path="res://UI/Home/cross.png" id="9_8ry1w"]
+[ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="10_2fkp1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofpfa"]
 content_margin_left = 2.0
@@ -383,5 +384,7 @@ scale = Vector2(0.04, 0.04)
 mouse_default_cursor_shape = 2
 icon = ExtResource("9_8ry1w")
 flat = true
+
+[node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("10_2fkp1")]
 
 [connection signal="pressed" from="WelcomeLabel/CloseWelcomeLabelButton" to="." method="_on_close_welcome_label_button_pressed"]
