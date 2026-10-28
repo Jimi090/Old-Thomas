@@ -591,7 +591,7 @@ tile_map_data = PackedByteArray("AAABAAYAAAAAAA0AAAABAAcAAAAAAA4AAAACAAYAAAABAA0
 tile_set = SubResource("TileSet_t5d4c")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." index="4" unique_id=479263427]
-tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAAAmAAkAAQAJAAMAAAAnAAcAAQAKAAEAAAAnAAgAAQAKAAIAAAAnAAkAAQAKAAMAAAAoAAkAAQALAAMAAAAfAAkAAQAMAAEAAAAgAAYAAQAGAAEAAAAgAAcAAQAGAAIAAAAgAAgAAQAGAAMAAAANAAMAAQAHAAEAAAANAAQAAQAHAAIAAAANAAUAAQAHAAMAAAAOAAUAAQAIAAIAAAAGAAYAAQAIAAIAAAAHAAQAAQAMAAIAAAAHAAUAAQAMAAMAAABDAAcAAQAMAAIAAABDAAgAAQAMAAMAAABEAAYAAQAIAAMAAABEAAcAAQAIAAQAAABEAAgAAQAIAAUAAAA2AAYAAQAJAAUAAABfAP3/AQAIAAMAAABfAP7/AQAIAAQAAABfAP//AQAIAAUAAABYAP//AQAHAAEAAABYAAAAAQAHAAIAAABYAAEAAQAHAAMAAABZAAEAAQANAAEAAABgAAAAAQAMAAEAAABSAAEAAQAGAAEAAABSAAIAAQAGAAIAAABSAAMAAQAGAAMAAABOAAQAAQAJAAUAAAA=")
+tile_map_data = PackedByteArray("AAABAAQAAQAFAAQAAAABAAUAAQAFAAUAAAAmAAkAAQAJAAMAAAAnAAcAAQAKAAEAAAAnAAgAAQAKAAIAAAAnAAkAAQAKAAMAAAAoAAkAAQALAAMAAAAfAAkAAQAMAAEAAAAgAAYAAQAGAAEAAAAgAAcAAQAGAAIAAAAgAAgAAQAGAAMAAAANAAMAAQAHAAEAAAANAAQAAQAHAAIAAAANAAUAAQAHAAMAAAAOAAUAAQAIAAIAAAAGAAYAAQAIAAIAAAAHAAQAAQAMAAIAAAAHAAUAAQAMAAMAAABDAAcAAQAMAAIAAABDAAgAAQAMAAMAAABEAAYAAQAIAAMAAABEAAcAAQAIAAQAAABEAAgAAQAIAAUAAAA2AAYAAQAJAAUAAABfAP3/AQAIAAMAAABfAP7/AQAIAAQAAABfAP//AQAIAAUAAABYAP//AQAHAAEAAABYAAAAAQAHAAIAAABYAAEAAQAHAAMAAABZAAEAAQANAAEAAABgAAAAAQAMAAEAAABSAAEAAQAGAAEAAABSAAIAAQAGAAIAAABSAAMAAQAGAAMAAABOAAQAAQAJAAUAAABwAAIAAQAGAAEAAABwAAMAAQAGAAIAAABwAAQAAQAGAAMAAABxAAUAAQANAAMAAAA=")
 tile_set = SubResource("TileSet_uc3s5")
 
 [node name="Ghost" parent="." index="6" unique_id=1822596800 instance=ExtResource("5_770wv")]
@@ -604,25 +604,25 @@ position = Vector2(888, 87)
 position = Vector2(1292, 47)
 
 [node name="Mage" parent="." index="9" unique_id=2006298918 instance=ExtResource("5_0knnk")]
-position = Vector2(150, 65)
+position = Vector2(150, 64)
 
 [node name="Mage2" parent="." index="10" unique_id=1866788527 instance=ExtResource("5_0knnk")]
-position = Vector2(924, 65)
+position = Vector2(924, 64)
 
 [node name="Mage3" parent="." index="11" unique_id=130420715 instance=ExtResource("5_0knnk")]
-position = Vector2(1733, 33)
+position = Vector2(1733, 32)
 
 [node name="Coin" parent="." index="12" unique_id=525547507 instance=ExtResource("6_j1jb0")]
-position = Vector2(254, 65)
+position = Vector2(256, 66)
 
 [node name="Coin2" parent="." index="13" unique_id=536617215 instance=ExtResource("6_j1jb0")]
-position = Vector2(672, 145)
+position = Vector2(672, 144)
 
 [node name="Coin3" parent="." index="14" unique_id=284271759 instance=ExtResource("6_j1jb0")]
-position = Vector2(735, 129)
+position = Vector2(735, 128)
 
 [node name="Coin4" parent="." index="15" unique_id=71686968 instance=ExtResource("6_j1jb0")]
-position = Vector2(800, 113)
+position = Vector2(800, 112)
 
 [node name="Coin6" parent="." index="16" unique_id=1107939063 instance=ExtResource("6_j1jb0")]
 position = Vector2(1201, 98)
@@ -631,10 +631,10 @@ position = Vector2(1201, 98)
 position = Vector2(1455, 2)
 
 [node name="Coin7" parent="." index="18" unique_id=1676002935 instance=ExtResource("6_j1jb0")]
-position = Vector2(336, 97)
+position = Vector2(336, 96)
 
 [node name="Chest" parent="." index="19" unique_id=1623759673 instance=ExtResource("9_b2yrd")]
-position = Vector2(1129, 113)
+position = Vector2(1129, 112)
 
 [node name="Cinnamon" parent="." index="21" unique_id=1995851129 instance=ExtResource("10_8laii")]
 position = Vector2(560, 113)

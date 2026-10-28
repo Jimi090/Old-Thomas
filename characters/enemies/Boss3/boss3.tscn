@@ -1,25 +1,108 @@
 [gd_scene format=3 uid="uid://cxnxmdjm8xfvb"]
 
-[ext_resource type="Script" uid="uid://cq0bkiajsgq7s" path="res://characters/enemies/Boss2/boss_2.gd" id="1_ywpu0"]
+[ext_resource type="Script" uid="uid://bp6tb3lk6tweo" path="res://characters/enemies/Boss3/boss_3.gd" id="1_i4ctl"]
 [ext_resource type="Texture2D" uid="uid://bbwyb0xp5sp4u" path="res://characters/enemies/Boss3/sprite/boss3-idle.png" id="2_ojsll"]
+[ext_resource type="Texture2D" uid="uid://bmvlsacb2ksrj" path="res://characters/enemies/Boss3/sprite/boss3-attacking.png" id="2_xheot"]
+[ext_resource type="Texture2D" uid="uid://dcf1dylo6orut" path="res://characters/enemies/Boss3/sprite/boss3-damaged.png" id="3_140jy"]
+[ext_resource type="Texture2D" uid="uid://i4qrnj4i1rgi" path="res://characters/enemies/Boss3/sprite/boss3-idle-movement.png" id="5_wshx0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq7a2"]
+atlas = ExtResource("2_xheot")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7umvo"]
+atlas = ExtResource("2_xheot")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81se0"]
+atlas = ExtResource("3_140jy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy2ha"]
+atlas = ExtResource("3_140jy")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dwhe"]
 atlas = ExtResource("2_ojsll")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy84s"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prumf"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8j00"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp1wn"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt2e3"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2daa"]
+atlas = ExtResource("5_wshx0")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qq7a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7umvo")
+}],
+"loop": 1,
+"name": &"attacking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81se0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy2ha")
+}],
+"loop": 1,
+"name": &"damaged",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5dwhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy84s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prumf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8j00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp1wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt2e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2daa")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kara3"]
-size = Vector2(33, 31)
+size = Vector2(33, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
 radius = 59.008472
@@ -28,15 +111,14 @@ radius = 59.008472
 scale = Vector2(2, 2)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_ywpu0")
+script = ExtResource("1_i4ctl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"idle"
+animation = &"damaged"
+frame_progress = 0.9568897
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
-visible = false
-position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_kara3")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
