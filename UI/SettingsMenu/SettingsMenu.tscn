@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdwa8rq6rnrr2"]
 
 [ext_resource type="Script" uid="uid://0rxm4n3i5nat" path="res://UI/SettingsMenu/settings_menu.gd" id="1_ickeq"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_f6fof"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_f6fof"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="3_78k07"]
 [ext_resource type="LabelSettings" uid="uid://c4lxkpd0kf3p7" path="res://UI/SettingsMenu/label_settings.tres" id="4_f6fof"]
 [ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="5_78k07"]

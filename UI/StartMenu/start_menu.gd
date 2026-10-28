@@ -23,7 +23,7 @@ func _process(_delta: float) -> void:
 
 
 func new_game():
-	get_tree().change_scene_to_file("res://Cutscenes/cutscene.tscn")
+	get_tree().change_scene_to_file("res://Cutscenes/StartCutscene/StartCustcene.tscn")
 
 
 func exit_game():

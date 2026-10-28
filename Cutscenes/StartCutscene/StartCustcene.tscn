@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://bmhdpdeppso3d"]
 
-[ext_resource type="Script" uid="uid://bw12ymjtwoc2j" path="res://Cutscenes/cutscene.gd" id="1_qce0b"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_1rxc4"]
-[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/story_label.gd" id="3_1rxc4"]
-[ext_resource type="Texture2D" uid="uid://cnnfktkmo8pjb" path="res://Cutscenes/assets/scroll.png" id="4_gp3my"]
-[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="5_yb8uu"]
-[ext_resource type="Texture2D" uid="uid://hivt0gxcmtfy" path="res://Cutscenes/assets/home.png" id="6_yoo65"]
-[ext_resource type="Texture2D" uid="uid://3dwut6bfg7xa" path="res://Cutscenes/assets/xcoin.png" id="7_m3cpi"]
-[ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/assets/heart.png" id="8_0joqj"]
+[ext_resource type="Script" uid="uid://bw12ymjtwoc2j" path="res://Cutscenes/StartCutscene/cutscene.gd" id="1_p08ns"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_wa2w4"]
+[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_p08ns"]
+[ext_resource type="Texture2D" uid="uid://cnnfktkmo8pjb" path="res://Cutscenes/StartCutscene/assets/scroll.png" id="4_fi4oe"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="5_8cr05"]
+[ext_resource type="Texture2D" uid="uid://hivt0gxcmtfy" path="res://Cutscenes/StartCutscene/assets/home.png" id="6_jff0x"]
+[ext_resource type="Texture2D" uid="uid://3dwut6bfg7xa" path="res://Cutscenes/StartCutscene/assets/xcoin.png" id="7_fhokb"]
+[ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/StartCutscene/assets/heart.png" id="8_sl3br"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
-font = ExtResource("2_1rxc4")
+font = ExtResource("2_wa2w4")
 font_size = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
-font = ExtResource("2_1rxc4")
+font = ExtResource("2_wa2w4")
 font_size = 10
 
 [sub_resource type="Animation" id="Animation_yoo65"]
@@ -204,14 +204,14 @@ _data = {
 &"animation": SubResource("Animation_yb8uu")
 }
 
-[node name="Cutscene" type="Control" unique_id=1136009752]
+[node name="StartCutscene" type="Control" unique_id=1136009752]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qce0b")
+script = ExtResource("1_p08ns")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
 layout_mode = 1
@@ -231,7 +231,7 @@ offset_right = 310.0
 offset_bottom = 146.0
 label_settings = SubResource("LabelSettings_8esil")
 autowrap_mode = 3
-script = ExtResource("3_1rxc4")
+script = ExtResource("3_p08ns")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=1652803276]
 layout_mode = 0
@@ -248,12 +248,12 @@ libraries/ = SubResource("AnimationLibrary_yoo65")
 [node name="Scroll" type="Sprite2D" parent="." unique_id=152247724]
 position = Vector2(-45, 99.000015)
 scale = Vector2(4, 4.062)
-texture = ExtResource("4_gp3my")
+texture = ExtResource("4_fi4oe")
 
 [node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
 scale = Vector2(5, 3.874)
-texture = ExtResource("5_yb8uu")
+texture = ExtResource("5_8cr05")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)
@@ -262,16 +262,16 @@ region_rect = Rect2(0, 0, 15.81102, 19.046265)
 modulate = Color(1, 1, 1, 0)
 position = Vector2(165.56252, 101.49999)
 scale = Vector2(5.179686, 5.0625)
-texture = ExtResource("6_yoo65")
+texture = ExtResource("6_jff0x")
 
 [node name="Coin" type="Sprite2D" parent="." unique_id=1336525315]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-61, 110.00001)
 scale = Vector2(3.6875, 3.5624995)
-texture = ExtResource("7_m3cpi")
+texture = ExtResource("7_fhokb")
 
 [node name="Heart" type="Sprite2D" parent="." unique_id=932600406]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(371.00003, 121)
 scale = Vector2(4.499996, 4.75)
-texture = ExtResource("8_0joqj")
+texture = ExtResource("8_sl3br")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hivt0gxcmtfy"
-path="res://.godot/imported/home.png-606487144012f5761e81c2ec3fdaede7.ctex"
+uid="uid://3dwut6bfg7xa"
+path="res://.godot/imported/xcoin.png-2170b0196af8a0a87d8dcc58566438d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutscenes/assets/home.png"
-dest_files=["res://.godot/imported/home.png-606487144012f5761e81c2ec3fdaede7.ctex"]
+source_file="res://Cutscenes/StartCutscene/assets/xcoin.png"
+dest_files=["res://.godot/imported/xcoin.png-2170b0196af8a0a87d8dcc58566438d9.ctex"]
 
 [params]
 

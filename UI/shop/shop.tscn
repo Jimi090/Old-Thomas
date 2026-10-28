@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://tf36yngqrqgr"]
 
 [ext_resource type="Script" uid="uid://5s0ru7bq4nrb" path="res://UI/shop/shop.gd" id="1_7hdkg"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_2y1v1"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_2y1v1"]
 [ext_resource type="Texture2D" uid="uid://idqw1wpukfut" path="res://UI/shop/assets/buy-button.png" id="3_2y1v1"]
 [ext_resource type="PackedScene" uid="uid://3y4hq5p2lg5p" path="res://UI/shop/shop_item.tscn" id="3_clrk4"]
 [ext_resource type="Texture2D" uid="uid://bwffx8fvjg0qi" path="res://UI/shop/assets/sword-pixel.png" id="4_7hdkg"]

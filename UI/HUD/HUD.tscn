@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfpcxuyyt6brx"]
 
 [ext_resource type="Script" uid="uid://d1aewfowog0rh" path="res://UI/HUD/hud.gd" id="1_yixhe"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_dm5mv"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_dm5mv"]
 [ext_resource type="PackedScene" uid="uid://bclefgai3qfrv" path="res://UI/PauseMenuButton/PauseMenuButton.tscn" id="4_7v3yo"]
 [ext_resource type="PackedScene" uid="uid://c46jhj8ni50l5" path="res://UI/CircleCooldownBar/CircleCooldownBar.tscn" id="4_gaqij"]
 [ext_resource type="Texture2D" uid="uid://dog4hcsaemmo5" path="res://characters/player/Apple projectile/apple.png" id="5_vb885"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dun2yl0eall1b" path="res://UI/Home/home.gd" id="1_2j1r1"]
 [ext_resource type="PackedScene" uid="uid://bluwq3vua2dj0" path="res://UI/BackArrow/back_button.tscn" id="1_ofpfa"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_vy2cl"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_ygfbf"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_ygfbf"]
 [ext_resource type="Texture2D" uid="uid://cgt0wwcdjyv2a" path="res://characters/dog/Sprite/dog-run.png" id="4_pplcb"]
 [ext_resource type="Texture2D" uid="uid://duoeyp8ngqrs1" path="res://characters/friend/assets/idle-friend.png" id="5_hpyr8"]
 [ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_etao0"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b0ynxtxqaexee" path="res://UI/StartMenu/start_menu.gd" id="1_1crbp"]
 [ext_resource type="PackedScene" uid="uid://7i4qhwyqmlrx" path="res://UI/StartMenu/option_button.tscn" id="2_7vcb3"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="2_8uev0"]
-[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/assets/PixelOperator8.ttf" id="2_x2dvx"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_x2dvx"]
 [ext_resource type="Texture2D" uid="uid://d35rss8uolvut" path="res://characters/enemies/Mage/sprite/idle-enemy.png" id="3_7vcb3"]
 [ext_resource type="Texture2D" uid="uid://bnhtj03wue180" path="res://UI/StartMenu/Assets/start-button(active).png" id="3_b1n4e"]
 [ext_resource type="Texture2D" uid="uid://cpekusg22v2bv" path="res://UI/StartMenu/Assets/quit-button(active).png" id="4_tdetd"]

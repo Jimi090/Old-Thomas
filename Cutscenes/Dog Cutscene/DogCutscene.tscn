@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://6y8esihxcfby"]
+
+[ext_resource type="Script" uid="uid://bqtq8q00happc" path="res://Cutscenes/Dog Cutscene/dog_cutscene.gd" id="1_582y4"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_xaecm"]
+[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_20dy6"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_2ice1"]
+[ext_resource type="Texture2D" uid="uid://c1gkeoeslfs0e" path="res://characters/enemies/Boss1/sprite/boss1-idle.png" id="4_xaecm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8esil"]
+line_spacing = 8.0
+font = ExtResource("2_xaecm")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
+font = ExtResource("2_xaecm")
+font_size = 10
+
+[sub_resource type="Animation" id="Animation_yoo65"]
+resource_name = "Home fade"
+length = 10.0
+
+[sub_resource type="Animation" id="Animation_gp3my"]
+length = 9.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Thomas:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.031463478, 1.3669882, 3.566988, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5, 3.874), Vector2(5, 4.048), Vector2(5, 4.048), Vector2(8.795835, 7.3009863)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Thomas:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.3666667, 3.5666666, 3.8, 3.9000003),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(354, 100.875), Vector2(223.00002, 100.875), Vector2(223.00002, 100.875), Vector2(288.00003, 145.99998), Vector2(383.00003, 146)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Thomas2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.36, 3.57, 3.81, 3.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-39, 98), Vector2(106, 98), Vector2(106, 98), Vector2(27, 146), Vector2(-58.000008, 146)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Thomas2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.3666667, 3.6, 3.81),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.7013276, 2.645768), Vector2(2.7013276, 2.645768), Vector2(2.7013276, 2.645768), Vector2(4.7143, 4.2934723)]
+}
+
+[sub_resource type="Animation" id="Animation_yb8uu"]
+resource_name = "animation"
+length = 1.8666667
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yoo65"]
+_data = {
+&"Home fade": SubResource("Animation_yoo65"),
+&"RESET": SubResource("Animation_gp3my"),
+&"animation": SubResource("Animation_yb8uu")
+}
+
+[node name="Dog Cutscene" type="Control" unique_id=1136009752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_582y4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=29079924]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_8esil")
+autowrap_mode = 3
+script = ExtResource("3_20dy6")
+text_to_show = "After defeating the horrifying beast, Thomas feels unconqurable and mighty... but at the same time very much lonely"
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1652803276]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 159.0
+offset_right = 361.0
+offset_bottom = 181.0
+text = "Press Space to Continue"
+label_settings = SubResource("LabelSettings_7c6ys")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1152033746]
+libraries/ = SubResource("AnimationLibrary_yoo65")
+
+[node name="Thomas2" type="Sprite2D" parent="." unique_id=1650116567]
+position = Vector2(-39, 98)
+scale = Vector2(2.7013276, 2.645768)
+texture = ExtResource("4_xaecm")
+region_enabled = true
+region_rect = Rect2(0, 0, 22.964188, 34.597813)
+
+[node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
+position = Vector2(354, 100.875)
+scale = Vector2(5, 3.874)
+texture = ExtResource("4_2ice1")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 19.046265)
