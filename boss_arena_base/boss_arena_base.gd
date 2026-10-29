@@ -41,6 +41,7 @@ func _on_boss_death():
 	spawn_coins()
 
 
+
 func spawn_coins():
 	for i in coin_number:
 		var coin: Coin = COIN.instantiate()

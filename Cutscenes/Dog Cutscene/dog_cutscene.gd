@@ -7,8 +7,8 @@ extends Control
 
 var pages: Array[String] = [
 	"After defeating the horrifying beast, Thomas feels unconqurable and mighty... but simuntaniously very much lonely.",
-	"Leaving the comfort of his quiet home, he steps onto unfamiliar paths, seeking a deeper evolution.",
-	"He searches not for gold or glory, but for a lost feeling, a deep truth, or a companion to help him truly change before his journey ends.",
+	"As Thomas heads back to the village he sees a lost dog, a dog who seems as lonely as him.",
+	"Thomas decides to take in the dog and together they will continue the adventure...",
 ]
 
 var current_page: int = 0
@@ -56,9 +56,9 @@ func _input(event: InputEvent) -> void:
 			if prompt_label:
 				prompt_label.hide()
 			if current_page == 1 and anim_player:
-				anim_player.play("Home fade")
-			if current_page == 2 and anim_player:
 				anim_player.play("animation")
+			if current_page == 2 and anim_player:
+				anim_player.play("Home fade")
 		else:
 			go_to_village()
 	if event.is_action_pressed("down"):

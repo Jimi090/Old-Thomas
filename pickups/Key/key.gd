@@ -17,5 +17,5 @@ func _on_body_entered(_body: Node2D) -> void:
 
 func _go_to_main_menu():
 	GameData.save_data()
-	var MainMenu = load("res://UI/MainMenu/MainMenu.tscn").instantiate()
-	get_tree().change_scene_to_node(MainMenu)
+	get_tree().change_scene_to_file("res://Cutscenes/Dog Cutscene/DogCutscene.tscn")
+	

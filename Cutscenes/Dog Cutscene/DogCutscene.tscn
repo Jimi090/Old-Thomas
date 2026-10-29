@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_20dy6"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_2ice1"]
 [ext_resource type="Texture2D" uid="uid://c1gkeoeslfs0e" path="res://characters/enemies/Boss1/sprite/boss1-idle.png" id="4_xaecm"]
+[ext_resource type="Texture2D" uid="uid://b3mp4whj2gbvj" path="res://characters/dog/Sprite/dog-idle.png" id="5_20dy6"]
+[ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/StartCutscene/assets/heart.png" id="6_2ice1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
@@ -14,10 +16,6 @@ font_size = 8
 [sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
 font = ExtResource("2_xaecm")
 font_size = 10
-
-[sub_resource type="Animation" id="Animation_yoo65"]
-resource_name = "Home fade"
-length = 10.0
 
 [sub_resource type="Animation" id="Animation_gp3my"]
 length = 9.5
@@ -48,7 +46,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Thomas2:position")
+tracks/2/path = NodePath("Boss1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -60,7 +58,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Thomas2:scale")
+tracks/3/path = NodePath("Boss1:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -69,16 +67,188 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(2.7013276, 2.645768), Vector2(2.7013276, 2.645768), Vector2(2.7013276, 2.645768), Vector2(4.7143, 4.2934723)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dog:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25.000002, 117)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dog:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dog:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Dog:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.9166684, 2.6604598)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Thomas2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_yb8uu"]
 resource_name = "animation"
-length = 1.8666667
+length = 9.966666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333344, 0.73333335, 1.3666667, 1.9333333, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25.000002, 117), Vector2(288.99997, 117), Vector2(27.999992, 117), Vector2(288.99997, 117), Vector2(157.99997, 116.99999)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dog:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333344, 0.74, 1.3666667, 1.9399999, 2.52, 2.7966666, 3.0300002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dog:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.06, 3.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_20dy6"]
+resource_name = "thomas&dog"
+length = 6.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.02, 1.03),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-26.999977, 110), Vector2(106.00002, 117.99999), Vector2(106.00003, 114), Vector2(106.00004, 117)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dog:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dog:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.9166684, 2.6604598), Vector2(2.9166684, 2.6604598)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Thomas:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(345.00003, 120.000015), Vector2(194.00002, 120.00002)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Thomas:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.9312491, 2.54523), Vector2(2.9312491, 2.54523)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Thomas2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.1333333, 1.5666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yoo65"]
 _data = {
-&"Home fade": SubResource("Animation_yoo65"),
 &"RESET": SubResource("Animation_gp3my"),
-&"animation": SubResource("Animation_yb8uu")
+&"animation": SubResource("Animation_yb8uu"),
+&"thomas&dog": SubResource("Animation_20dy6")
 }
 
 [node name="Dog Cutscene" type="Control" unique_id=1136009752]
@@ -123,12 +293,28 @@ label_settings = SubResource("LabelSettings_7c6ys")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1152033746]
 libraries/ = SubResource("AnimationLibrary_yoo65")
 
-[node name="Thomas2" type="Sprite2D" parent="." unique_id=1650116567]
+[node name="Boss1" type="Sprite2D" parent="." unique_id=1650116567]
 position = Vector2(-39, 98)
 scale = Vector2(2.7013276, 2.645768)
 texture = ExtResource("4_xaecm")
 region_enabled = true
 region_rect = Rect2(0, 0, 22.964188, 34.597813)
+
+[node name="Dog" type="Sprite2D" parent="." unique_id=1116412318]
+position = Vector2(-25.000002, 117)
+scale = Vector2(2.9166684, 2.6604598)
+texture = ExtResource("5_20dy6")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 16.27429)
+
+[node name="Thomas2" type="Sprite2D" parent="." unique_id=324951526]
+position = Vector2(151, 109)
+scale = Vector2(2.3758647, 2.6781962)
+texture = ExtResource("6_2ice1")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 19.046265)
 
 [node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
