@@ -59,7 +59,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7umvo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attacking",
 "speed": 8.0
 }, {
@@ -70,7 +70,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uy2ha")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"damaged",
 "speed": 6.0
 }, {
@@ -98,7 +98,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 4.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kara3"]
@@ -116,7 +116,6 @@ script = ExtResource("1_i4ctl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"idle"
-frame_progress = 0.81180215
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 shape = SubResource("RectangleShape2D_kara3")

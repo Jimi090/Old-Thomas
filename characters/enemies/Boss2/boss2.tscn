@@ -108,8 +108,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7a7jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a7jj")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"take_damage",
 "speed": 6.0
 }]
@@ -129,7 +132,14 @@ script = ExtResource("1_ipwhs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
 animation = &"take_damage"
-frame_progress = 0.4017932
+frame = 1
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1183839948]
+sprite_frames = SubResource("SpriteFrames_nrtow")
+animation = &"take_damage"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 visible = false

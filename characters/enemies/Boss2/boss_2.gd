@@ -72,6 +72,7 @@ func meteor_shower():
 		meteor.scale = Vector2(4, 4)
 		meteor.global_position = Vector2(i * 80 + offset, 0)
 		meteor.target_position = Vector2(i * 80 + offset, 256)
+		meteor.speed = 150
 		meteor.damage = METEOR_DAMAGE
 		get_tree().current_scene.add_child(meteor)
 

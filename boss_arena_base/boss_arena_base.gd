@@ -4,6 +4,7 @@ extends Node2D
 @onready var player: Player = $Player
 @onready var key_marker_2d: Marker2D = $KeyMarker2D
 @onready var hud: HUD = $HUD
+@onready var dog: CharacterBody2D = $Dog
 
 const COIN = preload("uid://dharn33rhc8ko")
 var coin_number: int
@@ -23,6 +24,8 @@ func _ready():
 	if path[-1] == "1":
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
+		dog.queue_free()
+		key.destination = "play_dog_cutscene"
 	elif path[-1] == "2":
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
@@ -39,7 +42,6 @@ func reload_level():
 func _on_boss_death():
 	key.position = key_marker_2d.position
 	spawn_coins()
-
 
 
 func spawn_coins():

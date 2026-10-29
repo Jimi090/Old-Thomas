@@ -17,7 +17,7 @@ enum Type {
 }
 @export var type: Type = Type.NORMAL_UI
 
-var SPEED := 100
+var SPEED := 130
 
 enum Dialogue_Position {
 	TOP_LEFT,

@@ -6,6 +6,8 @@ const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 @onready var v_box_container: GridContainer = $VBoxContainer
 @export var path: String
 
+var active_popup: GeneralPopup = null
+
 
 func _ready() -> void:
 	v_box_container.columns = 2
@@ -45,12 +47,15 @@ func lunch_level(level_scene_path: String):
 
 
 func create_general_popup(title: String, description: String):
-	var popup: GeneralPopup = GENERAL_POPUP.instantiate()
-	popup.title_text = title
-	popup.description_text = description
-	popup.position = (get_viewport_rect().size - popup.size) / 2
-	add_child(popup)
-	popup.show()
+	if active_popup == null:
+		var popup: GeneralPopup = GENERAL_POPUP.instantiate()
+		popup.title_text = title
+		popup.description_text = description
+
+		add_child(popup)
+		popup.position = (get_viewport_rect().size - popup.size) / 2
+		popup.show()
+		active_popup = popup
 
 
 func show_level_locked_popup():

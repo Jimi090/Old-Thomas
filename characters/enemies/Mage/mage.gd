@@ -24,6 +24,6 @@ func create_projectile(_body: Player):
 	fire.global_position = global_position
 	fire.damage = DAMAGE
 	fire.target_position = _body.global_position
-	fire.speed = 250
+	fire.speed = 200
 
 	get_tree().current_scene.add_child(fire)

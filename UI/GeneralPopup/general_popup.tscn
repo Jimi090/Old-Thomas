@@ -32,6 +32,7 @@ corner_radius_bottom_left = 8
 texture = ExtResource("3_utlf6")
 
 [node name="GeneralPopup" type="Panel" unique_id=247699040]
+process_mode = 3
 z_index = 100
 anchors_preset = 8
 anchor_left = 0.5

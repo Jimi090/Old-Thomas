@@ -6,6 +6,10 @@ extends Control
 
 
 func _ready() -> void:
+	setup_quests()
+
+
+func setup_quests():
 	quest_1.texture = "res://UI/Town/assets/enemy.png"
 	quest_1.texture_scale = Vector2(32, 32)
 

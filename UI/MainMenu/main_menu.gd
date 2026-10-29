@@ -13,6 +13,8 @@ const TOWN = preload("uid://cqqlmplhsuk52")
 const HOME = preload("uid://c7uauh106urq2")
 const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 
+var active_popup: GeneralPopup = null
+
 
 func _ready() -> void:
 	shop_btn.pressed.connect(open_shop)
@@ -77,11 +79,13 @@ func open_home():
 
 
 func create_general_popup(title: String, description: String):
-	var popup: GeneralPopup = GENERAL_POPUP.instantiate()
-	popup.title_text = title
-	popup.description_text = description
-	add_child(popup)
-	popup.show()
+	if active_popup == null:
+		var popup: GeneralPopup = GENERAL_POPUP.instantiate()
+		popup.title_text = title
+		popup.description_text = description
+		add_child(popup)
+		popup.show()
+		active_popup = popup
 
 
 func _on_click_not_available():

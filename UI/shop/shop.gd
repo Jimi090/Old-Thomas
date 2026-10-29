@@ -44,6 +44,7 @@ func _ready() -> void:
 func _on_buy_btn_pressed() -> void:
 	if not selected:
 		return
+
 	var currentlvl = int(GameData.upgrades[selected.name]["level"])
 
 	if GameData.upgrades[selected.name]["level"] < GameData.upgrades[selected.name]["maxLevel"]:

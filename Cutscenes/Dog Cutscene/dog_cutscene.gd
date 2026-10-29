@@ -57,8 +57,6 @@ func _input(event: InputEvent) -> void:
 				prompt_label.hide()
 			if current_page == 1 and anim_player:
 				anim_player.play("animation")
-			if current_page == 2 and anim_player:
-				anim_player.play("Home fade")
 		else:
 			go_to_village()
 	if event.is_action_pressed("down"):

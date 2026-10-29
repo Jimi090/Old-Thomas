@@ -258,4 +258,6 @@ func _ready() -> void:
 	'for path in level_progress:
 		for level in level_progress[path]:
 			level_progress[path][level]["finished"] = true
-'
+	'
+	for i in range(len(quests)):
+		quests[i]["progress"] = quests[i]["goal"]

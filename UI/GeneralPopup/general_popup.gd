@@ -11,7 +11,15 @@ class_name GeneralPopup
 func _ready() -> void:
 	title_label.text = title_text
 	description_label.text = description_text
+	get_tree().paused = true
 
 
 func _on_button_pressed() -> void:
 	queue_free()
+	get_tree().paused = false
+	await get_tree().process_frame
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		_on_button_pressed()

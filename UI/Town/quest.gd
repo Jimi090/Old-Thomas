@@ -31,6 +31,8 @@ func set_description():
 			mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	else:
 		label_1.text = "No more quests"
+		label_2.text = ""
+		label_3.text = ""
 		texture_rect.texture = load(texture)
 		texture_rect.scale = texture_scale
 
@@ -41,9 +43,10 @@ func _on_pressed() -> void:
 
 	var done := progress.split("/")[0]
 	var goal := progress.split("/")[1]
+
 	if done == goal:
 		GameData.gold += reward
 		GameData.quests[quest_index]["collected"] = true
 		GameData.save_data()
 		GameData.get_displaied_quests()
-		get_tree().reload_current_scene()
+		get_tree().current_scene.setup_quests()
