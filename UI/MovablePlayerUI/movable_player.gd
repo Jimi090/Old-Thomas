@@ -5,6 +5,7 @@ const DIALOGUE = preload("uid://djosr1t6fp8tb")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var start_dialogue: Dialogue = $Dialogue
 @export var start_dialogue_text: String
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 @onready var current_dialogue: Dialogue = start_dialogue
 @onready var current_dialogue_button: Button = null
@@ -31,15 +32,18 @@ func _ready() -> void:
 	if start_dialogue_text:
 		start_dialogue.text = start_dialogue_text
 	else:
-		start_dialogue.queue_free()
+		if start_dialogue:
+			start_dialogue.queue_free()
 	if type == Type.NORMAL_UI:
 		scale = Vector2(0.5, 0.5)
 		dialogue_position_marker.scale = Vector2.ONE
-		start_dialogue.scale = Vector2(1.5, 1.5)
+		if start_dialogue:
+			start_dialogue.scale = Vector2(1.5, 1.5)
 
-		start_dialogue.position = dialogue_position_marker.position - (
-			(start_dialogue.size + Vector2(0, 25)) * start_dialogue.scale
-		)
+			start_dialogue.position = dialogue_position_marker.position - (
+				(start_dialogue.size + Vector2(0, 25)) * start_dialogue.scale
+			)
+			collision_shape_2d.disabled = true
 
 		SPEED = 200
 	await hide_start_dialogue()

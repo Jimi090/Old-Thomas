@@ -386,5 +386,6 @@ icon = ExtResource("9_8ry1w")
 flat = true
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("10_2fkp1")]
+position = Vector2(186, 62)
 
 [connection signal="pressed" from="WelcomeLabel/CloseWelcomeLabelButton" to="." method="_on_close_welcome_label_button_pressed"]

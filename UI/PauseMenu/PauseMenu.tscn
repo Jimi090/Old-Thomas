@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cd4gb52uecpaq" path="res://UI/PauseMenu/PauseMenuOption.tscn" id="1_gkovu"]
 [ext_resource type="Script" uid="uid://jabhuok5nsqq" path="res://UI/PauseMenu/pause_menu.gd" id="1_kpccm"]
+[ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="3_fhxse"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkovu"]
 bg_color = Color(0.14117648, 0.23137255, 0.41960785, 0.48235294)
@@ -53,3 +54,6 @@ text = "Restart Level"
 [node name="MainMenuButton" parent="Panel/Container" unique_id=1779079396 instance=ExtResource("1_gkovu")]
 layout_mode = 2
 text = "Main Menu"
+
+[node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("3_fhxse")]
+position = Vector2(145, 93)

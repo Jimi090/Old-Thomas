@@ -32,5 +32,4 @@ func exit_game():
 
 
 func _on_settings_button_pressed():
-	var settings_instance = SETTINGS_SCENE.instantiate()
-	get_tree().current_scene.add_child(settings_instance)
+	get_tree().change_scene_to_file("res://UI/SettingsMenu/SettingsMenu.tscn")
