@@ -422,4 +422,4 @@ player = NodePath("../Player")
 position = Vector2(312, 245)
 
 [node name="Dog" parent="." index="8" unique_id=720855982]
-position = Vector2(176, 151)
+position = Vector2(176, 152)

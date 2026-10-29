@@ -32,6 +32,8 @@ func _ready() -> void:
 
 	meteor_shower_timer.wait_time = METEOR_SHOWER_COOLDOWN
 	meteor_shower_timer.start()
+
+	state = Boss_State.RUN
 	super()
 
 
@@ -52,7 +54,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y = -JUMP_FORCE
 	else:
 		if is_on_floor():
-			state = State.RUN
+			if state == Boss_State.JUMP:
+				state = State.RUN
 
 	velocity.x = direction * GB.boss2.speed * delta * 100
 
@@ -83,3 +86,35 @@ func _on_meteor_shower_timer_timeout() -> void:
 
 func attack(_body: Character) -> void:
 	pass
+
+
+@warning_ignore("shadowed_variable_base_class")
+func update_animation(animated_sprite_2d):
+	match state:
+		Boss_State.IDLE:
+			animated_sprite_2d.play("idle")
+		Boss_State.RUN:
+			animated_sprite_2d.play("run")
+		Boss_State.TAKE_DAMAGE:
+			animated_sprite_2d.play("take_damage")
+		Boss_State.JUMP:
+			animated_sprite_2d.play("jump")
+		State.IDLE:
+			animated_sprite_2d.play("idle")
+		State.RUN:
+			animated_sprite_2d.play("run")
+		State.TAKE_DAMAGE:
+			animated_sprite_2d.play("take_damage")
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if state == Boss_State.JUMP or state == Boss_State.TAKE_DAMAGE or state == State.TAKE_DAMAGE:
+		state = State.RUN
+
+
+func take_damage(damage: int):
+	state = Boss_State.TAKE_DAMAGE
+	health -= damage
+
+	if health <= 0:
+		die()
