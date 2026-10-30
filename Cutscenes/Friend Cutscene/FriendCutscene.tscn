@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dhk1u8mam6d6b"]
+
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="1_lfnnh"]
+[ext_resource type="Script" uid="uid://lkubp2fk51t" path="res://Cutscenes/Friend Cutscene/friend_cutscene.gd" id="1_lja8q"]
+[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="2_x7son"]
+[ext_resource type="Texture2D" uid="uid://dsnn3hrv0gigm" path="res://characters/enemies/Boss2/boss2-idle.png" id="3_lja8q"]
+[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_1lp42"]
+[ext_resource type="Texture2D" uid="uid://bt8g8xgbv43uf" path="res://characters/friend/assets/basicpose-friend.png" id="6_1lp42"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8esil"]
+line_spacing = 8.0
+font = ExtResource("1_lfnnh")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
+font = ExtResource("1_lfnnh")
+font_size = 10
+
+[sub_resource type="Animation" id="Animation_plrdg"]
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boss2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-49.000004, 105)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Thomas:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(354, 100.875)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Thomas:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boss2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qm8qo"]
+resource_name = "Scene1"
+length = 4.8333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boss2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-49.000004, 105), Vector2(113.00001, 105)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Thomas:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(354, 100.875), Vector2(202, 103.875)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Thomas:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boss2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.61, 2.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lja8q"]
+resource_name = "Scene2"
+
+[sub_resource type="Animation" id="Animation_1lp42"]
+resource_name = "Scene3"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mo142"]
+_data = {
+&"RESET": SubResource("Animation_plrdg"),
+&"Scene1": SubResource("Animation_qm8qo"),
+&"Scene2": SubResource("Animation_lja8q"),
+&"Scene3": SubResource("Animation_1lp42")
+}
+
+[node name="FriendCutscene" type="Control" unique_id=1136009752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lja8q")
+village_scene = null
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=29079924]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_8esil")
+autowrap_mode = 3
+script = ExtResource("2_x7son")
+text_to_show = "Once again Thomas has slayed the beast, and this time with his brand new companion "
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1652803276]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 159.0
+offset_right = 361.0
+offset_bottom = 181.0
+text = "Press Space to Continue"
+label_settings = SubResource("LabelSettings_7c6ys")
+
+[node name="Boss2" type="Sprite2D" parent="." unique_id=1650116567]
+position = Vector2(-49.000004, 105)
+scale = Vector2(2.7013276, 2.645768)
+texture = ExtResource("3_lja8q")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0.09648085, 0, 31.519419, 34.597813)
+
+[node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
+position = Vector2(354, 100.875)
+scale = Vector2(5, 3.874)
+texture = ExtResource("4_1lp42")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 19.046265)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1166627643]
+libraries/ = SubResource("AnimationLibrary_mo142")
+
+[node name="Friend" type="Sprite2D" parent="." unique_id=928090708]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(65, 109)
+scale = Vector2(4.812501, 4.8125)
+texture = ExtResource("6_1lp42")
