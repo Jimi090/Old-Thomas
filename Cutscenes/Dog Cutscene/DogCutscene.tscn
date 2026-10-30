@@ -125,7 +125,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_yb8uu"]
@@ -243,6 +243,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dog:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yoo65"]
 _data = {
@@ -309,6 +321,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 16.27429)
 
 [node name="Thomas2" type="Sprite2D" parent="." unique_id=324951526]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(151, 109)
 scale = Vector2(2.3758647, 2.6781962)
 texture = ExtResource("6_2ice1")
