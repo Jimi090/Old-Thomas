@@ -6,20 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dcf1dylo6orut" path="res://characters/enemies/Boss3/sprite/boss3-damaged.png" id="3_140jy"]
 [ext_resource type="Texture2D" uid="uid://i4qrnj4i1rgi" path="res://characters/enemies/Boss3/sprite/boss3-idle-movement.png" id="5_wshx0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qq7a2"]
-atlas = ExtResource("2_xheot")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7umvo"]
 atlas = ExtResource("2_xheot")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_81se0"]
-atlas = ExtResource("3_140jy")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uy2ha"]
-atlas = ExtResource("3_140jy")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dwhe"]
@@ -50,29 +38,26 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("5_wshx0")
 region = Rect2(160, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_81se0"]
+atlas = ExtResource("3_140jy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy2ha"]
+atlas = ExtResource("3_140jy")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qq7a2")
+"texture": SubResource("AtlasTexture_7umvo")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7umvo")
 }],
 "loop": 0,
-"name": &"attacking",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_81se0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uy2ha")
-}],
-"loop": 0,
-"name": &"damaged",
-"speed": 6.0
+"name": &"basic_attack",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -99,13 +84,24 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81se0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy2ha")
+}],
+"loop": 0,
+"name": &"take_damage",
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kara3"]
 size = Vector2(33, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
-radius = 59.008472
+radius = 47.5
 
 [node name="Boss3" type="CharacterBody2D" unique_id=1954414926]
 scale = Vector2(2, 2)
@@ -115,7 +111,7 @@ script = ExtResource("1_i4ctl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"attacking"
+animation = &"basic_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 shape = SubResource("RectangleShape2D_kara3")
