@@ -38,6 +38,7 @@ var mage := CharacterStats.new(50, 10, 1.2, 100, 200)
 
 var boss1 := CharacterStats.new(100, 20, 2.0, 100, 200)
 var boss2 := CharacterStats.new(200, 20, 2.0, 100, 400)
+var boss3 := CharacterStats.new(300, 30, 1.8, 100, 100)
 
 var attack_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])
 var health_upgrade := ShopUpgrades.new([5, 15, 30, 60, 120])

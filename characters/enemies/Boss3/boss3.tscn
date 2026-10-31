@@ -115,7 +115,7 @@ script = ExtResource("1_i4ctl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
 sprite_frames = SubResource("SpriteFrames_nrtow")
-animation = &"idle"
+animation = &"attacking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498609149]
 shape = SubResource("RectangleShape2D_kara3")
@@ -136,8 +136,6 @@ target_position = Vector2(26, 38.5)
 visible = false
 target_position = Vector2(23, 16)
 
-[node name="MeteorShowerTimer" type="Timer" parent="." unique_id=441698421]
+[node name="Timer" type="Timer" parent="." unique_id=441698421]
 wait_time = 2.0
 autostart = true
-
-[connection signal="timeout" from="MeteorShowerTimer" to="." method="_on_meteor_shower_timer_timeout"]

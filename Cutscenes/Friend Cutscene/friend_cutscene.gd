@@ -2,7 +2,7 @@ extends Control
 
 @export_file("*.tscn") var village_scene: String = "res://UI/MainMenu/MainMenu.tscn"
 @onready var story_label: Label = $StoryLabel
-$PromptLabel@onready var prompt_label: Label = $PromptLabel
+@onready var prompt_label: Label = $PromptLabel
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 var pages: Array[String] = [

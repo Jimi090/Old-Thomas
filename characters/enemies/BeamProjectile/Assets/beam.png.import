@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caxw57a3x8ao7"
-path="res://.godot/imported/beam.png-7358dd94d174a1a0f48d977dc21364d3.ctex"
+path="res://.godot/imported/beam.png-7e87f6ae4b26791fb4b0b02a92134751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/enemies/Beam/Assets/beam.png"
-dest_files=["res://.godot/imported/beam.png-7358dd94d174a1a0f48d977dc21364d3.ctex"]
+source_file="res://characters/enemies/BeamProjectile/Assets/beam.png"
+dest_files=["res://.godot/imported/beam.png-7e87f6ae4b26791fb4b0b02a92134751.ctex"]
 
 [params]
 

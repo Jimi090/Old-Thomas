@@ -14,7 +14,7 @@ enum Boss_State {
 	JUMP,
 }
 
-var METEOR_DAMAGE := 30
+var METEOR_DAMAGE := 20
 var METEOR_SHOWER_COOLDOWN := 2.0
 
 
