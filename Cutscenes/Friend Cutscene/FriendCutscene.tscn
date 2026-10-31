@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dsnn3hrv0gigm" path="res://characters/enemies/Boss2/boss2-idle.png" id="3_lja8q"]
 [ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_1lp42"]
 [ext_resource type="Texture2D" uid="uid://bt8g8xgbv43uf" path="res://characters/friend/assets/basicpose-friend.png" id="6_1lp42"]
+[ext_resource type="Texture2D" uid="uid://dskv1rcylq0oq" path="res://characters/friend/assets/friendcage.png" id="6_plrdg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
@@ -66,6 +67,54 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Friend:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Friend:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(65, 109)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Thomas2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(378, 110.00001)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Friend2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_qm8qo"]
 resource_name = "Scene1"
@@ -121,9 +170,59 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_lja8q"]
 resource_name = "Scene2"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(157, 109.00001)]
+}
 
 [sub_resource type="Animation" id="Animation_1lp42"]
 resource_name = "Scene3"
+length = 2.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Thomas2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.87),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(378, 110.00001), Vector2(208, 110)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.89, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mo142"]
 _data = {
@@ -142,6 +241,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lja8q")
 village_scene = null
+
+[node name="Thomas2" type="Sprite2D" parent="." unique_id=1549689315]
+top_level = true
+oversampling_with_scale = 1
+light_mask = 524288
+position = Vector2(378, 110.00001)
+scale = Vector2(5, 4.200158)
+texture = ExtResource("4_1lp42")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 15.81102, 19.046265)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
 layout_mode = 1
@@ -195,5 +305,11 @@ libraries/ = SubResource("AnimationLibrary_mo142")
 [node name="Friend" type="Sprite2D" parent="." unique_id=928090708]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(65, 109)
-scale = Vector2(4.812501, 4.8125)
+scale = Vector2(2.6831253, 2.9231246)
+texture = ExtResource("6_plrdg")
+
+[node name="Friend2" type="Sprite2D" parent="." unique_id=63532802]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(120.00001, 105)
+scale = Vector2(4.5290627, 4.8365626)
 texture = ExtResource("6_1lp42")

@@ -7,8 +7,8 @@ $PromptLabel@onready var prompt_label: Label = $PromptLabel
 
 var pages: Array[String] = [
 	"Once again Thomas has slayed the beast, and this time with his brand new companion.",
-	"As Thomas heads back to the village he sees a lost dog, a dog who seems as lonely as him.",
-	"Thomas decides to take in the dog and together they will continue the adventure...",
+	"Right before heading back, he sees in the corner of his eye some trapped in a cage, likely one of the beast",
+	"Heroicly, Thomas frees the person and they thank him. They share that if Thomas is every in the need for help to call him and he will help his new friend when in need",
 ]
 
 var current_page: int = 0

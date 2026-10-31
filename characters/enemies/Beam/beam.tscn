@@ -1,3 +1,58 @@
 [gd_scene format=3 uid="uid://b8d8jn6cosfs"]
 
+[ext_resource type="Texture2D" uid="uid://caxw57a3x8ao7" path="res://characters/enemies/Beam/Assets/beam.png" id="1_cawql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3r2i"]
+atlas = ExtResource("1_cawql")
+region = Rect2(0, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmikk"]
+atlas = ExtResource("1_cawql")
+region = Rect2(100, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n6u5"]
+atlas = ExtResource("1_cawql")
+region = Rect2(200, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0kh6"]
+atlas = ExtResource("1_cawql")
+region = Rect2(300, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0a8j"]
+atlas = ExtResource("1_cawql")
+region = Rect2(400, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28m4d"]
+atlas = ExtResource("1_cawql")
+region = Rect2(500, 0, 100, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3r2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmikk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n6u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0kh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0a8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28m4d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
+
 [node name="Beam" type="Node2D" unique_id=590651511]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=534850954]
+sprite_frames = SubResource("SpriteFrames_nrtow")
