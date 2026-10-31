@@ -104,7 +104,7 @@ size = Vector2(33, 32)
 radius = 47.5
 
 [node name="Boss3" type="CharacterBody2D" unique_id=1954414926]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_i4ctl")
@@ -132,6 +132,7 @@ target_position = Vector2(26, 38.5)
 visible = false
 target_position = Vector2(23, 16)
 
-[node name="Timer" type="Timer" parent="." unique_id=441698421]
-wait_time = 2.0
-autostart = true
+[node name="BeamStarTimer" type="Timer" parent="." unique_id=441698421]
+wait_time = 4.0
+
+[connection signal="timeout" from="BeamStarTimer" to="." method="_on_beam_star_timer_timeout"]
