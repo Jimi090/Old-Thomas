@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8d8jn6cosfs"]
+
+[ext_resource type="Script" uid="uid://w8wxk554rvy8" path="res://characters/enemies/BeamProjectile/beam_projectile.gd" id="1_1g4av"]
+[ext_resource type="Texture2D" uid="uid://caxw57a3x8ao7" path="res://characters/enemies/BeamProjectile/Assets/beam.png" id="1_5647s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_478fi"]
+size = Vector2(100, 8)
+
+[node name="BeamProjectile" type="Area2D" unique_id=365834160]
+collision_mask = 4
+script = ExtResource("1_1g4av")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=243701563]
+texture = ExtResource("1_5647s")
+region_enabled = true
+region_rect = Rect2(199.88121, 0, 100.23036, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578709620]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_478fi")

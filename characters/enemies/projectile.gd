@@ -9,7 +9,7 @@ var target_position := Vector2.ZERO
 var direction := Vector2.ZERO
 
 var sprite2d: Sprite2D
-var collision_polygon_2d: CollisionPolygon2D
+var collision_polygon_2d: Node2D
 
 
 func _on_body_entered(body: CharacterBody2D) -> void:
