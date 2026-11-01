@@ -133,6 +133,7 @@ visible = false
 target_position = Vector2(23, 16)
 
 [node name="BeamStarTimer" type="Timer" parent="." unique_id=441698421]
-wait_time = 4.0
+wait_time = 6.0
+autostart = true
 
 [connection signal="timeout" from="BeamStarTimer" to="." method="_on_beam_star_timer_timeout"]

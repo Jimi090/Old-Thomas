@@ -29,6 +29,7 @@ func _ready():
 	elif path[-1] == "2":
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
+		key.destination = "play_friend_cutscene"
 
 
 func _on_player_death():

@@ -16,6 +16,7 @@ var collision_polygon_2d: Node2D
 func _on_body_entered(body: CharacterBody2D) -> void:
 	if not player_hit:
 		body.take_damage(damage)
+		body.velocity = Vector2(direction.x * 500, 0)
 		player_hit = true
 
 

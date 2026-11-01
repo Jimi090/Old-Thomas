@@ -79,7 +79,7 @@ func beam_star():
 	gravity_on = false
 	can_attack = false
 	var tween = create_tween()
-	var time := 0.3
+	var time := 0.5
 	var degrees = 20.0
 	tween.tween_property(self, "position:y", self.position.y - 40, 0.1)
 	tween \

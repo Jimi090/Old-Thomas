@@ -4,7 +4,7 @@ extends Area2D
 @export var path_name: String
 @export var level_name: String
 
-var destination := "_go_to_main_menu"
+var destination := "go_to_main_menu"
 
 
 func _ready() -> void:
@@ -18,9 +18,13 @@ func _on_body_entered(_body: Node2D) -> void:
 	call_deferred(destination)
 
 
-func _go_to_main_menu():
+func go_to_main_menu():
 	get_tree().change_scene_to_file("uid://dt8lkmju64ybm")
 
 
 func play_dog_cutscene():
 	get_tree().change_scene_to_file("uid://6y8esihxcfby")
+
+
+func play_friend_cutscene():
+	get_tree().change_scene_to_file("uid://dhk1u8mam6d6b")
