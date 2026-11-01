@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://chiq7i2heh7tq" path="res://characters/enemies/Ghost/Ghost.tscn" id="8_d6jbu"]
 [ext_resource type="PackedScene" uid="uid://bf3vqjgn3qj6b" path="res://pickups/Cinnamon/Cinnamon.tscn" id="8_pwgcu"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwgcu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2242"]
 texture = ExtResource("1_5ywli")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.0791512, 8, -1.6187286, 8, 8, -8, 8)
@@ -406,9 +406,9 @@ texture = ExtResource("1_5ywli")
 
 [sub_resource type="TileSet" id="TileSet_p0pqx"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_pwgcu")
+sources/0 = SubResource("TileSetAtlasSource_w2242")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ie1li"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gapj8"]
 texture = ExtResource("2_r4pei")
 0:0/0 = 0
 1:0/0 = 0
@@ -423,7 +423,7 @@ texture = ExtResource("2_r4pei")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j4mj7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ot5q"]
 texture = ExtResource("3_htsat")
 3:0/0 = 0
 4:0/0 = 0
@@ -575,8 +575,8 @@ texture = ExtResource("3_htsat")
 
 [sub_resource type="TileSet" id="TileSet_mupgg"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ie1li")
-sources/1 = SubResource("TileSetAtlasSource_j4mj7")
+sources/0 = SubResource("TileSetAtlasSource_gapj8")
+sources/1 = SubResource("TileSetAtlasSource_6ot5q")
 
 [node name="Level1" unique_id=1826943140 instance=ExtResource("2_0eqkp")]
 
