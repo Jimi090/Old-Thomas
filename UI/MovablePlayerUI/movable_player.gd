@@ -34,6 +34,7 @@ func _ready() -> void:
 	else:
 		if start_dialogue:
 			start_dialogue.queue_free()
+
 	if type == Type.NORMAL_UI:
 		scale = Vector2(0.5, 0.5)
 		dialogue_position_marker.scale = Vector2.ONE
@@ -153,8 +154,10 @@ func _input(event: InputEvent) -> void:
 
 func check_for_buttons(node: Node, pos: Vector2):
 	var children = node.get_children()
+
 	if len(children) == 0:
 		return
+
 	for node2 in children:
 		if (
 			(node2 is Button or node2 is Shop_item) and node2.visible

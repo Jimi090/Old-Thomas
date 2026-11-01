@@ -4,8 +4,10 @@ extends Control
 @onready var buy_btn: Button = $Buy_btn
 @onready var gold_label: Label = $GoldLabel
 @onready var description: Label = $Description
+const GENERAL_POPUP = preload("uid://doyer7g4qd2mn")
 
 var selected: Shop_item
+var active_popup: GeneralPopup = null
 
 
 func set_signals():
@@ -43,6 +45,7 @@ func _ready() -> void:
 
 func _on_buy_btn_pressed() -> void:
 	if not selected:
+		create_general_popup("", "Select an item first")
 		return
 
 	var currentlvl = int(GameData.upgrades[selected.name]["level"])
@@ -54,6 +57,21 @@ func _on_buy_btn_pressed() -> void:
 			update_description()
 			selected.diamonds_amount_to_show += 1
 			GameData.save_data()
+		else:
+			create_general_popup("", "You're too poor to buy this")
+
+
+@warning_ignore("shadowed_variable")
+func create_general_popup(title: String, description: String):
+	if active_popup == null:
+		var popup: GeneralPopup = GENERAL_POPUP.instantiate()
+		popup.title_text = title
+		popup.description_text = description
+
+		add_child(popup)
+		popup.position = (get_viewport_rect().size - popup.size) / 2
+		popup.show()
+		active_popup = popup
 
 
 func _on_gold_changed(gold):

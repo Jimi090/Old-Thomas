@@ -32,4 +32,6 @@ func play_friend_cutscene():
 
 
 func lunch_level_1():
+	GameData.tutorial_completed = true
+	GameData.save_data()
 	get_tree().change_scene_to_file("uid://t7vyjpigixje")

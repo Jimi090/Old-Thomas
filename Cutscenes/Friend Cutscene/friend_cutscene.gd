@@ -61,6 +61,7 @@ func _input(event: InputEvent) -> void:
 				anim_player.play("Scene3")
 		else:
 			go_to_village()
+
 	if event.is_action_pressed("down"):
 		go_to_village()
 

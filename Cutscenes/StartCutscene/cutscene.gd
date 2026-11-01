@@ -1,6 +1,5 @@
 extends Control
 
-@export_file("*.tscn") var village_scene: String = "res://UI/MainMenu/MainMenu.tscn"
 @onready var story_label: Label = $StoryLabel
 @onready var prompt_label: Label = $PromptLabel
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
@@ -61,12 +60,13 @@ func _input(event: InputEvent) -> void:
 				anim_player.play("animation")
 		else:
 			go_to_village()
+
 	if event.is_action_pressed("down"):
 		go_to_village()
 
 
 func go_to_village() -> void:
-	if village_scene:
-		get_tree().change_scene_to_file(village_scene)
+	if GameData.tutorial_completed:
+		get_tree().change_scene_to_file("uid://dt8lkmju64ybm")
 	else:
-		print("Error: Village scene path not assigned!")
+		get_tree().change_scene_to_file("uid://dy10vnln32j4h")

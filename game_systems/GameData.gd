@@ -33,7 +33,16 @@ var quests := { }
 
 var game_settings := { }
 
-var variables_to_save := ["gold", "level_progress", "upgrades", "quests", "game_settings"]
+var tutorial_completed := false
+
+var variables_to_save := [
+	"gold",
+	"level_progress",
+	"upgrades",
+	"quests",
+	"game_settings",
+	"tutorial_completed",
+]
 ###
 
 
@@ -44,6 +53,7 @@ func save_data():
 		"upgrades": upgrades,
 		"quests": quests,
 		"game_settings": game_settings,
+		"tutorial_completed": tutorial_completed,
 	}
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_var(save)
@@ -73,6 +83,7 @@ func load_data():
 	upgrades = save["upgrades"]
 	quests = save["quests"]
 	game_settings = save["game_settings"]
+	tutorial_completed = save["tutorial_completed"]
 
 	return OK
 
@@ -82,6 +93,7 @@ func clear_save():
 	upgrades = default_upgrades.duplicate(true)
 	get_empty_levels_progress()
 	get_default_quests()
+	tutorial_completed = false
 
 	save_data()
 	load_data()
@@ -224,12 +236,12 @@ func get_default_game_settings():
 
 
 func apply_game_settings():
+	if game_settings.is_empty():
+		get_default_game_settings()
+
 	change_bus_volume_to("Master", game_settings["Audio"]["GeneralVolume"])
 	change_bus_volume_to("Music", game_settings["Audio"]["MusicVolume"])
 	change_bus_volume_to("SFX", game_settings["Audio"]["SFXVolume"])
-
-	if not game_settings.has("Fullscreen"):
-		clear_save()
 
 	change_fullscreen_mode_to(game_settings["Fullscreen"])
 
