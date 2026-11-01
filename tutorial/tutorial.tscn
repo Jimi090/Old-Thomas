@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://4nqa2h5gme6g" path="res://tutorial/tutorial.gd" id="1_tifc7"]
 [ext_resource type="Texture2D" uid="uid://cfq4nfu4a5bik" path="res://tileset/midground_/autumn_.png" id="1_vy6qu"]
-[ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="2_811q2"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="2_qk73h"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="3_rcm07"]
 [ext_resource type="Texture2D" uid="uid://2qujra7fqhld" path="res://tileset/objects_/staticObjects_.png" id="3_ridmi"]
 [ext_resource type="PackedScene" uid="uid://b0fqim18ew3u8" path="res://characters/player/player.tscn" id="4_ridmi"]
 [ext_resource type="Texture2D" uid="uid://dp1qo475waxic" path="res://level_base/background/cloudbg.png" id="5_p47bv"]
@@ -591,60 +591,60 @@ centered = false
 
 [node name="Label" type="Label" parent="." unique_id=813947576]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 42.0
-offset_top = 83.0
-offset_right = 158.0
-offset_bottom = 140.0
+offset_left = 54.0
+offset_top = 80.0
+offset_right = 182.0
+offset_bottom = 125.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "Move with WASD or the Arrow Keys"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="." unique_id=1854301666]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 455.0
-offset_top = 20.0
-offset_right = 589.0
-offset_bottom = 77.0
+offset_left = 431.0
+offset_top = 8.0
+offset_right = 565.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "Press J or the Right Mouse Button to punch"
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="." unique_id=421710360]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 661.0
-offset_top = -12.0
-offset_right = 808.0
-offset_bottom = 45.0
+offset_left = 643.0
+offset_top = -27.0
+offset_right = 821.0
+offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "Press K or the Left Mouse Button to throw an apple"
 autowrap_mode = 2
 
 [node name="Label4" type="Label" parent="." unique_id=1579830809]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 963.0
-offset_top = -2.0
-offset_right = 1110.0
-offset_bottom = 55.0
+offset_left = 960.0
+offset_top = -7.0
+offset_right = 1147.0
+offset_bottom = 50.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "If you fall, the level resets"
 autowrap_mode = 2
 
 [node name="Label5" type="Label" parent="." unique_id=522736629]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 1300.0
-offset_top = 51.0
-offset_right = 1425.0
-offset_bottom = 108.0
+offset_left = 1277.0
+offset_top = 44.0
+offset_right = 1427.0
+offset_bottom = 105.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "Collect coins to spend in the shop"
 autowrap_mode = 2
@@ -656,7 +656,7 @@ offset_top = -106.0
 offset_right = 2027.0
 offset_bottom = -49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_811q2")
+theme_override_fonts/font = ExtResource("3_rcm07")
 theme_override_font_sizes/font_size = 12
 text = "Ready for a real challange?"
 autowrap_mode = 2

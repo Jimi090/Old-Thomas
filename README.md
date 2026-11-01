@@ -8,12 +8,13 @@ Path 1 is centred around harvest and autumn time, when leaves change and the win
 Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels, plus you get a cute lil dog :)!
 Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!). And you can't forget the new friend you meet along the way!
 Path 4 keeps the nice autumn theme but also IS HARDER!!! 
-Plus, more paths and features are always coming out, so make sure to keep playing every week!!!
-Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get rewards!
+Plus, more paths and features are always coming out, so make sure to keep playing every week!!! 
+Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get AWESOME rewards!
 And you can't forget about the excellent music; it really helps set the mood!!! (it's advenutre and zelda themed hehe)
+Don't worry there is a tutorial at the start to guide you through the basics of the game!
 
 *Seasonal Event*
-New cinnamon collectable! Collect cinnamon on your journeys and get 3x more coins each. (Who doesn't like cinnamon??? hehehe)
+New cinnamon collectable! Collect cinnamon on your journeys and get 3x more coins each. (Who doesn't like cinnamon??? ESPECIALLY IN FALLL!!! hehehe...)
 
 I hope you enjoy this adventure. Good luck! (Yippppee!)
 
@@ -24,7 +25,8 @@ Each path has four levels, with 4 paths being available currently.
 On top of that you are also able to go to the shop and buy upgrades!
 Visit the town to complete quests and earn rewards!
 Can't forget to occasionally visit home to meet the friends you met along the way as well as collectables!!!
-At the end of paths you must defeat a diffucult boss! You may want to gear up!!!
+At the end of paths you must defeat a diffucult boss! You may want to gear up in the shop and complete quests before these milestones!!!
+
 
 ## Controls
 
@@ -40,20 +42,14 @@ Skip cutscene: S
 
 ## New Features
 
-This week lot of new features were added!
-First we have the path 2 boss finished.
-We have a friend ability that can help deal damage to enemies.
-We have uped the UI throught the game (especially the shop!)
-We have also allowed Thomas to walk around in the main menu using movement controls and enter different paths, the shop, your home, or town through this method.
-There is a new path 4 <3 !!!
-Levels were updated to be much more polished and nicer for gameplay.
-New range attack!
-New home in the main menu, where you can see collectables and happiness.
-Main menu was beautified with flowers and mushrooms!
-You can now view the cooldown for different attack options when in a level.
-That should be it for this week (again lots of stuff were made so I may have missed a few minor changes!)
+YAY! New featureeess! 
+There is now a new boss with its own attack system (hooray!)
+There is a tutorial level at the start so the user can understand how to play the game!
+You can now use Thomas as a cursor and really feel like you exploring the world of the game using WASD and Enter!
+There are some new sprites for Thomas that unfortunatly have no been implemented due to time difficulties :(, but they will be implemented next week!
+There are two new cutscenes: one for when you gaina doggy comapinion and one for when you make a friend along your journey!
+Hope you enjoy these features along with the slightly more polished levels!
 
-Also we have followed the theme again this week! I don't know if you saw, but the new friend ability ties in with theme best friend! This is because after completing path 2 you would meet you new best friend and they will be able to help you when in need!
 
 ## AI Usage
 
@@ -75,6 +71,8 @@ To solve this, we made sure to share what we will do beforehand and what we have
 Together, we have worked so hard to create a game for others to enjoy!
 
 *Also note for week 5! I had to revert some commits due to conflicts and redo some level changes ALL OVER AGAIN. but it should how in the git history!
+
+*Also week 7 there were some commit issues and some work needed to be discarded in order to carry over important work and so the came doesn't get completely distroyed hehe...
 
 <3 <3 <3
 
