@@ -12,7 +12,8 @@ func _ready() -> void:
 
 
 func _on_body_entered(_body: Node2D) -> void:
-	GameData.level_progress[path_name][level_name]["finished"] = true
+	if path_name and level_name:
+		GameData.level_progress[path_name][level_name]["finished"] = true
 	Events.level_completed.emit(path_name, level_name)
 	GameData.save_data()
 	call_deferred(destination)
@@ -28,3 +29,7 @@ func play_dog_cutscene():
 
 func play_friend_cutscene():
 	get_tree().change_scene_to_file("uid://dhk1u8mam6d6b")
+
+
+func lunch_level_1():
+	get_tree().change_scene_to_file("uid://t7vyjpigixje")

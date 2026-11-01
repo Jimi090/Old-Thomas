@@ -3,12 +3,14 @@ extends Node2D
 @onready var player: Player = $Player
 @onready var hud: HUD = $HUD
 @onready var mage_2: Enemy = $Mage2
+@onready var key: Key = $Key
 
 
 func _ready() -> void:
 	player.player_died.connect(_on_player_death)
 	player.ability1_used = true
 	hud.get_child(0).get_node("Ability1CooldownBar").hide()
+	key.destination = "lunch_level_1"
 	mage_2.health = 1
 
 
