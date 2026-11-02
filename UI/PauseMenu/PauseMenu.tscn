@@ -56,4 +56,4 @@ layout_mode = 2
 text = "Main Menu"
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("3_fhxse")]
-position = Vector2(145, 93)
+position = Vector2(160, 89)

@@ -129,6 +129,6 @@ label_settings = SubResource("LabelSettings_3al1m")
 layout_mode = 1
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("10_clrk4")]
-position = Vector2(181, 77)
+position = Vector2(169, 77)
 
 [connection signal="pressed" from="Buy_btn" to="." method="_on_buy_btn_pressed"]

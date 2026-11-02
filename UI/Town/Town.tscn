@@ -118,4 +118,4 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("6_x3eng")]
-position = Vector2(132, 21)
+position = Vector2(116, 28)

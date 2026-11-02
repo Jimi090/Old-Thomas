@@ -38,4 +38,4 @@ columns = 2
 layout_mode = 1
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("3_dq4gv")]
-position = Vector2(159, 102)
+position = Vector2(160, 90)

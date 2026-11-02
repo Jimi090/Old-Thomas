@@ -30,6 +30,8 @@ var ability1_used := false
 
 
 func _ready() -> void:
+	setup_sprite()
+
 	var health_multiplayer = GameData.upgrades["Health_upgrade"]["level"]
 	MAX_HEALTH = GB.player.health + health_multiplayer * GB.player.health / 10
 
@@ -186,3 +188,16 @@ func _on_range_attack_cooldown_timeout() -> void:
 
 func _on_basic_attack_cooldown_timeout() -> void:
 	can_basic_attack = true
+
+
+func setup_sprite():
+	$AnimatedSprite2D.hide()
+	if GameData.progress < 25:
+		animated_sprite_2d = $AnimatedSprite2DDepressed
+	elif GameData.progress < 50:
+		animated_sprite_2d = $AnimatedSprite2DSad
+	elif GameData.progress < 75:
+		animated_sprite_2d = $AnimatedSprite2DPale
+	elif GameData.progress <= 100:
+		animated_sprite_2d = $AnimatedSprite2D
+	animated_sprite_2d.show()

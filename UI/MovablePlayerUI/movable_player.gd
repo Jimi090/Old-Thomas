@@ -29,6 +29,8 @@ var dialogue_position: Dialogue_Position = Dialogue_Position.TOP_LEFT
 
 
 func _ready() -> void:
+	setup_sprite()
+
 	if start_dialogue_text:
 		start_dialogue.text = start_dialogue_text
 	else:
@@ -200,3 +202,16 @@ func move_dialogue():
 	current_dialogue.position = dialogue_position_marker.position - (
 		current_dialogue.size * current_dialogue.scale
 	) + scaler * current_dialogue.size * current_dialogue.scale
+
+
+func setup_sprite():
+	$AnimatedSprite2D.hide()
+	if GameData.progress < 25:
+		animated_sprite_2d = $AnimatedSprite2DDepressed
+	elif GameData.progress < 50:
+		animated_sprite_2d = $AnimatedSprite2DSad
+	elif GameData.progress < 75:
+		animated_sprite_2d = $AnimatedSprite2DPale
+	elif GameData.progress <= 100:
+		animated_sprite_2d = $AnimatedSprite2D
+	animated_sprite_2d.show()

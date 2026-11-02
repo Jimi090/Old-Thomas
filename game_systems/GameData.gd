@@ -16,6 +16,8 @@ var active_quests := { }
 
 var displaied_quests := { }
 
+var progress := 0.0
+
 # Variables to save
 var gold: int = 0:
 	set(value):
@@ -57,6 +59,8 @@ func save_data():
 	}
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_var(save)
+
+	get_progress()
 
 
 func load_data():
@@ -259,6 +263,18 @@ func change_fullscreen_mode_to(is_fullscreen: bool):
 		DisplayServer.window_set_position(Vector2(0, 36))
 
 
+func get_progress():
+	var all_levels := 0
+	var completed_levels := 0
+	for path in GameData.level_progress:
+		for level in GameData.level_progress[path]:
+			all_levels += 1
+			if GameData.level_progress[path][level]["finished"]:
+				completed_levels += 1
+
+	progress = float(completed_levels) / float(all_levels) * 100
+
+
 func _ready() -> void:
 	var status = load_data()
 	if status != OK:
@@ -268,6 +284,7 @@ func _ready() -> void:
 
 	get_active_quests()
 	get_displaied_quests()
+	get_progress()
 
 	'for path in level_progress:
 		for level in level_progress[path]:

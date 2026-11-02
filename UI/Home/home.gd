@@ -1,7 +1,7 @@
 extends Control
 
 @onready var progress_bar: ProgressBar = $ProgressBar
-@onready var player_animated_sprite_2d: AnimatedSprite2D = $PlayerAnimatedSprite2D
+@onready var player_animated_sprite_2d: AnimatedSprite2D = $PlayerSprite2D
 @onready var dog_animated_sprite_2d: AnimatedSprite2D = $DogAnimatedSprite2D
 @onready var friend_animated_sprite_2d: AnimatedSprite2D = $FriendAnimatedSprite2D
 @onready var flying_friend_sprite_2d: Sprite2D = $FlyingFriendSprite2D
@@ -17,6 +17,7 @@ var progress_decimal: float
 
 
 func _ready() -> void:
+	setup_player_sprite()
 	update_progress_bar()
 	if progress_decimal >= 0.25:
 		random_dog_flips()
@@ -119,3 +120,16 @@ func show_chests():
 
 func _on_close_welcome_label_button_pressed() -> void:
 	welcome_label.hide()
+
+
+func setup_player_sprite():
+	$PlayerSprite2D.hide()
+	if GameData.progress < 25:
+		player_animated_sprite_2d = $Player2DDepressed
+	elif GameData.progress < 50:
+		player_animated_sprite_2d = $Player2DSad
+	elif GameData.progress < 75:
+		player_animated_sprite_2d = $Player2DPale
+	elif GameData.progress <= 100:
+		player_animated_sprite_2d = $PlayerSprite2D
+	player_animated_sprite_2d.show()
