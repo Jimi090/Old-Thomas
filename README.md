@@ -84,5 +84,14 @@ Together, we have worked so hard to create a game for others to enjoy!
 
 <img width="1184" height="722" alt="image (14)" src="https://github.com/user-attachments/assets/aff2db82-8e41-45d3-9be7-7695a77da799" />
 
+<img width="1920" height="1080" alt="image (4) (1)" src="https://github.com/user-attachments/assets/b0757311-e211-49fe-8f93-99ca86d92359" />
+
+<img width="1920" height="1059" alt="image (3) (1)" src="https://github.com/user-attachments/assets/87ce5d43-7870-46b5-891c-d67f9424412e" />
+
+<img width="1920" height="1080" alt="image (2) (1)" src="https://github.com/user-attachments/assets/02d19c60-39e1-47a6-8809-428f1fc655da" />
+
+<img width="1920" height="1082" alt="image (1) (1)" src="https://github.com/user-attachments/assets/36416888-b5d1-4ba0-b168-7cac6617f199" />
+
+<img width="1920" height="1080" alt="image (21)" src="https://github.com/user-attachments/assets/dc7d597c-6689-4662-9cfb-03769ac70651" />
 
 https://lillylike123.itch.io/old-thomas
