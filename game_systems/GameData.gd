@@ -255,6 +255,8 @@ func change_fullscreen_mode_to(is_fullscreen: bool):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_size(Vector2(1280, 720))
+		DisplayServer.window_set_position(Vector2(0, 36))
 
 
 func _ready() -> void:
