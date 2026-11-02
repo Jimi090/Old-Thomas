@@ -681,6 +681,3 @@ position = Vector2(1933, 41)
 
 [node name="Ghost2" parent="." index="31" unique_id=1615067921 instance=ExtResource("8_d6jbu")]
 position = Vector2(956, -102)
-
-[node name="Ghost3" parent="." index="32" unique_id=1085084195 instance=ExtResource("8_d6jbu")]
-position = Vector2(542, 57)

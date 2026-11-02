@@ -202,7 +202,6 @@ height = 14.0
 size = Vector2(19.793129, 14.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=289370131]
-position = Vector2(8, 6)
 scale = Vector2(2, 2)
 collision_layer = 5
 collision_mask = 5
@@ -211,10 +210,8 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886025495]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"basic_attack"
+animation = &"jump"
 autoplay = "idle"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=864961474]
 position = Vector2(-2, 1)

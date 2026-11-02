@@ -591,61 +591,61 @@ centered = false
 
 [node name="Label" type="Label" parent="." unique_id=813947576]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 54.0
-offset_top = 80.0
-offset_right = 182.0
-offset_bottom = 125.0
+offset_left = 53.0
+offset_top = 84.0
+offset_right = 199.0
+offset_bottom = 129.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Move with WASD or the Arrow Keys"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="." unique_id=1854301666]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 431.0
-offset_top = 8.0
-offset_right = 565.0
-offset_bottom = 69.0
+offset_left = 423.0
+offset_top = 23.0
+offset_right = 594.0
+offset_bottom = 84.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Press J or the Right Mouse Button to punch"
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="." unique_id=421710360]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 643.0
-offset_top = -27.0
-offset_right = 821.0
-offset_bottom = 34.0
+offset_left = 661.0
+offset_top = -29.0
+offset_right = 839.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Press K or the Left Mouse Button to throw an apple"
 autowrap_mode = 2
 
 [node name="Label4" type="Label" parent="." unique_id=1579830809]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 960.0
-offset_top = -7.0
-offset_right = 1147.0
-offset_bottom = 50.0
+offset_left = 956.0
+offset_top = -10.0
+offset_right = 1106.0
+offset_bottom = 47.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "If you fall, the level resets"
 autowrap_mode = 2
 
 [node name="Label5" type="Label" parent="." unique_id=522736629]
 custom_minimum_size = Vector2(1, 1)
-offset_left = 1277.0
-offset_top = 44.0
-offset_right = 1427.0
-offset_bottom = 105.0
+offset_left = 1245.0
+offset_top = 54.0
+offset_right = 1395.0
+offset_bottom = 115.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Collect coins to spend in the shop"
 autowrap_mode = 2
 
@@ -653,11 +653,11 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(1, 1)
 offset_left = 1870.0
 offset_top = -106.0
-offset_right = 2027.0
+offset_right = 2020.0
 offset_bottom = -49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rcm07")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Ready for a real challange?"
 autowrap_mode = 2
 
@@ -666,7 +666,7 @@ tile_map_data = PackedByteArray("AAAAAAkAAAAAAAMAAAAAAAoAAAAAAAQAAAAAAAsAAAAGAA0
 tile_set = SubResource("TileSet_811q2")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1305725635]
-tile_map_data = PackedByteArray("AAAAAAcAAQAEAAQAAAAAAAgAAQAEAAUAAABHAAMAAQAKAAUAAABIAAMAAQALAAUAAABJAAMAAQAMAAUAAAA=")
+tile_map_data = PackedByteArray("AAAAAAcAAQAEAAQAAAAAAAgAAQAEAAUAAABHAAMAAQAKAAUAAABIAAMAAQALAAUAAABJAAMAAQAMAAUAAAAPAAYAAQAHAAEAAAAPAAcAAQAHAAIAAAAPAAgAAQAHAAMAAAAQAAgAAQAMAAEAAAAfAAUAAQANAAMAAAAgAAQAAQAMAAIAAAAgAAUAAQAMAAMAAABDAAMAAQACAAYAAAAtAAEAAQAGAAEAAAAtAAIAAQAGAAIAAAAtAAMAAQAGAAMAAAAsAAMAAQAJAAcAAABPAAgAAQAJAAUAAABlAAEAAQAIAAMAAABlAAIAAQAIAAQAAABlAAMAAQAIAAUAAAB7AP3/AQAMAAEAAAB6AP3/AQAMAAEAAAA=")
 tile_set = SubResource("TileSet_7d2fe")
 
 [node name="Player" parent="." unique_id=289370131 instance=ExtResource("4_ridmi")]
