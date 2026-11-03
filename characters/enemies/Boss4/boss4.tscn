@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://dxdo6g8tpaha5"]
+
+[ext_resource type="Script" uid="uid://cif4ha20htbc8" path="res://characters/enemies/Boss4/boss_4.gd" id="1_kij8n"]
+[ext_resource type="Texture2D" uid="uid://deyerehlisqe0" path="res://characters/enemies/Boss4/assets/boss4-attack.png" id="1_tsesd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kij8n"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(0, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2roi"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(0, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsrg8"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(100, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utc34"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(200, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrige"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(300, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3imo"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(400, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duxfw"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(500, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di1vp"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(600, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvfyn"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(700, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73wk2"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(800, 0, 100, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gf3h"]
+atlas = ExtResource("1_tsesd")
+region = Rect2(900, 0, 100, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrtow"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"basic_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kij8n")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"take_damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2roi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsrg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utc34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrige")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3imo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duxfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di1vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvfyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73wk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gf3h")
+}],
+"loop": 0,
+"name": &"thrust_attack",
+"speed": 40.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srkg8"]
+radius = 42.000004
+
+[node name="Boss4" type="CharacterBody2D" unique_id=1954414926]
+scale = Vector2(1.5, 1.5)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_kij8n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224564081]
+position = Vector2(12.666668, 0)
+sprite_frames = SubResource("SpriteFrames_nrtow")
+animation = &"thrust_attack"
+autoplay = "idle"
+frame = 9
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=2023240553]
+position = Vector2(-1.5, 0)
+polygon = PackedVector2Array(-2.6666665, -14, 6.0000005, -14, 10.000001, -10.666667, 10, -7.3333335, 8, -4.666667, 8.000001, 0, 14, 4, 14.666668, 16, -10, 16, -10.666667, 2.6666667, -5.333333, -0.6666667, -6.6666665, -4.666667, -8, -8, -8, -9.333334, -6.6666665, -11.333334, -6, -12.666667, -4, -13.333334)
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=584976478]
+visible = false
+position = Vector2(1.3333334, 0)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1874958705]
+shape = SubResource("CircleShape2D_srkg8")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=733006547]
+visible = false
+target_position = Vector2(26, 38.5)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1833862363]
+visible = false
+target_position = Vector2(23, 16)
+
+[node name="WeaponHitbox" type="Area2D" parent="." unique_id=483795480]
+position = Vector2(-12.666667, 6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeaponHitbox" unique_id=48754736]
+polygon = PackedVector2Array(-23.333332, 0, -20.666668, -2.6666665, -5.333332, -4, -0.66666603, -4, -0.66666603, 4, -20.666668, 4, -23.333332, 1.3333335)
+
+[node name="ThrustTimer" type="Timer" parent="." unique_id=441698421]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="ThrustTimer" to="." method="_on_thrust_timer_timeout"]

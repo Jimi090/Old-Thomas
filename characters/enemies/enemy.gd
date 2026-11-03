@@ -2,7 +2,7 @@ class_name Enemy
 extends Character
 
 var animated_sprite_2d: AnimatedSprite2D
-var collision_shape_2d: CollisionShape2D
+var collision_shape_2d: Node2D
 var attack_range: Area2D
 var floor_check: RayCast2D
 var wall_check: RayCast2D
