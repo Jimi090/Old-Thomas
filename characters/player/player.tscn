@@ -190,6 +190,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_idpv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idpv6")
 }],
 "loop": 0,
 "name": &"take_damage",
@@ -358,6 +361,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2xk8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xk8k")
 }],
 "loop": 0,
 "name": &"take_damage",
@@ -520,6 +526,9 @@ animations = [{
 "speed": 8.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xk8k")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2xk8k")
 }],
@@ -690,6 +699,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x3apq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3apq")
 }],
 "loop": 0,
 "name": &"take_damage",
@@ -711,7 +723,7 @@ script = ExtResource("1_rkbax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886025495]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"idle"
+animation = &"take_damage"
 autoplay = "idle"
 
 [node name="AnimatedSprite2DDepressed" type="AnimatedSprite2D" parent="." unique_id=1337081875]

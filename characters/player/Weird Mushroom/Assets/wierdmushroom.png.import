@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfx82qcqd30tu"
-path="res://.godot/imported/wierdmushroom.png-af78b8cfc735d4bb74229ce737d63dbd.ctex"
+path="res://.godot/imported/wierdmushroom.png-43731cfe530308af1a140b412b075d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pickups/Weird Mushroom/Assets/wierdmushroom.png"
-dest_files=["res://.godot/imported/wierdmushroom.png-af78b8cfc735d4bb74229ce737d63dbd.ctex"]
+source_file="res://characters/player/Weird Mushroom/Assets/wierdmushroom.png"
+dest_files=["res://.godot/imported/wierdmushroom.png-43731cfe530308af1a140b412b075d01.ctex"]
 
 [params]
 

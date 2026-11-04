@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		var weapon_bodies := weapon_hitbox.get_overlapping_bodies()
 		if not weapon_bodies.is_empty() and not has_thrust_hit:
 			weapon_bodies[0].take_damage(THRUST_DAMAGE)
-			weapon_bodies[0].velocity.x = direction * 200
+			weapon_bodies[0].velocity.x = direction * 250
 			has_thrust_hit = true
 
 		move_and_slide()
