@@ -8,6 +8,7 @@ class_name HUD
 @onready var range_attack_cooldown_bar: Control = $UI/RangeAttackCooldownBar
 @onready var basic_attack_cooldown_bar: Control = $UI/BasicAttackCooldownBar
 @onready var ability_1_cooldown_bar: Control = $UI/Ability1CooldownBar
+@onready var ability_2_cooldown_bar: Control = $UI/Ability2CooldownBar
 
 
 func _on_gold_changed(amount):
@@ -42,3 +43,4 @@ func _ready() -> void:
 	basic_attack_cooldown_bar.cooldown = player.basic_attack_cooldown
 	range_attack_cooldown_bar.cooldown = player.ranged_attack_cooldown
 	ability_1_cooldown_bar.cooldown = 1000000000
+	ability_2_cooldown_bar.cooldown = 1000000000

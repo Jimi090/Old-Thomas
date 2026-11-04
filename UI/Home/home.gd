@@ -7,6 +7,7 @@ extends Control
 @onready var flying_friend_sprite_2d: Sprite2D = $FlyingFriendSprite2D
 @onready var chest_container: Control = $ChestContainer
 @onready var welcome_label: Label = $WelcomeLabel
+@onready var mushrooms_container: Node2D = $MushroomsContainer
 
 var patrol_distance := 100
 var PATROL_SPEED = 150
@@ -28,6 +29,9 @@ func _ready() -> void:
 	else:
 		friend_animated_sprite_2d.hide()
 		flying_friend_sprite_2d.hide()
+	if progress_decimal < 0.75:
+		mushrooms_container.hide()
+
 	show_chests()
 
 	point1 = player_animated_sprite_2d.position.x - patrol_distance

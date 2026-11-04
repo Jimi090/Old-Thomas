@@ -16,9 +16,16 @@ func _ready() -> void:
 			dog.queue_free()
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
+		player.ability2_used = true
+		hud.get_child(0).get_node("Ability2CooldownBar").hide()
 	elif path[-1] == "2":
 		player.ability1_used = true
 		hud.get_child(0).get_node("Ability1CooldownBar").hide()
+		player.ability2_used = true
+		hud.get_child(0).get_node("Ability2CooldownBar").hide()
+	elif path[-1] == "3":
+		player.ability2_used = true
+		hud.get_child(0).get_node("Ability2CooldownBar").hide()
 
 	if (
 		int(level[-6]) != len(GameData.level_progress[path])

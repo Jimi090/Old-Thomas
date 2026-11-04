@@ -18,6 +18,7 @@ var basic_attack_cooldown := GB.player.attack_cooldown
 var ranged_attack_damage := 20
 var ranged_attack_cooldown = 6.0
 var JUMP_FORCE := GB.player.jump_force
+var mushroom_ability_duration := 10
 
 var attack_multi := 1.0
 var speed_multi := 1.0
@@ -27,6 +28,7 @@ var gravity := GB.GRAVITY
 var can_range_attack := true
 var can_basic_attack := true
 var ability1_used := false
+var ability2_used := false
 
 
 func _ready() -> void:
@@ -166,6 +168,12 @@ func _input(event: InputEvent) -> void:
 			ability1_used = true
 			$"../HUD/UI/Ability1CooldownBar/".restart()
 
+	if event.is_action_pressed("Ability2"):
+		if not ability2_used:
+			mushroom_ability()
+			ability2_used = true
+			$"../HUD/UI/Ability2CooldownBar/".restart()
+
 
 func friend_ability():
 	var nearest_enemy: Enemy
@@ -180,6 +188,23 @@ func friend_ability():
 	var friend := FRIEND.instantiate()
 	friend.target_body = nearest_enemy
 	get_tree().current_scene.add_child(friend)
+
+
+func mushroom_ability():
+	take_damage(10)
+	@warning_ignore_start("narrowing_conversion")
+	basic_attack_damage *= 1.5
+	ranged_attack_damage *= 1.5
+	SPEED *= 1.5
+
+	await get_tree().create_timer(mushroom_ability_duration).timeout
+	basic_attack_damage *= 0.67
+	ranged_attack_damage *= 0.67
+	SPEED *= 0.67
+	@warning_ignore_restore("narrowing_conversion")
+	basic_attack_damage = round(basic_attack_damage)
+	ranged_attack_damage = round(ranged_attack_damage)
+	SPEED = round(SPEED)
 
 
 func _on_range_attack_cooldown_timeout() -> void:

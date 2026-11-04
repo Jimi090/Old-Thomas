@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="10_2fkp1"]
 [ext_resource type="Texture2D" uid="uid://bromk7vjiu3we" path="res://characters/player/sprite/idle-sad-player.png" id="10_nt8j2"]
 [ext_resource type="Texture2D" uid="uid://bfykg7ru7h3gx" path="res://characters/player/sprite/run-sad-player.png" id="11_gmelg"]
+[ext_resource type="Texture2D" uid="uid://cfx82qcqd30tu" path="res://characters/player/Weird Mushroom/Assets/wierdmushroom.png" id="15_psdv1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofpfa"]
 content_margin_left = 2.0
@@ -374,42 +375,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ry1w"]
-atlas = ExtResource("4_pplcb")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fkp1"]
-atlas = ExtResource("4_pplcb")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ye2oi"]
-atlas = ExtResource("4_pplcb")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fah2u"]
-atlas = ExtResource("4_pplcb")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2j1r1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8ry1w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2fkp1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ye2oi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fah2u")
-}],
-"loop": 1,
-"name": &"run",
-"speed": 8.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7y8cr"]
 atlas = ExtResource("5_hpyr8")
 region = Rect2(0, 0, 16, 16)
@@ -472,6 +437,42 @@ expand_margin_right = 10.0
 [sub_resource type="LabelSettings" id="LabelSettings_2fkp1"]
 font = ExtResource("2_ygfbf")
 font_size = 9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ry1w"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fkp1"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye2oi"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fah2u"]
+atlas = ExtResource("4_pplcb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2j1r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ry1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fkp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye2oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fah2u")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 8.0
+}]
 
 [node name="Home" type="Control" unique_id=750356424]
 layout_mode = 3
@@ -543,14 +544,6 @@ sprite_frames = SubResource("SpriteFrames_celgx")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="DogAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011160984]
-position = Vector2(120, 161.00002)
-scale = Vector2(1.75, 1.75)
-sprite_frames = SubResource("SpriteFrames_2j1r1")
-animation = &"run"
-autoplay = "run"
-frame_progress = 0.33253926
-
 [node name="FriendAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=526009710]
 position = Vector2(207, 150)
 scale = Vector2(3, 3)
@@ -562,6 +555,51 @@ position = Vector2(100, -43)
 scale = Vector2(3, 3)
 texture = ExtResource("6_etao0")
 offset = Vector2(-1, -25)
+
+[node name="MushroomsContainer" type="Node2D" parent="." unique_id=1994403487]
+
+[node name="TextureRect" type="TextureRect" parent="MushroomsContainer" unique_id=818357815]
+offset_left = 9.0
+offset_top = 153.0
+offset_right = 29.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+
+[node name="TextureRect2" type="TextureRect" parent="MushroomsContainer" unique_id=136379336]
+offset_left = 20.0
+offset_top = 153.0
+offset_right = 40.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+
+[node name="TextureRect3" type="TextureRect" parent="MushroomsContainer" unique_id=1427125438]
+offset_left = 31.0
+offset_top = 153.0
+offset_right = 51.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+
+[node name="TextureRect4" type="TextureRect" parent="MushroomsContainer" unique_id=95648362]
+offset_left = 45.0
+offset_top = 153.0
+offset_right = 65.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+
+[node name="TextureRect5" type="TextureRect" parent="MushroomsContainer" unique_id=1350113899]
+offset_left = 59.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+
+[node name="TextureRect6" type="TextureRect" parent="MushroomsContainer" unique_id=1736565060]
+offset_left = 72.0
+offset_top = 153.0
+offset_right = 92.0
+offset_bottom = 173.0
+texture = ExtResource("15_psdv1")
+metadata/_edit_use_anchors_ = true
 
 [node name="ChestContainer" type="Control" parent="." unique_id=2113579603]
 layout_mode = 1
@@ -697,6 +735,14 @@ scale = Vector2(0.04, 0.04)
 mouse_default_cursor_shape = 2
 icon = ExtResource("9_8ry1w")
 flat = true
+
+[node name="DogAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011160984]
+position = Vector2(120, 161.00002)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_2j1r1")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.33253926
 
 [node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("10_2fkp1")]
 position = Vector2(171, 63)

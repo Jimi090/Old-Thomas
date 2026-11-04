@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dog4hcsaemmo5" path="res://characters/player/Apple projectile/apple.png" id="5_vb885"]
 [ext_resource type="Texture2D" uid="uid://dchx4523ymm3d" path="res://characters/friend/assets/parachutre-friend.png" id="6_q8dl0"]
 [ext_resource type="Texture2D" uid="uid://xt28boxk6p5f" path="res://UI/HUD/player_fist.png" id="6_vb885"]
+[ext_resource type="Texture2D" uid="uid://cfx82qcqd30tu" path="res://characters/player/Weird Mushroom/Assets/wierdmushroom.png" id="7_10ibt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yixhe"]
 bg_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
@@ -97,6 +98,16 @@ offset_bottom = 20.0
 [node name="TextureRect" parent="UI/Ability1CooldownBar" index="0" unique_id=119608997]
 texture = ExtResource("6_q8dl0")
 
+[node name="Ability2CooldownBar" parent="UI" unique_id=1459743101 instance=ExtResource("4_gaqij")]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 4.0
+offset_right = 128.0
+offset_bottom = 20.0
+
+[node name="TextureRect" parent="UI/Ability2CooldownBar" index="0" unique_id=119608997]
+texture = ExtResource("7_10ibt")
+
 [node name="PauseMenuButton" parent="UI" unique_id=1747087023 instance=ExtResource("4_7v3yo")]
 layout_mode = 1
 anchors_preset = -1
@@ -112,3 +123,4 @@ offset_bottom = 400.0
 [editable path="UI/BasicAttackCooldownBar"]
 [editable path="UI/RangeAttackCooldownBar"]
 [editable path="UI/Ability1CooldownBar"]
+[editable path="UI/Ability2CooldownBar"]

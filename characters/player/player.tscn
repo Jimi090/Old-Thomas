@@ -723,7 +723,7 @@ script = ExtResource("1_rkbax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886025495]
 sprite_frames = SubResource("SpriteFrames_478fi")
-animation = &"take_damage"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="AnimatedSprite2DDepressed" type="AnimatedSprite2D" parent="." unique_id=1337081875]
