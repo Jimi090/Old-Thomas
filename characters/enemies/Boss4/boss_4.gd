@@ -57,6 +57,9 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.speed_scale = 1
 		elif animated_sprite_2d.frame < 13:
 			animated_sprite_2d.speed_scale = 0.2
+		elif animated_sprite_2d.frame == 13:
+			animated_sprite_2d.speed_scale = 0.2
+			hide_show_sprite()
 		else:
 			animated_sprite_2d.speed_scale = 1.5
 
@@ -157,3 +160,18 @@ func change_direction_to(new_direction: float):
 func _on_animation_finished() -> void:
 	if state == State.BASIC_ATTACK or state == State.TAKE_DAMAGE or state == BossState.THRUST:
 		state = State.RUN
+
+
+func take_damage(damage: int):
+	if state != BossState.THRUST and state != BossState.BASIC_ATTACK:
+		state = State.TAKE_DAMAGE
+	health -= damage
+
+	if health <= 0:
+		die()
+
+
+func hide_show_sprite():
+	animated_sprite_2d.hide()
+	await get_tree().create_timer(0.5).timeout
+	animated_sprite_2d.show()

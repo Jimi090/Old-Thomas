@@ -215,7 +215,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"basic_attack",
-"speed": 32.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
