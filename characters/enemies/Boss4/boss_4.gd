@@ -12,6 +12,7 @@ enum BossState {
 }
 const THRUST_DAMAGE := 20
 var has_thrust_hit := false
+var has_basic_attack_hit := false
 
 
 func _ready() -> void:
@@ -50,13 +51,34 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 		return
+	elif state == BossState.BASIC_ATTACK:
+		var basic_attack_bodies := attack_range.get_overlapping_bodies()
+		if animated_sprite_2d.frame < 10:
+			animated_sprite_2d.speed_scale = 1
+		elif animated_sprite_2d.frame < 13:
+			animated_sprite_2d.speed_scale = 0.2
+		else:
+			animated_sprite_2d.speed_scale = 1.5
+
+		if (
+			animated_sprite_2d.frame > 12 and not basic_attack_bodies.is_empty()
+			and not has_basic_attack_hit
+		):
+			if basic_attack_bodies[0] is Player:
+				basic_attack_bodies[0].take_damage(DAMAGE)
+				has_basic_attack_hit = true
+
+		move_and_slide()
+		return
 	else:
 		has_thrust_hit = false
+		has_basic_attack_hit = false
+		animated_sprite_2d.speed_scale = 1
 
 	var bodies = attack_range.get_overlapping_bodies()
 
-	'if can_attack and not bodies.is_empty():
-		attack(bodies[0])'
+	if can_attack and not bodies.is_empty():
+		attack(bodies[0])
 
 	if bodies.is_empty():
 		if global_position.x - player.global_position.x >= 0:
@@ -97,6 +119,20 @@ func sword_thrust():
 	velocity.x = direction * 400
 
 
+func attack(body: Character) -> void:
+	state = State.BASIC_ATTACK
+	can_attack = false
+	velocity.x = 0
+
+	if body.position.x > position.x:
+		change_direction_to(1)
+	else:
+		change_direction_to(-1)
+
+	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
+	can_attack = true
+
+
 func change_direction_to(new_direction: float):
 	if direction == new_direction:
 		return
@@ -109,11 +145,13 @@ func change_direction_to(new_direction: float):
 		collision_shape_2d.scale.x = -1 * abs(collision_shape_2d.scale.x)
 		weapon_hitbox.position.x = abs(weapon_hitbox.position.x) - 3
 		weapon_hitbox.scale.x = -1 * abs(weapon_hitbox.scale.x)
+		attack_range.scale.x = -1 * abs(attack_range.scale.x)
 	else:
 		animated_sprite_2d.offset.x = 0
 		collision_shape_2d.scale.x = abs(collision_shape_2d.scale.x)
 		weapon_hitbox.position.x = -12.667
 		weapon_hitbox.scale.x = abs(weapon_hitbox.scale.x)
+		attack_range.scale.x = abs(attack_range.scale.x)
 
 
 func _on_animation_finished() -> void:
