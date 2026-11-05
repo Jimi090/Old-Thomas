@@ -1,3 +1,331 @@
 [gd_scene format=3 uid="uid://dym86pefms25e"]
 
-[node name="MushroomCutscene" type="Node2D" unique_id=915361008]
+[ext_resource type="Script" uid="uid://capn24hf8iu32" path="res://Cutscenes/Mushroom Cutscene/mushroom_cutscene.gd" id="1_6xfu7"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_nrjqj"]
+[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_koi6n"]
+[ext_resource type="Texture2D" uid="uid://bjtt7i8phrpfw" path="res://characters/player/sprite/run-player.png" id="4_hur15"]
+[ext_resource type="Texture2D" uid="uid://bbwyb0xp5sp4u" path="res://characters/enemies/Boss3/sprite/boss3-idle.png" id="5_s4nwx"]
+[ext_resource type="Texture2D" uid="uid://cfx82qcqd30tu" path="res://characters/player/Weird Mushroom/Assets/wierdmushroom.png" id="6_nrjqj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8esil"]
+line_spacing = 8.0
+font = ExtResource("2_nrjqj")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
+font = ExtResource("2_nrjqj")
+font_size = 10
+
+[sub_resource type="Animation" id="Animation_yqbaj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-35.374996, 106.99999)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boss3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(357.66666, 112)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeirdMush:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeirdMush:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.3529983]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.016814815, 0.01614815)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WeirdMush2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(231.00002, 117.75)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WeirdMush2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Player2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ljpt3"]
+resource_name = "Scene !"
+length = 2.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 2.36),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.374996, 106.99999), Vector2(114.624985, 106.99999), Vector2(114.624985, 106.99999), Vector2(-12.999992, 220)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boss3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 2.36),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(357.66666, 112), Vector2(200.66666, 112), Vector2(200.66666, 112), Vector2(332, 215)]
+}
+
+[sub_resource type="Animation" id="Animation_6xfu7"]
+resource_name = "Scene 2"
+length = 4.633333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeirdMush:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 1.7333333, 2.2666664),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(3.6875024, 3.875003), Vector2(3.6875024, 3.875003), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeirdMush:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.43333334, 1.7333333, 2.2566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -1.569051]
+}
+
+[sub_resource type="Animation" id="Animation_koi6n"]
+resource_name = "Scene 3"
+length = 3.1666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-6.3529983, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.016814815, 0.01614815), Vector2(4.081, 3.841)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeirdMush2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.71),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(231.00002, 117.75), Vector2(104, 123.75001)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeirdMush2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.7, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.18, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ofy50"]
+_data = {
+&"RESET": SubResource("Animation_yqbaj"),
+&"Scene 1": SubResource("Animation_ljpt3"),
+&"Scene 2": SubResource("Animation_6xfu7"),
+&"Scene 3": SubResource("Animation_koi6n")
+}
+
+[node name="Mushroom Cutscene" type="Control" unique_id=1136009752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xfu7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=29079924]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_8esil")
+autowrap_mode = 3
+script = ExtResource("3_koi6n")
+text_to_show = "After defeating the horrifying beast, Thomas feels unconqurable and mighty... but at the same time very much lonely"
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1652803276]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 159.0
+offset_right = 361.0
+offset_bottom = 181.0
+text = "Press Space to Continue"
+label_settings = SubResource("LabelSettings_7c6ys")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=990060100]
+libraries/ = SubResource("AnimationLibrary_ofy50")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=2046575169]
+position = Vector2(-35.374996, 106.99999)
+scale = Vector2(3.783333, 3.6333334)
+texture = ExtResource("4_hur15")
+region_enabled = true
+region_rect = Rect2(0, 0, 15.144791, 15.6564045)
+
+[node name="Player2" type="Sprite2D" parent="." unique_id=1968946578]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(99.3891, 117)
+rotation = -6.3529983
+scale = Vector2(0.016814815, 0.01614815)
+texture = ExtResource("4_hur15")
+region_enabled = true
+region_rect = Rect2(0, 0, 15.144791, 15.6564045)
+
+[node name="Boss3" type="Sprite2D" parent="." unique_id=548020665]
+position = Vector2(357.66666, 112)
+scale = Vector2(1.7083341, 1.754167)
+texture = ExtResource("5_s4nwx")
+region_rect = Rect2(0, 0, 15.144791, 15.6564045)
+
+[node name="WeirdMush" type="Sprite2D" parent="." unique_id=1560880449]
+position = Vector2(149, 115)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("6_nrjqj")
+
+[node name="WeirdMush2" type="Sprite2D" parent="." unique_id=1666651927]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(231.00002, 117.75)
+scale = Vector2(0.9375, 0.8437501)
+texture = ExtResource("6_nrjqj")
