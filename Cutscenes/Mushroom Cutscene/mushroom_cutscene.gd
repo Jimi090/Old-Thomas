@@ -8,7 +8,7 @@ extends Control
 var pages: Array[String] = [
 	"After once again destroying the final beast of path 3, Thomas makes his way back to the village.",
 	"A while through his travels to the village Thomas spots a unusual looking mushroom",
-	"Thomas decides to eat the mushroom and in return gains _____",
+	"Thomas decides to plant the mushroom and finds out that these mushrooms provide additional damage and speed at cost of some health.",
 ]
 
 var current_page: int = 0
