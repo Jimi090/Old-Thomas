@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dyqk6p1qtjax7" path="res://UI/StartMenu/Assets/sound-button(active).png" id="6_cc5vj"]
 [ext_resource type="Texture2D" uid="uid://gby43h6yrdp0" path="res://tileset/objects_/items_.png" id="6_tx4ui"]
 [ext_resource type="Texture2D" uid="uid://j66hup3j14a" path="res://UI/StartMenu/Assets/config-button.png" id="7_cc5vj"]
+[ext_resource type="Texture2D" uid="uid://bmqr8e38y7q7k" path="res://UI/Credits/heart_32x32.png" id="10_guiwc"]
 [ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="14_v5vrn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qejx2"]
@@ -29,6 +30,30 @@ texture = ExtResource("6_cc5vj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1y0td"]
 texture = ExtResource("4_tdetd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guiwc"]
+bg_color = Color(0.7176471, 0.25490198, 0.25490198, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dofjh"]
+bg_color = Color(0.51659566, 0.1653082, 0.1673244, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jntbr"]
 atlas = ExtResource("2_8uev0")
@@ -260,6 +285,26 @@ grow_vertical = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_1y0td")
 icon = ExtResource("6_1y0td")
 expand_icon = true
+
+[node name="CreditsBtn" parent="." unique_id=1529682245 instance=ExtResource("2_7vcb3")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -36.000008
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_guiwc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dofjh")
+icon = ExtResource("10_guiwc")
+flat = false
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1838247519]
 position = Vector2(56, 103)
