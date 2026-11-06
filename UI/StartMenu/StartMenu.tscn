@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://j66hup3j14a" path="res://UI/StartMenu/Assets/config-button.png" id="7_cc5vj"]
 [ext_resource type="Texture2D" uid="uid://bmqr8e38y7q7k" path="res://UI/Credits/heart_32x32.png" id="10_guiwc"]
 [ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="14_v5vrn"]
+[ext_resource type="Texture2D" uid="uid://c5xjvd6bg7k7e" path="res://UI/Credits/arrow-right-02.png" id="16_dofjh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qejx2"]
 font = ExtResource("2_x2dvx")
@@ -305,6 +306,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_guiwc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dofjh")
 icon = ExtResource("10_guiwc")
 flat = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1878227273]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -34.0
+offset_right = 192.0
+offset_bottom = 222.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_dofjh")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="." unique_id=1838247519]
 position = Vector2(56, 103)
