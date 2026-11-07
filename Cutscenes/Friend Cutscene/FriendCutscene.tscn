@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="1_lfnnh"]
 [ext_resource type="Script" uid="uid://lkubp2fk51t" path="res://Cutscenes/Friend Cutscene/friend_cutscene.gd" id="1_lja8q"]
+[ext_resource type="Texture2D" uid="uid://cd0c4njtwqsib" path="res://characters/player/sprite/idle-pale-player.png" id="2_1lp42"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="2_x7son"]
 [ext_resource type="Texture2D" uid="uid://dsnn3hrv0gigm" path="res://characters/enemies/Boss2/boss2-idle.png" id="3_lja8q"]
-[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_1lp42"]
 [ext_resource type="Texture2D" uid="uid://bt8g8xgbv43uf" path="res://characters/friend/assets/basicpose-friend.png" id="6_1lp42"]
 [ext_resource type="Texture2D" uid="uid://dskv1rcylq0oq" path="res://characters/friend/assets/friendcage.png" id="6_plrdg"]
 
@@ -247,7 +247,7 @@ oversampling_with_scale = 1
 light_mask = 524288
 position = Vector2(378, 110.00001)
 scale = Vector2(5, 4.200158)
-texture = ExtResource("4_1lp42")
+texture = ExtResource("2_1lp42")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)
@@ -293,7 +293,7 @@ region_rect = Rect2(0.09648085, 0, 31.519419, 34.597813)
 [node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
 scale = Vector2(5, 3.874)
-texture = ExtResource("4_1lp42")
+texture = ExtResource("2_1lp42")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)

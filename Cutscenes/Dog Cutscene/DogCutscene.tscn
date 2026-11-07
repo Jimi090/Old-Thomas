@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://bqtq8q00happc" path="res://Cutscenes/Dog Cutscene/dog_cutscene.gd" id="1_582y4"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_xaecm"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_20dy6"]
-[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="4_2ice1"]
 [ext_resource type="Texture2D" uid="uid://c1gkeoeslfs0e" path="res://characters/enemies/Boss1/sprite/boss1-idle.png" id="4_xaecm"]
 [ext_resource type="Texture2D" uid="uid://b3mp4whj2gbvj" path="res://characters/dog/Sprite/dog-idle.png" id="5_20dy6"]
 [ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/StartCutscene/assets/heart.png" id="6_2ice1"]
+[ext_resource type="Texture2D" uid="uid://bromk7vjiu3we" path="res://characters/player/sprite/idle-sad-player.png" id="7_2ice1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
@@ -332,7 +332,7 @@ region_rect = Rect2(0, 0, 15.81102, 19.046265)
 [node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
 scale = Vector2(5, 3.874)
-texture = ExtResource("4_2ice1")
+texture = ExtResource("7_2ice1")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)

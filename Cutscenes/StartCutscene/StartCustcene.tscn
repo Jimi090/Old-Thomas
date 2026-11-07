@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_wa2w4"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_p08ns"]
 [ext_resource type="Texture2D" uid="uid://cnnfktkmo8pjb" path="res://Cutscenes/StartCutscene/assets/scroll.png" id="4_fi4oe"]
-[ext_resource type="Texture2D" uid="uid://blwbcxe1wvm0i" path="res://characters/player/sprite/idle-player.png" id="5_8cr05"]
+[ext_resource type="Texture2D" uid="uid://bbhif2gxq0s7s" path="res://characters/player/sprite/idle-depressed-player.png" id="5_p08ns"]
 [ext_resource type="Texture2D" uid="uid://hivt0gxcmtfy" path="res://Cutscenes/StartCutscene/assets/home.png" id="6_jff0x"]
 [ext_resource type="Texture2D" uid="uid://3dwut6bfg7xa" path="res://Cutscenes/StartCutscene/assets/xcoin.png" id="7_fhokb"]
 [ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/StartCutscene/assets/heart.png" id="8_sl3br"]
@@ -253,7 +253,7 @@ texture = ExtResource("4_fi4oe")
 [node name="Thomas" type="Sprite2D" parent="." unique_id=1159063195]
 position = Vector2(354, 100.875)
 scale = Vector2(5, 3.874)
-texture = ExtResource("5_8cr05")
+texture = ExtResource("5_p08ns")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 15.81102, 19.046265)
