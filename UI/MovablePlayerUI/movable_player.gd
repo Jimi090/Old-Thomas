@@ -173,6 +173,8 @@ func check_for_buttons(node: Node, pos: Vector2):
 			elif node2 is Button:
 				node2.pressed.emit()
 				return
+			elif node2 is HSlider:
+				node2.value = (global_position.x - node2.global_position.x) / float(node2.size.x) * 100
 
 			else:
 				check_for_buttons(node2, pos)

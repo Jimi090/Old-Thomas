@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpwqve1uxpi8p"]
 
-[ext_resource type="Script" uid="uid://capn24hf8iu32" path="res://Cutscenes/Mushroom Cutscene/mushroom_cutscene.gd" id="1_hum6w"]
+[ext_resource type="Script" uid="uid://h4utlew2jbov" path="res://Cutscenes/End Cutscene/end_cutscene.gd" id="1_5k0rf"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_5k0rf"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_kk3fn"]
 [ext_resource type="Texture2D" uid="uid://bc4ldr3nbise1" path="res://characters/enemies/Boss4/assets/boss4-move.png" id="4_hum6w"]
@@ -215,7 +215,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hum6w")
+script = ExtResource("1_5k0rf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
 layout_mode = 1
