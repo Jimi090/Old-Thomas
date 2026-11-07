@@ -161,17 +161,21 @@ func check_for_buttons(node: Node, pos: Vector2):
 		return
 
 	for node2 in children:
-		if (
-			(node2 is Button or node2 is Shop_item) and node2.visible
-			and node2.get_global_rect().has_point(pos)
-		):
+		if node2 is CanvasLayer:
+			check_for_buttons(node2, pos)
+		if node2 is Control and node2.visible and node2.get_global_rect().has_point(pos):
 			if node2 is Shop_item:
 				node2.get_child(0).pressed.emit()
-			else:
+				return
+			elif node2 is CheckButton:
+				node2.button_pressed = !node2.button_pressed
+				return
+			elif node2 is Button:
 				node2.pressed.emit()
-			return
-		else:
-			check_for_buttons(node2, pos)
+				return
+
+			else:
+				check_for_buttons(node2, pos)
 	return
 
 

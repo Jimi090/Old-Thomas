@@ -6,6 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://c4lxkpd0kf3p7" path="res://UI/SettingsMenu/label_settings.tres" id="4_f6fof"]
 [ext_resource type="FontFile" uid="uid://dg4xfxq7ij2uv" path="res://UI/MainMenu/assets/MedievalSharp-Regular.ttf" id="5_78k07"]
 [ext_resource type="Texture2D" uid="uid://cwmtog4twag16" path="res://UI/SettingsMenu/assets/clear-button.png" id="6_s7png"]
+[ext_resource type="PackedScene" uid="uid://b726j4ll3g8c1" path="res://UI/MovablePlayerUI/movable_player.tscn" id="7_i8jin"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nrtow"]
 font = ExtResource("2_f6fof")
@@ -220,3 +221,6 @@ offset_bottom = 26.0
 text = "Clear Save?
 "
 label_settings = ExtResource("4_f6fof")
+
+[node name="MovablePlayer" parent="." unique_id=435402951 instance=ExtResource("7_i8jin")]
+position = Vector2(156, 77)

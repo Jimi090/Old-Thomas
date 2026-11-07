@@ -10,6 +10,8 @@ func _ready() -> void:
 	player.player_died.connect(_on_player_death)
 	player.ability1_used = true
 	hud.get_child(0).get_node("Ability1CooldownBar").hide()
+	player.ability2_used = true
+	hud.get_child(0).get_node("Ability2CooldownBar").hide()
 	key.destination = "lunch_level_1"
 	mage_2.health = 1
 

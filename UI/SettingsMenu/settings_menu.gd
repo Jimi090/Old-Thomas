@@ -62,6 +62,8 @@ func _on_fs_button_toggled(toggled_on: bool):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		await get_tree().process_frame
+		await get_tree().process_frame
 		DisplayServer.window_set_size(Vector2(1280, 720))
 		DisplayServer.window_set_position(Vector2(0, 36))
 
