@@ -4,6 +4,7 @@ extends Control
 @onready var settings_btn: Button = $SettingsBtn
 @onready var exit_btn: Button = $ExitBtn
 @onready var running_enemy: AnimatedSprite2D = $RunningEnemy
+@onready var credits_btn: Button = $CreditsBtn
 var direction := 1
 
 const SETTINGS_SCENE = preload("res://UI/SettingsMenu/SettingsMenu.tscn")
@@ -13,6 +14,7 @@ func _ready() -> void:
 	play_btn.pressed.connect(new_game)
 	exit_btn.pressed.connect(exit_game)
 	settings_btn.pressed.connect(_on_settings_button_pressed)
+	credits_btn.pressed.connect(show_credits)
 
 
 func _process(_delta: float) -> void:
@@ -33,3 +35,7 @@ func exit_game():
 
 func _on_settings_button_pressed():
 	get_tree().change_scene_to_file("res://UI/SettingsMenu/SettingsMenu.tscn")
+
+
+func show_credits():
+	get_tree().change_scene_to_file("uid://cb68tfcxh3oed")
