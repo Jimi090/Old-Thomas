@@ -1,0 +1,275 @@
+[gd_scene format=3 uid="uid://cpwqve1uxpi8p"]
+
+[ext_resource type="Script" uid="uid://capn24hf8iu32" path="res://Cutscenes/Mushroom Cutscene/mushroom_cutscene.gd" id="1_hum6w"]
+[ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_5k0rf"]
+[ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_kk3fn"]
+[ext_resource type="Texture2D" uid="uid://bc4ldr3nbise1" path="res://characters/enemies/Boss4/assets/boss4-move.png" id="4_hum6w"]
+[ext_resource type="Texture2D" uid="uid://cqddy76uhbbcl" path="res://Cutscenes/End Cutscene/assets/beam-thomas.png" id="5_5k0rf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8esil"]
+line_spacing = 8.0
+font = ExtResource("2_5k0rf")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_7c6ys"]
+font = ExtResource("2_5k0rf")
+font_size = 10
+
+[sub_resource type="Animation" id="Animation_5k0rf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Thomas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.0000076, 112.00001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boss4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(395, 101)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boss4:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boss4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.4245284, 2.36)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Thomas:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.7857137, 3.40625)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Beam Thomas:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Beam Thomas:skew")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_yoxa7"]
+resource_name = "Scene 1"
+length = 3.0666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Thomas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-31.999992, 111.00001), Vector2(104.99999, 111)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boss4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(372.00003, 102.99999), Vector2(191.00005, 102.99999)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boss4:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.97),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boss4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.99, 1.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.4245284, 2.36), Vector2(0.0008631287, -0.0006437207)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Thomas:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.99, 1.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.7857137, 3.40625), Vector2(0.039723404, 8.324161e-06)]
+}
+
+[sub_resource type="Animation" id="Animation_kk3fn"]
+resource_name = "Scene 2"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Beam Thomas:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beam Thomas:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.6333333, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.569051]
+}
+
+[sub_resource type="Animation" id="Animation_t3lgu"]
+resource_name = "Scene 3"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2stt7"]
+_data = {
+&"RESET": SubResource("Animation_5k0rf"),
+&"Scene 1": SubResource("Animation_yoxa7"),
+&"Scene 2": SubResource("Animation_kk3fn"),
+&"Scene 3": SubResource("Animation_t3lgu")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t3lgu"]
+load_path = "res://.godot/imported/run-player.png-17fe2ca06f107889ef6566369e396fe8.ctex"
+
+[node name="End Cutscene" type="Control" unique_id=1136009752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hum6w")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=423857534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=29079924]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_8esil")
+autowrap_mode = 3
+script = ExtResource("3_kk3fn")
+text_to_show = "After defeating the horrifying beast, Thomas feels unconqurable and mighty... but at the same time very much lonely"
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1652803276]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 159.0
+offset_right = 363.0
+offset_bottom = 181.0
+text = "Press Space to Continue"
+label_settings = SubResource("LabelSettings_7c6ys")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=239678830]
+libraries/ = SubResource("AnimationLibrary_2stt7")
+
+[node name="Thomas" type="Sprite2D" parent="." unique_id=566836839]
+position = Vector2(-7.0000076, 112.00001)
+scale = Vector2(3.7857137, 3.40625)
+texture = SubResource("CompressedTexture2D_t3lgu")
+region_enabled = true
+region_rect = Rect2(0, 0, 14.299356, 16.1278)
+
+[node name="Boss4" type="Sprite2D" parent="." unique_id=254111664]
+position = Vector2(395, 101)
+scale = Vector2(2.4245284, 2.36)
+texture = ExtResource("4_hum6w")
+region_enabled = true
+region_rect = Rect2(0, 0, 53.217377, 50)
+
+[node name="Beam Thomas" type="Sprite2D" parent="." unique_id=214194927]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(158, 115)
+scale = Vector2(2.4375, 2.4843752)
+texture = ExtResource("5_5k0rf")

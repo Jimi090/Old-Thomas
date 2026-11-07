@@ -6,9 +6,9 @@ extends Control
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 var pages: Array[String] = [
-	"After once again destroying the final beast of path 3, Thomas makes his way back to the village.",
-	"A while through his travels to the village Thomas spots a unusual looking mushroom",
-	"Thomas decides to plant the mushroom and finds out that these mushrooms provide additional damage and speed at cost of some health.",
+	"Finally Thomas destroyed the final boss, and is now able to return back home accomplished. ",
+	"He feels as happy as ever and now has seen the ups and downs and everything in between.",
+	"As thomas ventures back his journey comes the and end once and for all...",
 ]
 
 var current_page: int = 0

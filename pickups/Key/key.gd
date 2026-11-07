@@ -29,6 +29,9 @@ func play_dog_cutscene():
 
 func play_friend_cutscene():
 	get_tree().change_scene_to_file("uid://dhk1u8mam6d6b")
+	
+func play_mushroom_cutscene():
+	get_tree().change_scene_to_file("uid://")
 
 
 func lunch_level_1():
