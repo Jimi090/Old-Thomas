@@ -220,7 +220,7 @@ func get_empty_levels_progress():
 		for level in levels:
 			level_progress[path] = { }
 		for level in levels:
-			level_progress[path][level] = get_default_level_progress() # Call the function here!
+			level_progress[path][level] = get_default_level_progress()
 
 
 func get_default_level_progress() -> Dictionary:
@@ -284,11 +284,8 @@ func _ready() -> void:
 
 	get_active_quests()
 	get_displaied_quests()
-	get_progress()
 
-	'for path in level_progress:
+	for path in level_progress:
 		for level in level_progress[path]:
-			level_progress[path][level]["finished"] = true'
-
-	'for i in range(len(quests)):
-		quests[i]["progress"] = quests[i]["goal"]'
+			level_progress[path][level]["finished"] = true
+	GameData.save_data()
