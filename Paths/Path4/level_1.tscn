@@ -693,3 +693,6 @@ position = Vector2(1158, 198)
 
 [node name="Potion4" parent="." index="36" unique_id=139834562 instance=ExtResource("9_ouecq")]
 position = Vector2(1635, 231)
+
+[node name="Potion5" parent="." index="36" unique_id=344343364 instance=ExtResource("9_ouecq")]
+position = Vector2(2678, 246)

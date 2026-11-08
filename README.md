@@ -27,8 +27,13 @@ Path 2 continues that harvest and autumn feel, plus special treasure chests hidd
 ![boss3 ss](/screenshots/boss3.png)
 
 Path 3 takes it to the next level as the game gets a little bit harder for Thomas (still tying into the autumn theme of course!). And you can't forget the new friend you meet along the way!
+<<<<<<< Updated upstream
 Path 4 keeps the nice autumn theme but also IS HARDER!!!
 Plus, more paths and features are always coming out, so make sure to keep playing every week!!!
+=======
+Path 4 keeps the nice autumn theme but also IS WAY HARDER!!! 
+Unfortuantly for now the game is wrapped up!!! But hopefully in the future it can get imporved!
+>>>>>>> Stashed changes
 Additionally, there is also a shop where you can buy upgrades to level up Thomas and a town where you can complete quests and get AWESOME rewards!
 
 ![shop ss](/screenshots/shop.png)
@@ -72,6 +77,7 @@ Skip cutscene: S
 
 ## New Features
 
+<<<<<<< Updated upstream
 YAY! New featureeess!
 There is now a new boss with its own attack system (hooray!)
 There is a tutorial level at the start so the user can understand how to play the game!
@@ -81,6 +87,15 @@ There are two new cutscenes: one for when you gaina doggy comapinion and one for
 Hope you enjoy these features along with the slightly more polished levels!
 
 ![tutorial image](/screenshots/tutorial.png)
+=======
+HOORAY NEW FEATURESSSS!
+Firstly there is now a boss for path 4 that you need to defeat to finish the path!
+There is also level hardcore where you need to fight ALL 4 bosses at the same time!!!
+There is also a credits scene in the start page.
+You can't forget the new mushroom ability that you can use!
+Additonally, there is 2 new cutscenes one for gaining the mushroom ability and one for finally finishing the level!
+Hope you enjoy the new features and the awesome game!
+>>>>>>> Stashed changes
 
 ## AI Usage
 
