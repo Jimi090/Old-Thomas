@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://capn24hf8iu32" path="res://Cutscenes/Mushroom Cutscene/mushroom_cutscene.gd" id="1_6xfu7"]
 [ext_resource type="FontFile" uid="uid://38u8upqwkdat" path="res://Cutscenes/StartCutscene/assets/PixelOperator8.ttf" id="2_nrjqj"]
 [ext_resource type="Script" uid="uid://bkm3t57ppvygo" path="res://Cutscenes/StartCutscene/story_label.gd" id="3_koi6n"]
-[ext_resource type="Texture2D" uid="uid://bjtt7i8phrpfw" path="res://characters/player/sprite/run-player.png" id="4_hur15"]
+[ext_resource type="Texture2D" uid="uid://cd0c4njtwqsib" path="res://characters/player/sprite/idle-pale-player.png" id="4_s4nwx"]
 [ext_resource type="Texture2D" uid="uid://bbwyb0xp5sp4u" path="res://characters/enemies/Boss3/sprite/boss3-idle.png" id="5_s4nwx"]
 [ext_resource type="Texture2D" uid="uid://dvrau8qcw71qp" path="res://Cutscenes/Mushroom Cutscene/assets/seedling.png" id="6_koi6n"]
 [ext_resource type="Texture2D" uid="uid://cfx82qcqd30tu" path="res://characters/player/Weird Mushroom/Assets/wierdmushroom.png" id="6_nrjqj"]
@@ -351,7 +351,7 @@ libraries/ = SubResource("AnimationLibrary_ofy50")
 [node name="Player" type="Sprite2D" parent="." unique_id=2046575169]
 position = Vector2(-35.374996, 106.99999)
 scale = Vector2(3.783333, 3.6333334)
-texture = ExtResource("4_hur15")
+texture = ExtResource("4_s4nwx")
 region_enabled = true
 region_rect = Rect2(0, 0, 15.144791, 15.6564045)
 
@@ -360,7 +360,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(99.3891, 117)
 rotation = -6.3529983
 scale = Vector2(0.016814815, 0.01614815)
-texture = ExtResource("4_hur15")
+texture = ExtResource("4_s4nwx")
 region_enabled = true
 region_rect = Rect2(0, 0, 15.144791, 15.6564045)
 

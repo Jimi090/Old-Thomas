@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1gkeoeslfs0e" path="res://characters/enemies/Boss1/sprite/boss1-idle.png" id="4_xaecm"]
 [ext_resource type="Texture2D" uid="uid://b3mp4whj2gbvj" path="res://characters/dog/Sprite/dog-idle.png" id="5_20dy6"]
 [ext_resource type="Texture2D" uid="uid://beo8y8efhe783" path="res://Cutscenes/StartCutscene/assets/heart.png" id="6_2ice1"]
-[ext_resource type="Texture2D" uid="uid://bromk7vjiu3we" path="res://characters/player/sprite/idle-sad-player.png" id="7_2ice1"]
+[ext_resource type="Texture2D" uid="uid://bbhif2gxq0s7s" path="res://characters/player/sprite/idle-depressed-player.png" id="7_2ice1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8esil"]
 line_spacing = 8.0
