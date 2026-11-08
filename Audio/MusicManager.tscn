@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://c23qi71ae5gjk" path="res://Audio/music_manager.gd" id="1_olc47"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1812403529]
-autoplay = true
 bus = &"Music"
 script = ExtResource("1_olc47")
 
