@@ -7,6 +7,7 @@ extends Control
 @onready var shop_btn: Button = $ShopBtn
 @onready var town_btn: Button = $TownBtn
 @onready var home_btn: Button = $HomeBtn
+@onready var skull_btn: Button = $SkullBtn
 
 const SHOP = preload("uid://tf36yngqrqgr")
 const TOWN = preload("uid://cqqlmplhsuk52")
@@ -45,6 +46,12 @@ func _ready() -> void:
 		var desc := "Before you can enter this path, finish Path 3"
 		path_4.pressed.connect(create_general_popup.bind(title, desc))
 		path_4.padlock.visible = true
+	if is_path_finished("4") == true:
+		skull_btn.pressed.connect(open_level_hardcore)
+	else:
+		var title := "Path Locked"
+		var desc := "Before you can enter this level, finish all of the paths"
+		skull_btn.pressed.connect(create_general_popup.bind(title, desc))
 
 
 func is_path_finished(number: String):
@@ -76,6 +83,10 @@ func open_town():
 func open_home():
 	var home = HOME.instantiate()
 	get_tree().change_scene_to_node(home)
+
+
+func open_level_hardcore():
+	get_tree().change_scene_to_file("uid://b8gfdjq80715j")
 
 
 func create_general_popup(title: String, description: String):

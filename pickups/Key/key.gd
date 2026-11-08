@@ -14,7 +14,7 @@ func _ready() -> void:
 func _on_body_entered(_body: Node2D) -> void:
 	if path_name and level_name:
 		GameData.level_progress[path_name][level_name]["finished"] = true
-	Events.level_completed.emit(path_name, level_name)
+		Events.level_completed.emit(path_name, level_name)
 	GameData.save_data()
 	call_deferred(destination)
 

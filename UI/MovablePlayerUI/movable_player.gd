@@ -121,6 +121,7 @@ func when_in_range_of_button(button):
 		"Path2": "Path 2",
 		"Path3": "Path 3",
 		"Path4": "Path 4",
+		"SkullBtn": "Level Hardcore",
 	}
 
 	dialogue.text = 'Click "Enter" to enter ' + names_dic[button.name]
