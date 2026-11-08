@@ -21,7 +21,7 @@ You can play this game on itch.io: <a href="https://lillylike123.itch.io/old-tho
 ## Description
 
 Join Thomas on an adventure as he conquers hurdles, one path at a time. Destroy monsters, collect coins and cinnamon, and help Thomas evolve as a person.
-Old Thomas is a 2D platformer still in development where you join Thomas on an adventure of a lifetime.
+Old Thomas is a 2D platformer where you join Thomas on an adventure of a lifetime.
 Path 1 is centred around harvest and autumn time, when leaves change and the winter chill is drawing near.
 Path 2 continues that harvest and autumn feel, plus special treasure chests hidden in the levels, plus you get a cute lil dog :)!
 
