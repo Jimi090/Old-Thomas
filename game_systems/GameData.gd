@@ -284,8 +284,3 @@ func _ready() -> void:
 
 	get_active_quests()
 	get_displaied_quests()
-
-	for path in level_progress:
-		for level in level_progress[path]:
-			level_progress[path][level]["finished"] = true
-	GameData.save_data()

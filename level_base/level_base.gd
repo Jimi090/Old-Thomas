@@ -29,8 +29,13 @@ func _ready() -> void:
 
 	if (
 		int(level[-6]) != len(GameData.level_progress[path])
-		or not FileAccess.file_exists(
-			"res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
+		or (
+			not FileAccess.file_exists(
+				"res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
+			)
+			and not FileAccess.file_exists(
+				"res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn.remap"
+			)
 		)
 	):
 		# normal level
@@ -91,11 +96,9 @@ func reload_level():
 func change_scene_to_boss_arena(_body, path):
 	var file_path = "res://Paths/BossArena" + path[-1] + "/boss_arena_" + path[-1] + ".tscn"
 
-	if FileAccess.file_exists(file_path):
-		call_deferred("change_scene", file_path)
-	else:
-		print('xd')
+	var scene := load(file_path)
+	call_deferred("change_scene_to_packed", scene)
 
 
-func change_scene(file_path):
-	get_tree().change_scene_to_file(file_path)
+func change_scene_to_packed(packed):
+	get_tree().change_scene_to_packed(packed)
