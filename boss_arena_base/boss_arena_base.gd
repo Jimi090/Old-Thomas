@@ -37,7 +37,7 @@ func _ready():
 	elif path[-1] == "3":
 		player.ability2_used = true
 		hud.get_child(0).get_node("Ability2CooldownBar").hide()
-		key.destination = "play_mushroom_cutscenes"
+		key.destination = "play_mushroom_cutscene"
 	elif path[-1] == "4":
 		key.destination = "play_end_cutscene"
 
