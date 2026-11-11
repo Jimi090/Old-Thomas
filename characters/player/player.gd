@@ -83,7 +83,7 @@ func _physics_process(delta: float) -> void:
 		state = State.JUMP
 
 	# die when out of map
-	if position.y > 300:
+	if position.y > 400:
 		take_damage(10)
 
 	update_animation(animated_sprite_2d)
